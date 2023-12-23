@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import vercelStatic from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,6 +8,8 @@ export default defineConfig({
     locales: ["en", "es"],
     routing: {
       prefixDefaultLocale: true
-    }
+    },
+    output: 'static',
+    adapter: vercelStatic(),
   }
 });
