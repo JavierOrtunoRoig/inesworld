@@ -1,0 +1,17 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>english language</h1>
+    <a href={getRelativeLocaleUrl('es', '')}>spanish</a>
+	</body>
+</html>
