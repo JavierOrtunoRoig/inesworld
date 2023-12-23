@@ -8,10 +8,16 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
+		<link rel="stylesheet" href="../../node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
+		<script src="../../node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
+
 		<title>Astro</title>
 	</head>
 	<body>
 		<h1>english language</h1>
     <a href={getRelativeLocaleUrl('es', '')}>spanish</a>
+		<lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+		<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lOKASgtr6kU?si=iW5q1M71QlwQATJ7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 	</body>
 </html>
