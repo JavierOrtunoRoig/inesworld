@@ -1,6 +1,6 @@
 ---
 layout: '@/layouts/MarkdownPostLayout.astro'
-title: 'My first post in the blog'
+title: 'My second post in the blog'
 pubDate: 2022-07-08
 ---
 
