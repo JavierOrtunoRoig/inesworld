@@ -1,17 +1,9 @@
 ---
+import BasicLayout from '@/layouts/BasicLayout.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
+<BasicLayout>
 		<h1>spanish language</h1>
     <a href={getRelativeLocaleUrl('en', '')}>english</a>
-	</body>
-</html>
+</BasicLayout>
