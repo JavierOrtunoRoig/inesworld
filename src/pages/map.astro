@@ -1,0 +1,177 @@
+---
+import Layout from "@/layouts/BasicLayout.astro";
+---
+
+<Layout>
+
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/samples/maps-projections/10-busiest-routes-from-jfk-with-fahey-projection/data.js"
+  ></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/geodata/latest/custom/world_source/world_source.js"
+  ></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"
+  ></script>
+  <script
+    slot="custom-header-scripts"
+    src="https://cdn.anychart.com/releases/v8/themes/light_earth.min.js"
+  ></script>
+  <link
+    slot="custom-header-scripts"
+    href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css"
+    type="text/css"
+    rel="stylesheet"
+  />
+  <link
+    slot="custom-header-scripts"
+    href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css"
+    type="text/css"
+    rel="stylesheet"
+  />
+
+  <div id="container"></div>
+
+</Layout>
+
+<style>
+  html,
+  body,
+  #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<script>
+  anychart.onDocumentReady(function () {
+  // set chart theme
+  anychart.theme("lightEarth");
+  // Creates map chart
+  var map = anychart.connector();
+
+  // Sets settings for map chart
+  map
+    .crs("fahey")
+    .padding([10, 10, 10, 10])
+    .geoData("anychart.maps.world_source");
+  map.interactivity().selectionMode("none");
+
+  // Sets title for map chart and customizes it
+  map
+    .title()
+    .enabled(true)
+    .useHtml(true)
+    .padding([0, 0, 20, 0])
+    .text(
+      "10 Busiest Routes from JFK (2014)<br/>" +
+        '<span style="color:#212121; font-size: 13px;">' +
+        "According to en.wikipedia.org/wiki/John_F._Kennedy_International_Airport</span>",
+    );
+
+  // Sets credits data
+  map
+    .credits()
+    .enabled(true)
+    .url("https://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport")
+    .text(
+      "Data source: https://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport",
+    )
+    .logoSrc("https://en.wikipedia.org/static/favicon/wikipedia.ico");
+
+  function createSeries(name, color, data) {
+    // Creates connector series for destinations and customizes them
+    var connectorSeries = map
+      .connector(data)
+      .startSize(0)
+      .endSize(0)
+      .name(name)
+      .stroke("0.5 " + color)
+      .curvature(0);
+
+    connectorSeries.hovered().stroke("1.5 #455a64");
+
+    connectorSeries
+      .markers()
+      .position("100%")
+      .size(4)
+      .fill(color)
+      .stroke("2 #E1E1E1")
+      .type("circle");
+
+    connectorSeries
+      .hovered()
+      .markers()
+      .position("100%")
+      .size(4)
+      .fill("#455a64")
+      .stroke("2 #455a64")
+      .type("circle");
+
+    connectorSeries.legendItem().iconFill(color);
+
+    // Customizes labels for the destination series
+    connectorSeries
+      .labels()
+      .enabled(true)
+      .fontSize(10)
+      .offsetX(3)
+      .offsetY(3)
+      .position("100%")
+      .format(function () {
+        return this.getData("to");
+      });
+    // Customizes labels on hover for the destination series
+    connectorSeries.hovered().labels().fontColor("#455a64").fontSize(11);
+  }
+
+  // The data used in this sample can be obtained from the CDN
+  // https://cdn.anychart.com/samples/maps-projections/10-busiest-routes-from-jfk-with-fahey-projection/data.js
+  createSeries("International", "#1976d2", getInternationalData());
+  createSeries("Domestic", "#ef6c00", getDomesticData());
+
+  // Sets tooltip setting for the destination series
+  map
+    .tooltip()
+    .useHtml(true)
+    .padding([8, 13, 10, 13])
+    .title(true)
+    .separator(true)
+    .titleFormat("{%to}")
+    .fontSize(13)
+    .format(function () {
+      return (
+        '<span style="font-size: 12px; color: #cbcbcb">Passengers (2014): </span><br/>' +
+        anychart.format.number(this.getData("passengers"), {
+          groupsSeparator: ",",
+        })
+      );
+    });
+
+  // Sets Legend for the chart
+  map.legend(true);
+
+  // create zoom controls
+  var zoomController = anychart.ui.zoom();
+  zoomController.render(map);
+
+  // Sets container id for the chart
+  map.container("container");
+  // Initiates chart drawing
+  map.draw();
+});
+</script>
