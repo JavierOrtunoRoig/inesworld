@@ -1,10 +1,75 @@
 ---
+import { getValidPosts } from '../helpers/posts';
+import '../global.css';
+
 const { frontmatter } = Astro.props;
 const { minutesRead } = Astro.props.frontmatter;
+
+// I want to get all posts in the project and get the next and previous post to add a link to them
+const AllPosts = await Astro.glob('../pages/posts/*.md');
+const posts = getValidPosts(AllPosts);
+const currentPostIndex = posts.findIndex(post => post.url === Astro.url.pathname);
+const previousPost = posts[currentPostIndex - 1];
+const nextPost = posts[currentPostIndex + 1];
 ---
 
-<h1>{frontmatter.title}</h1>
-<p>{minutesRead}</p>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<slot name="custom-header-scripts"/>
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="info">
+      <h1 class="title">{frontmatter.title}</h1>
+      <p class="read-time">{minutesRead}</p>
+    </div>
+    
+    <slot />
+
+    <div class="other-posts">
+      {nextPost && <a href={nextPost.url}>&larr; { nextPost.frontmatter.title}</a>}
+      {previousPost && <a class="previous-post" href={previousPost.url}>{previousPost.frontmatter.title} &rarr;</a>}
+    </div>
 
 
-<slot />
+	</body>
+</html>
+
+<style>
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & > .title {
+      margin: 0;
+      text-align: center;
+    }
+
+    & > .read-time {
+      margin: 0.5em;
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .other-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem 0;
+
+    & .previous-post {
+      align-self: flex-end;
+    }
+  }
+
+</style>

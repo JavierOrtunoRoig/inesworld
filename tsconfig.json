@@ -1,11 +1,3 @@
 {
   "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "baseUrl": "D:/Users/Javier/Desktop/dev/astro-i18n",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-  }
 }

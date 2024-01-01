@@ -1,7 +1,7 @@
 ---
-import BasicLayout from '@/layouts/BasicLayout.astro';
+import BasicLayout from '../layouts/BasicLayout.astro';
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import LiteYoutubeHead from '@/components/LiteYoutubeHead.astro'
+import LiteYoutubeHead from '../components/LiteYoutubeHead.astro'
 ---
 
 <BasicLayout>
@@ -11,4 +11,3 @@ import LiteYoutubeHead from '@/components/LiteYoutubeHead.astro'
 	<a href={getRelativeLocaleUrl('es', '')}>spanish</a>
 	<lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
 </BasicLayout>
-
