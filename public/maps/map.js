@@ -1,5 +1,3 @@
-declare const am5, am5map, am5geodata_worldHigh;
-
 export let root = am5.Root.new("chartdiv");
 export const geoMapConfig = {
   panX: "rotateX",
@@ -177,6 +175,7 @@ export function addCitiesToMap(root, citySeries) {
 }
 
 export function addAnimations(did, citySeries, lineSeries, animatedLineSeries, animatedBulletSeries, londonDataItem, root, chart) {
+  console.log({citySeries});
   let destinationDataItem = citySeries.getDataItemById(did);
   let lineDataItem = lineSeries.pushDataItem({});
   lineDataItem.set("pointsToConnect", [

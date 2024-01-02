@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import { remarkReadingTime } from './src/core/remark-reading-time.mjs';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   i18n: {
@@ -11,6 +13,7 @@ export default defineConfig({
     }
   },
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkReadingTime]
   },
+  integrations: [mdx()]
 });

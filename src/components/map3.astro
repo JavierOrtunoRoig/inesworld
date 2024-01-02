@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/BasicLayout.astro";
+const { origin, destination } = Astro.props;
 ---
 
 <!-- Styles -->
@@ -11,10 +12,12 @@ import Layout from "../layouts/BasicLayout.astro";
 </style>
 
 <!-- Chart code -->
-<script type="module">
-  import './maps/mapWithAllTrips.js';
+<script type="module" data-origin={origin} data-destination={destination}>
+  import { main } from '/public/maps/mapWithNextTrip.js';
+  const o = document.scripts[0].dataset.origin;
+  const d = document.scripts[0].dataset.destination;
+  main(o, d)
 </script>
-
 
 <!-- HTML -->
 <Layout>

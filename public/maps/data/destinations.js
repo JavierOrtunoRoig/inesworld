@@ -1,5 +1,5 @@
 // Preparar datos para las líneas de trayectoria
-export const destinations = [
+export const ALL_DESTINATIONS = [
   "reykjavik",
   "lisbon",
   "moscow",

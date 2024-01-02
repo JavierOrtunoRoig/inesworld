@@ -1,9 +1,6 @@
-import cities from "./data/cities.json"
-import { destinations } from "./data/destinations";
-import { addAnimations, addCitiesToMap, addSwitchButton, createAnimatedBulletSeries, createAnimatedLineSeries, createCitySeries, createGraticuleSeries, createLineSeries, createMapChart, createPolygonSeries, createSwitchContainer, handleSwitchButton, root } from "./map";
-
-// Declaración de las letantes de la librería "amcharts"
-declare const am5, am5themes_Animated: any;
+import cities from "./data/cities.js"
+import { ALL_DESTINATIONS } from "./data/destinations.js";
+import { addAnimations, addCitiesToMap, addSwitchButton, createAnimatedBulletSeries, createAnimatedLineSeries, createCitySeries, createGraticuleSeries, createLineSeries, createMapChart, createPolygonSeries, createSwitchContainer, handleSwitchButton, root } from "./map.js";
 
 am5.ready(function () {
   // Configurar temas (themes) para el gráfico
@@ -30,7 +27,7 @@ am5.ready(function () {
   const londonDataItem = citySeries.getDataItemById("madrid");
 
   // Realizar todas las animaciones
-  am5.array.each(destinations, (did) => addAnimations(did, citySeries, lineSeries, animatedLineSeries, animatedBulletSeries, londonDataItem, root, chart));
+  am5.array.each(ALL_DESTINATIONS, (did) => addAnimations(did, citySeries, lineSeries, animatedLineSeries, animatedBulletSeries, londonDataItem, root, chart));
 
   // Evento al validar los datos de los polígonos, hace un zoom a una ubicación específica
   polygonSeries.events.on("datavalidated", function () {
