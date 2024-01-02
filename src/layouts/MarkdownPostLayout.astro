@@ -1,6 +1,9 @@
 ---
 import { getValidPosts } from '../helpers/posts';
+import { ViewTransitions } from 'astro:transitions';
 import '../global.css';
+import Nav from '../components/Nav.astro';
+
 
 const { frontmatter } = Astro.props;
 const { minutesRead } = Astro.props.frontmatter;
@@ -22,8 +25,11 @@ const nextPost = posts[currentPostIndex + 1];
 
 		<slot name="custom-header-scripts"/>
 		<title>Astro</title>
+    <ViewTransitions />
 	</head>
 	<body>
+    <Nav />
+
 		<div class="info">
       <h1 class="title">{frontmatter.title}</h1>
       <p class="read-time">{minutesRead}</p>
