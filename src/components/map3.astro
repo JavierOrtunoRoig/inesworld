@@ -13,7 +13,7 @@ const { origin, destination } = Astro.props;
 
 <!-- Chart code -->
 <script type="module" data-origin={origin} data-destination={destination}>
-  import { main } from '/public/maps/mapWithNextTrip.js';
+  import { main } from '/maps/mapWithNextTrip.js';
   const o = document.scripts[0].dataset.origin;
   const d = document.scripts[0].dataset.destination;
   main(o, d)
