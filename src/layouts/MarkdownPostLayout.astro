@@ -22,7 +22,7 @@ interface Post {
   }
 }
 
-const { frontmatter, slug, data } = Astro.props;
+const { frontmatter, slug } = Astro.props;
 const { minutesRead } = Astro.props.frontmatter;
 
 
@@ -39,9 +39,10 @@ const nextPost = posts[currentPostIndex + 1];
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-
+    <meta name="description" content={frontmatter.description} />
 		<slot name="custom-header-scripts"/>
-		<title>Astro</title>
+
+		<title>{frontmatter.title}</title>
 	</head>
 	<body>
     <Nav />

@@ -1,24 +1,30 @@
 ---
 import BasicLayout from '@/layouts/BasicLayout.astro';
-import LiteYoutubeHead from '@/components/LiteYoutubeHead.astro'
-import { getRelativeLocaleUrl } from 'astro:i18n';
 import Map from '@/components/MapWithAllTrips.astro';
 ---
 
 <BasicLayout >
-	<article>
-		<LiteYoutubeHead />
-		
-		<h1>english language</h1>
-		<a href={getRelativeLocaleUrl('es', '')}>spanish</a>
-		<lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+	<link slot="custom-header-scripts" rel="stylesheet" href="/lite-youtube/lite-yt-embed.css" />
+	<script slot="custom-header-scripts" is:inline src="/lite-youtube/lite-yt-embed.js"></script>
 
-		<Map />
+	<article>
+		<h1>Portfolio</h1>
+		<lite-youtube videoid="xemu1IOIFnw" playlabel="Introduction to myself"></lite-youtube>
+		<Map/>
 	</article>
 </BasicLayout>
 
 <style>
 	article {
 		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	lite-youtube {
+		width: 600px;
+		margin: 2rem 0;
+		border-radius: 10px;
 	}
 </style>

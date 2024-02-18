@@ -17,12 +17,10 @@ const { origin, destination } = Astro.props;
   const o = scrp.dataset.origin;
   const d = scrp.dataset.destination;
   main(o, d);
-  console.log("adios");
 </script>
 
 <script type="module">
   if (!document.querySelector('canvas')) {
-    // reload
     location.reload();
   }
 </script>
