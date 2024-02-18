@@ -9,8 +9,8 @@ import BasicLayout from "../layouts/BasicLayout.astro";
   <article>
     <h1 class="title">Inés Cuevas Jiménez</h1>
     <img src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
-
     <p>Hi! I'm Ines</p>
+    <p>Voluptate amet aliquip pariatur deserunt incididunt enim laborum dolor excepteur eiusmod enim. Irure consequat pariatur cillum exercitation proident ea nostrud do qui reprehenderit culpa ipsum anim eiusmod. Consectetur voluptate commodo mollit commodo non dolor sint esse aute magna enim laboris enim esse.</p>
   </article>
 </BasicLayout>
 
@@ -18,6 +18,9 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 
   article {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .title {
@@ -27,8 +30,8 @@ import BasicLayout from "../layouts/BasicLayout.astro";
   }
 
   img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
+    max-width: 350px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
   }
 </style>

@@ -3,7 +3,6 @@ import BasicLayout from '../layouts/BasicLayout.astro';
 import { getValidPosts } from '../helpers/posts';
 
 const allPosts: any = await Astro.glob('../pages/posts/*.{md,mdx}');
-console.log({allPosts});
 const posts = getValidPosts(allPosts);
 
 /* 
@@ -13,6 +12,12 @@ const posts = getValidPosts(allPosts);
 
 <BasicLayout>
   <ul>
-    {posts.map((post) => <li><a href={post.url}>{post.frontmatter.pubDate.slice(0,10)} - {post.frontmatter.title}</a></li>)}
+    {posts.map((post) => (
+      <li>
+        <a href={post.url}>
+          {post.frontmatter.pubDate.slice(0,10)} - {post.frontmatter.title}
+        </a>
+      </li>
+    ))}
   </ul>
 </BasicLayout>
