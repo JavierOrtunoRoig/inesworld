@@ -1,11 +1,24 @@
 import cities from "./data/cities.js"
-import { addAnimations, addCitiesToMap, addSwitchButton, createAnimatedBulletSeries, createAnimatedLineSeries, createCitySeries, createGraticuleSeries, createLineSeries, createMapChart, createPolygonSeries, createSwitchContainer, handleSwitchButton, root } from "./map.js";
+import {
+  addAnimations,
+  addCitiesToMap,
+  addSwitchButton,
+  createAnimatedBulletSeries,
+  createAnimatedLineSeries,
+  createCitySeries,
+  createGraticuleSeries,
+  createLineSeries,
+  createMapChart,
+  createPolygonSeries,
+  createSwitchContainer,
+  handleSwitchButton,
+  root
+} from "./map.js";
 
 // Declaración de las letantes de la librería "amcharts"
 
 export const main = (o, d) => {
 
-  
   am5.ready(function () {
 
     // Configurar temas (themes) para el gráfico

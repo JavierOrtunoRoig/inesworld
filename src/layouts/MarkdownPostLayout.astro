@@ -1,7 +1,6 @@
 ---
 import Nav from '@/components/Nav.astro';
 import { getValidPosts } from '@/helpers/posts';
-import { ViewTransitions } from 'astro:transitions';
 import { getCollection } from "astro:content";
 
 import '@/global.css';
@@ -43,7 +42,6 @@ const nextPost = posts[currentPostIndex + 1];
 
 		<slot name="custom-header-scripts"/>
 		<title>Astro</title>
-    <ViewTransitions />
 	</head>
 	<body>
     <Nav />

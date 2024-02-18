@@ -1,6 +1,12 @@
 ---
-const { origin, destination } = Astro.props;
+import Layout from "@/layouts/BasicLayout.astro";
 ---
+
+<script is:inline type="module">
+  import "./maps/mapWithAllTrips.js";
+  document.addEventListener("astro:load", () => {
+  })
+</script>
 
 <!-- Styles -->
 <style>
@@ -10,16 +16,6 @@ const { origin, destination } = Astro.props;
   }
 </style>
 
-<!-- Chart code -->
-<script type="module" data-origin={origin} data-destination={destination} id="cities-data">
-  import { main } from "/maps/mapWithNextTrip.js";
-  const scrp = document.scripts.namedItem("cities-data")
-  const o = scrp.dataset.origin;
-  const d = scrp.dataset.destination;
-  main(o, d);
-</script>
-
-<!-- HTML -->
 <script
   slot="custom-header-scripts"
   src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -35,3 +31,9 @@ const { origin, destination } = Astro.props;
   src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
 <div id="chartdiv"></div>
+
+
+<!-- Chart code -->
+<!-- <script type="module">
+  import "./maps/mapWithAllTrips.js";
+</script> -->
