@@ -1,5 +1,4 @@
 ---
-import Layout from "../layouts/BasicLayout.astro";
 const { origin, destination } = Astro.props;
 ---
 
@@ -12,21 +11,27 @@ const { origin, destination } = Astro.props;
 </style>
 
 <!-- Chart code -->
-<script type="module" data-origin={origin} data-destination={destination}>
-  import { main } from '/maps/mapWithNextTrip.js';
-  const o = document.scripts[0].dataset.origin;
-  const d = document.scripts[0].dataset.destination;
-  main(o, d)
+<script type="module" data-origin={origin} data-destination={destination} id="cities-data">
+  import { main } from "/maps/mapWithNextTrip.js";
+  const scrp = document.scripts.namedItem("cities-data")
+  const o = scrp.dataset.origin;
+  const d = scrp.dataset.destination;
+  main(o, d);
 </script>
 
 <!-- HTML -->
-<Layout>
-  <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/map.js"></script>
-  <!-- <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script> -->
-  <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/geodata/worldHigh.js"></script>
-  <!-- <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/geodata/worldUltra.js"></script> -->
-  <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script
+  slot="custom-header-scripts"
+  src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/map.js"
+></script>
+<!-- <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script> -->
+<script
+  slot="custom-header-scripts"
+  src="https://cdn.amcharts.com/lib/5/geodata/worldHigh.js"></script>
+<!-- <script slot="custom-header-scripts" src="https://cdn.amcharts.com/lib/5/geodata/worldUltra.js"></script> -->
+<script
+  slot="custom-header-scripts"
+  src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
-  <div id="chartdiv"></div>
-</Layout>
+<div id="chartdiv"></div>

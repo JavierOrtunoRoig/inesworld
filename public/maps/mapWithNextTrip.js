@@ -5,8 +5,7 @@ import { addAnimations, addCitiesToMap, addSwitchButton, createAnimatedBulletSer
 
 export const main = (o, d) => {
 
-  console.log({o, d});
-
+  
   am5.ready(function () {
 
     // Configurar temas (themes) para el gráfico
