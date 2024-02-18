@@ -1,10 +1,10 @@
 ---
-import Nav from '../components/Nav.astro';
-import { getValidPosts } from '../helpers/posts';
+import Nav from '@/components/Nav.astro';
+import { getValidPosts } from '@/helpers/posts';
 import { ViewTransitions } from 'astro:transitions';
 import { getCollection } from "astro:content";
 
-import '../global.css';
+import '@/global.css';
 
 interface Post {
   id: string,
