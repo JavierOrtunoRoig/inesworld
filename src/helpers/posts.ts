@@ -1,11 +1,7 @@
-import type { MarkdownInstance } from "astro";
-
-type Post = MarkdownInstance<Record<string, any>>;
-
-const sortPosts = (posts:  Post[]) => posts.sort((a, b) => {
-    return new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime();
+const sortPosts = (posts) => posts.sort((a, b) => {
+    return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
 
-const getFinishedPosts = (posts:  Post[]) => posts.filter((post) => !post.frontmatter.draft);
+const getFinishedPosts = (posts) => posts.filter((post) => !post.data.draft);
 
-export const getValidPosts = (posts:  Post[]) => sortPosts(getFinishedPosts(posts));
+export const getValidPosts = (posts) => sortPosts(getFinishedPosts(posts));

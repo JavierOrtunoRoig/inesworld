@@ -1,7 +1,6 @@
 ---
-layout: '../../layouts/MarkdownPostLayout.astro'
-title: 'My first post in the blog'
-pubDate: 2022-07-01
+title: 'My third post in the blog'
+pubDate: 2022-07-03
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Alumno de Astro'
 image:
@@ -10,4 +9,4 @@ image:
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-Hello! My name is Ines and this is my first blog
+Hello! My name is Ines and this is my third blog
