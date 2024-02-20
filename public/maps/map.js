@@ -6,8 +6,8 @@ export const geoMapConfig = {
 };
 export const switchcontainerConfig = {
   layout: root.horizontalLayout,
-  x: 20,
-  y: 40,
+  x: 0,
+  y: 20,
 };
 export const globeLabelSwitchConfig = {
   text: "Globe",
