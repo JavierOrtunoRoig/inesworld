@@ -11,7 +11,7 @@ image:
 
 import Map from "../../components/MapWithOneTrip.astro"
 
-<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '10px'}}>
 
   <img src={frontmatter.image.src} style={{borderRadius: '10px', width: '500px', maxWidth: '90%'}}/>
   <Map origin={frontmatter.origin} destination={frontmatter.destination}/>

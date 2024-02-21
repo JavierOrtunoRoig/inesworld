@@ -33,7 +33,7 @@ console.log({a: posts[1].image});
   </ul> -->
 
   {
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 10px">
       {posts.map((post) => {
         const date = new Date(post.data.pubDate);
         const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
