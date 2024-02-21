@@ -5,7 +5,7 @@ origin: malaga
 destination: oslo
 description: 'Exploring Oslo: A Photographic Adventure'
 image:
-  url: '/blogImages/inesworld.mov-20230312_120701-334710508_147184688261777_6348575695809538810_n.jpeg'
+  src: '/blogImages/inesworld.mov-20230312_120701-334710508_147184688261777_6348575695809538810_n.jpeg'
   alt: 'Ines image'
 ---
 
@@ -13,7 +13,7 @@ import Map from "../../components/MapWithOneTrip.astro"
 
 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
 
-  <img src={frontmatter.image.url} style={{borderRadius: '10px', width: '500px', maxWidth: '90%'}}/>
+  <img src={frontmatter.image.src} style={{borderRadius: '10px', width: '500px', maxWidth: '90%'}}/>
   <Map origin={frontmatter.origin} destination={frontmatter.destination}/>
 
 

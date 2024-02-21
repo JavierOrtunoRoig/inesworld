@@ -9,10 +9,14 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blogs")
 const posts = getValidPosts(allPosts);
+
+console.log({a: posts[1].image});
+
+
 ---
 
 <BasicLayout>
-  <ul>
+  <!-- <ul>
     {
       posts.map((post) => {
         const date = new Date(post.data.pubDate);
@@ -26,5 +30,24 @@ const posts = getValidPosts(allPosts);
         );
       })
     }
-  </ul>
+  </ul> -->
+
+  {
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      {posts.map((post) => {
+        const date = new Date(post.data.pubDate);
+        const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+
+        return (
+          <div style="display: flex; flex-direction: column; width: 400px; border: 1px solid grey; border-radius: 10px;  box-shadow: 6px 7px 5px 0px rgba(224,224,224,0.65)">
+            <img style="width: 100%; border-radius: 10px 10px 0 0;" src={post.data.image?.src ?? "https://picsum.photos/1600/900"} alt={post.data.image?.alt} />
+            <div style="padding: 5px;">
+              <h2><a href={`posts/${post.slug}`}>{post.data.title}</a></h2>
+              <p>{formattedDate}</p>  
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  }
 </BasicLayout>
