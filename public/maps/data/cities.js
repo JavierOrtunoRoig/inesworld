@@ -39,7 +39,7 @@ export default [
     "id": "oslo",
     "title": "Oslo",
     "geometry": { "type": "Point", "coordinates": [10.7387, 59.9138] },
-    "visited": false
+    "visited": true
   },
   {
     "id": "lisbon",
@@ -106,5 +106,12 @@ export default [
     "title": "New York",
     "geometry": { "type": "Point", "coordinates": [-74, 40.43] },
     "visited": true
-  }
+  },
+  {
+    "id": "malaga",
+    "title": "malaga",
+    "geometry": { "type": "Point", "coordinates": [-4.4214, 36.7196]},
+    "visited": true
+  },
+
 ]

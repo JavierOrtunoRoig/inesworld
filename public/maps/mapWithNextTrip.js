@@ -35,7 +35,7 @@ export const main = (o, d) => {
     const citySeries = createCitySeries(root, chart);
 
     // Datos de las ciudades
-    const visitedCities = cities.filter((city) => city.id === "london" || city.id === "madrid");
+    const visitedCities = cities.filter((city) => city.id === d || city.id === o);
     console.log({ visitedCities });
     citySeries.data.setAll(visitedCities);
 
@@ -44,11 +44,11 @@ export const main = (o, d) => {
     const animatedBulletSeries = createAnimatedBulletSeries(root, chart);
 
     // Obtener el objeto de datos para Londres
-    const londonDataItem = citySeries.getDataItemById("madrid");
+    const londonDataItem = citySeries.getDataItemById(o);
 
     // Realizar todas las animaciones
     // Necesita una array con el id de los destinos. Debe coincidir con las ciudades del archivo cities.json
-    am5.array.each(['london'], (did) => addAnimations(did, citySeries, lineSeries, animatedLineSeries, animatedBulletSeries, londonDataItem, root, chart));
+    am5.array.each([d], (did) => addAnimations(did, citySeries, lineSeries, animatedLineSeries, animatedBulletSeries, londonDataItem, root, chart));
 
     // Evento al validar los datos de los polígonos, hace un zoom a una ubicación específica
     polygonSeries.events.on("datavalidated", function () {
