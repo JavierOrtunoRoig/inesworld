@@ -8,6 +8,7 @@ import Youtube from "@/icons/Youtube.astro";
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/biblioteca">Biblioteca</a></li>
     <li>
       <ul class="icon-list">
         <li class="item instagram">
@@ -26,14 +27,19 @@ import Youtube from "@/icons/Youtube.astro";
 </nav>
 
 <style>
+
+  nav {
+    height: var(--header-height);
+  }
+
   ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
     background: #eee;
     list-style: none;
     margin: 0;
+    padding: 0;
   }
 
   ul.icon-list {

@@ -9,10 +9,6 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blogs")
 const posts = getValidPosts(allPosts);
-
-console.log({a: posts[1].image});
-
-
 ---
 
 <BasicLayout>

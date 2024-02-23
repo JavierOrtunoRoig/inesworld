@@ -1,0 +1,298 @@
+---
+import "@/global.css";
+
+import BasicLayout from "@/layouts/BasicLayout.astro";
+import ChevronLeft from '@/icons/ChevronLeft.astro';
+import ChevronRight from '@/icons/ChevronRight.astro';
+---
+
+<BasicLayout>
+  <div class="container">
+    <div class="gradient"></div>
+    <img src="https://picsum.photos/1920/1080" />
+    <main class="info-container">
+      <aside class="arrow"><ChevronLeft/></aside>
+      <article>
+        <h1 class="fade-in-up">Oslo, Norway</h1>
+        <a class="fade-in-up" href="/oslo-norway">See gallery</a>
+      </article>
+      <aside class="arrow"><ChevronRight/></aside>
+    </main>
+  </div>
+</BasicLayout>
+
+<script>
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => document.querySelectorAll(selector);
+
+  const image = $('img') as HTMLImageElement;
+  const leftArrow = $$('.arrow')[0] as HTMLDivElement;
+  const rightArrow = $$('.arrow')[1] as HTMLDivElement;
+
+  /**
+   * Restarts the animation of the title and the image
+   */
+  const restartAnimation = (trip) => {
+    const title = $('h1') as HTMLHeadingElement;
+    const newTitle = title.cloneNode(true);
+    newTitle.textContent = trip.title;
+
+    const link = $('article a') as HTMLAnchorElement;
+    const newLink = link.cloneNode(true) as HTMLAnchorElement;
+    newLink.href = trip.link;
+
+    title.parentNode?.replaceChild(newTitle, title);
+    link.parentNode?.replaceChild(newLink, link);
+  }
+
+
+  leftArrow.addEventListener('click', () => {
+    const title = $('h1') as HTMLHeadingElement;
+    const index = trips.findIndex(trip => trip.title === title.textContent);;
+    const trip = trips.at(index - 1) as Trip;
+    image.src = trip.image;
+    restartAnimation(trip);
+  });
+  
+  rightArrow.addEventListener('click', () => {
+    const title = $('h1') as HTMLHeadingElement;
+    const index = trips.findIndex(trip => trip.title === title.textContent);
+    const newIndex = (index + 1) % trips.length;
+    const trip = trips[newIndex];
+    image.src = trip.image;
+    restartAnimation(trip);
+  });
+
+  interface Trip {
+    title: string;
+    image: string;
+    link: string;
+  }
+
+  const trips: Trip[] = [
+    {
+      title: 'Oslo, Norway',
+      image: 'https://picsum.photos/1920/1080',
+      link: '/oslo-norway'
+    },
+    {
+      title: 'Rome, Italy',
+      image: 'https://picsum.photos/1904/1071',
+      link: '/rome-italy'
+    },
+    {
+      title: 'New Delhi, India',
+      image: 'https://picsum.photos/1888/1062',
+      link: '/new-delhi'
+    }
+  ]
+</script>
+
+<style>
+
+  :root {
+    --line-width: 70%;
+    --line-color: #fff;
+  }
+
+  .fade-in-1 {
+    animation: fade-in 2s ease-in-out;
+  }
+
+  .fade-in-2 {
+    animation: fade-in 3s ease-in-out;
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 1s ease-in-out;
+  }
+
+  .container {
+    position: relative;
+    /* 
+    Las imágenes son elementos de remplazo (así se llaman), es decir que en realidad su representación es externa a css.  No puedes cambiar lo que hay en la iamgen con css.
+    Su propiedad display por defecto es inline y para muchos casos es tratada igual que un texto.  Esto significa que al igual que el texto, el css lo trata como si tuviera una línea base (baseline), auqnue en realidad no la tiene por ser imagen.
+    Cuando css utiliza esa baseline, deja un espacio por debajo (esos 4px en tu caso) para que quepan los trazos descendentes de las letras que los tienen (como la letra g o q), es decir el trazo que va por debajo de la línea base.
+    Si a la imagen le indicas que su display es de tipo block, css deja de usar la línea base para pintar la imagen.  También puedes decirle explicitamente que no use alineación por línea base sino que la use al medio:
+    vertical-align: middle
+    Con eso eliminas ese espacio.
+    */
+    img {
+      display: block;
+      height: calc(100vh - var(--header-height));
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .gradient {
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(to top,
+              #000000da 10%,
+              transparent 100%
+            );
+      top: 0;
+      width: 100%;
+    }
+
+    .info-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+        flex-direction: column;
+      }
+      
+      .arrow > svg {
+        fill: #fff;
+        width: 32px;
+        height: 32px;
+        transition: all 0.3s ease;
+        
+        
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.5);
+        }
+        
+        @media (max-width: 768px) {
+          margin: 1.5rem 0;
+          transform: rotate(90deg);
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.5) rotate(90deg);
+          }
+        }        
+      }
+
+      article {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 8rem;
+
+        @media (max-width: 768px) {
+          padding-bottom: 1rem;
+        }
+
+        @media (max-height: 768px) {
+          padding-bottom: 1rem;
+        }
+        
+        > a {
+          text-decoration: none;
+          margin-top: 1.5rem;
+          background-color: transparent;
+          color: #fff;
+          border: 1px solid #fff;
+          padding: 0.5rem 1rem;
+          font-size: 1.5rem;
+          transition: all 0.3s ease;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+          }
+        }
+      }
+
+      /* Style one -> https://codepen.io/vedadesigns/pen/GPxYZg */
+      h1 {
+        font-size: 6rem;
+        margin: 0;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        -webkit-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        display: inline-block;
+        text-align: center;
+
+
+        @media (max-width: 768px) {
+          font-size: 4rem;
+        }
+
+        @media (max-height: 768px) {
+          font-size: 3rem;
+        }
+
+        &:before {
+          width: 28px;
+          height: 5px;
+          display: block;
+          content: "";
+          position: absolute;
+          bottom: 3px;
+          left: 50%;
+          margin-left: -14px;
+          background-color: var(--line-color);
+          z-index: 1;
+          margin-left: calc(28px / 2 * -1);
+        }
+        &:after {
+          width: var(--line-width);
+          height: 1px;
+          display: block;
+          content: "";
+          position: relative;
+          margin-top: 25px;
+          left: 50%;
+          text-align: center;
+          margin-left: calc(70% / 2 * -1);
+          background-color: var(--line-color)
+        }
+      }
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      transform:translate(0px, 25px);
+      opacity: 0;
+    }
+    100% {
+      transform:translate(0px, 0);
+      opacity: 1;
+    }
+  }
+
+</style>
