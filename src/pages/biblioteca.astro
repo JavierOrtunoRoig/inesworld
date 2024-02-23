@@ -8,8 +8,8 @@ import ChevronRight from '@/icons/ChevronRight.astro';
 
 <BasicLayout>
   <div class="container">
+    <img class="fade-in-img" src="https://picsum.photos/1920/1080" />
     <div class="gradient"></div>
-    <img src="https://picsum.photos/1920/1080" />
     <main class="info-container">
       <aside class="arrow"><ChevronLeft/></aside>
       <article>
@@ -34,15 +34,20 @@ import ChevronRight from '@/icons/ChevronRight.astro';
    */
   const restartAnimation = (trip) => {
     const title = $('h1') as HTMLHeadingElement;
-    const newTitle = title.cloneNode(true);
-    newTitle.textContent = trip.title;
-
     const link = $('article a') as HTMLAnchorElement;
+    const image = $('img') as HTMLImageElement;
+    
+    const newTitle = title.cloneNode(true);
     const newLink = link.cloneNode(true) as HTMLAnchorElement;
+    const newImage = image.cloneNode(true) as HTMLImageElement;
+    
+    newTitle.textContent = trip.title;
     newLink.href = trip.link;
+    newImage.src = trip.image;
 
     title.parentNode?.replaceChild(newTitle, title);
     link.parentNode?.replaceChild(newLink, link);
+    image.parentNode?.replaceChild(newImage, image);
   }
 
 
@@ -95,18 +100,22 @@ import ChevronRight from '@/icons/ChevronRight.astro';
     --line-color: #fff;
   }
 
+  .fade-in-img {
+    animation: fade-in 0.3s ease-in-out;
+  }
+
   .fade-in-1 {
-    animation: fade-in 2s ease-in-out;
+    animation: fade-in 1s ease-in-out;
   }
 
   .fade-in-2 {
-    animation: fade-in 3s ease-in-out;
+    animation: fade-in 2s ease-in-out;
   }
 
   .fade-in-up {
     animation: fade-in-up 1s ease-in-out;
   }
-
+  
   .container {
     position: relative;
     /* 
@@ -125,16 +134,15 @@ import ChevronRight from '@/icons/ChevronRight.astro';
     }
     
     .gradient {
-      position: absolute;
-      height: 100%;
-      background: linear-gradient(to top,
-              #000000da 10%,
-              transparent 100%
-            );
-      top: 0;
-      width: 100%;
-    }
-
+        position: absolute;
+        height: 100%;
+        background: linear-gradient(to top,
+                #000000da 10%,
+                transparent 100%
+              );
+        top: 0;
+        width: 100%;
+      }
     .info-container {
       width: 100%;
       height: 100%;
