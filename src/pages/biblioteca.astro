@@ -167,9 +167,11 @@ import ChevronRight from "@/icons/ChevronRight.astro";
         height: 32px;
         transition: all 0.3s ease;
 
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.5);
+        @media (any-hover: hover) {
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+          }
         }
 
         @media (max-width: 768px) {
@@ -177,8 +179,7 @@ import ChevronRight from "@/icons/ChevronRight.astro";
           transform: rotate(90deg);
 
           &:hover {
-            cursor: pointer;
-            transform: scale(1.5) rotate(90deg);
+            transform: rotate(90deg);
           }
         }
       }
