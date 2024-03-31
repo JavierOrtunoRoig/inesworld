@@ -7,6 +7,7 @@ image:
     alt: 'El logotipo completo de Astro.'
 tags: ["astro", "bloguear", "aprender en público"]
 description: 'This is the first post in the blog'
+draft: true
 ---
 
 Hello! My name is Ines and this is my first blog
