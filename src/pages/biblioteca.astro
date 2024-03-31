@@ -14,7 +14,7 @@ import ChevronRight from "@/icons/ChevronRight.astro";
       <aside class="arrow"><ChevronLeft /></aside>
       <article>
         <h1 class="fade-in-up">Oslo, Norway</h1>
-        <a class="fade-in-up" href="/oslo-norway">See gallery</a>
+        <a class="fade-in-up" href="/trip/oslo-norway">See gallery</a>
       </article>
       <aside class="arrow"><ChevronRight /></aside>
     </main>
@@ -22,36 +22,14 @@ import ChevronRight from "@/icons/ChevronRight.astro";
 </BasicLayout>
 
 <script>
+  import { trips, type Trip } from "@/constants";
+
   const $ = (selector) => document.querySelector(selector);
   const $$ = (selector) => document.querySelectorAll(selector);
 
   const image = $("img") as HTMLImageElement;
   const leftArrow = $$(".arrow")[0] as HTMLDivElement;
   const rightArrow = $$(".arrow")[1] as HTMLDivElement;
-
-  interface Trip {
-    title: string;
-    image: string;
-    link: string;
-  }
-
-  const trips: Trip[] = [
-    {
-      title: "Oslo, Norway",
-      image: "https://picsum.photos/1920/1080",
-      link: "/oslo-norway",
-    },
-    {
-      title: "Rome, Italy",
-      image: "https://picsum.photos/1904/1071",
-      link: "/rome-italy",
-    },
-    {
-      title: "New Delhi, India",
-      image: "https://picsum.photos/1888/1062",
-      link: "/new-delhi",
-    },
-  ];
 
   // set up the trips and preload the images
   trips.forEach((trip) => {
