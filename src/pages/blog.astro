@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
   https://github.com/withastro/astro/blob/latest/examples/blog/src/components/FormattedDate.astro
 */
 
-const allPosts = await getCollection("blogs")
+const allPosts = await getCollection("blogs");
 const posts = getValidPosts(allPosts);
 ---
 
@@ -29,21 +29,102 @@ const posts = getValidPosts(allPosts);
   </ul> -->
 
   {
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 10px">
-      {posts.map((post) => {
-        const date = new Date(post.data.pubDate);
-        const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    (
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 10px">
+        {posts.map((post) => {
+          const date = new Date(post.data.pubDate);
+          const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 
-        return (
-          <div style="display: flex; flex-direction: column; width: 400px; border: 1px solid grey; border-radius: 10px;  box-shadow: 6px 7px 5px 0px rgba(224,224,224,0.65)">
-            <img style="width: 100%; border-radius: 10px 10px 0 0;" src={post.data.image?.src ?? "https://picsum.photos/1600/900"} alt={post.data.image?.alt} />
-            <div style="padding: 5px;">
-              <h2><a href={`posts/${post.slug}`}>{post.data.title}</a></h2>
-              <p>{formattedDate}</p>  
-            </div>
-          </div>
-        );
-      })}
-    </div>
+          return (
+            <a class="post" href={`posts/${post.slug}`}>
+              <img
+                src={post.data.image?.src ?? "https://picsum.photos/1600/900"}
+                alt={post.data.image?.alt}
+              />
+              <div class="gradient" />
+
+              <div class="info">
+                <h2>
+                  <p>{post.data.title}</p>
+                </h2>
+                <p>{formattedDate}</p>
+              </div>
+            </a>
+          );
+
+          // return (
+          //   <div style="display: flex; flex-direction: column; width: 400px; border: 1px solid grey; border-radius: 10px;  box-shadow: 6px 7px 5px 0px rgba(224,224,224,0.65)">
+          //     <img
+          //       style="width: 100%; border-radius: 10px 10px 0 0;"
+          //       src={post.data.image?.src ?? "https://picsum.photos/1600/900"}
+          //       alt={post.data.image?.alt}
+          //     />
+          //     <div style="padding: 5px;">
+          //       <h2>
+          //         <a href={`posts/${post.slug}`}>{post.data.title}</a>
+          //       </h2>
+          //       <p>{formattedDate}</p>
+          //     </div>
+          //   </div>
+          // );
+        })}
+      </div>
+    )
   }
 </BasicLayout>
+
+<style>
+  .post {
+    --width: 700px;
+    --height: 400px;
+
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+      transition: transform 0.5s;
+    }
+
+    .gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(--width);
+      height: var(--height);
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      border-radius: 10px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+</style>
