@@ -1,16 +1,24 @@
 ---
-import BasicLayout from '@/layouts/BasicLayout.astro';
-import Map from '@/components/MapWithAllTrips.astro';
+import BasicLayout from "@/layouts/BasicLayout.astro";
+import Map from "@/components/MapWithAllTrips.astro";
 ---
 
-<BasicLayout >
-	<link slot="custom-header-scripts" rel="stylesheet" href="/lite-youtube/lite-yt-embed.css" />
-	<script slot="custom-header-scripts" is:inline src="/lite-youtube/lite-yt-embed.js"></script>
+<BasicLayout>
+	<link
+		slot="custom-header-scripts"
+		rel="stylesheet"
+		href="/lite-youtube/lite-yt-embed.css"
+	/>
+	<script
+		slot="custom-header-scripts"
+		is:inline
+		src="/lite-youtube/lite-yt-embed.js"></script>
 
 	<article>
 		<h1>Portfolio</h1>
-		<lite-youtube videoid="xemu1IOIFnw" playlabel="Introduction to myself"></lite-youtube>
-		<Map/>
+		<lite-youtube videoid="xemu1IOIFnw" playlabel="Introduction to myself"
+		></lite-youtube>
+		<!-- <Map/> -->
 	</article>
 </BasicLayout>
 

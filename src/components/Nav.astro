@@ -12,7 +12,10 @@ import Youtube from "@/icons/Youtube.astro";
     <li>
       <ul class="icon-list">
         <li class="item instagram">
-          <a href="https://www.instagram.com/inesworld.mov/" aria-label="See my instagram account">
+          <a
+            href="https://www.instagram.com/inesworld.mov/"
+            aria-label="See my instagram account"
+          >
             <Instagram class={"icon"} />
           </a>
         </li>
@@ -27,48 +30,61 @@ import Youtube from "@/icons/Youtube.astro";
 </nav>
 
 <style>
-
   nav {
+    position: relative;
+    font-size: 1.3rem;
     height: var(--header-height);
-  }
-
-  ul {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #eee;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    margin-top: 1rem;
+    z-index: 2;
+
+    > ul {
+      width: fit-content;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 15px;
+      background-color: var(--secondary-color);
+      border-radius: 1rem;
+
+      li:hover {
+        transition: 0.5s ease;
+        transform: scale(1.1);
+      }
+
+      li > a {
+        text-decoration: none;
+        color: var(--quinary-color);
+        font-weight: bold;
+      }
+    }
   }
 
   ul.icon-list {
     padding: 0rem;
     display: flex;
     gap: 5px;
-  }
-
-  ul a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    list-style-type: none;
   }
 </style>
 
 <style is:global>
   .item {
     .icon {
-      font-size: 1.5rem;
-      color: hsl(203, 92%, 8%);
-      fill: hsl(203, 92%, 8%);
+      font-size: 1.1rem;
+      color: #fff;
+      fill: #fff;
       transition: 0.5s ease;
       z-index: 2;
     }
 
     a {
       text-decoration: none;
-      width: 48px;
-      height: 48px;
+      width: 32px;
+      height: 32px;
       /* background-color: #f0f9fe; */
       border-radius: 50%;
       display: flex;
@@ -97,8 +113,6 @@ import Youtube from "@/icons/Youtube.astro";
     }
 
     a:hover .icon {
-      color: #fff;
-      fill: #fff;
       transform: rotateY(360deg);
     }
 

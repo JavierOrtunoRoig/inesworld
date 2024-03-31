@@ -1,6 +1,11 @@
 /* Set global variables */
 :root {
   --header-height: 48px;
+  --primary-color: #22223B;
+  --secondary-color: #4A4E69;
+  --tertiary-color: #9A8C98;
+  --quaternary-color: #C9ADA7;
+  --quinary-color: #F2E9E4;
 }
 
 * {
@@ -10,8 +15,9 @@
 html {
   font-family: sans-serif;
   font-size: 16px;
-  background-color: #FBFBFB;
   width: 100dvw;
+  background-color: var(--primary-color);
+  color: var(--quinary-color);
 }
 
 body {
