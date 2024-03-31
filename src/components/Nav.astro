@@ -63,15 +63,33 @@ import Youtube from "@/icons/Youtube.astro";
     }
   }
 
+  @media (max-width: 500px) {
+    nav {
+      margin-top: 0;
+      height: auto;
+
+      > ul {
+        width: 100%;
+        border-radius: 0;
+        flex-direction: column;
+
+        > li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+</style>
+
+<style is:global>
   ul.icon-list {
     padding: 0rem;
     display: flex;
     gap: 5px;
     list-style-type: none;
   }
-</style>
-
-<style is:global>
   .item {
     .icon {
       font-size: 1.1rem;
