@@ -52,6 +52,7 @@ const nextPost = posts[currentPostIndex + 1];
     <div class="info">
       <h1 class="title">{frontmatter.title}</h1>
       <p class="read-time">{minutesRead}</p>
+      <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
     </div>
 
     <article class="content">
@@ -79,6 +80,7 @@ const nextPost = posts[currentPostIndex + 1];
     justify-content: center;
     max-width: 800px;
     margin: 0 auto;
+    padding: 1rem;
 
     strong,
     del {
@@ -87,6 +89,7 @@ const nextPost = posts[currentPostIndex + 1];
 
     h1 {
       font-size: 2rem;
+      margin-top: 0;
     }
     h1,
     h2,
@@ -114,7 +117,7 @@ const nextPost = posts[currentPostIndex + 1];
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
+    padding: 1rem;
 
     & > .title {
       margin: 0;
@@ -125,6 +128,13 @@ const nextPost = posts[currentPostIndex + 1];
       margin: 0.5em;
       font-size: 1.2rem;
       color: var(--tertiary-color);
+    }
+
+    & > img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 0.5rem;
+      margin: 1rem 0;
     }
   }
 
