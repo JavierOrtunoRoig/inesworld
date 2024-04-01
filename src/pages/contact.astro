@@ -32,6 +32,17 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
     </form>
   </div>
 
+  <script>
+    const form = document.querySelector("form") as HTMLFormElement;
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      console.log(Object.fromEntries(formData));
+    });
+  </script>
+
   <style>
     .container {
       display: flex;
