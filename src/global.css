@@ -21,7 +21,6 @@ html {
   width: 100dvw;
   background-color: var(--primary-color);
   color: var(--quinary-color);
-  /* font-family: roboto, sans-serif; */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
