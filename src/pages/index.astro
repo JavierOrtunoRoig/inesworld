@@ -24,11 +24,13 @@ import Map from "@/components/MapWithAllTrips.astro";
 
 <style>
 	article {
+		width: 100%;
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		flex-grow: 1;
 	}
 	lite-youtube {
 		width: 600px;
@@ -36,7 +38,7 @@ import Map from "@/components/MapWithAllTrips.astro";
 		border-radius: 10px;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 500px) {
 		lite-youtube {
 			width: 100%;
 		}

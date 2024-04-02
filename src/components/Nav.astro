@@ -37,8 +37,12 @@ import Youtube from "@/icons/Youtube.astro";
     height: var(--header-height);
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    top: 1rem;
     z-index: 2;
+
+    @media (max-width: 500px) {
+      top: 0;
+    }
 
     > ul {
       width: fit-content;

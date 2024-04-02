@@ -57,22 +57,26 @@ const nextPost = posts[currentPostIndex + 1];
 
     <article class="content">
       <slot />
+      <div class="other-posts">
+        {nextPost && <a href={nextPost.slug}>&larr; {nextPost.data.title}</a>}
+        {
+          previousPost && (
+            <a class="previous-post" href={previousPost.slug}>
+              {previousPost.data.title} &rarr;
+            </a>
+          )
+        }
+      </div>
     </article>
-
-    <div class="other-posts">
-      {nextPost && <a href={nextPost.slug}>&larr; {nextPost.data.title}</a>}
-      {
-        previousPost && (
-          <a class="previous-post" href={previousPost.slug}>
-            {previousPost.data.title} &rarr;
-          </a>
-        )
-      }
-    </div>
   </body>
 </html>
 
 <style>
+  body,
+  html {
+    width: 100%;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -81,6 +85,7 @@ const nextPost = posts[currentPostIndex + 1];
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
+    overflow-x: hidden;
 
     strong,
     del {
@@ -99,16 +104,16 @@ const nextPost = posts[currentPostIndex + 1];
     h6 {
       align-self: flex-start;
     }
+  }
 
-    a {
-      color: var(--special-text-color);
-      text-decoration-color: var(--special-text-color);
-      transition: color 0.2s;
+  a {
+    color: var(--special-text-color);
+    text-decoration-color: var(--special-text-color);
+    transition: color 0.2s;
 
-      &:hover {
-        color: var(--quaternary-color);
-        text-decoration-color: var(--quaternary-color);
-      }
+    &:hover {
+      color: var(--quaternary-color);
+      text-decoration-color: var(--quaternary-color);
     }
   }
 
@@ -117,7 +122,7 @@ const nextPost = posts[currentPostIndex + 1];
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 3rem;
 
     & > .title {
       margin: 0;

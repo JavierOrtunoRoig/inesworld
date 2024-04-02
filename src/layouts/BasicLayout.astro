@@ -1,6 +1,6 @@
 ---
-import Nav from '@/components/Nav.astro';
-import '@/global.css';
+import Nav from "@/components/Nav.astro";
+import "@/global.css";
 ---
 
 <html lang="en">
@@ -9,13 +9,47 @@ import '@/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos.">
+		<meta
+			name="description"
+			content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos."
+		/>
 
-		<slot name="custom-header-scripts"/>
+		<slot name="custom-header-scripts" />
 		<title>Astro</title>
 	</head>
 	<body>
 		<Nav />
-		<slot />
+
+		<div class="page-container">
+			<slot />
+		</div>
+
+		<footer>
+			<p>© All rights reserved. Copyright by Inés Cuevas Jiménez. 2024.</p>
+		</footer>
 	</body>
 </html>
+
+<style>
+	body,
+	html {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.page-container {
+		flex-grow: 1;
+	}
+
+	footer {
+		background-color: var(--secondary-color);
+		text-align: center;
+	}
+
+	p {
+		margin: 0rem;
+		padding: 0.3rem;
+	}
+</style>
