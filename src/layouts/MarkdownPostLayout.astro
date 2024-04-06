@@ -68,90 +68,89 @@ const nextPost = posts[currentPostIndex + 1];
         }
       </div>
     </article>
+    <style>
+      body,
+      html {
+        width: 100%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+        overflow-x: hidden;
+
+        strong,
+        del {
+          color: var(--special-text-color);
+        }
+
+        h1 {
+          font-size: 2rem;
+          margin-top: 0;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          align-self: flex-start;
+        }
+      }
+
+      a {
+        color: var(--special-text-color);
+        text-decoration-color: var(--special-text-color);
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--quaternary-color);
+          text-decoration-color: var(--quaternary-color);
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+
+        & > .title {
+          margin: 0;
+          text-align: center;
+        }
+
+        & > .read-time {
+          margin: 0.5em;
+          font-size: 1.2rem;
+          color: var(--tertiary-color);
+        }
+
+        & > img {
+          width: 100%;
+          max-width: 800px;
+          border-radius: 0.5rem;
+          margin: 1rem 0;
+        }
+      }
+
+      .other-posts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1rem 0;
+
+        & .previous-post {
+          align-self: flex-end;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style>
-  body,
-  html {
-    width: 100%;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    overflow-x: hidden;
-
-    strong,
-    del {
-      color: var(--special-text-color);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-top: 0;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      align-self: flex-start;
-    }
-  }
-
-  a {
-    color: var(--special-text-color);
-    text-decoration-color: var(--special-text-color);
-    transition: color 0.2s;
-
-    &:hover {
-      color: var(--quaternary-color);
-      text-decoration-color: var(--quaternary-color);
-    }
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-
-    & > .title {
-      margin: 0;
-      text-align: center;
-    }
-
-    & > .read-time {
-      margin: 0.5em;
-      font-size: 1.2rem;
-      color: var(--tertiary-color);
-    }
-
-    & > img {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 0.5rem;
-      margin: 1rem 0;
-    }
-  }
-
-  .other-posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin: 1rem 0;
-
-    & .previous-post {
-      align-self: flex-end;
-    }
-  }
-</style>

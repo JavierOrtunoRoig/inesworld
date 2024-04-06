@@ -3,21 +3,113 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 ---
 
 <BasicLayout>
-  <article>
-    <h1 class="title">Inés Cuevas Jiménez</h1>
+  <article id="who-am-i">
+    <div class="who-am-i">
+      <h1 class="title">WHO I AM</h1>
+      <p>
+        I believe that visual storytelling can contribute to impactful change
+        towards a more inclusive, sustainable and connected world.
+      </p>
+      <p>
+        I started my career as a creator by building a self-owned side business
+        alongside my studies of media in Germany. Followed by traveling South
+        America for a full year in 2022, I focused on creating visually unique
+        and authentic content for various brands. Shooting and living abroad
+        fundamentally shaped my character and purpose as a storyteller towards
+        encouraging more people to travel with intent and make a positive
+        difference with their actions.
+      </p>
+    </div>
     <img src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
-    <p>Hi! I'm Ines</p>
-    <p>Voluptate amet aliquip pariatur deserunt incididunt enim laborum dolor excepteur eiusmod enim. Irure consequat pariatur cillum exercitation proident ea nostrud do qui reprehenderit culpa ipsum anim eiusmod. Consectetur voluptate commodo mollit commodo non dolor sint esse aute magna enim laboris enim esse.</p>
+    <div class="key-values-container">
+      <h2>My key values</h2>
+      <ul>
+        <li>Inclusive Storytelling</li>
+        <li>Conscious Travel</li>
+        <li>Sustainable Business</li>
+        <li>Positive Impact</li>
+        <li>Interconnection</li>
+      </ul>
+    </div>
+  </article>
+
+  <article id="contact">
+    <div>
+      <p>Here's the reality</p>
+      <h1>Exceptional brands tell exceptional stories</h1>
+      <p>…because a story does way more than just that.</p>
+      <p>It creates community.</p>
+      <p>
+        Showing the world we share with impactful visuals that align with your
+        mission, makes your audience feel more connected and emotionally
+        engaged. I believe that this is a underestimated but most valuable
+        factor to achieve better and lasting business success.
+      </p>
+      <button>let's get in touch!</button>
+    </div>
+  </article>
+
+  <article id="what-i-do">
+    <h1>What I do</h1>
+    <div class="card-containers">
+      <div class="card">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+          deserunt quo animi quas et voluptatibus veniam adipisci, rerum
+          excepturi facere.
+        </p>
+      </div>
+      <div class="card">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+          deserunt quo animi quas et voluptatibus veniam adipisci, rerum
+          excepturi facere.
+        </p>
+      </div>
+      <div class="card">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+          deserunt quo animi quas et voluptatibus veniam adipisci, rerum
+          excepturi facere.
+        </p>
+      </div>
+    </div>
   </article>
 </BasicLayout>
 
 <style>
-
-  article {
+  #who-am-i {
+    height: 100vh;
     padding: 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 2rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .who-am-i {
+      flex: 2;
+      text-align: center;
+    }
+
+    img {
+      border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
+      min-width: 300px;
+      flex: 2;
+      margin-bottom: 2rem;
+    }
+
+    .key-values-container {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
   }
 
   .title {
@@ -26,9 +118,105 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
     margin-bottom: 2rem;
   }
 
-  img {
-    max-width: 350px;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
+  #contact {
+    background-color: var(--quinary-color);
+    color: var(--secondary-color);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      margin: 0.2rem 0;
+      text-align: center;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: var(--quinary-color);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  #what-i-do {
+    padding: 2rem;
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+    }
+
+    .card-containers {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .card {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #22223b;
+      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.09);
+      padding: 1rem;
+      border: 1px solid #282d47;
+
+      &:hover {
+        box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.29);
+        transition: all 0.5s;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    #who-am-i {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+      img {
+        min-width: auto;
+        width: 75%;
+      }
+
+      .who-am-i {
+        flex: 2;
+        text-align: center;
+      }
+
+      .key-values-container {
+        padding: 0rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-containers {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>

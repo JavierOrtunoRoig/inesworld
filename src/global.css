@@ -17,7 +17,7 @@
 
 html {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 1.1rem;
   width: 100dvw;
   background-color: var(--primary-color);
   color: var(--quinary-color);
