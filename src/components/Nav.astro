@@ -30,6 +30,18 @@ import Youtube from "@/icons/Youtube.astro";
   </ul>
 </nav>
 
+<script>
+  // get path of current page and add active class to the corresponding link
+  const path = window.location.pathname;
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach((link) => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
 <style>
   nav {
     position: relative;
@@ -63,6 +75,10 @@ import Youtube from "@/icons/Youtube.astro";
       li > a {
         text-decoration: none;
         color: var(--quinary-color);
+      }
+
+      li > a.active {
+        border-bottom: 1.5px solid var(--quinary-color);
       }
     }
   }
