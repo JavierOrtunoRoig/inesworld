@@ -35,7 +35,119 @@ body {
     opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
 }
 
-.fade-up.faded {
-  opacity: 1;
+
+.fade-down {
+  opacity: 0;
+  transform: translate3d(0, -5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-left {
+  opacity: 0;
+  transform: translate3d(-5rem, 0, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-right {
+  opacity: 0;
+  transform: translate3d(5rem, 0, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-up-left-corner {
+  opacity: 0;
+  transform: translate3d(5rem, 5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-up-right-corner {
+  opacity: 0;
+  transform: translate3d(-5rem, 5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-down-left-corner {
+  opacity: 0;
+  transform: translate3d(5rem, -5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+.fade-down-right-corner {
+  opacity: 0;
+  transform: translate3d(-5rem, -5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+
+:is(.fade-up,
+  .fade-down,
+  .fade-left,
+  .fade-right,
+  .fade-up-left-corner,
+  .fade-up-right-corner,
+  .fade-down-left-corner,
+  .fade-down-right-corner,
+).faded {
   transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.fade-delay-01 {
+  transition-delay: 0.1s;
+}
+
+.fade-delay-02 {
+  transition-delay: 0.2s;
+}
+
+.fade-delay-03 {
+  transition-delay: 0.3s;
+}
+
+.fade-delay-04 {
+  transition-delay: 0.4s;
+}
+
+.fade-delay-05 {
+  transition-delay: 0.5s;
+}
+
+.fade-delay-06 {
+  transition-delay: 0.6s;
+}
+
+.fade-delay-07 {
+  transition-delay: 0.7s;
+}
+
+.fade-delay-08 {
+  transition-delay: 0.8s;
+}
+
+.fade-delay-09 {
+  transition-delay: 0.9s;
+}
+
+.fade-delay-10 {
+  transition-delay: 1s;
 }
