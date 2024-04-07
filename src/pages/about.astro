@@ -33,7 +33,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
     </div>
   </article>
 
-  <article id="contact">
+  <article id="contact" class="light-theme">
     <div>
       <p>Here's the reality</p>
       <h1>Exceptional brands tell exceptional stories</h1>
@@ -45,12 +45,12 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         engaged. I believe that this is a underestimated but most valuable
         factor to achieve better and lasting business success.
       </p>
-      <button>let's get in touch!</button>
+      <a href="contact">let's get in touch!</a>
     </div>
   </article>
 
   <article id="what-i-do">
-    <h1>What I do</h1>
+    <h1 class="title">What I do</h1>
     <div class="card-containers">
       <div class="card">
         <h2>title</h2>
@@ -78,146 +78,369 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
       </div>
     </div>
   </article>
-</BasicLayout>
 
-<style>
-  #who-am-i {
-    height: 100vh;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  <article id="why-me" class="light-theme">
+    <div class="container">
+      <h1 class="title">Why me</h1>
 
-    h1 {
+      <div class="grid-container">
+        <img
+          src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC01482-q4bj7p7pj0m2i9553q3iw0yw7vk18k8gke8imnsp2w.jpg"
+          alt="image to test"
+        />
+        <div>
+          <h2>Inclusive Storytelling</h2>
+          <p>
+            Authentic visuals that break barriers and contribute to positive
+            social change. I’m unlocking the full potential of your brand by
+            creating a space for all stories to be heard and valued. That sets
+            you apart as a leader of promoting diversity and equality.
+          </p>
+        </div>
+        <img
+          src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC05373-1-pw112w032dbrhm20j0e1506p479605mo55p4y26faw.jpg"
+          alt="image to test"
+        />
+        <div>
+          <h2>Sustainable Business</h2>
+          <p>
+            The stories I tell are individually tailored for companies that
+            prioritize sustainability. This will not only help to preserve the
+            earth and cultures for future generations, but also positions your
+            business for long-term success.
+          </p>
+        </div>
+        <img
+          src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC08211-q4bj8vig2k7z0pfp8qdqi8amy7rjuxwdq7ld841zaw.jpg"
+          alt="image to test"
+        />
+        <div>
+          <h2>Embracing Community</h2>
+          <p>
+            I’m dedicated to creating engaging and relevant content that helps
+            showcasing your brand’s values and builds a strong sense of
+            community around your brand to ensure the success of a business and
+            its mission.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article id="process">
+    <div class="container">
+      <h1 class="title">My Process</h1>
+      <h2>5 steps to your results</h2>
+      <div class="grid-container">
+        <div>
+          <h3>1. Connect</h3>
+          <p>
+            At first we build a personal connection and openly share our
+            individual expectations and ideas to make sure the project moves in
+            the right direction.
+          </p>
+        </div>
+        <div>
+          <h3>2. Concept</h3>
+          <p>
+            Together we develop unique and creative visual concepts, individually
+            designed for you, that tell meaningful stories and build a strong
+            community around your brand.
+          </p>
+        </div>
+        <div>
+          <h3>3. Create</h3>
+          <p>
+            Now it’s my turn. I’m going to bring the project to life with a
+            professional approach to production both organizational and within the
+            field.
+          </p>
+        </div>
+        <div>
+          <h3>4. Review</h3>
+          <p>
+            Feedback calls with you in the post production phase make sure that
+            the final results exceed your expectations.
+          </p>
+        </div>
+        <div>
+          <h3>5. Return</h3>
+          <p>
+            A successful release of high quality content shows how powerful visual
+            stories can be to connect your target audience to your brand and reach
+            your business objectives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <style>
+    .title {
+      text-align: center;
       font-size: 4rem;
+      text-transform: uppercase;
       margin-top: 0;
     }
 
-    .who-am-i {
-      flex: 2;
-      text-align: center;
+    .light-theme {
+      background-color: var(--quinary-color);
+      color: var(--secondary-color);
     }
 
-    img {
-      border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
-      min-width: 300px;
-      flex: 2;
-      margin-bottom: 2rem;
-    }
-
-    .key-values-container {
-      flex: 0.7;
-      display: flex;
-      flex-direction: column;
-      padding: 2rem;
-    }
-  }
-
-  .title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  #contact {
-    background-color: var(--quinary-color);
-    color: var(--secondary-color);
-    padding: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    div {
-      width: 100%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 0;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    p {
-      margin: 0.2rem 0;
-      text-align: center;
-    }
-
-    button {
-      background-color: var(--primary-color);
-      color: var(--quinary-color);
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 5rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      margin-top: 2rem;
-      text-transform: uppercase;
-    }
-  }
-
-  #what-i-do {
-    padding: 2rem;
-    h1 {
-      text-align: center;
-      font-size: 4rem;
-    }
-
-    .card-containers {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .card {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #22223b;
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.09);
-      padding: 1rem;
-      border: 1px solid #282d47;
-
-      &:hover {
-        box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.29);
-        transition: all 0.5s;
-      }
-
-      p {
-        text-align: center;
-      }
-    }
-  }
-
-  @media (max-width: 992px) {
     #who-am-i {
-      flex-direction: column;
-      width: 100%;
-      height: auto;
+      height: 100vh;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
 
-      img {
-        min-width: auto;
-        width: 75%;
+      h1 {
+        font-size: 4rem;
+        margin-top: 0;
       }
 
       .who-am-i {
-        flex: 2;
+        flex: 3;
         text-align: center;
       }
 
+      img {
+        border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
+        min-width: 300px;
+        flex: 2;
+        margin-bottom: 2rem;
+      }
+
       .key-values-container {
-        padding: 0rem;
+        flex: 0.7;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
       }
     }
-  }
 
-  @media (max-width: 768px) {
-    .card-containers {
+    #contact {
+      display: flex;
       flex-direction: column;
       align-items: center;
+
+      div {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        margin: 0.2rem 0;
+        text-align: center;
+      }
+
+      a {
+        background-color: var(--primary-color);
+        color: var(--quinary-color);
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        text-transform: uppercase;
+      }
     }
-  }
-</style>
+
+    #what-i-do {
+      padding: 2rem;
+
+      .card-containers {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      .card {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #22223b;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.09);
+        padding: 1rem;
+        border: 1px solid #282d47;
+
+        &:hover {
+          box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.29);
+          transition: all 0.5s;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    #why-me {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1000px;
+      }
+
+      /* opcion 1 */
+      /* .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1rem;
+        }
+      } */
+
+      /* opción 2 */
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        img {
+          width: 100%;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 1rem;
+
+          h2,
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    #process {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1200px;
+      }
+
+      .title {
+        margin: 0;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin: 1rem 0;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+
+        div {
+          padding: 1rem;
+          background-color: #22223b;
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.09);
+          border: 1px solid #282d47;
+
+          h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            text-align: center;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      #who-am-i {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+
+        img {
+          min-width: auto;
+          width: 75%;
+        }
+
+        .who-am-i {
+          flex: 2;
+          text-align: center;
+        }
+
+        .key-values-container {
+          padding: 0rem;
+        }
+      }
+
+      #why-me {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      #process {
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card-containers {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+
+      #process {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  </style>
+</BasicLayout>
