@@ -40,21 +40,15 @@ imagesGrouped.push(group1, group2, group3);
   </div>
 </BasicLayout>
 
+<script type="module"></script>
 <script>
-  const fadeUpObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("faded");
-        }
-      });
-    },
-    { threshold: 0.1 },
-  );
+  import {
+    createIntersectionObserver,
+    observeAll,
+  } from "@/helpers/IntersectionObserver.js";
 
-  document.querySelectorAll(".fade-up").forEach((element) => {
-    fadeUpObserver.observe(element);
-  });
+  const fadeUpObserver = createIntersectionObserver();
+  observeAll(fadeUpObserver, ".fade-up");
 </script>
 
 <style>
@@ -107,18 +101,5 @@ imagesGrouped.push(group1, group2, group3);
         }
       }
     }
-  }
-
-  .fade-up {
-    opacity: 0;
-    transform: translate3d(0, 5rem, 0);
-    transition:
-      transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
-      opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
-  }
-
-  .fade-up.faded {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 </style>

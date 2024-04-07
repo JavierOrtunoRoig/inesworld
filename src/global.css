@@ -26,3 +26,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.fade-up {
+  opacity: 0;
+  transform: translate3d(0, 5rem, 0);
+  transition:
+    transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
+    opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+
+.fade-up.faded {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
