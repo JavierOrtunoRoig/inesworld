@@ -35,6 +35,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
 <script>
   import { init, send } from "@emailjs/browser";
+  import Swal from "sweetalert2";
 
   const form = document.querySelector("form") as HTMLFormElement;
 
@@ -59,14 +60,39 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
       message: "Check this out!",
     };
 
-    // send("service_3r6y8dq", "template_d3rlfnk", templateParams).then(
-    //   (response) => {
-    //     console.log("SUCCESS!", response.status, response.text);
-    //   },
-    //   (error) => {
-    //     console.log("FAILED...", error);
-    //   },
-    // );
+    Swal.fire({
+      title: "Sending email...",
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
+    //   send("service_3r6y8dq", "template_d3rlfnk", templateParams).then(
+    //     (response) => {
+    //       Swal.close();
+    //       Swal.fire({
+    //         title: "Email sent!",
+    //         icon: "success",
+    //         didOpen: () => {
+    //           setTimeout(() => {
+    //             Swal.close();
+    //           }, 2000);
+    //         },
+    //       });
+    //     },
+    //     (error) => {
+    //       Swal.close();
+    //       Swal.fire({
+    //         title: "Error sending email",
+    //         icon: "error",
+    //         didOpen: () => {
+    //           setTimeout(() => {
+    //             Swal.close();
+    //           }, 2000);
+    //         },
+    //       });
+    //     },
+    //   );
   });
 </script>
 
