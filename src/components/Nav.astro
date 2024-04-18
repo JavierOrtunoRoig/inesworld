@@ -42,40 +42,38 @@ import Youtube from "@/icons/Youtube.astro";
 </button>
 
 <script>
-  // get path of current page and add active class to the corresponding link
-  const path = window.location.pathname;
-  const links = document.querySelectorAll("nav a");
+  document.addEventListener("astro:page-load", () => {
+    // get path of current page and add active class to the corresponding link
+    const path = window.location.pathname;
+    const links = document.querySelectorAll("nav a");
 
-  links.forEach((link) => {
-    if (link.getAttribute("href") === path) {
-      link.classList.add("active");
-    }
+    links.forEach((link) => {
+      if (link.getAttribute("href") === path) {
+        link.classList.add("active");
+      }
+    });
   });
 </script>
 
 <script>
-  const menu = document.querySelector(".menu") as HTMLUListElement;
-  const menuItems = document.querySelectorAll(".menu-item");
-  const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
-  const closeIcon = document.querySelector(".close-icon") as HTMLElement;
-  const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
+  document.addEventListener("astro:page-load", () => {
+    const menu = document.querySelector(".menu") as HTMLUListElement;
+    const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
+    const closeIcon = document.querySelector(".close-icon") as HTMLElement;
+    const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
 
-  function toggleMenu() {
-    if (menu.classList.contains("show-menu")) {
-      menu.classList.remove("show-menu");
-      closeIcon.classList.toggle("hide");
-      menuIcon.classList.toggle("hide");
-    } else {
-      menu.classList.add("show-menu");
-      closeIcon.classList.toggle("hide");
-      menuIcon.classList.toggle("hide");
+    function toggleMenu() {
+      if (menu.classList.contains("show-menu")) {
+        menu.classList.remove("show-menu");
+        closeIcon.classList.toggle("hide");
+        menuIcon.classList.toggle("hide");
+      } else {
+        menu.classList.add("show-menu");
+        closeIcon.classList.toggle("hide");
+        menuIcon.classList.toggle("hide");
+      }
     }
-  }
-
-  hamburger.addEventListener("click", toggleMenu);
-
-  menuItems.forEach(function (menuItem) {
-    menuItem.addEventListener("click", toggleMenu);
+    hamburger.addEventListener("click", toggleMenu);
   });
 </script>
 

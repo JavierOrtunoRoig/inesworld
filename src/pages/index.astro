@@ -48,14 +48,15 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
 	section {
 		width: 1100px;
+		max-width: 100%;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 
+		/* this component has its own styles in other file */
 		lite-youtube {
 			width: 100%;
-			max-width: 1100px;
 			border-radius: 10px;
 		}
 
@@ -63,7 +64,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 			background-color: var(--primary-color);
 			color: var(--quinary-color);
 			width: fit-content;
-			padding: .8rem 1rem;
+			padding: 0.8rem 1rem;
 			border: 1px solid var(--quinary-color);
 			border-radius: 5rem;
 			font-size: 1.1rem;
