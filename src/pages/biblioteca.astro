@@ -24,56 +24,64 @@ import ChevronRight from "@/icons/ChevronRight.astro";
 <script>
   import { trips, type Trip } from "@/constants";
 
-  const $ = (selector) => document.querySelector(selector);
-  const $$ = (selector) => document.querySelectorAll(selector);
+  const loadScript = () => {
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => document.querySelectorAll(selector);
 
-  const image = $("img") as HTMLImageElement;
-  const leftArrow = $$(".arrow")[0] as HTMLDivElement;
-  const rightArrow = $$(".arrow")[1] as HTMLDivElement;
-
-  // set up the trips and preload the images
-  trips.forEach((trip) => {
-    const img = new Image();
-    img.src = trip.image;
-  });
-
-  /**
-   * Restarts the animation of the title and the image
-   */
-  const restartAnimation = (trip) => {
-    const title = $("h1") as HTMLHeadingElement;
-    const link = $("article a") as HTMLAnchorElement;
     const image = $("img") as HTMLImageElement;
+    const leftArrow = $$(".arrow")[0] as HTMLDivElement;
+    const rightArrow = $$(".arrow")[1] as HTMLDivElement;
 
-    const newTitle = title.cloneNode(true);
-    const newLink = link.cloneNode(true) as HTMLAnchorElement;
-    const newImage = image.cloneNode(true) as HTMLImageElement;
+    if (!image || !leftArrow || !rightArrow) {
+      return;
+    }
 
-    newTitle.textContent = trip.title;
-    newLink.href = trip.link;
-    newImage.src = trip.image;
+    // set up the trips and preload the images
+    trips.forEach((trip) => {
+      const img = new Image();
+      img.src = trip.image;
+    });
 
-    title.parentNode?.replaceChild(newTitle, title);
-    link.parentNode?.replaceChild(newLink, link);
-    image.parentNode?.replaceChild(newImage, image);
+    /**
+     * Restarts the animation of the title and the image
+     */
+    const restartAnimation = (trip) => {
+      const title = $("h1") as HTMLHeadingElement;
+      const link = $("article a") as HTMLAnchorElement;
+      const image = $("img") as HTMLImageElement;
+
+      const newTitle = title.cloneNode(true);
+      const newLink = link.cloneNode(true) as HTMLAnchorElement;
+      const newImage = image.cloneNode(true) as HTMLImageElement;
+
+      newTitle.textContent = trip.title;
+      newLink.href = trip.link;
+      newImage.src = trip.image;
+
+      title.parentNode?.replaceChild(newTitle, title);
+      link.parentNode?.replaceChild(newLink, link);
+      image.parentNode?.replaceChild(newImage, image);
+    };
+
+    leftArrow.addEventListener("click", () => {
+      const title = $("h1") as HTMLHeadingElement;
+      const index = trips.findIndex((trip) => trip.title === title.textContent);
+      const trip = trips.at(index - 1) as Trip;
+      image.src = trip.image;
+      restartAnimation(trip);
+    });
+
+    rightArrow.addEventListener("click", () => {
+      const title = $("h1") as HTMLHeadingElement;
+      const index = trips.findIndex((trip) => trip.title === title.textContent);
+      const newIndex = (index + 1) % trips.length;
+      const trip = trips[newIndex];
+      image.src = trip.image;
+      restartAnimation(trip);
+    });
   };
 
-  leftArrow.addEventListener("click", () => {
-    const title = $("h1") as HTMLHeadingElement;
-    const index = trips.findIndex((trip) => trip.title === title.textContent);
-    const trip = trips.at(index - 1) as Trip;
-    image.src = trip.image;
-    restartAnimation(trip);
-  });
-
-  rightArrow.addEventListener("click", () => {
-    const title = $("h1") as HTMLHeadingElement;
-    const index = trips.findIndex((trip) => trip.title === title.textContent);
-    const newIndex = (index + 1) % trips.length;
-    const trip = trips[newIndex];
-    image.src = trip.image;
-    restartAnimation(trip);
-  });
+  document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>

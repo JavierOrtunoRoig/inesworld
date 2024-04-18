@@ -188,13 +188,17 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
       observeAll,
     } from "@/helpers/IntersectionObserver.js";
 
-    const fadeUpObserver = createIntersectionObserver();
-    observeAll(fadeUpObserver, ".fade-up");
-    observeAll(fadeUpObserver, ".fade-down");
-    observeAll(fadeUpObserver, ".fade-down-right-corner");
-    observeAll(fadeUpObserver, ".fade-down-left-corner");
-    observeAll(fadeUpObserver, ".fade-up-right-corner");
-    observeAll(fadeUpObserver, ".fade-up-left-corner");
+    const runAnimations = () => {
+      const fadeUpObserver = createIntersectionObserver();
+      observeAll(fadeUpObserver, ".fade-up");
+      observeAll(fadeUpObserver, ".fade-down");
+      observeAll(fadeUpObserver, ".fade-down-right-corner");
+      observeAll(fadeUpObserver, ".fade-down-left-corner");
+      observeAll(fadeUpObserver, ".fade-up-right-corner");
+      observeAll(fadeUpObserver, ".fade-up-left-corner");
+    };
+
+    document.addEventListener("astro:page-load", runAnimations);
   </script>
 
   <style>

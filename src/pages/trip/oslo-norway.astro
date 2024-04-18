@@ -46,8 +46,12 @@ imagesGrouped.push(group1, group2, group3);
     observeAll,
   } from "@/helpers/IntersectionObserver.js";
 
-  const fadeUpObserver = createIntersectionObserver();
-  observeAll(fadeUpObserver, ".fade-up");
+  const runAnimation = () => {
+    const fadeUpObserver = createIntersectionObserver();
+    observeAll(fadeUpObserver, ".fade-up");
+  };
+
+  document.addEventListener("astro:page-load", runAnimation);
 </script>
 
 <style>

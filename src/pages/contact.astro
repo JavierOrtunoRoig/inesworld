@@ -37,63 +37,68 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
   import { init, send } from "@emailjs/browser";
   import Swal from "sweetalert2";
 
-  const form = document.querySelector("form") as HTMLFormElement;
+  const runScript = () => {
+    const form = document.querySelector("form") as HTMLFormElement;
+    if (!form) return;
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    const formData = new FormData(form);
-    console.log(Object.fromEntries(formData));
+      const formData = new FormData(form);
+      console.log(Object.fromEntries(formData));
 
-    init({
-      publicKey: "Zysq_8MGlqpjcijD4",
-      limitRate: {
-        // Allow 1 request per 10s
-        throttle: 10000,
-      },
+      init({
+        publicKey: "Zysq_8MGlqpjcijD4",
+        limitRate: {
+          // Allow 1 request per 10s
+          throttle: 10000,
+        },
+      });
+
+      const templateParams = {
+        to_email: "javiortunoroig@gmail.com",
+        from_name: "Ines",
+        to_name: "Javi",
+        message: "Check this out!",
+      };
+
+      Swal.fire({
+        title: "Sending email...",
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+
+      //   send("service_3r6y8dq", "template_d3rlfnk", templateParams).then(
+      //     (response) => {
+      //       Swal.close();
+      //       Swal.fire({
+      //         title: "Email sent!",
+      //         icon: "success",
+      //         didOpen: () => {
+      //           setTimeout(() => {
+      //             Swal.close();
+      //           }, 2000);
+      //         },
+      //       });
+      //     },
+      //     (error) => {
+      //       Swal.close();
+      //       Swal.fire({
+      //         title: "Error sending email",
+      //         icon: "error",
+      //         didOpen: () => {
+      //           setTimeout(() => {
+      //             Swal.close();
+      //           }, 2000);
+      //         },
+      //       });
+      //     },
+      //   );
     });
+  };
 
-    const templateParams = {
-      to_email: "javiortunoroig@gmail.com",
-      from_name: "Ines",
-      to_name: "Javi",
-      message: "Check this out!",
-    };
-
-    Swal.fire({
-      title: "Sending email...",
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
-
-    //   send("service_3r6y8dq", "template_d3rlfnk", templateParams).then(
-    //     (response) => {
-    //       Swal.close();
-    //       Swal.fire({
-    //         title: "Email sent!",
-    //         icon: "success",
-    //         didOpen: () => {
-    //           setTimeout(() => {
-    //             Swal.close();
-    //           }, 2000);
-    //         },
-    //       });
-    //     },
-    //     (error) => {
-    //       Swal.close();
-    //       Swal.fire({
-    //         title: "Error sending email",
-    //         icon: "error",
-    //         didOpen: () => {
-    //           setTimeout(() => {
-    //             Swal.close();
-    //           }, 2000);
-    //         },
-    //       });
-    //     },
-    //   );
-  });
+  document.addEventListener("astro:page-load", runScript);
 </script>
 
 <style>

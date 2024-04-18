@@ -1,5 +1,6 @@
 ---
 import Nav from "@/components/Nav.astro";
+import { ViewTransitions } from "astro:transitions";
 import "@/global.css";
 ---
 
@@ -16,6 +17,7 @@ import "@/global.css";
 
 		<slot name="custom-header-scripts" />
 		<title>Astro</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Nav />
