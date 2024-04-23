@@ -1,3 +1,8 @@
+---
+import Nav from "@/components/Nav.astro";
+import "@/global.css";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,10 +11,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
   </head>
   <body>
+    <Nav />
     <div id="map"></div>
   </body>
 </html>
@@ -152,6 +156,7 @@
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    color: black;
   }
   .info h4 {
     margin: 0 0 5px;
@@ -168,5 +173,11 @@
     float: left;
     margin-right: 8px;
     opacity: 0.7;
+  }
+
+  nav {
+    position: absolute !important;
+    left: 50%;
+    transform: translateX(-50%);
   }
 </style>
