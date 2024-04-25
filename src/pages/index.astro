@@ -16,17 +16,8 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		src="/lite-youtube/lite-yt-embed.js"></script>
 
 	<main>
-		<section id="portfolio">
-			<h2 class="sub-title">Portfolio</h2>
-			<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
-			></lite-youtube>
-			<!-- <Map/> -->
-			<a href="">Discover my work!</a>
-		</section>
-
 		<section id="who-am-i">
 			<div class="who-am-i">
-				<h1 class="title">My name is Ines</h1>
 				<TitleRewritter
 					texts={[
 						"Hi, I'm Ines.",
@@ -37,6 +28,14 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 				/>
 			</div>
 			<img src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
+		</section>
+
+		<section id="portfolio">
+			<h2 class="sub-title">Portfolio</h2>
+			<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
+			></lite-youtube>
+			<!-- <Map/> -->
+			<a href="">Discover my work!</a>
 		</section>
 	</main>
 </BasicLayout>
@@ -61,6 +60,32 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		justify-content: center;
 	}
 
+	@keyframes fluid {
+		0% {
+			border-radius: 79% 21% 39% 61% / 22% 80% 20% 78%;
+		}
+		16% {
+			border-radius: 96% 4% 80% 20% / 58% 33% 67% 42%;
+		}
+		32% {
+			border-radius: 56% 44% 69% 31% / 16% 80% 20% 84%;
+		}
+		50% {
+			border-radius: 79% 21% 39% 61% / 22% 80% 20% 78%;
+		}
+		66% {
+			border-radius: 56% 44% 69% 31% / 16% 80% 20% 84%;
+		}
+		82% {
+			border-radius: 96% 4% 80% 20% / 58% 33% 67% 42%;
+		}
+		100% {
+			border-radius: 79% 21% 39% 61% / 22% 80% 20% 78%;
+		}
+	}
+
+	img {
+	}
 	#portfolio {
 		width: 1100px;
 		max-width: 100%;
@@ -93,10 +118,13 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
 	#who-am-i {
 		height: 100vh;
+		max-width: 100%;
 		padding: 2rem;
-		display: flex;
-		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+		/* center */
+		place-items: center;
 
 		.title {
 			margin: 0;
@@ -115,22 +143,18 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		img {
 			border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
 			min-width: 300px;
+			width: 100%;
+			max-width: 800px;
 			flex: 2;
 			margin-bottom: 2rem;
-		}
-
-		.key-values-container {
-			flex: 0.7;
-			display: flex;
-			flex-direction: column;
-			padding: 2rem;
+			animation: fluid 45s infinite linear;
 		}
 
 		@media (max-width: 992px) {
 			& {
-				flex-direction: column;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr;
 				width: 100%;
-				height: auto;
 			}
 
 			img {
