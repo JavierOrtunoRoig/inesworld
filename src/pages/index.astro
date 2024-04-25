@@ -1,4 +1,5 @@
 ---
+import TitleRewritter from "@/components/TitleRewritter.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 // import Map from "@/components/MapWithAllTrips.astro";
 ---
@@ -15,12 +16,27 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		src="/lite-youtube/lite-yt-embed.js"></script>
 
 	<main>
-		<section>
+		<section id="portfolio">
 			<h2 class="sub-title">Portfolio</h2>
 			<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
 			></lite-youtube>
 			<!-- <Map/> -->
 			<a href="">Discover my work!</a>
+		</section>
+
+		<section id="who-am-i">
+			<div class="who-am-i">
+				<h1 class="title">My name is Ines</h1>
+				<TitleRewritter
+					texts={[
+						"Hi, I'm Ines.",
+						"I am Creative.",
+						"I Love Photography.",
+						"I Love to Travel.",
+					]}
+				/>
+			</div>
+			<img src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
 		</section>
 	</main>
 </BasicLayout>
@@ -29,7 +45,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 	.title {
 		text-align: center;
 		font-size: 4rem;
-		text-transform: capitalize;
 		margin-top: 0;
 	}
 
@@ -46,7 +61,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		justify-content: center;
 	}
 
-	section {
+	#portfolio {
 		width: 1100px;
 		max-width: 100%;
 		padding: 2rem;
@@ -73,6 +88,60 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 			text-transform: uppercase;
 			align-self: center;
 			text-decoration: none;
+		}
+	}
+
+	#who-am-i {
+		height: 100vh;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+
+		.title {
+			margin: 0;
+		}
+
+		h1 {
+			font-size: 4rem;
+			margin-top: 0;
+		}
+
+		.who-am-i {
+			flex: 3;
+			text-align: center;
+		}
+
+		img {
+			border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
+			min-width: 300px;
+			flex: 2;
+			margin-bottom: 2rem;
+		}
+
+		.key-values-container {
+			flex: 0.7;
+			display: flex;
+			flex-direction: column;
+			padding: 2rem;
+		}
+
+		@media (max-width: 992px) {
+			& {
+				flex-direction: column;
+				width: 100%;
+				height: auto;
+			}
+
+			img {
+				min-width: auto;
+				width: 75%;
+			}
+
+			.who-am-i {
+				flex: 2;
+				text-align: center;
+			}
 		}
 	}
 
