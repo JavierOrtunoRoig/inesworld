@@ -13,7 +13,7 @@ import "@/global.css";
     <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
   </head>
   <body>
-    <!-- <Nav /> -->
+    <Nav />
     <div class="container">
       <div id="map"></div>
     </div>
@@ -168,6 +168,11 @@ import "@/global.css";
     width: 300px;
     overflow: hidden;
     border: 1px solid red;
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .info {
