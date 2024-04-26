@@ -14,7 +14,9 @@ import "@/global.css";
   </head>
   <body>
     <Nav />
-    <div id="map"></div>
+    <div class="container">
+      <div id="map"></div>
+    </div>
   </body>
 </html>
 
@@ -157,10 +159,14 @@ import "@/global.css";
 </script>
 
 <style is:inline>
-  #map {
-    height: 100vh;
-    max-height: 200px;
-    max-width: 200px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
   }
 
   .info {
