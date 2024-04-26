@@ -32,9 +32,6 @@ import "@/global.css";
     const tiles = L.tileLayer(
       "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
-        minZoom: 3,
-        maxZoom: 19,
-        noWrap: true,
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       },
@@ -46,13 +43,13 @@ import "@/global.css";
   }, 200);
 
   // prevent dragging the map out of bounds
-  var southWest = L.latLng(-89.98155760646617, -180),
-    northEast = L.latLng(89.99346179538875, 180);
-  var bounds = L.latLngBounds(southWest, northEast);
-  map.setMaxBounds(bounds);
-  map.on("drag", function () {
-    map.panInsideBounds(bounds, { animate: false });
-  });
+  // var southWest = L.latLng(-89.98155760646617, -180),
+  //   northEast = L.latLng(89.99346179538875, 180);
+  // var bounds = L.latLngBounds(southWest, northEast);
+  // map.setMaxBounds(bounds);
+  // map.on("drag", function () {
+  //   map.panInsideBounds(bounds, { animate: false });
+  // });
 
   // control that shows state info on hover
   // const info = L.control();
