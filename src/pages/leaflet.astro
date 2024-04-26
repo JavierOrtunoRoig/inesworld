@@ -41,6 +41,10 @@ import "@/global.css";
     ).addTo(map);
   }, 200);
 
+  setTimeout(function () {
+    L.map.invalidateSize();
+  }, 200);
+
   // prevent dragging the map out of bounds
   var southWest = L.latLng(-89.98155760646617, -180),
     northEast = L.latLng(89.99346179538875, 180);
