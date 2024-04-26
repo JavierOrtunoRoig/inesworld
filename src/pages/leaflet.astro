@@ -1,6 +1,7 @@
 ---
 import Nav from "@/components/Nav.astro";
 import "@/global.css";
+import "@/../node_modules/leaflet/dist/leaflet.css";
 ---
 
 <!doctype html>
@@ -9,14 +10,10 @@ import "@/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
   </head>
   <body>
     <Nav />
-    <div class="container">
-      <div id="map"></div>
-    </div>
+    <div id="map"></div>
   </body>
 </html>
 
@@ -26,153 +23,134 @@ import "@/global.css";
 
   declare var L: any;
 
-  const map = L.map("map").setView([0, 0], 0);
+  const map = L.map("map").setView([47.712198, 46.313982], 3);
 
-  // workaround for leaflet not loading on first render on mobile
-  // https://stackoverflow.com/a/72428905
-  setTimeout(function () {
-    const tiles = L.tileLayer(
-      "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      {
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      },
-    ).addTo(map);
-  }, 200);
-
-  setTimeout(function () {
-    L.map.invalidateSize();
-  }, 200);
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    minZoom: 3,
+    maxZoom: 19,
+    noWrap: true,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
 
   // prevent dragging the map out of bounds
-  // var southWest = L.latLng(-89.98155760646617, -180),
-  //   northEast = L.latLng(89.99346179538875, 180);
-  // var bounds = L.latLngBounds(southWest, northEast);
-  // map.setMaxBounds(bounds);
-  // map.on("drag", function () {
-  //   map.panInsideBounds(bounds, { animate: false });
-  // });
+  var southWest = L.latLng(-89.98155760646617, -180),
+    northEast = L.latLng(89.99346179538875, 180);
+  var bounds = L.latLngBounds(southWest, northEast);
+  map.setMaxBounds(bounds);
+  map.on("drag", function () {
+    map.panInsideBounds(bounds, { animate: false });
+  });
 
   // control that shows state info on hover
-  // const info = L.control();
+  const info = L.control();
 
-  // info.onAdd = function (map) {
-  //   this._div = L.DomUtil.create("div", "info");
-  //   this.update();
-  //   return this._div;
-  // };
+  info.onAdd = function (map) {
+    this._div = L.DomUtil.create("div", "info");
+    this.update();
+    return this._div;
+  };
 
-  // info.update = function (props) {
-  //   const contents = props ? `<b>${props.name}</b>` : "Hover over a state";
-  //   this._div.innerHTML = `<h4>Trip Map</h4>${contents}`;
-  // };
+  info.update = function (props) {
+    const contents = props ? `<b>${props.name}</b>` : "Hover over a state";
+    this._div.innerHTML = `<h4>Trip Map</h4>${contents}`;
+  };
 
-  // info.addTo(map);
+  info.addTo(map);
 
-  // // get color depending on population density value
-  // function getColor(d) {
-  //   if (d === 0) return "rgba(255, 0, 0, 0.3)";
-  //   else if (d === 1) return "rgba(0, 0, 255, 0.3)";
-  //   else return "rgba(0, 255, 0, 0.3)";
-  // }
+  // get color depending on population density value
+  function getColor(d) {
+    if (d === 0) return "rgba(255, 0, 0, 0.3)";
+    else if (d === 1) return "rgba(0, 0, 255, 0.3)";
+    else return "rgba(0, 255, 0, 0.3)";
+  }
 
-  // function style(feature) {
-  //   return {
-  //     weight: 2,
-  //     opacity: 1,
-  //     color: "white",
-  //     dashArray: "3",
-  //     fillOpacity: 0.7,
-  //     fillColor: getColor(feature.properties.visited),
-  //   };
-  // }
+  function style(feature) {
+    return {
+      weight: 2,
+      opacity: 1,
+      color: "white",
+      dashArray: "3",
+      fillOpacity: 0.7,
+      fillColor: getColor(feature.properties.visited),
+    };
+  }
 
-  // function highlightFeature(e) {
-  //   const layer = e.target;
+  function highlightFeature(e) {
+    const layer = e.target;
 
-  //   layer.setStyle({
-  //     weight: 5,
-  //     color: "#666",
-  //     dashArray: "",
-  //     fillOpacity: 0.7,
-  //   });
+    layer.setStyle({
+      weight: 5,
+      color: "#666",
+      dashArray: "",
+      fillOpacity: 0.7,
+    });
 
-  //   layer.bringToFront();
+    layer.bringToFront();
 
-  //   info.update(layer.feature.properties);
-  // }
+    info.update(layer.feature.properties);
+  }
 
-  // /* global statesData */
-  // const geojson = L.geoJson(atlas, {
-  //   style,
-  //   onEachFeature,
-  // }).addTo(map);
+  /* global statesData */
+  const geojson = L.geoJson(atlas, {
+    style,
+    onEachFeature,
+  }).addTo(map);
 
-  // function resetHighlight(e) {
-  //   geojson.resetStyle(e.target);
-  //   info.update();
-  // }
+  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    info.update();
+  }
 
-  // function zoomToFeature(e) {
-  //   map.fitBounds(e.target.getBounds());
-  // }
+  function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+  }
 
-  // function onEachFeature(feature, layer) {
-  //   layer.on({
-  //     mouseover: highlightFeature,
-  //     mouseout: resetHighlight,
-  //     click: zoomToFeature,
-  //   });
-  // }
+  function onEachFeature(feature, layer) {
+    layer.on({
+      mouseover: highlightFeature,
+      mouseout: resetHighlight,
+      click: zoomToFeature,
+    });
+  }
 
-  // map.attributionControl.addAttribution(
-  //   'Population data &copy; <a href="http://census.gov/">US Census Bureau</a>',
-  // );
+  map.attributionControl.addAttribution(
+    'Population data &copy; <a href="http://census.gov/">US Census Bureau</a>',
+  );
 
-  // const legend = L.control({ position: "bottomright" });
+  const legend = L.control({ position: "bottomright" });
 
-  // legend.onAdd = function (map) {
-  //   const div = L.DomUtil.create("div", "info legend");
-  //   const labels = ["Not visited", "Plan to visit", "Visited"];
-  //   const legend = [];
+  legend.onAdd = function (map) {
+    const div = L.DomUtil.create("div", "info legend");
+    const labels = ["Not visited", "Plan to visit", "Visited"];
+    const legend = [];
 
-  //   // get number of countries in each category
-  //   const visited = atlas.features.reduce(
-  //     (acc, feature) => {
-  //       acc[feature.properties.visited]++;
-  //       return acc;
-  //     },
-  //     [0, 0, 0],
-  //   );
+    // get number of countries in each category
+    const visited = atlas.features.reduce(
+      (acc, feature) => {
+        acc[feature.properties.visited]++;
+        return acc;
+      },
+      [0, 0, 0],
+    );
 
-  //   for (let i = 0; i < labels.length; i++) {
-  //     legend.push(
-  //       `<i style="background:${getColor(i)}"></i> ${labels[i]} - ${visited[i]} countries` as never,
-  //     );
-  //   }
+    for (let i = 0; i < labels.length; i++) {
+      legend.push(
+        `<i style="background:${getColor(i)}"></i> ${labels[i]} - ${visited[i]} countries` as never,
+      );
+    }
 
-  //   div.innerHTML = legend.join("<br>");
-  //   return div;
-  // };
+    div.innerHTML = legend.join("<br>");
+    return div;
+  };
 
-  // legend.addTo(map);
+  legend.addTo(map);
 </script>
 
 <style is:inline>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
-    border: 1px solid red;
-
-    #map {
-      width: 100%;
-      height: 100%;
-    }
+  #map {
+    width: 100vw;
+    height: 100vh;
   }
 
   .info {
@@ -204,7 +182,7 @@ import "@/global.css";
     opacity: 0.7;
   }
 
-  /* nav {
+  nav {
     position: absolute !important;
     left: 50%;
     transform: translateX(-50%);
@@ -218,5 +196,5 @@ import "@/global.css";
       color: black !important;
       fill: black !important;
     }
-  } */
+  }
 </style>

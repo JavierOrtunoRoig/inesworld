@@ -106,8 +106,7 @@ body {
   .fade-up-left-corner,
   .fade-up-right-corner,
   .fade-down-left-corner,
-  .fade-down-right-corner,
-).faded {
+  .fade-down-right-corner).faded {
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
