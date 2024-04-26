@@ -1,5 +1,6 @@
 ---
 import BasicLayout from "@/layouts/BasicLayout.astro";
+import "@/../node_modules/viewerjs/dist/viewer.css";
 
 const country = "Oslo, Norway";
 
@@ -40,6 +41,7 @@ imagesGrouped.push(group1, group2, group3);
   </div>
 </BasicLayout>
 
+<!-- Script to add fade up animation -->
 <script>
   import {
     createIntersectionObserver,
@@ -52,6 +54,20 @@ imagesGrouped.push(group1, group2, group3);
   };
 
   document.addEventListener("astro:page-load", runAnimation);
+</script>
+
+<!-- Script to add image viewer -->
+<script>
+  import Viewer from "viewerjs";
+
+  const loadScript = () => {
+    const img = document.querySelector(".container") as HTMLElement;
+    new Viewer(img, {
+      viewed() {},
+    });
+  };
+
+  document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>
