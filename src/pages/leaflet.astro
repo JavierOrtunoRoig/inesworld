@@ -19,7 +19,28 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
 <script>
   import atlas from "@/data/atlas.geo.json";
+  import geometries from "@/data/geometriesExtraction.json";
+  import type { GEOJson } from "@/types";
   import * as L from "leaflet";
+
+  const geoJson: GEOJson = {
+    type: "FeatureCollection",
+    features: [],
+  };
+
+  // merge atlas with geometries by name
+  atlas.features.forEach((feature) => {
+    const geometry = geometries[feature.properties.name];
+    console.log({ geometry });
+    if (geometry) {
+      geoJson.features.push({
+        ...feature,
+        geometry: geometry,
+      });
+    }
+  });
+
+  console.log({ geoJson });
 
   declare var L: any;
 
@@ -92,7 +113,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   }
 
   /* global statesData */
-  const geojson = L.geoJson(atlas, {
+  const geojson = L.geoJson(geoJson, {
     style,
     onEachFeature,
   }).addTo(map);
@@ -148,8 +169,6 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 </script>
 
 <script>
-  console.log("patata");
-  console.log("page-load");
   const menu = document.querySelector(".menu") as HTMLUListElement;
   const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
   const closeIcon = document.querySelector(".close-icon") as HTMLElement;
