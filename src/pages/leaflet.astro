@@ -73,8 +73,22 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   };
 
   info.update = function (props) {
-    const contents = props ? `<b>${props.name}</b>` : "Hover over a state";
-    this._div.innerHTML = `<h4>Trip Map</h4>${contents}`;
+    if (!props) {
+      const contents = "Hover over a state";
+      this._div.innerHTML = contents;
+    } else {
+      // get the language of the user using js
+      var userLang = navigator.language.split("-")[0];
+
+      const contents = props?.name || "N/A";
+      this._div.innerHTML = `
+        <h4>Country information</h4>
+        <p class="text country-name">Name: ${contents}</p>
+        <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
+        <p class="text text">Continent: ${props?.continent || "N/A"}</p>
+        <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
+      `;
+    }
   };
 
   info.addTo(map);
@@ -208,6 +222,14 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     color: black;
+
+    .country-name {
+      font-weight: bold;
+    }
+
+    .text {
+      margin: 0;
+    }
   }
   .info h4 {
     margin: 0 0 5px;
