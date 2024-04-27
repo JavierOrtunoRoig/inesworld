@@ -23,6 +23,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   import type { GEOJson } from "@/types";
   import * as L from "leaflet";
   import "leaflet-polylinedecorator";
+  import { markersToShow } from "@/data/markers";
 
   const geoJson: GEOJson = {
     type: "FeatureCollection",
@@ -143,64 +144,67 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   const houseIcon = new LeafIcon({ iconUrl: "house.png" });
   const planeIcon = new LeafIcon({ iconUrl: "plane.png" });
 
-  const houseMarker = L.marker([36.72016, -4.42034], { icon: houseIcon })
+  const houseMarker = L.marker(markersToShow.livingIn, { icon: houseIcon })
     .addTo(map)
     .bindPopup("I'm based here");
 
-  const planeMarker = L.marker([12.879721, 121.774017], { icon: planeIcon })
-    .addTo(map)
-    .bindPopup("I'm traveling here");
+  if (markersToShow.travellingTo.length !== 0) {
+    const planeMarker = L.marker(markersToShow.travellingTo, {
+      icon: planeIcon,
+    })
+      .addTo(map)
+      .bindPopup("I'm traveling here");
 
-  var latlngs = Array();
+    var latlngs = Array();
 
-  //Get latlng from first marker
-  latlngs.push(houseMarker.getLatLng());
+    //Get latlng from first marker
+    latlngs.push(houseMarker.getLatLng());
 
-  //Get latlng from first marker
-  latlngs.push(planeMarker.getLatLng());
+    //Get latlng from first marker
+    latlngs.push(planeMarker.getLatLng());
 
-  //You can just keep adding markers
+    //You can just keep adding markers
 
-  //From documentation http://leafletjs.com/reference.html#polyline
-  // create a red polyline from an arrays of LatLng points
-  // var polyline = L.polyline(latlngs, { color: "red" }).addTo(map);
+    //From documentation http://leafletjs.com/reference.html#polyline
+    // create a red polyline from an arrays of LatLng points
+    // var polyline = L.polyline(latlngs, { color: "red" }).addTo(map);
 
-  // zoom the map to the polyline
-  // map.fitBounds(polyline.getBounds());
-
-  var pathPattern = L.polylineDecorator(
-    [houseMarker.getLatLng(), planeMarker.getLatLng()],
-    {
-      patterns: [
-        {
-          offset: 0,
-          repeat: 10,
-          symbol: L.Symbol.dash({
-            pixelSize: 5,
-            pathOptions: {
-              color: "#000",
-              weight: 3,
-              opacity: 0.5,
-            },
-          }),
-        },
-        {
-          offset: "16%",
-          repeat: "33%",
-          symbol: L.Symbol.marker({
-            rotate: true,
-            markerOptions: {
-              icon: L.icon({
-                iconUrl: "plane.png",
-                iconAnchor: [16, 16],
-                iconSize: [32, 32],
-              }),
-            },
-          }),
-        },
-      ],
-    },
-  ).addTo(map);
+    // zoom the map to the polyline
+    // map.fitBounds(polyline.getBounds());
+    var pathPattern = L.polylineDecorator(
+      [houseMarker.getLatLng(), planeMarker.getLatLng()],
+      {
+        patterns: [
+          {
+            offset: 0,
+            repeat: 10,
+            symbol: L.Symbol.dash({
+              pixelSize: 5,
+              pathOptions: {
+                color: "#000",
+                weight: 3,
+                opacity: 0.5,
+              },
+            }),
+          },
+          {
+            offset: "16%",
+            repeat: "33%",
+            symbol: L.Symbol.marker({
+              rotate: true,
+              markerOptions: {
+                icon: L.icon({
+                  iconUrl: "plane.png",
+                  iconAnchor: [16, 16],
+                  iconSize: [32, 32],
+                }),
+              },
+            }),
+          },
+        ],
+      },
+    ).addTo(map);
+  }
 
   function resetHighlight(e) {
     const div = document.querySelector("div.info.legend") as HTMLDivElement;
