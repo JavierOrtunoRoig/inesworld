@@ -184,10 +184,23 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
       [0, 0, 0],
     );
 
-    function highlightVisit() {
+    function highlightVisit(event: PointerEvent) {
       const filterActive = Number(this.parentNode.dataset.filterActive);
       const filterClicked = Array.from(this.parentNode.children).indexOf(this);
       const sameFilter = filterActive === filterClicked;
+
+      // add filter-not-selected class to all divs unless the one clicked
+      // if the filter is the same as the one clicked, remove the class
+      if (!sameFilter) {
+        Array.from(this.parentNode.children).forEach((child) => {
+          child.classList.add("filter-not-selected");
+        });
+        this.classList.remove("filter-not-selected");
+      } else {
+        Array.from(this.parentNode.children).forEach((child) => {
+          child.classList.remove("filter-not-selected");
+        });
+      }
 
       if (sameFilter) {
         div.dataset.filterActive = -1;
@@ -215,6 +228,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
     for (let i = 0; i < labels.length; i++) {
       const visitContainer = L.DomUtil.create("div", "");
+      visitContainer.style.cursor = "pointer";
       visitContainer.onclick = highlightVisit;
       visitContainer.innerHTML = `<i style="background:${getColor(i)}"></i> ${labels[i]} - ${visited[i]} countries`;
       div.appendChild(visitContainer);
@@ -273,6 +287,10 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
     .text {
       margin: 0;
+    }
+
+    .filter-not-selected {
+      filter: opacity(0.5);
     }
   }
   .info h4 {
