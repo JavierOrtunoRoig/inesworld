@@ -12,6 +12,13 @@ const posts = getValidPosts(allPosts);
 ---
 
 <BasicLayout>
+  <div class="search-container">
+    <input
+      type="text"
+      id="search"
+      placeholder="Search for a title posts or any tag"
+    />
+  </div>
   <div class="container">
     {
       (
@@ -51,9 +58,70 @@ const posts = getValidPosts(allPosts);
   </div>
 </BasicLayout>
 
+<script>
+  const loadScript = (params) => {
+    document
+      .getElementById("search")
+      ?.addEventListener("input", (e: InputEvent) => {
+        const input = e.target as HTMLInputElement;
+        const search = input.value.toLowerCase();
+
+        const $allPosts = document.querySelectorAll(".post");
+
+        $allPosts.forEach((post: HTMLAnchorElement) => {
+          const $titleElement = post.querySelector("h2") as HTMLHeadingElement;
+          const $tags = post.querySelectorAll(".tags span");
+          const $date = post.querySelector(
+            ".secondary-info p",
+          ) as HTMLParagraphElement;
+          const title = $titleElement?.textContent?.toLowerCase();
+
+          const tags = Array.from($tags).map((tag) =>
+            tag?.textContent?.toLowerCase(),
+          );
+          const date = $date?.textContent?.toLowerCase();
+
+          if (
+            title?.includes(search) ||
+            tags.some((tag) => tag?.includes(search)) ||
+            date?.includes(search)
+          ) {
+            post.style.display = "block";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      });
+  };
+
+  document.addEventListener("astro:page-load", loadScript);
+</script>
+
 <style>
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    input {
+      width: 576px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 2rem;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
   .container {
-    padding: 2rem;
+    padding: 0 2rem;
     .post {
       --width: 500px;
       --height: 300px;
@@ -138,6 +206,16 @@ const posts = getValidPosts(allPosts);
         h2 {
           margin: 5px 0;
           font-size: 1.2rem;
+        }
+
+        .info {
+          h2 {
+            font-size: 1.1rem;
+          }
+
+          .secondary-info {
+            font-size: 0.8rem;
+          }
         }
       }
     }

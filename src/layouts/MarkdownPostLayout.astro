@@ -34,8 +34,6 @@ const posts: Post[] = getValidPosts(allPosts);
 const currentPostIndex = posts.findIndex((post) => post.slug === slug);
 const previousPost = posts[currentPostIndex - 1];
 const nextPost = posts[currentPostIndex + 1];
-
-console.log({ frontmatter });
 ---
 
 <html lang="en">

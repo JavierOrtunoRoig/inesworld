@@ -57,16 +57,13 @@ import Youtube from "@/icons/Youtube.astro";
 </script>
 
 <script>
-  // console.log("patata");
   document.addEventListener("astro:page-load", () => {
-    // console.log("page-load");
     const menu = document.querySelector(".menu") as HTMLUListElement;
     const hamburger = document.querySelector(".hamburger") as HTMLButtonElement;
     const closeIcon = document.querySelector(".close-icon") as HTMLElement;
     const menuIcon = document.querySelector(".menu-icon") as HTMLElement;
 
     function toggleMenu() {
-      console.log("object");
       if (menu.classList.contains("show-menu")) {
         menu.classList.remove("show-menu");
         closeIcon.classList.toggle("hide");
