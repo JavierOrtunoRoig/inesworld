@@ -19,6 +19,7 @@ const posts = getValidPosts(allPosts);
           {posts.map((post) => {
             const date = new Date(post.data.pubDate);
             const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+            const tags = post.data.tags;
 
             return (
               <a class="post" href={`posts/${post.slug}`}>
@@ -32,7 +33,14 @@ const posts = getValidPosts(allPosts);
                   <h2>
                     <p>{post.data.title}</p>
                   </h2>
-                  <p>{formattedDate}</p>
+                  <div class="secondary-info">
+                    <p>{formattedDate}</p>
+                    <div class="tags">
+                      {tags.map((tag) => (
+                        <span>#{tag}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </a>
             );
@@ -86,10 +94,13 @@ const posts = getValidPosts(allPosts);
       }
 
       .info {
+        --padding: 10px;
+
         position: absolute;
-        bottom: 10px;
-        left: 10px;
+        bottom: var(--padding);
+        left: var(--padding);
         color: white;
+        width: calc(100% - var(--padding) * 2);
 
         a {
           color: white;
@@ -98,6 +109,16 @@ const posts = getValidPosts(allPosts);
 
         p {
           margin: 0;
+        }
+
+        .secondary-info {
+          display: flex;
+          justify-content: space-between;
+
+          .tags {
+            display: flex;
+            gap: 5px;
+          }
         }
       }
 

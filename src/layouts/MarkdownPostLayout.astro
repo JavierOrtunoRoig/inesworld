@@ -34,6 +34,8 @@ const posts: Post[] = getValidPosts(allPosts);
 const currentPostIndex = posts.findIndex((post) => post.slug === slug);
 const previousPost = posts[currentPostIndex - 1];
 const nextPost = posts[currentPostIndex + 1];
+
+console.log({ frontmatter });
 ---
 
 <html lang="en">
@@ -46,8 +48,7 @@ const nextPost = posts[currentPostIndex + 1];
     <slot name="custom-header-scripts" />
 
     <title>{frontmatter.title}</title>
-		<ViewTransitions />
-
+    <ViewTransitions />
   </head>
   <body>
     <Nav />
@@ -55,6 +56,16 @@ const nextPost = posts[currentPostIndex + 1];
     <div class="info">
       <h1 class="title">{frontmatter.title}</h1>
       <p class="read-time">{minutesRead}</p>
+      <!-- render tags -->
+      {
+        frontmatter.tags && (
+          <div class="tags">
+            {frontmatter.tags.map((tag) => (
+              <span>#{tag} </span>
+            ))}
+          </div>
+        )
+      }
       <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
     </div>
 
@@ -133,6 +144,17 @@ const nextPost = posts[currentPostIndex + 1];
           margin: 0.5em;
           font-size: 1.2rem;
           color: var(--tertiary-color);
+        }
+
+        & > .tags {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          & > span {
+            margin: 0 0.2rem;
+            color: var(--tertiary-color);
+          }
         }
 
         & > img {
