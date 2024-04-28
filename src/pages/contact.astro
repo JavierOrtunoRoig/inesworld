@@ -5,7 +5,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 <BasicLayout>
   <div class="container">
     <h1>Contact with me!</h1>
-    <p>Email: <a href="mailto: set an email here">set an email here</a></p>
     <p>
       Maybe here we can put a text giving thanks to users or any message that
       Ines want to share
@@ -69,32 +68,27 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         },
       });
 
-      //   send("service_3r6y8dq", "template_d3rlfnk", templateParams).then(
-      //     (response) => {
-      //       Swal.close();
-      //       Swal.fire({
-      //         title: "Email sent!",
-      //         icon: "success",
-      //         didOpen: () => {
-      //           setTimeout(() => {
-      //             Swal.close();
-      //           }, 2000);
-      //         },
-      //       });
-      //     },
-      //     (error) => {
-      //       Swal.close();
-      //       Swal.fire({
-      //         title: "Error sending email",
-      //         icon: "error",
-      //         didOpen: () => {
-      //           setTimeout(() => {
-      //             Swal.close();
-      //           }, 2000);
-      //         },
-      //       });
-      //     },
-      //   );
+      send("service_3r6y8dq", "template_z2etras", templateParams).then(
+        (response) => {
+          Swal.close();
+          Swal.fire({
+            title: "Email sent! I will contact you soon!",
+            icon: "success",
+          });
+        },
+        (error) => {
+          Swal.close();
+          Swal.fire({
+            title: "Error sending email",
+            icon: "error",
+            didOpen: () => {
+              setTimeout(() => {
+                Swal.close();
+              }, 2000);
+            },
+          });
+        },
+      );
     });
   };
 
