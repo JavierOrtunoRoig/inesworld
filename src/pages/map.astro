@@ -18,6 +18,36 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 </html>
 
 <script>
+  import introJs from "intro.js";
+  import "intro.js/introjs.css";
+
+  const loadScript = () => {
+    introJs()
+      .setOptions({
+        tooltipClass: "guide",
+      })
+      .setOption("dontShowAgain", true)
+      .setOptions({
+        steps: [
+          {
+            title: "Let's start a new journey together!",
+            intro:
+              "Right now you are viewing an interactive map with the countries I have visited and those I plan to visit. You can click on each country to see more information about it.",
+          },
+          {
+            element: document.querySelector(".info.legend") as HTMLElement,
+            intro:
+              "We have some filters! You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.",
+          },
+        ],
+      })
+      .start();
+  };
+  loadScript();
+  document.addEventListener("astro:page-load", loadScript);
+</script>
+
+<script>
   import atlas from "@/data/atlas.geo.json";
   import geometries from "@/data/geometriesExtraction.json";
   import type { GEOJson } from "@/types";
@@ -317,7 +347,13 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
       div.appendChild(visitContainer);
     }
 
-    return div;
+    const divGuide = document.createElement("div");
+    divGuide.dataset.title = "We have some filters!";
+    divGuide.dataset.intro =
+      "You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.";
+
+    divGuide.appendChild(div);
+    return divGuide;
   };
 
   legend.addTo(map);
@@ -429,5 +465,12 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     .absolute {
       position: absolute !important;
     }
+  }
+
+  .guide {
+    color: black;
+    max-width: 100%;
+    width: 400px;
+    min-width: 400px;
   }
 </style>
