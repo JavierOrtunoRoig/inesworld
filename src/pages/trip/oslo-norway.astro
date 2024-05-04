@@ -59,12 +59,32 @@ imagesGrouped.push(group1, group2, group3);
 <!-- Script to add image viewer -->
 <script>
   import Viewer from "viewerjs";
+  import introJs from "intro.js";
+  import "intro.js/introjs.css";
 
   const loadScript = () => {
     const img = document.querySelector(".container") as HTMLElement;
     new Viewer(img, {
       viewed() {},
     });
+
+    const guideshouldNotRun = localStorage.getItem("guideshouldNotRun_gallery");
+
+    if (guideshouldNotRun) return;
+
+    introJs()
+      .setOptions({
+        tooltipClass: "guide",
+        steps: [
+          {
+            intro: "Click on an image to view it in full screen.",
+          },
+        ],
+      })
+      .oncomplete(() => {
+        localStorage.setItem("guideshouldNotRun_gallery", "true");
+      })
+      .start();
   };
 
   document.addEventListener("astro:page-load", loadScript);
@@ -120,5 +140,11 @@ imagesGrouped.push(group1, group2, group3);
         }
       }
     }
+  }
+</style>
+
+<style is:inline>
+  .guide {
+    color: black;
   }
 </style>

@@ -22,11 +22,16 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   import "intro.js/introjs.css";
 
   const loadScript = () => {
+    const guideshouldNotRun_map = localStorage.getItem("guideshouldNotRun_map");
+    if (guideshouldNotRun_map) return;
+
     introJs()
       .setOptions({
         tooltipClass: "guide",
       })
-      .setOption("dontShowAgain", true)
+      .oncomplete(() => {
+        localStorage.setItem("guideshouldNotRun_map", "true");
+      })
       .setOptions({
         steps: [
           {
