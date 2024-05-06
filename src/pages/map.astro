@@ -53,40 +53,23 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 </script>
 
 <script>
-  import atlas from "@/data/atlas.geo.json";
-  import geometries from "@/data/geometriesExtraction.json";
   import type { GEOJson } from "@/types";
   import * as L from "leaflet";
   import "leaflet-polylinedecorator";
   import { markersToShow } from "@/data/markers";
+  import { addTiles, mergeData } from "@/helpers/map";
 
   const geoJson: GEOJson = {
     type: "FeatureCollection",
     features: [],
   };
-
-  // merge atlas with geometries by name
-  atlas.features.forEach((feature) => {
-    const geometry = geometries[feature.properties.name];
-    if (geometry) {
-      geoJson.features.push({
-        ...feature,
-        geometry: geometry,
-      });
-    }
-  });
+  mergeData(geoJson);
 
   declare var L: any;
 
+  // create a map
   const map = L.map("map").setView([47.712198, 46.313982], 3);
-
-  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    minZoom: 2,
-    maxZoom: 19,
-    noWrap: true,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+  const tiles = addTiles(L, map);
 
   // prevent dragging the map out of bounds
   var southWest = L.latLng(-89.98155760646617, -180),
@@ -290,7 +273,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     const labels = ["Not visited", "Plan to visit", "Visited"];
 
     // get number of countries in each category
-    const visited = atlas.features.reduce(
+    const visited = geoJson.features.reduce(
       (acc, feature) => {
         acc[feature.properties.visited]++;
         return acc;
