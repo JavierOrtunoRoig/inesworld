@@ -11,7 +11,7 @@ export const mergeData = (geoJson: GEOJson) => {
       geoJson.features.push({
         ...feature,
         geometry: geometry,
-      });
+      } as any);
     }
   });
 
@@ -42,6 +42,68 @@ export const preventDragOutScope = (L, map) => {
   });
 }
 
+/**
+ * Zooms the map to the bounds of the specified feature.
+ * @param e - The event object.
+ * @param map - The map object.
+ */
 export function zoomToFeature(e, map) {
   map.fitBounds(e.target.getBounds());
+}
+
+/**
+ * Prevents dragging of the map beyond specified bounds.
+ * @param {L} L - The Leaflet library object.
+ * @param {Map} map - The Leaflet map object.
+ */
+export const preventMapDrag = (L, map) => {
+  const southWest = L.latLng(-89.98155760646617, -180);
+  const northEast = L.latLng(89.99346179538875, 180);
+  const bounds = L.latLngBounds(southWest, northEast);
+  map.setMaxBounds(bounds);
+  map.on("drag", () => {
+    map.panInsideBounds(bounds, { animate: false });
+  });
+};
+
+/**
+ * Returns a color based on the visited property.
+ * @param {number} visited - The visited property value.
+ * @returns {string} - The color in rgba format.
+ */
+export const getColorFromVisitedProperty = (visited) => {
+  if (visited === 0) return "rgba(255, 0, 0, 0.3)";
+  else if (visited === 1) return "rgba(0, 0, 255, 0.3)";
+  else return "rgba(0, 255, 0, 0.3)";
+}
+
+/**
+ * Returns the default GeoJSON style for a given feature.
+ * @param {any} feature - The GeoJSON feature.
+ * @returns {object} - The default GeoJSON style object.
+ */
+export const getDefaultGeoJsonStyle = (feature) => ({
+  weight: 2,
+  opacity: 1,
+  color: "white",
+  dashArray: "3",
+  fillOpacity: 0.7,
+  fillColor: getColorFromVisitedProperty(feature.properties.visited),
+})
+
+/**
+ * Style object for highlighting a feature on a map.
+ */
+const highlightFeatureStyle = {
+  weight: 5,
+  color: "#666",
+  dashArray: "",
+  fillOpacity: 0.7,
+}
+
+export function highlightFeature(e, info) {
+  const layer = e.target;
+  layer.setStyle(highlightFeatureStyle);
+  layer.bringToFront();
+  info.update(layer.feature.properties);
 }
