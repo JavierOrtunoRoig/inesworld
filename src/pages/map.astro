@@ -56,7 +56,6 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   import type { GEOJson } from "@/types";
   import * as L from "leaflet";
   import "leaflet-polylinedecorator";
-  import { markersToShow } from "@/data/markers";
   import {
     addTiles,
     mergeData,
@@ -65,6 +64,9 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     getDefaultGeoJsonStyle,
     highlightFeature,
     getIconExtendOptions,
+    addTravellingMarker,
+    addHouseMarker,
+    resetHighlight,
   } from "@/helpers/map";
 
   const geoJson: GEOJson = {
@@ -93,97 +95,14 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     onEachFeature,
   }).addTo(map);
 
+  /* Add markers */
   const LeafIcon = L.Icon.extend(getIconExtendOptions);
 
   const houseIcon = new LeafIcon({ iconUrl: "house.png" });
   const planeIcon = new LeafIcon({ iconUrl: "plane.png" });
 
-  const houseMarker = L.marker(markersToShow.livingIn, { icon: houseIcon })
-    .addTo(map)
-    .bindPopup("I'm based here");
-
-  if (markersToShow.travellingTo.length !== 0) {
-    const planeMarker = L.marker(markersToShow.travellingTo, {
-      icon: planeIcon,
-    })
-      .addTo(map)
-      .bindPopup("I'm traveling here");
-
-    var latlngs = Array();
-
-    //Get latlng from first marker
-    latlngs.push(houseMarker.getLatLng());
-
-    //Get latlng from first marker
-    latlngs.push(planeMarker.getLatLng());
-
-    //You can just keep adding markers
-
-    //From documentation http://leafletjs.com/reference.html#polyline
-    // create a red polyline from an arrays of LatLng points
-    // var polyline = L.polyline(latlngs, { color: "red" }).addTo(map);
-
-    // zoom the map to the polyline
-    // map.fitBounds(polyline.getBounds());
-
-    //https:github.com/bbecquet/Leaflet.PolylineDecorator
-    var pathPattern = L.polylineDecorator(
-      [houseMarker.getLatLng(), planeMarker.getLatLng()],
-      {
-        patterns: [
-          {
-            offset: 0,
-            repeat: 10,
-            symbol: L.Symbol.dash({
-              pixelSize: 5,
-              pathOptions: {
-                color: "#000",
-                weight: 3,
-                opacity: 0.5,
-              },
-            }),
-          },
-          {
-            offset: "16%",
-            repeat: "33%",
-            symbol: L.Symbol.marker({
-              rotate: true,
-              markerOptions: {
-                icon: L.icon({
-                  iconUrl: "plane.png",
-                  iconAnchor: [16, 16],
-                  iconSize: [32, 32],
-                }),
-              },
-            }),
-          },
-        ],
-      },
-    ).addTo(map);
-  }
-
-  function resetHighlight(e) {
-    const div = document.querySelector("div.info.legend") as HTMLDivElement;
-    const filterActive = Number(div.dataset.filterActive);
-    geojson.resetStyle(e.target);
-    if (filterActive !== -1) {
-      // iterate in the geojson layers. If the layer is not the same as the one hovered, set opacity to 0.1
-      geojson.eachLayer((layer) => {
-        geojson.resetStyle(e.target);
-        if (layer.feature.properties.visited !== filterActive) {
-          layer.setStyle({
-            fillOpacity: 0.1,
-          });
-        } else {
-          layer.setStyle({
-            fillOpacity: 0.7,
-          });
-        }
-      });
-    }
-
-    info.update();
-  }
+  const houseMarker = addHouseMarker(L, map, houseIcon);
+  addTravellingMarker(L, map, houseMarker, planeIcon);
 
   function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
@@ -192,7 +111,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   function onEachFeature(feature, layer) {
     layer.on({
       mouseover: handleHighlightFeature,
-      mouseout: resetHighlight,
+      mouseout: handleResetHighlight,
       click: zoomToFeature,
     });
   }
@@ -284,6 +203,10 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
   function handleHighlightFeature(e) {
     highlightFeature(e, info);
+  }
+
+  function handleResetHighlight(e) {
+    resetHighlight(e, info, geojson);
   }
 
   function onAdd(map) {

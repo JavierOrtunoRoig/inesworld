@@ -1,6 +1,7 @@
 import atlas from "@/data/atlas.geo.json";
 import geometries from "@/data/geometriesExtraction.json";
 import type { GEOJson } from "@/types";
+import { markersToShow } from "@/data/markers";
 
 // merge atlas with geometries by name
 export const mergeData = (geoJson: GEOJson) => {
@@ -108,6 +109,29 @@ export const highlightFeature = (e, info) => {
   info.update(layer.feature.properties);
 }
 
+export const resetHighlight = (e, info, geojson) => {
+  const div = document.querySelector("div.info.legend") as HTMLDivElement;
+    const filterActive = Number(div.dataset.filterActive);
+    geojson.resetStyle(e.target);
+    if (filterActive !== -1) {
+      // iterate in the geojson layers. If the layer is not the same as the one hovered, set opacity to 0.1
+      geojson.eachLayer((layer) => {
+        geojson.resetStyle(e.target);
+        if (layer.feature.properties.visited !== filterActive) {
+          layer.setStyle({
+            fillOpacity: 0.1,
+          });
+        } else {
+          layer.setStyle({
+            fillOpacity: 0.7,
+          });
+        }
+      });
+    }
+
+    info.update();
+}
+
 const ICON_SIZE = 48;
 const ICON_ANCHOR = ICON_SIZE / 2; // I don't know this way
 
@@ -117,4 +141,70 @@ export const getIconExtendOptions = {
     iconAnchor: [ICON_ANCHOR, ICON_SIZE],
     popupAnchor: [0, -ICON_SIZE],
   },
+}
+
+export const addHouseMarker = (L, map, houseIcon) => L.marker(markersToShow.livingIn, { icon: houseIcon })
+  .addTo(map)
+  .bindPopup("I'm based here");
+
+export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
+  if (markersToShow.travellingTo.length !== 0) {
+    const planeMarker = L.marker(markersToShow.travellingTo, {
+      icon: planeIcon,
+    })
+      .addTo(map)
+      .bindPopup("I'm traveling here");
+
+    var latlngs = Array();
+
+    //Get latlng from first marker
+    latlngs.push(houseMarker.getLatLng());
+
+    //Get latlng from first marker
+    latlngs.push(planeMarker.getLatLng());
+
+    //You can just keep adding markers
+
+    //From documentation http://leafletjs.com/reference.html#polyline
+    // create a red polyline from an arrays of LatLng points
+    // var polyline = L.polyline(latlngs, { color: "red" }).addTo(map);
+
+    // zoom the map to the polyline
+    // map.fitBounds(polyline.getBounds());
+
+    //https:github.com/bbecquet/Leaflet.PolylineDecorator
+    var pathPattern = L.polylineDecorator(
+      [houseMarker.getLatLng(), planeMarker.getLatLng()],
+      {
+        patterns: [
+          {
+            offset: 0,
+            repeat: 10,
+            symbol: L.Symbol.dash({
+              pixelSize: 5,
+              pathOptions: {
+                color: "#000",
+                weight: 3,
+                opacity: 0.5,
+              },
+            }),
+          },
+          {
+            offset: "16%",
+            repeat: "33%",
+            symbol: L.Symbol.marker({
+              rotate: true,
+              markerOptions: {
+                icon: L.icon({
+                  iconUrl: "plane.png",
+                  iconAnchor: [16, 16],
+                  iconSize: [32, 32],
+                }),
+              },
+            }),
+          },
+        ],
+      },
+    ).addTo(map);
+  }
 }
