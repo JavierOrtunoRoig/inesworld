@@ -101,9 +101,20 @@ const highlightFeatureStyle = {
   fillOpacity: 0.7,
 }
 
-export function highlightFeature(e, info) {
+export const highlightFeature = (e, info) => {
   const layer = e.target;
   layer.setStyle(highlightFeatureStyle);
   layer.bringToFront();
   info.update(layer.feature.properties);
+}
+
+const ICON_SIZE = 48;
+const ICON_ANCHOR = ICON_SIZE / 2; // I don't know this way
+
+export const getIconExtendOptions = {
+  options: {
+    iconSize: [ICON_SIZE, ICON_SIZE],
+    iconAnchor: [ICON_ANCHOR, ICON_SIZE],
+    popupAnchor: [0, -ICON_SIZE],
+  },
 }

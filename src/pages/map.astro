@@ -64,6 +64,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     getColorFromVisitedProperty,
     getDefaultGeoJsonStyle,
     highlightFeature,
+    getIconExtendOptions,
   } from "@/helpers/map";
 
   const geoJson: GEOJson = {
@@ -82,37 +83,9 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
   // control that shows state info on hover
   const info = L.control();
-
-  info.onAdd = function (map) {
-    this._div = L.DomUtil.create("div", "info");
-    this.update();
-    return this._div;
-  };
-
-  info.update = function (props) {
-    if (!props) {
-      const contents = "Hover over a state";
-      this._div.innerHTML = contents;
-    } else {
-      // get the language of the user using js
-      var userLang = navigator.language.split("-")[0];
-
-      const contents = props?.name || "N/A";
-      this._div.innerHTML = `
-        <h4>Country information</h4>
-        <p class="text country-name">Name: ${contents}</p>
-        <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
-        <p class="text text">Continent: ${props?.continent || "N/A"}</p>
-        <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
-      `;
-    }
-  };
-
+  info.onAdd = onAdd;
+  info.update = update;
   info.addTo(map);
-
-  const handleHighlightFeature = (e) => {
-    highlightFeature(e, info);
-  };
 
   /* global statesData */
   const geojson = L.geoJson(geoJson, {
@@ -120,15 +93,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     onEachFeature,
   }).addTo(map);
 
-  const iconSize = 48;
-  const iconAnchor = iconSize / 2; // I don't know this way
-  const LeafIcon = L.Icon.extend({
-    options: {
-      iconSize: [iconSize, iconSize],
-      iconAnchor: [iconAnchor, iconSize],
-      popupAnchor: [0, -iconSize],
-    },
-  });
+  const LeafIcon = L.Icon.extend(getIconExtendOptions);
 
   const houseIcon = new LeafIcon({ iconUrl: "house.png" });
   const planeIcon = new LeafIcon({ iconUrl: "plane.png" });
@@ -316,6 +281,35 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   };
 
   legend.addTo(map);
+
+  function handleHighlightFeature(e) {
+    highlightFeature(e, info);
+  }
+
+  function onAdd(map) {
+    this._div = L.DomUtil.create("div", "info");
+    this.update();
+    return this._div;
+  }
+
+  function update(props) {
+    if (!props) {
+      const contents = "Hover over a state";
+      this._div.innerHTML = contents;
+    } else {
+      // get the language of the user using js
+      var userLang = navigator.language.split("-")[0];
+
+      const contents = props?.name || "N/A";
+      this._div.innerHTML = `
+        <h4>Country information</h4>
+        <p class="text country-name">Name: ${contents}</p>
+        <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
+        <p class="text text">Continent: ${props?.continent || "N/A"}</p>
+        <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
+      `;
+    }
+  }
 </script>
 
 <script>
