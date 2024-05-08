@@ -67,6 +67,8 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     addTravellingMarker,
     addHouseMarker,
     resetHighlight,
+    onAdd,
+    update,
   } from "@/helpers/map";
 
   const geoJson: GEOJson = {
@@ -104,6 +106,16 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   const houseMarker = addHouseMarker(L, map, houseIcon);
   addTravellingMarker(L, map, houseMarker, planeIcon);
 
+  map.attributionControl.addAttribution(
+    'Population data &copy; <a href="http://census.gov/">US Census Bureau</a>',
+  );
+
+  const legend = L.control({ position: "bottomright" });
+
+  legend.onAdd = legendOnAdd;
+
+  legend.addTo(map);
+
   function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
   }
@@ -116,13 +128,15 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     });
   }
 
-  map.attributionControl.addAttribution(
-    'Population data &copy; <a href="http://census.gov/">US Census Bureau</a>',
-  );
+  function handleHighlightFeature(e) {
+    highlightFeature(e, info);
+  }
 
-  const legend = L.control({ position: "bottomright" });
+  function handleResetHighlight(e) {
+    resetHighlight(e, info, geojson);
+  }
 
-  legend.onAdd = function (map) {
+  function legendOnAdd(map) {
     const div = L.DomUtil.create("div", "info legend");
     div.dataset.filterActive = -1;
     const labels = ["Not visited", "Plan to visit", "Visited"];
@@ -136,56 +150,60 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
       [0, 0, 0],
     );
 
-    function highlightVisit(event: PointerEvent) {
-      const filterActive = Number(this.parentNode.dataset.filterActive);
-      const filterClicked = Array.from(this.parentNode.children).indexOf(this);
-      const sameFilter = filterActive === filterClicked;
+    const divGuide = renderHTMLLegend(div, labels, visited);
+    return divGuide;
+  }
 
-      // add filter-not-selected class to all divs unless the one clicked
-      // if the filter is the same as the one clicked, remove the class
-      if (!sameFilter) {
-        Array.from(this.parentNode.children).forEach(
-          (child: HTMLDivElement) => {
-            child.classList.add("filter-not-selected");
-          },
-        );
-        this.classList.remove("filter-not-selected");
-      } else {
-        Array.from(this.parentNode.children).forEach(
-          (child: HTMLDivElement) => {
-            child.classList.remove("filter-not-selected");
-          },
-        );
-      }
+  function highlightVisit(this, event: PointerEvent, div) {
+    const filterActive = Number(this.parentNode.dataset.filterActive);
+    const filterClicked = Array.from(this.parentNode.children).indexOf(this);
+    const sameFilter = filterActive === filterClicked;
 
-      if (sameFilter) {
-        div.dataset.filterActive = -1;
-        geojson.eachLayer((layer) => {
+    // add filter-not-selected class to all divs unless the one clicked
+    // if the filter is the same as the one clicked, remove the class
+    if (!sameFilter) {
+      Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
+        child.classList.add("filter-not-selected");
+      });
+      this.classList.remove("filter-not-selected");
+    } else {
+      Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
+        child.classList.remove("filter-not-selected");
+      });
+    }
+
+    if (sameFilter) {
+      div.dataset.filterActive = -1;
+      geojson.eachLayer((layer) => {
+        layer.setStyle({
+          fillOpacity: 0.7,
+        });
+      });
+      return div;
+    } else {
+      div.dataset.filterActive = filterClicked;
+      geojson.eachLayer((layer) => {
+        if (layer.feature.properties.visited !== filterClicked) {
+          layer.setStyle({
+            fillOpacity: 0.1,
+          });
+        } else {
           layer.setStyle({
             fillOpacity: 0.7,
           });
-        });
-        return div;
-      } else {
-        div.dataset.filterActive = filterClicked;
-        geojson.eachLayer((layer) => {
-          if (layer.feature.properties.visited !== filterClicked) {
-            layer.setStyle({
-              fillOpacity: 0.1,
-            });
-          } else {
-            layer.setStyle({
-              fillOpacity: 0.7,
-            });
-          }
-        });
-      }
+        }
+      });
     }
+  }
 
+  function renderHTMLLegend(div, labels, visited) {
+    function handleHighlightVisit(event) {
+      highlightVisit.call(this, event, div);
+    }
     for (let i = 0; i < labels.length; i++) {
       const visitContainer = L.DomUtil.create("div", "");
       visitContainer.style.cursor = "pointer";
-      visitContainer.onclick = highlightVisit;
+      visitContainer.onclick = handleHighlightVisit;
       visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}"></i> ${labels[i]} - ${visited[i]} countries`;
       div.appendChild(visitContainer);
     }
@@ -195,43 +213,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
     divGuide.dataset.intro =
       "You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.";
 
-    divGuide.appendChild(div);
-    return divGuide;
-  };
-
-  legend.addTo(map);
-
-  function handleHighlightFeature(e) {
-    highlightFeature(e, info);
-  }
-
-  function handleResetHighlight(e) {
-    resetHighlight(e, info, geojson);
-  }
-
-  function onAdd(map) {
-    this._div = L.DomUtil.create("div", "info");
-    this.update();
-    return this._div;
-  }
-
-  function update(props) {
-    if (!props) {
-      const contents = "Hover over a state";
-      this._div.innerHTML = contents;
-    } else {
-      // get the language of the user using js
-      var userLang = navigator.language.split("-")[0];
-
-      const contents = props?.name || "N/A";
-      this._div.innerHTML = `
-        <h4>Country information</h4>
-        <p class="text country-name">Name: ${contents}</p>
-        <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
-        <p class="text text">Continent: ${props?.continent || "N/A"}</p>
-        <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
-      `;
-    }
+    return divGuide.appendChild(div);
   }
 </script>
 

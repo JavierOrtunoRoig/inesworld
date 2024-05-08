@@ -3,6 +3,8 @@ import geometries from "@/data/geometriesExtraction.json";
 import type { GEOJson } from "@/types";
 import { markersToShow } from "@/data/markers";
 
+declare var L: any;
+
 // merge atlas with geometries by name
 export const mergeData = (geoJson: GEOJson) => {
 
@@ -206,5 +208,30 @@ export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
         ],
       },
     ).addTo(map);
+  }
+}
+
+export function onAdd(map) {
+  this._div = L.DomUtil.create("div", "info");
+  this.update();
+  return this._div;
+}
+
+export function update(props) {
+  if (!props) {
+    const contents = "Hover over a state";
+    this._div.innerHTML = contents;
+  } else {
+    // get the language of the user using js
+    var userLang = navigator.language.split("-")[0];
+
+    const contents = props?.name || "N/A";
+    this._div.innerHTML = `
+      <h4>Country information</h4>
+      <p class="text country-name">Name: ${contents}</p>
+      <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
+      <p class="text text">Continent: ${props?.continent || "N/A"}</p>
+      <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
+    `;
   }
 }
