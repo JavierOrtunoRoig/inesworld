@@ -1,7 +1,7 @@
 import atlas from "@/data/atlas.geo.json";
 import geometries from "@/data/geometriesExtraction.json";
 import type { GEOJson } from "@/types";
-import { markersToShow } from "@/data/markers";
+import { HOME_POPUP_TEXT, markersToShow, TRAVELLING_POPUP_TEXT } from "@/data/markers";
 
 declare var L: any;
 
@@ -147,7 +147,7 @@ export const getIconExtendOptions = {
 
 export const addHouseMarker = (L, map, houseIcon) => L.marker(markersToShow.livingIn, { icon: houseIcon })
   .addTo(map)
-  .bindPopup("I'm based here");
+  .bindPopup(HOME_POPUP_TEXT);
 
 export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
   if (markersToShow.travellingTo.length !== 0) {
@@ -155,7 +155,7 @@ export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
       icon: planeIcon,
     })
       .addTo(map)
-      .bindPopup("I'm traveling here");
+      .bindPopup(TRAVELLING_POPUP_TEXT);
 
     var latlngs = Array();
 
