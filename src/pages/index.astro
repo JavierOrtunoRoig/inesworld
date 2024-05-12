@@ -1,5 +1,6 @@
 ---
 import TitleRewritter from "@/components/TitleRewritter.astro";
+import WhyMe from "@/components/WhyMe.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 // import Map from "@/components/MapWithAllTrips.astro";
 ---
@@ -31,12 +32,15 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		</section>
 
 		<section id="portfolio">
-			<h2 class="sub-title">My Showreel</h2>
-			<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
-			></lite-youtube>
-			<!-- <Map/> -->
-			<a href="/biblioteca">Discover my work!</a>
+			<div class="container">
+				<h2 class="title">My Showreel</h2>
+				<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
+				></lite-youtube>
+				<a href="/biblioteca">Discover my work!</a>
+			</div>
 		</section>
+
+		<WhyMe />
 	</main>
 </BasicLayout>
 
@@ -51,13 +55,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		font-size: 2rem;
 		text-transform: capitalize;
 		margin: 0 0 1rem 0;
-	}
-
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 	}
 
 	@keyframes fluid {
@@ -87,32 +84,41 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 	img {
 	}
 	#portfolio {
-		width: 1100px;
 		max-width: 100%;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+		justify-content: center;
+		align-items: center;
 
-		/* this component has its own styles in other file */
-		lite-youtube {
-			width: 100%;
-			border-radius: 10px;
-		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 1000px;
+			overflow: hidden;
 
-		a {
-			background-color: var(--primary-color);
-			color: var(--quinary-color);
-			width: fit-content;
-			padding: 0.8rem 1rem;
-			border: 1px solid var(--quinary-color);
-			border-radius: 5rem;
-			font-size: 1.1rem;
-			cursor: pointer;
-			margin-top: 2rem;
-			text-transform: uppercase;
-			align-self: center;
-			text-decoration: none;
+			/* this component has its own styles in other file */
+			lite-youtube {
+				width: 100%;
+				border-radius: 10px;
+			}
+
+			a {
+				background-color: var(--primary-color);
+				color: var(--quinary-color);
+				width: fit-content;
+				padding: 0.8rem 1rem;
+				border: 1px solid var(--quinary-color);
+				border-radius: 5rem;
+				font-size: 1.1rem;
+				cursor: pointer;
+				margin-top: 2rem;
+				text-transform: uppercase;
+				align-self: center;
+				text-decoration: none;
+			}
 		}
 	}
 

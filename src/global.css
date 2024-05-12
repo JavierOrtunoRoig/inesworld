@@ -27,6 +27,18 @@ body {
   padding: 0;
 }
 
+.light-theme {
+  background-color: var(--quinary-color);
+  color: var(--secondary-color);
+}
+
+.title {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
 .fade-up {
   opacity: 0;
   transform: translate3d(0, 5rem, 0);
