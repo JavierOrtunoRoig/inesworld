@@ -43,7 +43,9 @@ const { texts } = Astro.props;
 
     if (document.querySelector(".typewrite > .wrap")) {
       const wrap = document.querySelector(".typewrite > .wrap");
-      this.el.removeChild(wrap);
+      if (wrap?.parentNode === this.el) {
+        this?.el?.removeChild(wrap);
+      }
     }
 
     const wrap = document.createElement("span");
