@@ -10838,7 +10838,7 @@
         "name_zh": "法国",
         "name_zht": "法國",
         "filename": "FRA.geojson",
-        "visited": 0
+        "visited": 2
       }
     },
     {
@@ -12810,7 +12810,7 @@
         "name_zh": "荷兰",
         "name_zht": "荷蘭",
         "filename": "NLD.geojson",
-        "visited": 0
+        "visited": 2
       }
     },
     {
@@ -13694,7 +13694,7 @@
         "name_zh": "梵蒂冈",
         "name_zht": "梵蒂岡",
         "filename": "VAT.geojson",
-        "visited": 0
+        "visited": 2
       }
     },
     {
@@ -14170,7 +14170,7 @@
         "name_zh": "法罗群岛",
         "name_zht": "法羅群島",
         "filename": "FRO.geojson",
-        "visited": 0
+        "visited": 2
       }
     },
     {
@@ -14646,7 +14646,7 @@
         "name_zh": "法属波利尼西亚",
         "name_zht": "法屬玻里尼西亞",
         "filename": "PYF.geojson",
-        "visited": 2
+        "visited": 0
       }
     },
     {
