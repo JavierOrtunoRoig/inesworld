@@ -68,27 +68,27 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         },
       });
 
-      // send("service_3r6y8dq", "template_z2etras", templateParams).then(
-      //   (response) => {
-      //     Swal.close();
-      //     Swal.fire({
-      //       title: "Email sent! I will contact you soon!",
-      //       icon: "success",
-      //     });
-      //   },
-      //   (error) => {
-      //     Swal.close();
-      //     Swal.fire({
-      //       title: "Error sending email",
-      //       icon: "error",
-      //       didOpen: () => {
-      //         setTimeout(() => {
-      //           Swal.close();
-      //         }, 2000);
-      //       },
-      //     });
-      //   },
-      // );
+      send("service_3r6y8dq", "template_z2etras", templateParams).then(
+        (response) => {
+          Swal.close();
+          Swal.fire({
+            title: "Email sent! I will contact you soon!",
+            icon: "success",
+          });
+        },
+        (error) => {
+          Swal.close();
+          Swal.fire({
+            title: "Error sending email",
+            icon: "error",
+            didOpen: () => {
+              setTimeout(() => {
+                Swal.close();
+              }, 2000);
+            },
+          });
+        },
+      );
     });
   };
 
