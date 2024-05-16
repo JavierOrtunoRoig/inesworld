@@ -1,22 +1,31 @@
 ---
-import MarkdownPostLayout from '@/layouts/MarkdownPostLayout.astro';
-import { getCollection } from 'astro:content';
+import MarkdownPostLayout from "@/layouts/MarkdownPostLayout.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blogs', ({ data }) => {
+  const blogEntries = await getCollection("blogs", ({ data }) => {
     return !data.draft;
   });
 
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+  return blogEntries.map((entry) => {
+    const id = entry.id; // -> file name including extension
+    const slug = id.split(".")[0]; // -> file name without extension
 
+    return {
+      params: { slug },
+      props: { entry },
+    };
+  });
 }
 // 2. Para tu plantilla, puedes obtener la entrada directamente de la prop
 const { entry } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<MarkdownPostLayout slug={entry.slug} data={entry.data} frontmatter={remarkPluginFrontmatter}>
+<MarkdownPostLayout
+  slug={entry.slug}
+  data={entry.data}
+  frontmatter={remarkPluginFrontmatter}
+>
   <Content />
 </MarkdownPostLayout>
