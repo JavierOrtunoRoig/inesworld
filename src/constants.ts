@@ -16,8 +16,8 @@ export const trips: Trip[] = [
     link: "/trip/rome-italy",
   },
   {
-    title: "New Delhi, India",
+    title: "Thailand, Thailand",
     image: "https://picsum.photos/1888/1062",
-    link: "/trip/new-delhi",
+    link: "/trip/thailand-thailand",
   },
 ];

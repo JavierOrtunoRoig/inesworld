@@ -2,6 +2,8 @@
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getCollection } from "astro:content";
 
+import "@/../node_modules/viewerjs/dist/viewer.css";
+
 export async function getStaticPaths() {
   const gallery = await getCollection("gallery");
 
@@ -78,6 +80,7 @@ imagesGrouped.push(group1, group2, group3);
 
   const loadScript = () => {
     const img = document.querySelector(".container") as HTMLElement;
+    console.log({ img });
     new Viewer(img, {
       viewed() {},
     });
