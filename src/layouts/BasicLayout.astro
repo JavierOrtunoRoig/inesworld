@@ -1,7 +1,7 @@
 ---
-import Nav from "@/components/Nav.astro";
 import { ViewTransitions } from "astro:transitions";
 import "@/global.css";
+import Navbar from "@/components/Navbar.astro";
 ---
 
 <html lang="en">
@@ -21,8 +21,7 @@ import "@/global.css";
 		<ViewTransitions />
 	</head>
 	<body>
-		<Nav />
-
+		<Navbar />
 		<div class="page-container">
 			<slot />
 		</div>
