@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 
 import "@/global.css";
+import Footer from "@/components/Footer.astro";
 
 interface Post {
   id: string;
@@ -80,6 +81,9 @@ const nextPost = posts[currentPostIndex + 1];
         }
       </div>
     </article>
+
+    <Footer />
+
     <style>
       body,
       html {

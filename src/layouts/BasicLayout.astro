@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import "@/global.css";
 import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <html lang="en">
@@ -26,9 +27,8 @@ import Navbar from "@/components/Navbar.astro";
 			<slot />
 		</div>
 
-		<footer>
-			<p>© All rights reserved. Copyright by Inés Cuevas Jiménez. 2024.</p>
-		</footer>
+		<Footer />
+
 		<style>
 			body,
 			html {
@@ -40,11 +40,6 @@ import Navbar from "@/components/Navbar.astro";
 
 			.page-container {
 				flex-grow: 1;
-			}
-
-			footer {
-				background-color: var(--secondary-color);
-				text-align: center;
 			}
 
 			p {

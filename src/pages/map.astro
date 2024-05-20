@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar.astro";
 import "@/global.css";
 import "@/../node_modules/leaflet/dist/leaflet.css";
+import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
   <body>
     <Navbar />
     <div id="map"></div>
+    <Footer />
   </body>
 </html>
 
@@ -225,8 +227,30 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 
 <style is:inline>
   #map {
-    width: 100vw;
-    height: 100vh;
+    --footer-text-height: 22px;
+    --footer-padding: 1rem;
+    --footer-total-height: calc(
+      var(--footer-text-height) + var(--footer-padding) * 2
+    );
+
+    --navbar-height: 4rem;
+    --navbar-padding: 0.5rem;
+    --navbar-total-height: calc(
+      var(--navbar-height) + var(--navbar-padding) * 2
+    );
+
+    --total-map-height: calc(
+      100% - var(--footer-total-height) - var(--navbar-total-height)
+    );
+
+    width: 100%;
+    height: var(--total-map-height);
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
   }
 
   .info {
