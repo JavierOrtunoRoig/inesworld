@@ -1,5 +1,7 @@
 ---
+import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
+import Youtube from "@/icons/Youtube.astro";
 ---
 
 <nav class="navbar bg-base-100 z-10">
@@ -29,6 +31,21 @@ import Logo from "@/icons/Logo.astro";
         <li class="menu-item"><a href="/biblioteca">Biblioteca</a></li>
         <li class="menu-item"><a href="/contact">Contact</a></li>
         <li class="menu-item"><a href="/map">Trip map</a></li>
+        <ul class="icon-list">
+          <li class="item instagram">
+            <a
+              href="https://www.instagram.com/inesworld.mov/"
+              aria-label="See my instagram account"
+            >
+              <Instagram class={"icon"} />
+            </a>
+          </li>
+          <li class="item youtube">
+            <a href="#" aria-label="See my youtube channel">
+              <Youtube class={"icon"} />
+            </a>
+          </li>
+        </ul>
         <!-- <li>
           <a>Parent</a>
           <ul class="p-2">
@@ -36,10 +53,11 @@ import Logo from "@/icons/Logo.astro";
             <li><a>Submenu 2</a></li>
           </ul>
         </li> -->
-        <li><a>Item 3</a></li>
       </ul>
     </div>
-    <Logo />
+    <a href="/" class="navbar-brand">
+      <Logo />
+    </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
@@ -49,6 +67,21 @@ import Logo from "@/icons/Logo.astro";
       <li class="menu-item"><a href="/biblioteca">Biblioteca</a></li>
       <li class="menu-item"><a href="/contact">Contact</a></li>
       <li class="menu-item"><a href="/map">Trip map</a></li>
+      <ul class="icon-list">
+        <li class="item instagram">
+          <a
+            href="https://www.instagram.com/inesworld.mov/"
+            aria-label="See my instagram account"
+          >
+            <Instagram class={"icon"} />
+          </a>
+        </li>
+        <li class="item youtube">
+          <a href="#" aria-label="See my youtube channel">
+            <Youtube class={"icon"} />
+          </a>
+        </li>
+      </ul>
       <!-- <li>
         <details>
           <summary>Parent</summary>
@@ -69,5 +102,57 @@ import Logo from "@/icons/Logo.astro";
 <style>
   .menu {
     font-size: 1.1rem;
+  }
+</style>
+
+<style is:global>
+  ul.icon-list {
+    padding: 0rem;
+    margin-left: 1rem;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+  }
+
+  li.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    transition: all 0.3s ease;
+  }
+  .item {
+    .icon {
+      --color: #f0f9fe;
+      font-size: 1.1rem;
+      color: var(--color);
+      fill: var(--color);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    a {
+      text-decoration: none;
+      /* width: 32px;
+      height: 32px; */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .icon-list {
+      margin: 0rem !important;
+      padding-top: 0.5rem !important;
+      justify-content: center;
+    }
   }
 </style>
