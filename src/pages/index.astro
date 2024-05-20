@@ -32,11 +32,14 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		</section>
 
 		<section id="portfolio">
-			<div class="container">
+			<div class="showreel-container">
 				<h2 class="title">My Showreel</h2>
 				<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
 				></lite-youtube>
-				<a href="/biblioteca">Discover my work!</a>
+				<a
+					class="btn bg-base-100 w-fit border border-white text-[1.1rem] cursor-pointer uppercase self-center no-underline mt-8 px-4 py-[0.8rem] rounded-[5rem] border-solid;"
+					href="/biblioteca">Discover my work!</a
+				>
 			</div>
 		</section>
 
@@ -81,8 +84,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		}
 	}
 
-	img {
-	}
 	#portfolio {
 		max-width: 100%;
 		padding: 2rem;
@@ -92,11 +93,13 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		justify-content: center;
 		align-items: center;
 
-		.container {
+		.showreel-container {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: 1000px;
+			max-width: 100%;
+
 			overflow: hidden;
 
 			/* this component has its own styles in other file */
@@ -105,7 +108,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 				border-radius: 10px;
 			}
 
-			a {
+			/* a {
 				background-color: var(--primary-color);
 				color: var(--quinary-color);
 				width: fit-content;
@@ -118,7 +121,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 				text-transform: uppercase;
 				align-self: center;
 				text-decoration: none;
-			}
+			} */
 		}
 	}
 
