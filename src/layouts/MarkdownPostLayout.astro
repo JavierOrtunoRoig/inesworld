@@ -1,5 +1,5 @@
 ---
-import Nav from "@/components/Nav.astro";
+import Navbar from "@/components/Navbar.astro";
 import { getValidPosts } from "@/helpers/posts";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
@@ -49,7 +49,7 @@ const nextPost = posts[currentPostIndex + 1];
     <ViewTransitions />
   </head>
   <body>
-    <Nav />
+    <Navbar />
 
     <div class="info">
       <h1 class="title">{frontmatter.title}</h1>
@@ -67,7 +67,7 @@ const nextPost = posts[currentPostIndex + 1];
       <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
     </div>
 
-    <article class="content">
+    <article class="post-content">
       <slot />
       <div class="other-posts">
         {nextPost && <a href={nextPost.slug}>&larr; {nextPost.data.title}</a>}
@@ -86,7 +86,7 @@ const nextPost = posts[currentPostIndex + 1];
         width: 100%;
       }
 
-      .content {
+      .post-content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,6 +112,33 @@ const nextPost = posts[currentPostIndex + 1];
         h5,
         h6 {
           align-self: flex-start;
+          font-weight: 900;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        h4 {
+          font-size: 1.1rem;
+        }
+
+        h5 {
+          font-size: 1rem;
+        }
+
+        h6 {
+          font-size: 0.9rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          margin: 1rem 0;
         }
       }
 
@@ -134,6 +161,7 @@ const nextPost = posts[currentPostIndex + 1];
         padding: 3rem;
 
         & > .title {
+          font-size: 3rem;
           margin: 0;
           text-align: center;
         }
@@ -141,7 +169,7 @@ const nextPost = posts[currentPostIndex + 1];
         & > .read-time {
           margin: 0.5em;
           font-size: 1.2rem;
-          color: var(--tertiary-color);
+          /* color: var(--tertiary-color); */
         }
 
         & > .tags {
@@ -151,7 +179,7 @@ const nextPost = posts[currentPostIndex + 1];
 
           & > span {
             margin: 0 0.2rem;
-            color: var(--tertiary-color);
+            /* color: var(--tertiary-color); */
           }
         }
 

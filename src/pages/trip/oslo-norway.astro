@@ -25,7 +25,7 @@ imagesGrouped.push(group1, group2, group3);
 ---
 
 <BasicLayout title={country}>
-  <div class="container">
+  <div class="gallery-container">
     <h1>{country}</h1>
     <div>
       {
@@ -63,7 +63,7 @@ imagesGrouped.push(group1, group2, group3);
   import "intro.js/introjs.css";
 
   const loadScript = () => {
-    const img = document.querySelector(".container") as HTMLElement;
+    const img = document.querySelector(".gallery-container") as HTMLElement;
     new Viewer(img, {
       viewed() {},
     });
@@ -91,7 +91,7 @@ imagesGrouped.push(group1, group2, group3);
 </script>
 
 <style>
-  .container {
+  .gallery-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -126,7 +126,7 @@ imagesGrouped.push(group1, group2, group3);
   }
 
   @media (max-width: 576px) {
-    .container {
+    .gallery-container {
       > h1 {
         font-size: 3rem;
       }
