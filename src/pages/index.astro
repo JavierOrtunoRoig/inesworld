@@ -1,9 +1,10 @@
 ---
-import Dashboard from "@/components/dashboard/Dashboard.astro";
-import DiffContainer from "@/components/edition/DiffContainer.astro";
+import BasicLayout from "@/layouts/BasicLayout.astro";
 import TitleRewritter from "@/components/TitleRewritter.astro";
 import WhyMe from "@/components/WhyMe.astro";
-import BasicLayout from "@/layouts/BasicLayout.astro";
+import Dashboard from "@/components/dashboard/Dashboard.astro";
+import DiffContainer from "@/components/edition/DiffContainer.astro";
+import Process from "@/components/process/Process.astro";
 ---
 
 <BasicLayout>
@@ -47,6 +48,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		<WhyMe />
 		<Dashboard />
 		<DiffContainer />
+		<Process />
 	</main>
 </BasicLayout>
 

@@ -26,6 +26,7 @@
     "viewerjs": "^1.11.6"
   },
   "devDependencies": {
-    "daisyui": "^4.11.1"
+    "daisyui": "^4.11.1",
+    "tailwindcss-animated": "^1.0.1"
   }
 }
