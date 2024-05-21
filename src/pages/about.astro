@@ -102,11 +102,11 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
   <WhyMe />
 
   <section id="process">
-    <div class="container">
+    <div class="process-container">
       <h1 class="title fade-up">My Process</h1>
       <h2 class="fade-up">5 steps to your results</h2>
 
-      <div class="grid-container">
+      <div class="process-card-container">
         <div
           class="fade-up fade-delay-01 card w-96 bg-neutral text-neutral-content shadow-xl"
         >
@@ -276,12 +276,14 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
       padding: 2rem;
       display: flex;
       justify-content: center;
+      width: 100vw;
 
-      .container {
+      .process-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 1200px;
+        width: 100%;
+        flex-wrap: wrap;
       }
 
       .title {
@@ -295,10 +297,11 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         margin: 1rem 0;
       }
 
-      .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap: 2rem;
+      .process-card-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
       }
     }
 
@@ -322,18 +325,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
           padding: 0rem;
         }
       }
-
-      #why-me {
-        .grid-container {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      #process {
-        .grid-container {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
     }
 
     @media (max-width: 768px) {
@@ -350,12 +341,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
       .title {
         font-size: 3rem;
-      }
-
-      #process {
-        .grid-container {
-          grid-template-columns: 1fr;
-        }
       }
     }
   </style>

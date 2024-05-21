@@ -1,5 +1,5 @@
 <section id="why-me" class="light-theme">
-  <div class="container">
+  <div class="why-me-container">
     <h1 class="title fade-up">Why me</h1>
 
     <div class="grid-container">
@@ -73,7 +73,7 @@
     display: flex;
     justify-content: center;
 
-    .container {
+    .why-me-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -118,6 +118,22 @@
         h2,
         p {
           text-align: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #why-me {
+      .why-me-container {
+        width: 100%;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+
+        img {
+          width: 100%;
         }
       }
     }
