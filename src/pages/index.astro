@@ -1,9 +1,9 @@
 ---
 import Dashboard from "@/components/dashboard/Dashboard.astro";
+import DiffContainer from "@/components/edition/DiffContainer.astro";
 import TitleRewritter from "@/components/TitleRewritter.astro";
 import WhyMe from "@/components/WhyMe.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
-// import Map from "@/components/MapWithAllTrips.astro";
 ---
 
 <BasicLayout>
@@ -44,8 +44,9 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 			</div>
 		</section>
 
-		<Dashboard />
 		<WhyMe />
+		<Dashboard />
+		<DiffContainer />
 	</main>
 </BasicLayout>
 
