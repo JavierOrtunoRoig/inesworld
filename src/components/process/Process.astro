@@ -3,12 +3,14 @@ import Timeline from "./Timeline.astro";
 ---
 
 <section class="w-full p-8 flex flex-col items-center">
-  <h1 class="text-center text-6xl uppercase mt-0 mb-8 font-bold">My process</h1>
+  <h1 class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl">
+    My process
+  </h1>
   <div class="lg:flex lg:flex-row lg:gap-16">
     <Timeline />
 
     <div
-      class="animate-fade animate-duration-1000 card w-96 bg-base-100 shadow-xl"
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl"
     >
       <div class="card-body">
         <h2 class="card-title">1. Connect</h2>
@@ -20,7 +22,7 @@ import Timeline from "./Timeline.astro";
     </div>
 
     <div
-      class="animate-fade animate-duration-1000 card w-96 bg-base-100 shadow-xl hidden"
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
         <h2 class="card-title">2. Concept</h2>
@@ -33,7 +35,7 @@ import Timeline from "./Timeline.astro";
     </div>
 
     <div
-      class="animate-fade animate-duration-1000 card w-96 bg-base-100 shadow-xl hidden"
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
         <h2 class="card-title">3. Create</h2>
@@ -45,7 +47,7 @@ import Timeline from "./Timeline.astro";
     </div>
 
     <div
-      class="animate-fade animate-duration-1000 card w-96 bg-base-100 shadow-xl hidden"
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
         <h2 class="card-title">4. Review</h2>
@@ -58,7 +60,7 @@ import Timeline from "./Timeline.astro";
     </div>
 
     <div
-      class="animate-fade animate-duration-1000 card w-96 bg-base-100 shadow-xl hidden"
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
         <h2 class="card-title">5. Deliver</h2>
