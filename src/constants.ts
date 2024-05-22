@@ -7,7 +7,7 @@ export interface Trip {
 export const trips: Trip[] = [
   {
     title: "Switzerland",
-    image: "/trips/switzerland/1.jpg",
+    image: "/trips/switzerland/1.webp",
     link: "/trip/switzerland",
   },
   {
