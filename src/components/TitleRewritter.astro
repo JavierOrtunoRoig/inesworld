@@ -2,10 +2,14 @@
 const { texts } = Astro.props;
 ---
 
-<h1 class="typewrite" data-period="2000" data-type=`${JSON.stringify(texts)}`>
+<p
+  class="typewrite text-5xl md:text-6xl"
+  data-period="2000"
+  data-type=`${JSON.stringify(texts)}`
+>
   <span class="wrap"></span>
   <span class="tick"></span>
-</h1>
+</p>
 
 <style>
   @keyframes caret {

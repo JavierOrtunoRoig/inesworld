@@ -1,0 +1,158 @@
+---
+import Instagram from "@/icons/Instagram.astro";
+import Logo from "@/icons/Logo.astro";
+import Youtube from "@/icons/Youtube.astro";
+---
+
+<nav class="navbar bg-base-100 z-10">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"></path></svg
+        >
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+      >
+        <li class="menu-item"><a href="/">Home</a></li>
+        <li class="menu-item"><a href="/about">About</a></li>
+        <li class="menu-item"><a href="/blog">Blog</a></li>
+        <li class="menu-item"><a href="/my-work">My work</a></li>
+        <li class="menu-item"><a href="/contact">Contact</a></li>
+        <li class="menu-item"><a href="/map">Trip map</a></li>
+        <ul class="icon-list">
+          <li class="item instagram">
+            <a
+              href="https://www.instagram.com/inesworld.mov/"
+              aria-label="See my instagram account"
+            >
+              <Instagram class={"icon"} />
+            </a>
+          </li>
+          <li class="item youtube">
+            <a href="#" aria-label="See my youtube channel">
+              <Youtube class={"icon"} />
+            </a>
+          </li>
+        </ul>
+        <!-- <li>
+          <a>Parent</a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+    <a href="/" class="navbar-brand">
+      <Logo />
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li class="menu-item"><a href="/">Home</a></li>
+      <li class="menu-item"><a href="/about">About</a></li>
+      <li class="menu-item"><a href="/blog">Blog</a></li>
+      <li class="menu-item"><a href="/my-work">My work</a></li>
+      <li class="menu-item"><a href="/contact">Contact</a></li>
+      <li class="menu-item"><a href="/map">Trip map</a></li>
+      <ul class="icon-list">
+        <li class="item instagram">
+          <a
+            href="https://www.instagram.com/inesworld.mov/"
+            aria-label="See my instagram account"
+          >
+            <Instagram class={"icon"} />
+          </a>
+        </li>
+        <li class="item youtube">
+          <a href="#" aria-label="See my youtube channel">
+            <Youtube class={"icon"} />
+          </a>
+        </li>
+      </ul>
+      <!-- <li>
+        <details>
+          <summary>Parent</summary>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Item 3</a></li> -->
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <!-- <a class="btn">Button</a> -->
+  </div>
+</nav>
+
+<style>
+  .menu {
+    font-size: 1.1rem;
+  }
+</style>
+
+<style is:global>
+  ul.icon-list {
+    padding: 0rem;
+    margin-left: 1rem;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+  }
+
+  li.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    transition: all 0.3s ease;
+  }
+  .item {
+    .icon {
+      --color: #f0f9fe;
+      font-size: 1.1rem;
+      color: var(--color);
+      fill: var(--color);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    a {
+      text-decoration: none;
+      /* width: 32px;
+      height: 32px; */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .icon-list {
+      margin: 0rem !important;
+      padding-top: 0.5rem !important;
+      justify-content: center;
+    }
+  }
+</style>

@@ -6,18 +6,18 @@ export interface Trip {
 
 export const trips: Trip[] = [
   {
-    title: "Oslo, Norway",
-    image: "https://picsum.photos/1920/1080",
-    link: "/trip/oslo-norway",
+    title: "Switzerland",
+    image: "/trips/switzerland/1.jpg",
+    link: "/trip/switzerland",
   },
   {
-    title: "Rome, Italy",
-    image: "https://picsum.photos/1904/1071",
-    link: "/trip/rome-italy",
+    title: "Indonesia",
+    image: "/trips/indonesia/1.jpg",
+    link: "/trip/indonesia",
   },
   {
-    title: "Thailand, Thailand",
-    image: "https://picsum.photos/1888/1062",
-    link: "/trip/thailand-thailand",
+    title: "Vietnam",
+    image: "/trips/vietnam/1.jpg",
+    link: "/trip/vietnam",
   },
 ];

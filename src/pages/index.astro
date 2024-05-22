@@ -1,8 +1,10 @@
 ---
+import BasicLayout from "@/layouts/BasicLayout.astro";
 import TitleRewritter from "@/components/TitleRewritter.astro";
 import WhyMe from "@/components/WhyMe.astro";
-import BasicLayout from "@/layouts/BasicLayout.astro";
-// import Map from "@/components/MapWithAllTrips.astro";
+import Dashboard from "@/components/dashboard/Dashboard.astro";
+import DiffContainer from "@/components/edition/DiffContainer.astro";
+import Process from "@/components/process/Process.astro";
 ---
 
 <BasicLayout>
@@ -21,10 +23,12 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 			<div class="who-am-i">
 				<TitleRewritter
 					texts={[
-						"Hi, I'm Ines.",
-						"I am Creative.",
-						"I Love Photography.",
-						"I Love to Travel.",
+						"Hey, It's Ines",
+						"Creativity",
+						"Connecting",
+						"Photography",
+						"Travelling",
+						"Story telling",
 					]}
 				/>
 			</div>
@@ -32,15 +36,25 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		</section>
 
 		<section id="portfolio">
-			<div class="container">
-				<h2 class="title">My Showreel</h2>
+			<div class="showreel-container">
+				<h2
+					class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl"
+				>
+					My Showreel
+				</h2>
 				<lite-youtube videoid="kcPcTyCoMEY" playlabel="Introduction to myself"
 				></lite-youtube>
-				<a href="/biblioteca">Discover my work!</a>
+				<a
+					class="btn bg-base-100 w-fit border border-white text-[1.1rem] cursor-pointer uppercase self-center no-underline mt-8 px-4 py-[0.8rem] rounded-[5rem] border-solid;"
+					href="/my-work">Discover my work!</a
+				>
 			</div>
 		</section>
 
 		<WhyMe />
+		<Dashboard />
+		<DiffContainer />
+		<Process />
 	</main>
 </BasicLayout>
 
@@ -81,8 +95,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		}
 	}
 
-	img {
-	}
 	#portfolio {
 		max-width: 100%;
 		padding: 2rem;
@@ -92,11 +104,13 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 		justify-content: center;
 		align-items: center;
 
-		.container {
+		.showreel-container {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: 1000px;
+			max-width: 100%;
+
 			overflow: hidden;
 
 			/* this component has its own styles in other file */
@@ -105,7 +119,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 				border-radius: 10px;
 			}
 
-			a {
+			/* a {
 				background-color: var(--primary-color);
 				color: var(--quinary-color);
 				width: fit-content;
@@ -118,7 +132,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 				text-transform: uppercase;
 				align-self: center;
 				text-decoration: none;
-			}
+			} */
 		}
 	}
 
@@ -134,11 +148,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
 		.title {
 			margin: 0;
-		}
-
-		h1 {
-			font-size: 4rem;
-			margin-top: 0;
 		}
 
 		.who-am-i {

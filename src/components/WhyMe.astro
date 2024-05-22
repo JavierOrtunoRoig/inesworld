@@ -1,54 +1,62 @@
-<section id="why-me" class="light-theme">
-  <div class="container">
-    <h1 class="title fade-up">Why me</h1>
+<section class="light-theme p-8 flex flex-col justify-center xl:items-center">
+  <h1 class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl">
+    Why me
+  </h1>
 
-    <div class="grid-container">
-      <img
-        class="fade-down-right-corner fade-delay-01"
-        src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC01482-q4bj7p7pj0m2i9553q3iw0yw7vk18k8gke8imnsp2w.jpg"
-        alt="image to test"
-      />
-      <div class="fade-down fade-delay-02">
-        <h2>Inclusive Storytelling</h2>
-        <p>
-          Authentic visuals that break barriers and contribute to positive
-          social change. I’m unlocking the full potential of your brand by
-          creating a space for all stories to be heard and valued. That sets you
-          apart as a leader of promoting diversity and equality.
-        </p>
-      </div>
-      <img
-        class="fade-down-left-corner fade-delay-03"
-        src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC05373-1-pw112w032dbrhm20j0e1506p479605mo55p4y26faw.jpg"
-        alt="image to test"
-      />
-      <div class="fade-up-right-corner fade-delay-04">
-        <h2>Sustainable Business</h2>
-        <p>
-          The stories I tell are individually tailored for companies that
-          prioritize sustainability. This will not only help to preserve the
-          earth and cultures for future generations, but also positions your
-          business for long-term success.
-        </p>
-      </div>
-      <img
-        class="fade-up fade-delay-05"
-        src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC08211-q4bj8vig2k7z0pfp8qdqi8amy7rjuxwdq7ld841zaw.jpg"
-        alt="image to test"
-      />
-      <div class="fade-up-left-corner fade-delay-06">
-        <h2>Embracing Community</h2>
-        <p>
-          I’m dedicated to creating engaging and relevant content that helps
-          showcasing your brand’s values and builds a strong sense of community
-          around your brand to ensure the success of a business and its mission.
-        </p>
-      </div>
+  <div class="md:flex md:gap-8 xl:w-2/3">
+    <img
+      class="rounded-lg w-full"
+      src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC01482-q4bj7p7pj0m2i9553q3iw0yw7vk18k8gke8imnsp2w.jpg"
+      alt="image to test"
+    />
+    <div class="my-8 md:my-0 md:flex md:flex-col md:justify-center">
+      <h2 class="font-bold text-2xl text-center mb-4">
+        Inclusive Storytelling
+      </h2>
+      <p class="md:text-center">
+        Authentic visuals that break barriers and contribute to positive social
+        change. I’m unlocking the full potential of your brand by creating a
+        space for all stories to be heard and valued. That sets you apart as a
+        leader of promoting diversity and equality.
+      </p>
+    </div>
+  </div>
+
+  <div class="md:flex md:gap-8 xl:w-2/3">
+    <img
+      class="rounded-lg w-full my-8 md:order-2"
+      src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC05373-1-pw112w032dbrhm20j0e1506p479605mo55p4y26faw.jpg"
+      alt="image to test"
+    />
+    <div class="md:flex md:flex-col md:justify-center md:order-1">
+      <h2 class="font-bold text-2xl text-center mb-4">Sustainable Business</h2>
+      <p class="md:text-center">
+        The stories I tell are individually tailored for companies that
+        prioritize sustainability. This will not only help to preserve the earth
+        and cultures for future generations, but also positions your business
+        for long-term success.
+      </p>
+    </div>
+  </div>
+
+  <div class="md:flex md:gap-8 xl:w-2/3">
+    <img
+      class="rounded-lg w-full my-8"
+      src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC08211-q4bj8vig2k7z0pfp8qdqi8amy7rjuxwdq7ld841zaw.jpg"
+      alt="image to test"
+    />
+    <div class="md:flex md:flex-col md:justify-center">
+      <h2 class="font-bold text-2xl text-center mb-4">Embracing Community</h2>
+      <p class="md:text-center">
+        I’m dedicated to creating engaging and relevant content that helps
+        showcasing your brand’s values and builds a strong sense of community
+        around your brand to ensure the success of a business and its mission.
+      </p>
     </div>
   </div>
 </section>
 
-<script>
+<!-- <script>
   import {
     createIntersectionObserver,
     observeAll,
@@ -56,16 +64,13 @@
 
   const runAnimations = () => {
     const fadeUpObserver = createIntersectionObserver();
-    observeAll(fadeUpObserver, ".fade-up");
+    observeAll(fadeUpObserver, ".fade-left");
+    observeAll(fadeUpObserver, ".fade-right");
     observeAll(fadeUpObserver, ".fade-down");
-    observeAll(fadeUpObserver, ".fade-down-right-corner");
-    observeAll(fadeUpObserver, ".fade-down-left-corner");
-    observeAll(fadeUpObserver, ".fade-up-right-corner");
-    observeAll(fadeUpObserver, ".fade-up-left-corner");
   };
 
   document.addEventListener("astro:page-load", runAnimations);
-</script>
+</script> -->
 
 <style>
   #why-me {
@@ -73,7 +78,7 @@
     display: flex;
     justify-content: center;
 
-    .container {
+    .why-me-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -81,26 +86,6 @@
       overflow: hidden;
     }
 
-    /* opcion 1 */
-    /* .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-
-        img {
-          width: 100%;
-          border-radius: 10px;
-        }
-
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 1rem;
-        }
-      } */
-
-    /* opción 2 */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -118,6 +103,22 @@
         h2,
         p {
           text-align: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #why-me {
+      .why-me-container {
+        width: 100%;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+
+        img {
+          width: 100%;
         }
       }
     }

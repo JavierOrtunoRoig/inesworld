@@ -1,0 +1,161 @@
+---
+import Timeline from "./Timeline.astro";
+---
+
+<section class="w-full p-8 flex flex-col items-center">
+  <h1 class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl">
+    My process
+  </h1>
+  <div class="lg:flex lg:flex-row lg:gap-16">
+    <Timeline />
+
+    <div
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl"
+    >
+      <div class="card-body">
+        <h2 class="card-title">1. Connect</h2>
+        <p>
+          Connect with me to share your project details. Together, we'll explore
+          how I can help you achieve your goals and bring your vision to life.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
+    >
+      <div class="card-body">
+        <h2 class="card-title">2. Concept</h2>
+        <p>
+          We develop unique and creative visual concepts, individually designed
+          for you. We tell meaningful stories and build a strong community
+          around your brand.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
+    >
+      <div class="card-body">
+        <h2 class="card-title">3. Create</h2>
+        <p>
+          Now it's my turn. I start working on your project, using my expertise
+          and creativity to turn your vision into reality.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
+    >
+      <div class="card-body">
+        <h2 class="card-title">4. Review</h2>
+        <p>
+          I receive your feedback on the project. I work with you to make the
+          necessary adjustments and ensure the final result meets your
+          expectations.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
+    >
+      <div class="card-body">
+        <h2 class="card-title">5. Deliver</h2>
+        <p>
+          I deliver the final product, making sure it meets your expectations
+          and is ready to impress your audience.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let interval;
+  const loadScript = () => {
+    const cards = document.querySelectorAll(".card");
+    const timeline = document.querySelector("ul.timeline") as HTMLUListElement;
+
+    if (!cards || !timeline) {
+      return;
+    }
+
+    const timelineItems = timeline.querySelectorAll("li");
+
+    // add click event listener to each timeline item
+    timelineItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        cards.forEach((card) => {
+          card.classList.add("hidden");
+        });
+        activeNextPoint(0);
+        activeNextPath(0);
+
+        cards.item(index).classList.remove("hidden");
+
+        for (let i = 0; i < timelineItems.length; i++) {
+          if (i <= index) {
+            activeNextPoint(i);
+            activeNextPath(i);
+          }
+        }
+      });
+    });
+
+    interval = setInterval(() => {
+      const activeItemIndex = Array.from(cards).findIndex(
+        (card) => !card.classList.contains("hidden"),
+      );
+      const nextItemIndex = (activeItemIndex + 1) % cards.length;
+
+      cards.item(activeItemIndex).classList.add("hidden");
+      cards.item(nextItemIndex).classList.remove("hidden");
+
+      activeNextPoint(nextItemIndex);
+      activeNextPath(nextItemIndex);
+    }, 5000);
+
+    const activeNextPoint = (nextItemIndex: number) => {
+      const allSvgElements = timeline.querySelectorAll("svg");
+
+      if (nextItemIndex === 0) {
+        for (let i = 1; i < allSvgElements.length; i++) {
+          // remove 'text-primary' class from all item svg elements
+          allSvgElements[i].classList.remove("text-primary");
+        }
+      } else {
+        // get the :nth-child index of the next item svg element
+        const nextItemSvgIndex = allSvgElements[nextItemIndex];
+        // add 'text-primary' class to the next item svg element
+        nextItemSvgIndex.classList.toggle("text-primary");
+      }
+    };
+
+    const activeNextPath = (nextItemIndex: number) => {
+      const allHrElements = timeline.querySelectorAll("hr");
+
+      // debugger;
+      if (nextItemIndex === 0) {
+        allHrElements.forEach((hr) => {
+          hr.classList.remove("bg-primary");
+        });
+      } else {
+        // get the :nth-child index of the next item hr element
+        const nextItemHrIndex = allHrElements[(nextItemIndex - 1) * 2];
+        const nextItemHrIndex2 = allHrElements[(nextItemIndex - 1) * 2 + 1];
+
+        nextItemHrIndex.classList.toggle("bg-primary");
+        nextItemHrIndex2.classList.toggle("bg-primary");
+      }
+    };
+  };
+
+  document.addEventListener("astro:page-load", loadScript);
+  document.addEventListener("astro:before-preparation", () => {
+    clearInterval(interval);
+    interval = null;
+  });
+</script>
