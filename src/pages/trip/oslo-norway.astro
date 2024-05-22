@@ -32,7 +32,7 @@ imagesGrouped.push(group1, group2, group3);
         imagesGrouped.map((group) => (
           <div class="flex">
             {group.map((image) => (
-              <img class="fade-up" src={image.src} alt={country} />
+              <img class="fade-up hover:cursor-pointer" src={image.src} alt={country} />
             ))}
           </div>
         ))
