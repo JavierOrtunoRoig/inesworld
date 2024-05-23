@@ -1,0 +1,26 @@
+---
+const { text } = Astro.props;
+
+const src = `/trips/${text.toLowerCase()}/1.webp`;
+const url = `/trip/${text.toLowerCase()}`;
+---
+
+<a
+  class="w-full flex justify-center sm:w-96 transition-transform hover:cursor-pointer hover:scale-105"
+  href={url}
+>
+  <div class="card shadow image-full before:opacity-15">
+    <figure>
+      <img src={src} alt="Indonesia" />
+    </figure>
+    <div class="card-body">
+      <h2 class="title text-2xl sm:text-4xl text-white">{text}</h2>
+    </div>
+  </div>
+</a>
+
+<style>
+  div.card::before {
+    opacity: 0.3;
+  }
+</style>

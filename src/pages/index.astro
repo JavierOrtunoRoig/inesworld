@@ -5,6 +5,7 @@ import WhyMe from "@/components/home/WhyMe.astro";
 import Dashboard from "@/components/home/dashboard/SkillsContainer.astro";
 import DiffContainer from "@/components/home/edition/DiffContainer.astro";
 import Process from "@/components/home/process/Process.astro";
+import LatestWorks from "@/components/home/LatestWorks.astro";
 ---
 
 <BasicLayout>
@@ -21,7 +22,7 @@ import Process from "@/components/home/process/Process.astro";
 	<main>
 		<section
 			id="who-am-i"
-			class="max-w-full p-8 flex flex-col items-center gap-16 sm:flex-row sm:gap-8 sm:justify-around"
+			class="max-w-full p-8 flex flex-col items-center gap-16 md:flex-row md:gap-8 md:justify-around"
 		>
 			<div
 				class="who-am-i sm:w-[50%] sm:flex sm:justify-center sm:items-center"
@@ -64,6 +65,7 @@ import Process from "@/components/home/process/Process.astro";
 		<Dashboard />
 		<DiffContainer />
 		<Process />
+		<LatestWorks />
 	</main>
 </BasicLayout>
 
