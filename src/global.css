@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title {
+    @apply text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl;
+  }
+}
+
+
 /* Set global variables */
 :root {
   --header-height: 48px;
@@ -32,12 +43,6 @@ body {
   color: var(--secondary-color);
 }
 
-.title {
-  text-align: center;
-  font-size: 4rem;
-  text-transform: uppercase;
-  margin-top: 0;
-}
 
 .fade-up {
   opacity: 0;

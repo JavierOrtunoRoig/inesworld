@@ -2,7 +2,7 @@
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import TitleRewritter from "@/components/TitleRewritter.astro";
 import WhyMe from "@/components/WhyMe.astro";
-import Dashboard from "@/components/dashboard/Dashboard.astro";
+import Dashboard from "@/components/dashboard/SkillsContainer.astro";
 import DiffContainer from "@/components/edition/DiffContainer.astro";
 import Process from "@/components/process/Process.astro";
 ---
@@ -37,11 +37,7 @@ import Process from "@/components/process/Process.astro";
 
 		<section id="portfolio">
 			<div class="showreel-container">
-				<h2
-					class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl"
-				>
-					My Showreel
-				</h2>
+				<h2 class="title">My Showreel</h2>
 				<lite-youtube videoid="U_4y5UKOOTI" playlabel="Introduction to myself"
 				></lite-youtube>
 				<a
@@ -59,18 +55,6 @@ import Process from "@/components/process/Process.astro";
 </BasicLayout>
 
 <style>
-	.title {
-		text-align: center;
-		font-size: 4rem;
-		margin-top: 0;
-	}
-
-	.sub-title {
-		font-size: 2rem;
-		text-transform: capitalize;
-		margin: 0 0 1rem 0;
-	}
-
 	@keyframes fluid {
 		0% {
 			border-radius: 79% 21% 39% 61% / 22% 80% 20% 78%;
