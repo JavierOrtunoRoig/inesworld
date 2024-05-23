@@ -48,7 +48,11 @@ imagesGrouped.push(group1, group2, group3);
         imagesGrouped.map((group) => (
           <div class="flex">
             {group.map((image) => (
-              <img class="fade-up" src={image.path} alt={image.description} />
+              <img
+                class="fade-up hover:cursor-pointer"
+                src={image.path}
+                alt={image.description}
+              />
             ))}
           </div>
         ))
@@ -80,7 +84,6 @@ imagesGrouped.push(group1, group2, group3);
 
   const loadScript = () => {
     const img = document.querySelector(".gallery-container") as HTMLElement;
-    console.log({ img });
     new Viewer(img, {
       viewed() {},
     });
