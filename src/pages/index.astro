@@ -19,8 +19,13 @@ import Process from "@/components/process/Process.astro";
 		src="/lite-youtube/lite-yt-embed.js"></script>
 
 	<main>
-		<section id="who-am-i">
-			<div class="who-am-i">
+		<section
+			id="who-am-i"
+			class="max-w-full p-8 flex flex-col items-center gap-16 sm:flex-row sm:gap-8 sm:justify-around"
+		>
+			<div
+				class="who-am-i sm:w-[50%] sm:flex sm:justify-center sm:items-center"
+			>
 				<TitleRewritter
 					texts={[
 						"Hey, It's Ines",
@@ -32,11 +37,19 @@ import Process from "@/components/process/Process.astro";
 					]}
 				/>
 			</div>
-			<img src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
+			<img
+				class="min-w-[300px] w-full max-w-[800px] flex-[2] animate-[fluid_45s_infinite_linear] mb-8 rounded-[36%_64%_70%_30%_/_30%_30%_70%_70%];"
+				src="/ines.jpeg"
+				alt="Inés Cuevas Jiménez"
+			/>
 		</section>
 
-		<section id="portfolio">
-			<div class="showreel-container">
+		<section
+			class="max-w-full p-8 flex flex-col grow justify-center items-center"
+		>
+			<div
+				class="showreel-container flex flex-col items-center w-full lg:w-[1000px] max-w-full overflow-hidden"
+			>
 				<h2 class="title">My Showreel</h2>
 				<lite-youtube videoid="U_4y5UKOOTI" playlabel="Introduction to myself"
 				></lite-youtube>
@@ -78,94 +91,9 @@ import Process from "@/components/process/Process.astro";
 			border-radius: 79% 21% 39% 61% / 22% 80% 20% 78%;
 		}
 	}
-
-	#portfolio {
-		max-width: 100%;
-		padding: 2rem;
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		justify-content: center;
-		align-items: center;
-
-		.showreel-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 1000px;
-			max-width: 100%;
-
-			overflow: hidden;
-
-			/* this component has its own styles in other file */
-			lite-youtube {
-				width: 100%;
-				border-radius: 10px;
-			}
-
-			/* a {
-				background-color: var(--primary-color);
-				color: var(--quinary-color);
-				width: fit-content;
-				padding: 0.8rem 1rem;
-				border: 1px solid var(--quinary-color);
-				border-radius: 5rem;
-				font-size: 1.1rem;
-				cursor: pointer;
-				margin-top: 2rem;
-				text-transform: uppercase;
-				align-self: center;
-				text-decoration: none;
-			} */
-		}
-	}
-
-	#who-am-i {
-		height: 100vh;
-		max-width: 100%;
-		padding: 2rem;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
-		/* center */
-		place-items: center;
-
-		.title {
-			margin: 0;
-		}
-
-		.who-am-i {
-			flex: 3;
-			text-align: center;
-		}
-
-		img {
-			border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
-			min-width: 300px;
-			width: 100%;
-			max-width: 800px;
-			flex: 2;
-			margin-bottom: 2rem;
-			animation: fluid 45s infinite linear;
-		}
-
-		@media (max-width: 992px) {
-			& {
-				grid-template-columns: 1fr;
-				grid-template-rows: 1fr 1fr;
-				width: 100%;
-			}
-
-			img {
-				min-width: auto;
-				width: 75%;
-			}
-
-			.who-am-i {
-				flex: 2;
-				text-align: center;
-			}
-		}
+	lite-youtube {
+		width: 100%;
+		border-radius: 10px;
 	}
 
 	@media (max-width: 576px) {
