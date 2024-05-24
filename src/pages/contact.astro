@@ -11,22 +11,22 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
     </p>
     <form class="pt-4">
       <div class="form-field">
-        <label class="text-xl" for="name">Name:</label>
+        <label class="text-xl" for="from_name">Name:</label>
         <input
           class="p-2 rounded-lg"
           type="text"
           id="name"
-          name="name"
+          name="from_name"
           required
         />
       </div>
       <div class="form-field">
-        <label class="text-xl" for="email">Email:</label>
+        <label class="text-xl" for="to_email">Email:</label>
         <input
           class="p-2 rounded-lg"
           type="email"
           id="email"
-          name="email"
+          name="to_email"
           required
         />
       </div>
@@ -50,9 +50,24 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
       const formData = new FormData(form);
-      console.log(Object.fromEntries(formData));
+
+      /* 
+        In the web template:
+        - From name: Es el nombre de la persona que envía el mensaje, aparecerá como nombre de la persona que envía el correo, EN LA PREVIEW DEL CORREO
+
+        from email: el email del servicio usado. en este caso el mio de google
+        Con reply to podemos enviar otro correo al que mandó el formulario
+      */
+
+      // to_email will be inserted in the email body linked to {{to_email}}
+      // from_name will be inserted in the email body linked to {{from_name}}
+      // message will be inserted in the email body linked to {{message}}
+      const data = {
+        to_email: formData.get("to_email"),
+        from_name: formData.get("from_name"),
+        message: formData.get("message"),
+      };
 
       init({
         publicKey: "Zysq_8MGlqpjcijD4",
@@ -62,13 +77,6 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         },
       });
 
-      const templateParams = {
-        to_email: "javiortunoroig@gmail.com",
-        from_name: "Ines",
-        to_name: "Javi",
-        message: "Check this out!",
-      };
-
       Swal.fire({
         title: "Sending email...",
         didOpen: () => {
@@ -76,7 +84,7 @@ import BasicLayout from "@/layouts/BasicLayout.astro";
         },
       });
 
-      send("service_3r6y8dq", "template_z2etras", templateParams).then(
+      send("service_3r6y8dq", "template_d3rlfnk", data).then(
         (response) => {
           Swal.close();
           Swal.fire({
