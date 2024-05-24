@@ -1,8 +1,10 @@
 ---
 import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+
 import "@/global.css";
 import "@/../node_modules/leaflet/dist/leaflet.css";
-import Footer from "@/components/Footer.astro";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 ---
 
 <!doctype html>
@@ -22,10 +24,69 @@ import Footer from "@/components/Footer.astro";
   </head>
   <body>
     <Navbar />
+    <h1 class="title">All my trips!</h1>
+    <span class="fi fi-es"></span>
+
     <div id="map"></div>
+
+    <div class="px-8">
+      <h2 class="m-8 text-center text-3xl font-bold">Comming soon!!</h2>
+      <div id="comming-countries" class="flex flex-wrap gap-4 justify-center">
+        <!-- <div class="card w-fit bg-base-100 shadow-2xl">
+          <div class="card-body p-0 flex flex-row m-0">
+            <p class="fi fi-kr !h-[66px] !w-[5rem] !rounded-l-2xl"></p>
+            <h2 class="card-title">South Korea</h2>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="px-8 py-8">
+      <h2 class="m-8 text-center text-3xl font-bold">Countries visited!!</h2>
+      <div id="visited-countries" class="flex flex-wrap gap-4 justify-center">
+      </div>
+    </div>
+
     <Footer />
   </body>
 </html>
+
+<script>
+  import atlas from "@/data/atlas.geo.json";
+  // Next trips
+  const commingContainer = document.getElementById(
+    "comming-countries",
+  ) as HTMLDivElement;
+  const countriesToVisit = atlas.features.filter(
+    (country) => country.properties.visited === 1,
+  );
+  countriesToVisit.forEach((country) =>
+    createCard(commingContainer, country.properties),
+  );
+
+  // countried visited
+  const visitedContainer = document.getElementById(
+    "visited-countries",
+  ) as HTMLDivElement;
+  const countriesVisited = atlas.features.filter(
+    (country) => country.properties.visited === 2,
+  );
+  countriesVisited.forEach((country) =>
+    createCard(visitedContainer, country.properties),
+  );
+
+  function createCard(container: HTMLDivElement, countryProperties) {
+    const div = document.createElement("div");
+    div.classList.add("card", "w-fit", "bg-base-200", "shadow-2xl");
+    div.innerHTML = `
+      <div class="card-body p-0 flex flex-row">
+        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl"></p>
+        <h2 class="card-title pr-4">${countryProperties.name}</h2>
+      </div>
+    `;
+    container.appendChild(div);
+  }
+</script>
 
 <script>
   import introJs from "intro.js";
@@ -80,6 +141,7 @@ import Footer from "@/components/Footer.astro";
     onAdd,
     update,
   } from "@/helpers/map";
+  import { markersToShow } from "@/data/markers";
 
   const geoJson: GEOJson = {
     type: "FeatureCollection",
@@ -90,7 +152,7 @@ import Footer from "@/components/Footer.astro";
   declare var L: any;
 
   // create a map
-  const map = L.map("map").setView([47.712198, 46.313982], 3);
+  const map = L.map("map").setView(markersToShow.livingIn, 3);
   const tiles = addTiles(L, map);
 
   preventMapDrag(L, map);
@@ -246,7 +308,7 @@ import Footer from "@/components/Footer.astro";
     );
 
     width: 100%;
-    height: var(--total-map-height);
+    height: calc(var(--total-map-height) - 20%);
   }
 
   html,

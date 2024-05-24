@@ -116,6 +116,8 @@ interface Properties {
   abbrev_len: number;
   tiny: number;
   homepart: number;
+  iso_a2: string;
+  iso_a3: string;
   min_zoom: number;
   min_label: number;
   max_label: number;

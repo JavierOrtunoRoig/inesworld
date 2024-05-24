@@ -66,7 +66,9 @@
         "name_zh": "哥斯达黎加",
         "name_zht": "哥斯大黎加",
         "filename": "CRI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CR",
+        "iso_a3": "CRI"
       }
     },
     {
@@ -134,7 +136,9 @@
         "name_zh": "尼加拉瓜",
         "name_zht": "尼加拉瓜",
         "filename": "NIC.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NI",
+        "iso_a3": "NIC"
       }
     },
     {
@@ -202,7 +206,9 @@
         "name_zh": "法属圣马丁",
         "name_zht": "法屬聖馬丁",
         "filename": "MAF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MF",
+        "iso_a3": "MAF"
       }
     },
     {
@@ -270,7 +276,9 @@
         "name_zh": "荷属圣马丁",
         "name_zht": "荷屬聖馬丁",
         "filename": "SXM.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "SX",
+        "iso_a3": "SXM"
       }
     },
     {
@@ -338,7 +346,9 @@
         "name_zh": "海地",
         "name_zht": "海地",
         "filename": "HTI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "HT",
+        "iso_a3": "HTI"
       }
     },
     {
@@ -406,7 +416,9 @@
         "name_zh": "多米尼加",
         "name_zht": "多明尼加",
         "filename": "DOM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "DO",
+        "iso_a3": "DOM"
       }
     },
     {
@@ -474,7 +486,9 @@
         "name_zh": "萨尔瓦多",
         "name_zht": "薩爾瓦多",
         "filename": "SLV.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SV",
+        "iso_a3": "SLV"
       }
     },
     {
@@ -542,7 +556,9 @@
         "name_zh": "危地马拉",
         "name_zht": "瓜地馬拉",
         "filename": "GTM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GT",
+        "iso_a3": "GTM"
       }
     },
     {
@@ -610,7 +626,9 @@
         "name_zh": "古巴",
         "name_zht": "古巴",
         "filename": "CUB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CU",
+        "iso_a3": "CUB"
       }
     },
     {
@@ -678,7 +696,9 @@
         "name_zh": "洪都拉斯",
         "name_zht": "宏都拉斯",
         "filename": "HND.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "HN",
+        "iso_a3": "HND"
       }
     },
     {
@@ -746,7 +766,9 @@
         "name_zh": "美国",
         "name_zht": "美國",
         "filename": "USA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "US",
+        "iso_a3": "USA"
       }
     },
     {
@@ -814,7 +836,9 @@
         "name_zh": "加拿大",
         "name_zht": "加拿大",
         "filename": "CAN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CA",
+        "iso_a3": "CAN"
       }
     },
     {
@@ -882,7 +906,9 @@
         "name_zh": "墨西哥",
         "name_zht": "墨西哥",
         "filename": "MEX.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MX",
+        "iso_a3": "MEX"
       }
     },
     {
@@ -950,7 +976,9 @@
         "name_zh": "伯利兹",
         "name_zht": "貝里斯",
         "filename": "BLZ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BZ",
+        "iso_a3": "BLZ"
       }
     },
     {
@@ -1018,7 +1046,9 @@
         "name_zh": "巴拿马",
         "name_zht": "巴拿馬",
         "filename": "PAN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PA",
+        "iso_a3": "PAN"
       }
     },
     {
@@ -1086,7 +1116,9 @@
         "name_zh": "格陵兰",
         "name_zht": "格陵蘭",
         "filename": "GRL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GL",
+        "iso_a3": "GRL"
       }
     },
     {
@@ -1154,7 +1186,9 @@
         "name_zh": "库拉索",
         "name_zht": "古拉索",
         "filename": "CUW.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CW",
+        "iso_a3": "CUW"
       }
     },
     {
@@ -1222,7 +1256,9 @@
         "name_zh": "阿鲁巴",
         "name_zht": "阿魯巴",
         "filename": "ABW.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AW",
+        "iso_a3": "ABW"
       }
     },
     {
@@ -1290,7 +1326,9 @@
         "name_zh": "巴哈马",
         "name_zht": "巴哈馬",
         "filename": "BHS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BS",
+        "iso_a3": "BHS"
       }
     },
     {
@@ -1358,7 +1396,9 @@
         "name_zh": "特克斯和凯科斯群岛",
         "name_zht": "土克凱可群島",
         "filename": "TCA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TC",
+        "iso_a3": "TCA"
       }
     },
     {
@@ -1426,7 +1466,9 @@
         "name_zh": "圣皮埃尔和密克隆",
         "name_zht": "聖皮埃與密克隆群島",
         "filename": "SPM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PM",
+        "iso_a3": "SPM"
       }
     },
     {
@@ -1494,7 +1536,9 @@
         "name_zh": "特立尼达和多巴哥",
         "name_zht": "千里達及托巴哥",
         "filename": "TTO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TT",
+        "iso_a3": "TTO"
       }
     },
     {
@@ -1562,7 +1606,9 @@
         "name_zh": "格林纳达",
         "name_zht": "格瑞那達",
         "filename": "GRD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GD",
+        "iso_a3": "GRD"
       }
     },
     {
@@ -1630,7 +1676,9 @@
         "name_zh": "圣文森特和格林纳丁斯",
         "name_zht": "聖文森及格瑞那丁",
         "filename": "VCT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "VC",
+        "iso_a3": "VCT"
       }
     },
     {
@@ -1698,7 +1746,9 @@
         "name_zh": "巴巴多斯",
         "name_zht": "巴貝多",
         "filename": "BRB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BB",
+        "iso_a3": "BRB"
       }
     },
     {
@@ -1766,7 +1816,9 @@
         "name_zh": "圣卢西亚",
         "name_zht": "聖露西亞",
         "filename": "LCA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LC",
+        "iso_a3": "LCA"
       }
     },
     {
@@ -1834,7 +1886,9 @@
         "name_zh": "多米尼克",
         "name_zht": "多米尼克",
         "filename": "DMA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "DM",
+        "iso_a3": "DMA"
       }
     },
     {
@@ -1902,7 +1956,9 @@
         "name_zh": "蒙特塞拉特",
         "name_zht": "蒙哲臘",
         "filename": "MSR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MS",
+        "iso_a3": "MSR"
       }
     },
     {
@@ -1970,7 +2026,9 @@
         "name_zh": "安提瓜和巴布达",
         "name_zht": "安地卡及巴布達",
         "filename": "ATG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AG",
+        "iso_a3": "ATG"
       }
     },
     {
@@ -2038,7 +2096,9 @@
         "name_zh": "圣基茨和尼维斯",
         "name_zht": "聖克里斯多福與尼維斯",
         "filename": "KNA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KN",
+        "iso_a3": "KNA"
       }
     },
     {
@@ -2106,7 +2166,9 @@
         "name_zh": "美属维尔京群岛",
         "name_zht": "美屬維京群島",
         "filename": "VIR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "VI",
+        "iso_a3": "VIR"
       }
     },
     {
@@ -2174,7 +2236,9 @@
         "name_zh": "圣巴泰勒米",
         "name_zht": "聖巴瑟米",
         "filename": "BLM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BL",
+        "iso_a3": "BLM"
       }
     },
     {
@@ -2242,7 +2306,9 @@
         "name_zh": "波多黎各",
         "name_zht": "波多黎各",
         "filename": "PRI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PR",
+        "iso_a3": "PRI"
       }
     },
     {
@@ -2310,7 +2376,9 @@
         "name_zh": "安圭拉",
         "name_zht": "安吉拉",
         "filename": "AIA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AI",
+        "iso_a3": "AIA"
       }
     },
     {
@@ -2378,7 +2446,9 @@
         "name_zh": "英属维尔京群岛",
         "name_zht": "英屬維京群島",
         "filename": "VGB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "VG",
+        "iso_a3": "VGB"
       }
     },
     {
@@ -2446,7 +2516,9 @@
         "name_zh": "牙买加",
         "name_zht": "牙買加",
         "filename": "JAM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "JM",
+        "iso_a3": "JAM"
       }
     },
     {
@@ -2514,7 +2586,9 @@
         "name_zh": "开曼群岛",
         "name_zht": "開曼群島",
         "filename": "CYM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KY",
+        "iso_a3": "CYM"
       }
     },
     {
@@ -2582,7 +2656,9 @@
         "name_zh": "百慕大",
         "name_zht": "百慕達",
         "filename": "BMU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BM",
+        "iso_a3": "BMU"
       }
     },
     {
@@ -2650,7 +2726,9 @@
         "name_vi": "Indonesia",
         "name_zh": "印度尼西亚",
         "name_zht": "印度尼西亞",
-        "filename": "IDN.geojson"
+        "filename": "IDN.geojson",
+        "iso_a2": "ID",
+        "iso_a3": "IDN"
       }
     },
     {
@@ -2718,7 +2796,9 @@
         "name_zh": "马来西亚",
         "name_zht": "馬來西亞",
         "filename": "MYS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MY",
+        "iso_a3": "MYS"
       }
     },
     {
@@ -2800,7 +2880,9 @@
         "name_zh": "塞浦路斯",
         "name_zht": "賽普勒斯",
         "filename": "CYP.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "CY",
+        "iso_a3": "CYP"
       }
     },
     {
@@ -2868,7 +2950,9 @@
         "name_zh": "印度",
         "name_zht": "印度",
         "filename": "IND.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IN",
+        "iso_a3": "IND"
       }
     },
     {
@@ -2936,7 +3020,9 @@
         "name_zh": "中华人民共和国",
         "name_zht": "中華人民共和國",
         "filename": "CHN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CN",
+        "iso_a3": "CHN"
       }
     },
     {
@@ -3004,7 +3090,9 @@
         "name_zh": "以色列",
         "name_zht": "以色列",
         "filename": "ISR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IL",
+        "iso_a3": "ISR"
       }
     },
     {
@@ -3072,7 +3160,9 @@
         "name_zh": "巴勒斯坦",
         "name_zht": "巴勒斯坦地區",
         "filename": "PSE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PS",
+        "iso_a3": "PSE"
       }
     },
     {
@@ -3140,7 +3230,9 @@
         "name_zh": "黎巴嫩",
         "name_zht": "黎巴嫩",
         "filename": "LBN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LB",
+        "iso_a3": "LBN"
       }
     },
     {
@@ -3208,7 +3300,9 @@
         "name_zh": "叙利亚",
         "name_zht": "敘利亞",
         "filename": "SYR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SY",
+        "iso_a3": "SYR"
       }
     },
     {
@@ -3276,7 +3370,9 @@
         "name_zh": "大韩民国",
         "name_zht": "大韓民國",
         "filename": "KOR.geojson",
-        "visited": 1
+        "visited": 1,
+        "iso_a2": "KR",
+        "iso_a3": "KOR"
       }
     },
     {
@@ -3344,7 +3440,9 @@
         "name_zh": "朝鲜民主主义人民共和国",
         "name_zht": "朝鮮民主主義人民共和國",
         "filename": "PRK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KP",
+        "iso_a3": "PRK"
       }
     },
     {
@@ -3412,7 +3510,9 @@
         "name_zh": "不丹",
         "name_zht": "不丹",
         "filename": "BTN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BT",
+        "iso_a3": "BTN"
       }
     },
     {
@@ -3480,7 +3580,9 @@
         "name_zh": "阿曼",
         "name_zht": "阿曼",
         "filename": "OMN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "OM",
+        "iso_a3": "OMN"
       }
     },
     {
@@ -3548,7 +3650,9 @@
         "name_zh": "乌兹别克斯坦",
         "name_zht": "烏茲別克",
         "filename": "UZB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "UZ",
+        "iso_a3": "UZB"
       }
     },
     {
@@ -3616,7 +3720,9 @@
         "name_zh": "哈萨克斯坦",
         "name_zht": "哈薩克",
         "filename": "KAZ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KZ",
+        "iso_a3": "KAZ"
       }
     },
     {
@@ -3684,7 +3790,9 @@
         "name_zh": "塔吉克斯坦",
         "name_zht": "塔吉克",
         "filename": "TJK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TJ",
+        "iso_a3": "TJK"
       }
     },
     {
@@ -3752,7 +3860,9 @@
         "name_zh": "蒙古国",
         "name_zht": "蒙古國",
         "filename": "MNG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MN",
+        "iso_a3": "MNG"
       }
     },
     {
@@ -3820,7 +3930,9 @@
         "name_zh": "越南",
         "name_zht": "越南",
         "filename": "VNM.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "VN",
+        "iso_a3": "VNM"
       }
     },
     {
@@ -3888,7 +4000,9 @@
         "name_zh": "柬埔寨",
         "name_zht": "柬埔寨",
         "filename": "KHM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KH",
+        "iso_a3": "KHM"
       }
     },
     {
@@ -3956,7 +4070,9 @@
         "name_zh": "阿拉伯联合酋长国",
         "name_zht": "阿拉伯聯合大公國",
         "filename": "ARE.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "AE",
+        "iso_a3": "ARE"
       }
     },
     {
@@ -4024,7 +4140,9 @@
         "name_zh": "格鲁吉亚",
         "name_zht": "喬治亞",
         "filename": "GEO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GE",
+        "iso_a3": "GEO"
       }
     },
     {
@@ -4092,7 +4210,9 @@
         "name_zh": "阿塞拜疆",
         "name_zht": "亞塞拜然",
         "filename": "AZE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AZ",
+        "iso_a3": "AZE"
       }
     },
     {
@@ -4160,7 +4280,9 @@
         "name_zh": "土耳其",
         "name_zht": "土耳其",
         "filename": "TUR.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "TR",
+        "iso_a3": "TUR"
       }
     },
     {
@@ -4228,7 +4350,9 @@
         "name_zh": "老挝",
         "name_zht": "寮國",
         "filename": "LAO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LA",
+        "iso_a3": "LAO"
       }
     },
     {
@@ -4296,7 +4420,9 @@
         "name_zh": "吉尔吉斯斯坦",
         "name_zht": "吉爾吉斯",
         "filename": "KGZ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KG",
+        "iso_a3": "KGZ"
       }
     },
     {
@@ -4364,7 +4490,9 @@
         "name_zh": "亚美尼亚",
         "name_zht": "亞美尼亞",
         "filename": "ARM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AM",
+        "iso_a3": "ARM"
       }
     },
     {
@@ -4432,7 +4560,9 @@
         "name_zh": "伊拉克",
         "name_zht": "伊拉克",
         "filename": "IRQ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IQ",
+        "iso_a3": "IRQ"
       }
     },
     {
@@ -4500,7 +4630,9 @@
         "name_zh": "伊朗",
         "name_zht": "伊朗",
         "filename": "IRN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IR",
+        "iso_a3": "IRN"
       }
     },
     {
@@ -4568,7 +4700,9 @@
         "name_zh": "卡塔尔",
         "name_zht": "卡達",
         "filename": "QAT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "QA",
+        "iso_a3": "QAT"
       }
     },
     {
@@ -4636,7 +4770,9 @@
         "name_zh": "沙特阿拉伯",
         "name_zht": "沙烏地阿拉伯",
         "filename": "SAU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SA",
+        "iso_a3": "SAU"
       }
     },
     {
@@ -4704,7 +4840,9 @@
         "name_zh": "巴基斯坦",
         "name_zht": "巴基斯坦",
         "filename": "PAK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PK",
+        "iso_a3": "PAK"
       }
     },
     {
@@ -4772,7 +4910,9 @@
         "name_zh": "泰国",
         "name_zht": "泰國",
         "filename": "THA.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "TH",
+        "iso_a3": "THA"
       }
     },
     {
@@ -4840,7 +4980,9 @@
         "name_zh": "科威特",
         "name_zht": "科威特",
         "filename": "KWT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KW",
+        "iso_a3": "KWT"
       }
     },
     {
@@ -4908,7 +5050,9 @@
         "name_zh": "东帝汶",
         "name_zht": "東帝汶",
         "filename": "TLS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TL",
+        "iso_a3": "TLS"
       }
     },
     {
@@ -4976,7 +5120,9 @@
         "name_zh": "文莱",
         "name_zht": "汶萊",
         "filename": "BRN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BN",
+        "iso_a3": "BRN"
       }
     },
     {
@@ -5044,7 +5190,9 @@
         "name_zh": "缅甸",
         "name_zht": "緬甸",
         "filename": "MMR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MM",
+        "iso_a3": "MMR"
       }
     },
     {
@@ -5112,7 +5260,9 @@
         "name_zh": "孟加拉国",
         "name_zht": "孟加拉",
         "filename": "BGD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BD",
+        "iso_a3": "BGD"
       }
     },
     {
@@ -5180,7 +5330,9 @@
         "name_zh": "阿富汗",
         "name_zht": "阿富汗",
         "filename": "AFG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AF",
+        "iso_a3": "AFG"
       }
     },
     {
@@ -5248,7 +5400,9 @@
         "name_zh": "土库曼斯坦",
         "name_zht": "土庫曼",
         "filename": "TKM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TM",
+        "iso_a3": "TKM"
       }
     },
     {
@@ -5316,7 +5470,9 @@
         "name_zh": "约旦",
         "name_zht": "約旦",
         "filename": "JOR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "JO",
+        "iso_a3": "JOR"
       }
     },
     {
@@ -5384,7 +5540,9 @@
         "name_zh": "尼泊尔",
         "name_zht": "尼泊爾",
         "filename": "NPL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NP",
+        "iso_a3": "NPL"
       }
     },
     {
@@ -5452,7 +5610,9 @@
         "name_zh": "也门",
         "name_zht": "葉門",
         "filename": "YEM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "YE",
+        "iso_a3": "YEM"
       }
     },
     {
@@ -5520,7 +5680,9 @@
         "name_zh": "香港",
         "name_zht": "香港",
         "filename": "HKG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "HK",
+        "iso_a3": "HKG"
       }
     },
     {
@@ -5602,7 +5764,9 @@
         "name_zh": "北塞浦路斯土耳其共和国",
         "name_zht": "北賽普勒斯土耳其共和國",
         "filename": "CYN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -5670,7 +5834,9 @@
         "name_zh": "锡亚琴冰川",
         "name_zht": "錫亞琴冰川",
         "filename": "siachenglacier.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -5738,7 +5904,9 @@
         "name_zh": "菲律宾",
         "name_zht": "菲律賓",
         "filename": "PHL.geojson",
-        "visited": 1
+        "visited": 1,
+        "iso_a2": "PH",
+        "iso_a3": "PHL"
       }
     },
     {
@@ -5806,7 +5974,9 @@
         "name_zh": "斯里兰卡",
         "name_zht": "斯里蘭卡",
         "filename": "LKA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LK",
+        "iso_a3": "LKA"
       }
     },
     {
@@ -5874,7 +6044,9 @@
         "name_zh": "中华民国",
         "name_zht": "中華民國",
         "filename": "TWN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CN-TW",
+        "iso_a3": "TWN"
       }
     },
     {
@@ -5942,7 +6114,9 @@
         "name_zh": "日本",
         "name_zht": "日本",
         "filename": "JPN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "JP",
+        "iso_a3": "JPN"
       }
     },
     {
@@ -6010,7 +6184,9 @@
         "name_zh": "澳屬印度洋領地",
         "name_zht": "澳屬印度洋領地",
         "filename": "indianoceanter.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -6078,7 +6254,9 @@
         "name_zh": "新加坡",
         "name_zht": "新加坡",
         "filename": "SGP.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SG",
+        "iso_a3": "SGP"
       }
     },
     {
@@ -6146,7 +6324,9 @@
         "name_zh": "巴林",
         "name_zht": "巴林",
         "filename": "BHR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BH",
+        "iso_a3": "BHR"
       }
     },
     {
@@ -6214,7 +6394,9 @@
         "name_zh": "澳门",
         "name_zht": "澳門",
         "filename": "MAC.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MO",
+        "iso_a3": "MAC"
       }
     },
     {
@@ -6282,7 +6464,9 @@
         "name_zh": "智利",
         "name_zht": "智利",
         "filename": "CHL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CL",
+        "iso_a3": "CHL"
       }
     },
     {
@@ -6350,7 +6534,9 @@
         "name_zh": "玻利维亚",
         "name_zht": "玻利維亞",
         "filename": "BOL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BO",
+        "iso_a3": "BOL"
       }
     },
     {
@@ -6418,7 +6604,9 @@
         "name_zh": "秘鲁",
         "name_zht": "秘魯",
         "filename": "PER.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PE",
+        "iso_a3": "PER"
       }
     },
     {
@@ -6486,7 +6674,9 @@
         "name_zh": "阿根廷",
         "name_zht": "阿根廷",
         "filename": "ARG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AR",
+        "iso_a3": "ARG"
       }
     },
     {
@@ -6554,7 +6744,9 @@
         "name_zh": "苏里南",
         "name_zht": "蘇利南",
         "filename": "SUR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SR",
+        "iso_a3": "SUR"
       }
     },
     {
@@ -6622,7 +6814,9 @@
         "name_zh": "圭亚那",
         "name_zht": "圭亞那",
         "filename": "GUY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GY",
+        "iso_a3": "GUY"
       }
     },
     {
@@ -6690,7 +6884,9 @@
         "name_zh": "巴西",
         "name_zht": "巴西",
         "filename": "BRA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BR",
+        "iso_a3": "BRA"
       }
     },
     {
@@ -6758,7 +6954,9 @@
         "name_zh": "乌拉圭",
         "name_zht": "烏拉圭",
         "filename": "URY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "UY",
+        "iso_a3": "URY"
       }
     },
     {
@@ -6826,7 +7024,9 @@
         "name_zh": "厄瓜多尔",
         "name_zht": "厄瓜多爾",
         "filename": "ECU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "EC",
+        "iso_a3": "ECU"
       }
     },
     {
@@ -6894,7 +7094,9 @@
         "name_zh": "哥伦比亚",
         "name_zht": "哥倫比亞",
         "filename": "COL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CO",
+        "iso_a3": "COL"
       }
     },
     {
@@ -6962,7 +7164,9 @@
         "name_zh": "巴拉圭",
         "name_zht": "巴拉圭",
         "filename": "PRY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PY",
+        "iso_a3": "PRY"
       }
     },
     {
@@ -7030,7 +7234,9 @@
         "name_zh": "委内瑞拉",
         "name_zht": "委內瑞拉",
         "filename": "VEN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "VE",
+        "iso_a3": "VEN"
       }
     },
     {
@@ -7098,7 +7304,9 @@
         "name_zh": "福克兰群岛",
         "name_zht": "福克蘭群島",
         "filename": "FLK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "FK",
+        "iso_a3": "FLK"
       }
     },
     {
@@ -7166,7 +7374,9 @@
         "name_zh": "埃塞俄比亚",
         "name_zht": "衣索比亞",
         "filename": "ETH.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ET",
+        "iso_a3": "ETH"
       }
     },
     {
@@ -7234,7 +7444,9 @@
         "name_zh": "南苏丹",
         "name_zht": "南蘇丹",
         "filename": "SSD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SS",
+        "iso_a3": "SSD"
       }
     },
     {
@@ -7302,7 +7514,9 @@
         "name_zh": "索马里",
         "name_zht": "索馬利亞",
         "filename": "SOM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SO",
+        "iso_a3": "SOM"
       }
     },
     {
@@ -7370,7 +7584,9 @@
         "name_zh": "肯尼亚",
         "name_zht": "肯亞",
         "filename": "KEN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KE",
+        "iso_a3": "KEN"
       }
     },
     {
@@ -7438,7 +7654,9 @@
         "name_zh": "马拉维",
         "name_zht": "馬拉威",
         "filename": "MWI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MW",
+        "iso_a3": "MWI"
       }
     },
     {
@@ -7506,7 +7724,9 @@
         "name_zh": "坦桑尼亚",
         "name_zht": "坦尚尼亞",
         "filename": "TZA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TZ",
+        "iso_a3": "TZA"
       }
     },
     {
@@ -7574,7 +7794,9 @@
         "name_zh": "索马里兰",
         "name_zht": "索馬利蘭",
         "filename": "SOL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -7642,7 +7864,9 @@
         "name_zh": "摩洛哥",
         "name_zht": "摩洛哥",
         "filename": "MAR.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "MA",
+        "iso_a3": "MAR"
       }
     },
     {
@@ -7710,7 +7934,9 @@
         "name_zh": "西撒哈拉",
         "name_zht": "西撒哈拉",
         "filename": "ESH.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "EH",
+        "iso_a3": "ESH"
       }
     },
     {
@@ -7778,7 +8004,9 @@
         "name_zh": "刚果共和国",
         "name_zht": "剛果共和國",
         "filename": "COG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CG",
+        "iso_a3": "COG"
       }
     },
     {
@@ -7846,7 +8074,9 @@
         "name_zh": "刚果民主共和国",
         "name_zht": "剛果民主共和國",
         "filename": "COD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CD",
+        "iso_a3": "COD"
       }
     },
     {
@@ -7914,7 +8144,9 @@
         "name_zh": "纳米比亚",
         "name_zht": "納米比亞",
         "filename": "NAM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NA",
+        "iso_a3": "NAM"
       }
     },
     {
@@ -7982,7 +8214,9 @@
         "name_zh": "南非",
         "name_zht": "南非",
         "filename": "ZAF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ZA",
+        "iso_a3": "ZAF"
       }
     },
     {
@@ -8050,7 +8284,9 @@
         "name_zh": "利比亚",
         "name_zht": "利比亞",
         "filename": "LBY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LY",
+        "iso_a3": "LBY"
       }
     },
     {
@@ -8118,7 +8354,9 @@
         "name_zh": "突尼斯",
         "name_zht": "突尼西亞",
         "filename": "TUN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TN",
+        "iso_a3": "TUN"
       }
     },
     {
@@ -8186,7 +8424,9 @@
         "name_zh": "赞比亚",
         "name_zht": "尚比亞",
         "filename": "ZMB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ZM",
+        "iso_a3": "ZMB"
       }
     },
     {
@@ -8254,7 +8494,9 @@
         "name_zh": "塞拉利昂",
         "name_zht": "獅子山",
         "filename": "SLE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SL",
+        "iso_a3": "SLE"
       }
     },
     {
@@ -8322,7 +8564,9 @@
         "name_zh": "几内亚",
         "name_zht": "幾內亞",
         "filename": "GIN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GN",
+        "iso_a3": "GIN"
       }
     },
     {
@@ -8390,7 +8634,9 @@
         "name_zh": "利比里亚",
         "name_zht": "賴比瑞亞",
         "filename": "LBR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LR",
+        "iso_a3": "LBR"
       }
     },
     {
@@ -8458,7 +8704,9 @@
         "name_zh": "中非共和国",
         "name_zht": "中非共和國",
         "filename": "CAF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CF",
+        "iso_a3": "CAF"
       }
     },
     {
@@ -8526,7 +8774,9 @@
         "name_zh": "苏丹",
         "name_zht": "蘇丹",
         "filename": "SDN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SD",
+        "iso_a3": "SDN"
       }
     },
     {
@@ -8594,7 +8844,9 @@
         "name_zh": "吉布提",
         "name_zht": "吉布地",
         "filename": "DJI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "DJ",
+        "iso_a3": "DJI"
       }
     },
     {
@@ -8662,7 +8914,9 @@
         "name_zh": "厄立特里亚",
         "name_zht": "厄利垂亞",
         "filename": "ERI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ER",
+        "iso_a3": "ERI"
       }
     },
     {
@@ -8730,7 +8984,9 @@
         "name_zh": "科特迪瓦",
         "name_zht": "象牙海岸",
         "filename": "CIV.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CI",
+        "iso_a3": "CIV"
       }
     },
     {
@@ -8798,7 +9054,9 @@
         "name_zh": "马里",
         "name_zht": "馬利共和國",
         "filename": "MLI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ML",
+        "iso_a3": "MLI"
       }
     },
     {
@@ -8866,7 +9124,9 @@
         "name_zh": "塞内加尔",
         "name_zht": "塞內加爾",
         "filename": "SEN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SN",
+        "iso_a3": "SEN"
       }
     },
     {
@@ -8934,7 +9194,9 @@
         "name_zh": "尼日利亚",
         "name_zht": "奈及利亞",
         "filename": "NGA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NG",
+        "iso_a3": "NGA"
       }
     },
     {
@@ -9002,7 +9264,9 @@
         "name_zh": "贝宁",
         "name_zht": "貝南",
         "filename": "BEN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BJ",
+        "iso_a3": "BEN"
       }
     },
     {
@@ -9070,7 +9334,9 @@
         "name_zh": "安哥拉",
         "name_zht": "安哥拉",
         "filename": "AGO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AO",
+        "iso_a3": "AGO"
       }
     },
     {
@@ -9138,7 +9404,9 @@
         "name_zh": "博茨瓦纳",
         "name_zht": "波札那",
         "filename": "BWA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BW",
+        "iso_a3": "BWA"
       }
     },
     {
@@ -9206,7 +9474,9 @@
         "name_zh": "津巴布韦",
         "name_zht": "辛巴威",
         "filename": "ZWE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ZW",
+        "iso_a3": "ZWE"
       }
     },
     {
@@ -9274,7 +9544,9 @@
         "name_zh": "乍得",
         "name_zht": "查德",
         "filename": "TCD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TD",
+        "iso_a3": "TCD"
       }
     },
     {
@@ -9342,7 +9614,9 @@
         "name_zh": "阿尔及利亚",
         "name_zht": "阿爾及利亞",
         "filename": "DZA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "DZ",
+        "iso_a3": "DZA"
       }
     },
     {
@@ -9410,7 +9684,9 @@
         "name_zh": "莫桑比克",
         "name_zht": "莫三比克",
         "filename": "MOZ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MZ",
+        "iso_a3": "MOZ"
       }
     },
     {
@@ -9478,7 +9754,9 @@
         "name_zh": "斯威士兰",
         "name_zht": "史瓦帝尼",
         "filename": "SWZ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SZ",
+        "iso_a3": "SWZ"
       }
     },
     {
@@ -9546,7 +9824,9 @@
         "name_zh": "布隆迪",
         "name_zht": "蒲隆地",
         "filename": "BDI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BI",
+        "iso_a3": "BDI"
       }
     },
     {
@@ -9614,7 +9894,9 @@
         "name_zh": "卢旺达",
         "name_zht": "盧旺達",
         "filename": "RWA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "RW",
+        "iso_a3": "RWA"
       }
     },
     {
@@ -9682,7 +9964,9 @@
         "name_zh": "乌干达",
         "name_zht": "烏干達",
         "filename": "UGA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "UG",
+        "iso_a3": "UGA"
       }
     },
     {
@@ -9750,7 +10034,9 @@
         "name_zh": "莱索托",
         "name_zht": "賴索托",
         "filename": "LSO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LS",
+        "iso_a3": "LSO"
       }
     },
     {
@@ -9818,7 +10104,9 @@
         "name_zh": "喀麦隆",
         "name_zht": "喀麥隆",
         "filename": "CMR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CM",
+        "iso_a3": "CMR"
       }
     },
     {
@@ -9886,7 +10174,9 @@
         "name_zh": "加蓬",
         "name_zht": "加彭",
         "filename": "GAB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GA",
+        "iso_a3": "GAB"
       }
     },
     {
@@ -9954,7 +10244,9 @@
         "name_zh": "尼日尔",
         "name_zht": "尼日",
         "filename": "NER.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NE",
+        "iso_a3": "NER"
       }
     },
     {
@@ -10022,7 +10314,9 @@
         "name_zh": "布基纳法索",
         "name_zht": "布基納法索",
         "filename": "BFA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BF",
+        "iso_a3": "BFA"
       }
     },
     {
@@ -10090,7 +10384,9 @@
         "name_zh": "多哥",
         "name_zht": "多哥",
         "filename": "TGO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TG",
+        "iso_a3": "TGO"
       }
     },
     {
@@ -10158,7 +10454,9 @@
         "name_zh": "加纳",
         "name_zht": "迦納",
         "filename": "GHA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GH",
+        "iso_a3": "GHA"
       }
     },
     {
@@ -10226,7 +10524,9 @@
         "name_zh": "几内亚比绍",
         "name_zht": "幾內亞比索",
         "filename": "GNB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GW",
+        "iso_a3": "GNB"
       }
     },
     {
@@ -10294,7 +10594,9 @@
         "name_zh": "埃及",
         "name_zht": "埃及",
         "filename": "EGY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "EG",
+        "iso_a3": "EGY"
       }
     },
     {
@@ -10362,7 +10664,9 @@
         "name_zh": "毛里塔尼亚",
         "name_zht": "茅利塔尼亞",
         "filename": "MRT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MR",
+        "iso_a3": "MRT"
       }
     },
     {
@@ -10430,7 +10734,9 @@
         "name_zh": "赤道几内亚",
         "name_zht": "赤道幾內亞",
         "filename": "GNQ.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GQ",
+        "iso_a3": "GNQ"
       }
     },
     {
@@ -10498,7 +10804,9 @@
         "name_zh": "冈比亚",
         "name_zht": "甘比亞",
         "filename": "GMB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GM",
+        "iso_a3": "GMB"
       }
     },
     {
@@ -10566,7 +10874,9 @@
         "name_zh": "马达加斯加",
         "name_zht": "馬達加斯加",
         "filename": "MDG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MG",
+        "iso_a3": "MDG"
       }
     },
     {
@@ -10634,7 +10944,9 @@
         "name_zh": "科摩罗",
         "name_zht": "葛摩",
         "filename": "COM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KM",
+        "iso_a3": "COM"
       }
     },
     {
@@ -10702,7 +11014,9 @@
         "name_zh": "圣多美和普林西比",
         "name_zht": "聖多美普林西比",
         "filename": "STP.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ST",
+        "iso_a3": "STP"
       }
     },
     {
@@ -10770,7 +11084,9 @@
         "name_zh": "佛得角",
         "name_zht": "維德角",
         "filename": "CPV.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CV",
+        "iso_a3": "CPV"
       }
     },
     {
@@ -10838,7 +11154,9 @@
         "name_zh": "法国",
         "name_zht": "法國",
         "filename": "FRA.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "FR",
+        "iso_a3": "FRA"
       }
     },
     {
@@ -10906,7 +11224,9 @@
         "name_zh": "乌克兰",
         "name_zht": "烏克蘭",
         "filename": "UKR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "UA",
+        "iso_a3": "UKR"
       }
     },
     {
@@ -10974,7 +11294,9 @@
         "name_zh": "白俄罗斯",
         "name_zht": "白俄羅斯",
         "filename": "BLR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BY",
+        "iso_a3": "BLR"
       }
     },
     {
@@ -11042,7 +11364,9 @@
         "name_zh": "立陶宛",
         "name_zht": "立陶宛",
         "filename": "LTU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LT",
+        "iso_a3": "LTU"
       }
     },
     {
@@ -11110,7 +11434,9 @@
         "name_zh": "俄罗斯",
         "name_zht": "俄羅斯",
         "filename": "RUS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "RU",
+        "iso_a3": "RUS"
       }
     },
     {
@@ -11178,7 +11504,9 @@
         "name_zh": "捷克",
         "name_zht": "捷克共和國",
         "filename": "CZE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CZ",
+        "iso_a3": "CZE"
       }
     },
     {
@@ -11246,7 +11574,9 @@
         "name_zh": "德国",
         "name_zht": "德國",
         "filename": "DEU.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "DE",
+        "iso_a3": "DEU"
       }
     },
     {
@@ -11314,7 +11644,9 @@
         "name_zh": "爱沙尼亚",
         "name_zht": "愛沙尼亞",
         "filename": "EST.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "EE",
+        "iso_a3": "EST"
       }
     },
     {
@@ -11382,7 +11714,9 @@
         "name_zh": "拉脱维亚",
         "name_zht": "拉脫維亞",
         "filename": "LVA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LV",
+        "iso_a3": "LVA"
       }
     },
     {
@@ -11450,7 +11784,9 @@
         "name_zh": "挪威",
         "name_zht": "挪威",
         "filename": "NOR.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "NO",
+        "iso_a3": "NOR"
       }
     },
     {
@@ -11518,7 +11854,9 @@
         "name_zh": "瑞典",
         "name_zht": "瑞典",
         "filename": "SWE.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "SE",
+        "iso_a3": "SWE"
       }
     },
     {
@@ -11586,7 +11924,9 @@
         "name_zh": "芬兰",
         "name_zht": "芬蘭",
         "filename": "FIN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "FI",
+        "iso_a3": "FIN"
       }
     },
     {
@@ -11654,7 +11994,9 @@
         "name_zh": "卢森堡",
         "name_zht": "盧森堡",
         "filename": "LUX.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LU",
+        "iso_a3": "LUX"
       }
     },
     {
@@ -11722,7 +12064,9 @@
         "name_zh": "比利时",
         "name_zht": "比利時",
         "filename": "BEL.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "BE",
+        "iso_a3": "BEL"
       }
     },
     {
@@ -11790,7 +12134,9 @@
         "name_zh": "北马其顿",
         "name_zht": "北馬其頓",
         "filename": "MKD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MK",
+        "iso_a3": "MKD"
       }
     },
     {
@@ -11858,7 +12204,9 @@
         "name_zh": "阿尔巴尼亚",
         "name_zht": "阿爾巴尼亞",
         "filename": "ALB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AL",
+        "iso_a3": "ALB"
       }
     },
     {
@@ -11926,7 +12274,9 @@
         "name_zh": "科索沃",
         "name_zht": "科索沃",
         "filename": "kosovo.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -11994,7 +12344,9 @@
         "name_vi": "Tây Ban Nha",
         "name_zh": "西班牙",
         "name_zht": "西班牙",
-        "filename": "ESP.geojson"
+        "filename": "ESP.geojson",
+        "iso_a2": "ES",
+        "iso_a3": "ESP"
       }
     },
     {
@@ -12062,7 +12414,9 @@
         "name_zh": "丹麦",
         "name_zht": "丹麥",
         "filename": "DNK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "DK",
+        "iso_a3": "DNK"
       }
     },
     {
@@ -12130,7 +12484,9 @@
         "name_zh": "罗马尼亚",
         "name_zht": "羅馬尼亞",
         "filename": "ROU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "RO",
+        "iso_a3": "ROU"
       }
     },
     {
@@ -12198,7 +12554,9 @@
         "name_zh": "匈牙利",
         "name_zht": "匈牙利",
         "filename": "HUN.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "HU",
+        "iso_a3": "HUN"
       }
     },
     {
@@ -12266,7 +12624,9 @@
         "name_zh": "斯洛伐克",
         "name_zht": "斯洛伐克",
         "filename": "SVK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SK",
+        "iso_a3": "SVK"
       }
     },
     {
@@ -12334,7 +12694,9 @@
         "name_zh": "波兰",
         "name_zht": "波蘭",
         "filename": "POL.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "PL",
+        "iso_a3": "POL"
       }
     },
     {
@@ -12402,7 +12764,9 @@
         "name_zh": "爱尔兰",
         "name_zht": "愛爾蘭",
         "filename": "IRL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IE",
+        "iso_a3": "IRL"
       }
     },
     {
@@ -12470,7 +12834,9 @@
         "name_zh": "英国",
         "name_zht": "英國",
         "filename": "GBR.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "GB",
+        "iso_a3": "GBR"
       }
     },
     {
@@ -12538,7 +12904,9 @@
         "name_zh": "希腊",
         "name_zht": "希臘",
         "filename": "GRC.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GR",
+        "iso_a3": "GRC"
       }
     },
     {
@@ -12606,7 +12974,9 @@
         "name_zh": "奥地利",
         "name_zht": "奧地利",
         "filename": "AUT.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "AT",
+        "iso_a3": "AUT"
       }
     },
     {
@@ -12674,7 +13044,9 @@
         "name_zh": "意大利",
         "name_zht": "義大利",
         "filename": "ITA.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "IT",
+        "iso_a3": "ITA"
       }
     },
     {
@@ -12742,7 +13114,9 @@
         "name_zh": "瑞士",
         "name_zht": "瑞士",
         "filename": "CHE.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "CH",
+        "iso_a3": "CHE"
       }
     },
     {
@@ -12810,7 +13184,9 @@
         "name_zh": "荷兰",
         "name_zht": "荷蘭",
         "filename": "NLD.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "NL",
+        "iso_a3": "NLD"
       }
     },
     {
@@ -12878,7 +13254,9 @@
         "name_zh": "列支敦士登",
         "name_zht": "列支敦斯登",
         "filename": "LIE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "LI",
+        "iso_a3": "LIE"
       }
     },
     {
@@ -12946,7 +13324,9 @@
         "name_zh": "塞尔维亚",
         "name_zht": "塞爾維亞",
         "filename": "SRB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "RS",
+        "iso_a3": "SRB"
       }
     },
     {
@@ -13014,7 +13394,9 @@
         "name_zh": "克罗地亚",
         "name_zht": "克羅地亞",
         "filename": "HRV.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "HR",
+        "iso_a3": "HRV"
       }
     },
     {
@@ -13082,7 +13464,9 @@
         "name_zh": "斯洛文尼亚",
         "name_zht": "斯洛維尼亞",
         "filename": "SVN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SI",
+        "iso_a3": "SVN"
       }
     },
     {
@@ -13150,7 +13534,9 @@
         "name_zh": "保加利亚",
         "name_zht": "保加利亞",
         "filename": "BGR.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "BG",
+        "iso_a3": "BGR"
       }
     },
     {
@@ -13218,7 +13604,9 @@
         "name_zh": "圣马力诺",
         "name_zht": "聖馬力諾",
         "filename": "SMR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SM",
+        "iso_a3": "SMR"
       }
     },
     {
@@ -13286,7 +13674,9 @@
         "name_zh": "摩纳哥",
         "name_zht": "摩納哥",
         "filename": "MCO.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MC",
+        "iso_a3": "MCO"
       }
     },
     {
@@ -13354,7 +13744,9 @@
         "name_zh": "安道尔",
         "name_zht": "安道爾",
         "filename": "AND.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AD",
+        "iso_a3": "AND"
       }
     },
     {
@@ -13422,7 +13814,9 @@
         "name_zh": "黑山",
         "name_zht": "蒙特內哥羅",
         "filename": "MNE.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "ME",
+        "iso_a3": "MNE"
       }
     },
     {
@@ -13490,7 +13884,9 @@
         "name_zh": "波斯尼亚和黑塞哥维那",
         "name_zht": "波士尼亞與赫塞哥維納",
         "filename": "BIH.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "BA",
+        "iso_a3": "BIH"
       }
     },
     {
@@ -13558,7 +13954,9 @@
         "name_zh": "葡萄牙",
         "name_zht": "葡萄牙",
         "filename": "PRT.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "PT",
+        "iso_a3": "PRT"
       }
     },
     {
@@ -13626,7 +14024,9 @@
         "name_zh": "摩尔多瓦",
         "name_zht": "摩爾多瓦",
         "filename": "MDA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MD",
+        "iso_a3": "MDA"
       }
     },
     {
@@ -13694,7 +14094,9 @@
         "name_zh": "梵蒂冈",
         "name_zht": "梵蒂岡",
         "filename": "VAT.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "VA",
+        "iso_a3": "VAT"
       }
     },
     {
@@ -13762,7 +14164,9 @@
         "name_zh": "冰岛",
         "name_zht": "冰島",
         "filename": "ISL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IS",
+        "iso_a3": "ISL"
       }
     },
     {
@@ -13830,7 +14234,9 @@
         "name_zh": "马耳他",
         "name_zht": "馬耳他",
         "filename": "MLT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MT",
+        "iso_a3": "MLT"
       }
     },
     {
@@ -13898,7 +14304,9 @@
         "name_zh": "泽西",
         "name_zht": "澤西",
         "filename": "JEY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "JE",
+        "iso_a3": "JEY"
       }
     },
     {
@@ -13966,7 +14374,9 @@
         "name_zh": "根西",
         "name_zht": "根西",
         "filename": "GGY.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GG",
+        "iso_a3": "GGY"
       }
     },
     {
@@ -14034,7 +14444,9 @@
         "name_zh": "马恩岛",
         "name_zht": "曼島",
         "filename": "IMN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IM",
+        "iso_a3": "IMN"
       }
     },
     {
@@ -14102,7 +14514,9 @@
         "name_zh": "奥兰",
         "name_zht": "奧蘭",
         "filename": "ALA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AX",
+        "iso_a3": "ALA"
       }
     },
     {
@@ -14170,7 +14584,9 @@
         "name_zh": "法罗群岛",
         "name_zht": "法羅群島",
         "filename": "FRO.geojson",
-        "visited": 2
+        "visited": 2,
+        "iso_a2": "FO",
+        "iso_a3": "FRO"
       }
     },
     {
@@ -14238,7 +14654,9 @@
         "name_zh": "巴布亚新几内亚",
         "name_zht": "巴布亞紐幾內亞",
         "filename": "PNG.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PG",
+        "iso_a3": "PNG"
       }
     },
     {
@@ -14306,7 +14724,9 @@
         "name_zh": "澳大利亚",
         "name_zht": "澳大利亞",
         "filename": "AUS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AU",
+        "iso_a3": "AUS"
       }
     },
     {
@@ -14374,7 +14794,9 @@
         "name_zh": "斐济",
         "name_zht": "斐濟",
         "filename": "FJI.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "FJ",
+        "iso_a3": "FJI"
       }
     },
     {
@@ -14442,7 +14864,9 @@
         "name_zh": "新西兰",
         "name_zht": "新西蘭",
         "filename": "NZL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NZ",
+        "iso_a3": "NZL"
       }
     },
     {
@@ -14510,7 +14934,9 @@
         "name_zh": "新喀里多尼亚",
         "name_zht": "新喀里多尼亞",
         "filename": "NCL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NC",
+        "iso_a3": "NCL"
       }
     },
     {
@@ -14578,7 +15004,9 @@
         "name_zh": "皮特凯恩群岛",
         "name_zht": "皮特肯群島",
         "filename": "PCN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PN",
+        "iso_a3": "PCN"
       }
     },
     {
@@ -14646,7 +15074,9 @@
         "name_zh": "法属波利尼西亚",
         "name_zht": "法屬玻里尼西亞",
         "filename": "PYF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PF",
+        "iso_a3": "PYF"
       }
     },
     {
@@ -14714,7 +15144,9 @@
         "name_zh": "基里巴斯",
         "name_zht": "吉里巴斯",
         "filename": "KIR.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "KI",
+        "iso_a3": "KIR"
       }
     },
     {
@@ -14782,7 +15214,9 @@
         "name_zh": "马绍尔群岛",
         "name_zht": "馬紹爾群島",
         "filename": "MHL.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MH",
+        "iso_a3": "MHL"
       }
     },
     {
@@ -14850,7 +15284,9 @@
         "name_zh": "诺福克岛",
         "name_zht": "諾福克島",
         "filename": "NFK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NF",
+        "iso_a3": "NFK"
       }
     },
     {
@@ -14918,7 +15354,9 @@
         "name_zh": "库克群岛",
         "name_zht": "庫克群島",
         "filename": "COK.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "CK",
+        "iso_a3": "COK"
       }
     },
     {
@@ -14986,7 +15424,9 @@
         "name_zh": "汤加",
         "name_zht": "東加",
         "filename": "TON.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TO",
+        "iso_a3": "TON"
       }
     },
     {
@@ -15054,7 +15494,9 @@
         "name_zh": "瓦利斯和富图纳",
         "name_zht": "瓦利斯和富圖納",
         "filename": "WLF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "WF",
+        "iso_a3": "WLF"
       }
     },
     {
@@ -15122,7 +15564,9 @@
         "name_zh": "萨摩亚",
         "name_zht": "薩摩亞",
         "filename": "WSM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "WS",
+        "iso_a3": "WSM"
       }
     },
     {
@@ -15190,7 +15634,9 @@
         "name_zh": "所罗门群岛",
         "name_zht": "索羅門群島",
         "filename": "SLB.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SB",
+        "iso_a3": "SLB"
       }
     },
     {
@@ -15258,7 +15704,9 @@
         "name_zh": "图瓦卢",
         "name_zht": "吐瓦魯",
         "filename": "TUV.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TV",
+        "iso_a3": "TUV"
       }
     },
     {
@@ -15326,7 +15774,9 @@
         "name_zh": "瑙鲁",
         "name_zht": "諾魯",
         "filename": "NRU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NR",
+        "iso_a3": "NRU"
       }
     },
     {
@@ -15394,7 +15844,9 @@
         "name_zh": "密克罗尼西亚联邦",
         "name_zht": "密克羅尼西亞聯邦",
         "filename": "FSM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "FM",
+        "iso_a3": "FSM"
       }
     },
     {
@@ -15462,7 +15914,9 @@
         "name_zh": "瓦努阿图",
         "name_zht": "萬那杜",
         "filename": "VUT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "VU",
+        "iso_a3": "VUT"
       }
     },
     {
@@ -15530,7 +15984,9 @@
         "name_zh": "纽埃",
         "name_zht": "紐埃",
         "filename": "NIU.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "NU",
+        "iso_a3": "NIU"
       }
     },
     {
@@ -15598,7 +16054,9 @@
         "name_zh": "美属萨摩亚",
         "name_zht": "美屬薩摩亞",
         "filename": "ASM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AS",
+        "iso_a3": "ASM"
       }
     },
     {
@@ -15666,7 +16124,9 @@
         "name_zh": "帕劳",
         "name_zht": "帛琉",
         "filename": "PLW.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "PW",
+        "iso_a3": "PLW"
       }
     },
     {
@@ -15734,7 +16194,9 @@
         "name_zh": "关岛",
         "name_zht": "關島",
         "filename": "GUM.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GU",
+        "iso_a3": "GUM"
       }
     },
     {
@@ -15802,7 +16264,9 @@
         "name_zh": "北马里亚纳群岛",
         "name_zht": "北馬里亞納群島",
         "filename": "MNP.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MP",
+        "iso_a3": "MNP"
       }
     },
     {
@@ -15870,7 +16334,9 @@
         "name_zh": "阿什莫尔和卡捷群岛",
         "name_zht": "亞什摩及卡地爾群島",
         "filename": "ashmoreandcartieris.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "-99",
+        "iso_a3": "-99"
       }
     },
     {
@@ -15938,7 +16404,9 @@
         "name_zh": "南极洲",
         "name_zht": "南極洲",
         "filename": "ATA.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "AQ",
+        "iso_a3": "ATA"
       }
     },
     {
@@ -16006,7 +16474,9 @@
         "name_zh": "法属南部和南极领地",
         "name_zht": "法屬南部和南極領地",
         "filename": "ATF.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "TF",
+        "iso_a3": "ATF"
       }
     },
     {
@@ -16074,7 +16544,9 @@
         "name_zh": "塞舌尔",
         "name_zht": "塞席爾",
         "filename": "SYC.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SC",
+        "iso_a3": "SYC"
       }
     },
     {
@@ -16142,7 +16614,9 @@
         "name_zh": "赫德岛和麦克唐纳群岛",
         "name_zht": "赫德島和麥克唐納群島",
         "filename": "HMD.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "HM",
+        "iso_a3": "HMD"
       }
     },
     {
@@ -16210,7 +16684,9 @@
         "name_zh": "圣赫勒拿",
         "name_zht": "聖赫勒拿",
         "filename": "SHN.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "SH",
+        "iso_a3": "SHN"
       }
     },
     {
@@ -16278,7 +16754,9 @@
         "name_zh": "毛里求斯",
         "name_zht": "模里西斯",
         "filename": "MUS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MU",
+        "iso_a3": "MUS"
       }
     },
     {
@@ -16346,7 +16824,9 @@
         "name_zh": "英属印度洋领地",
         "name_zht": "英屬印度洋領地",
         "filename": "IOT.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "IO",
+        "iso_a3": "IOT"
       }
     },
     {
@@ -16414,7 +16894,9 @@
         "name_zh": "马尔代夫",
         "name_zht": "馬爾地夫",
         "filename": "MDV.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "MV",
+        "iso_a3": "MDV"
       }
     },
     {
@@ -16482,7 +16964,9 @@
         "name_zh": "南乔治亚和南桑威奇群岛",
         "name_zht": "南喬治亞與南桑威奇",
         "filename": "SGS.geojson",
-        "visited": 0
+        "visited": 0,
+        "iso_a2": "GS",
+        "iso_a3": "SGS"
       }
     }
   ]
