@@ -2,7 +2,7 @@
 import Timeline from "./Timeline.astro";
 ---
 
-<section class="w-full p-8 flex flex-col items-center">
+<section id="process" class="w-full p-8 flex flex-col items-center">
   <h1 class="title">My process</h1>
   <div class="lg:flex lg:flex-row lg:gap-16">
     <Timeline />
@@ -74,7 +74,7 @@ import Timeline from "./Timeline.astro";
 <script>
   let interval;
   const loadScript = () => {
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll("#process .card");
     const timeline = document.querySelector("ul.timeline") as HTMLUListElement;
 
     if (!cards || !timeline) {
