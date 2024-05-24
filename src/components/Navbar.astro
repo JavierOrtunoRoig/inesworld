@@ -107,6 +107,14 @@ import Youtube from "@/icons/Youtube.astro";
 </style>
 
 <style is:global>
+  :root {
+    --navbar-height: 4rem;
+    --navbar-padding: 0.5rem;
+    --navbar-total-height: calc(
+      var(--navbar-height) + var(--navbar-padding) * 2
+    );
+  }
+
   ul.icon-list {
     padding: 0rem;
     margin-left: 1rem;

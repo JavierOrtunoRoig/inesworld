@@ -8,13 +8,13 @@ import ChevronRight from "@/icons/ChevronRight.astro";
 
 <BasicLayout>
   <div class="container">
-    <img class="fade-in-img" src="/trips/switzerland/1.webp" />
+    <img class="animate-fade" src="/trips/switzerland/1.webp" />
     <div class="gradient"></div>
     <main class="info-container">
       <aside class="arrow"><ChevronLeft /></aside>
-      <article>
-        <h1 class="fade-in-up">Switzerland</h1>
-        <a class="fade-in-up" href="/trip/switzerland">See gallery</a>
+      <article class="animate-fade-up">
+        <h1 class="title">Switzerland</h1>
+        <a href="/trip/switzerland">See gallery</a>
       </article>
       <aside class="arrow"><ChevronRight /></aside>
     </main>
@@ -135,7 +135,7 @@ import ChevronRight from "@/icons/ChevronRight.astro";
 
     .info-container {
       width: 100%;
-      height: 100%;
+      height: calc(100dvh - var(--navbar-total-height));
       position: absolute;
       bottom: 0;
       left: 0;
@@ -211,7 +211,6 @@ import ChevronRight from "@/icons/ChevronRight.astro";
 
       /* Style one -> https://codepen.io/vedadesigns/pen/GPxYZg */
       h1 {
-        font-size: 5rem;
         margin: 0;
         position: relative;
         padding: 0;
@@ -225,14 +224,6 @@ import ChevronRight from "@/icons/ChevronRight.astro";
         padding-bottom: 5px;
         display: inline-block;
         text-align: center;
-
-        @media (max-width: 768px) {
-          font-size: 4rem;
-        }
-
-        @media (max-height: 768px) {
-          font-size: 3rem;
-        }
 
         &:before {
           width: 28px;
