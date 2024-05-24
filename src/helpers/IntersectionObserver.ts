@@ -4,13 +4,15 @@
  * @returns IntersectionObserver
  */
 export const createIntersectionObserver = (
+  animatedClass?: string,
   options?: IntersectionObserverInit
 ) => {
   return new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const targetClass = animatedClass || "faded";
         if (entry.isIntersecting) {
-          entry.target.classList.add("faded");
+          entry.target.classList.add(targetClass);
         }
       });
     },

@@ -6,7 +6,7 @@ const url = `/trip/${text.toLowerCase()}`;
 ---
 
 <a
-  class="w-full flex justify-center sm:w-96 transition-transform hover:cursor-pointer hover:scale-105"
+  class="fade-up w-full flex justify-center sm:w-96 transition-transform hover:cursor-pointer hover:scale-105"
   href={url}
 >
   <div class="card shadow image-full before:opacity-15">
@@ -24,3 +24,18 @@ const url = `/trip/${text.toLowerCase()}`;
     opacity: 0.3;
   }
 </style>
+
+<!-- Script to add fade up animation -->
+<script>
+  import {
+    createIntersectionObserver,
+    observeAll,
+  } from "@/helpers/IntersectionObserver.js";
+
+  const runAnimation = () => {
+    const fadeUpObserver = createIntersectionObserver();
+    observeAll(fadeUpObserver, ".fade-up");
+  };
+
+  document.addEventListener("astro:page-load", runAnimation);
+</script>
