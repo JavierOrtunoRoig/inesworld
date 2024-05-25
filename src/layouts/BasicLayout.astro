@@ -3,12 +3,10 @@ import { ViewTransitions } from "astro:transitions";
 import "@/global.css";
 import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
-
-import { getLangFromUrl } from "@/i18n/utils";
-const lang = getLangFromUrl(Astro.url);
+import i18next from "i18next";
 ---
 
-<html lang={lang}>
+<html lang={i18next.language}>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

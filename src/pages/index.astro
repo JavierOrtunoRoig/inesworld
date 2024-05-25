@@ -1,4 +1,5 @@
 ---
+import { changeLanguage } from "i18next";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import TitleRewritter from "@/components/home/TitleRewritter.astro";
 import WhyMe from "@/components/home/WhyMe.astro";
@@ -7,6 +8,8 @@ import DiffContainer from "@/components/home/edition/DiffContainer.astro";
 import Process from "@/components/home/process/Process.astro";
 import LatestWorks from "@/components/home/LatestWorks.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+changeLanguage("en");
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -62,7 +65,7 @@ const t = useTranslations(lang);
 					playlabel="My showreel"></lite-youtube>
 				<a
 					class="btn bg-base-100 w-fit border border-white text-[1.1rem] cursor-pointer uppercase self-center no-underline mt-8 px-4 py-[0.8rem] rounded-[5rem] border-solid;"
-					href="/my-work">Discover my work!</a
+					href="/my-work">{t("showreel.button")}</a
 				>
 			</div>
 		</section>

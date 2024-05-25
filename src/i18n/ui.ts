@@ -53,6 +53,20 @@ export const ui = {
 
     "latest_works.title": "Latest Works",
 
+    "blog.input.placeholder": "Search for a title posts or any tag",
+
+    "portfolio.title": "See gallery",
+
+    "contact.title": "CONTACT WITH ME!",
+    "contact.subtitle": "Maybe here we can put a text giving thanks to users or any message that Ines want to share",
+    "contact.label.name": "Name:",
+    "contact.label.email": "Email:",
+    "contact.label.message": "Message:",
+    "contact.button": "Send request",
+
+    "map.title": "All my trips",
+    "map.subtitle_1": "Comming soon!!",
+    "map.subtitle_2": "Countries visited!!",
   },
   es: {
     "showreel.title": "Mi showreel",
@@ -93,6 +107,21 @@ export const ui = {
     "process.step_5.title": "5. Entregar",
     "process.step_5.description": "Entrego el producto final, asegurándome de que cumpla con tus expectativas y esté listo para impresionar a tu audiencia.",
 
-    "latest_works.title": "Últimos Trabajos"
+    "latest_works.title": "Últimos Trabajos",
+
+    "blog.input.placeholder": "Busca un post por título o tag",
+
+    "portfolio.title": "Ver galería",
+
+    "contact.title": "Contacta conmigo",
+    "contact.subtitle": "Tal vez aquí podamos poner un texto dando las gracias a los usuarios o cualquier mensaje que Ines quiera compartir",
+    "contact.label.name": "Nombre:",
+    "contact.label.email": "Correo electrónico:",
+    "contact.label.message": "Mensaje:",
+    "contact.button": "Enviar petición",
+
+    "map.title": "Todos mis viajes",
+    "map.subtitle_1": "¡Próximamente!",
+    "map.subtitle_2": "¡Países visitados!",
   }
 } as const;

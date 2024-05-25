@@ -4,10 +4,8 @@ import { getValidPosts } from "@/helpers/posts";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "@/components/Footer.astro";
-import { getLangFromUrl } from "@/i18n/utils";
+import i18next from "i18next";
 import "@/global.css";
-
-const lang = getLangFromUrl(Astro.url);
 
 interface Post {
   id: string;
@@ -39,7 +37,7 @@ const previousPost = posts[currentPostIndex - 1];
 const nextPost = posts[currentPostIndex + 1];
 ---
 
-<html lang={lang}>
+<html lang={i18next.language}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
