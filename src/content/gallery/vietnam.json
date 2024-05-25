@@ -2,27 +2,27 @@
   "title": "Vietnam",
   "photos": [
     {
-      "path": "/trips/vietnam/1.webp",
+      "path": "/src/assets/trips/vietnam/1.jpg",
       "description": ""
     },
     {
-      "path": "/trips/vietnam/2.webp",
+      "path": "/src/assets/trips/vietnam/2.jpg",
       "description": ""
     },
     {
-      "path": "/trips/vietnam/3.webp",
+      "path": "/src/assets/trips/vietnam/3.jpg",
       "description": ""
     },
     {
-      "path": "/trips/vietnam/4.webp",
+      "path": "/src/assets/trips/vietnam/4.jpg",
       "description": ""
     },
     {
-      "path": "/trips/vietnam/5.webp",
+      "path": "/src/assets/trips/vietnam/5.jpg",
       "description": ""
     },
     {
-      "path": "/trips/vietnam/6.webp",
+      "path": "/src/assets/trips/vietnam/6.jpg",
       "description": ""
     }
   ]

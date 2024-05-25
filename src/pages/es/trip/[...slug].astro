@@ -2,6 +2,7 @@
 import { changeLanguage } from "i18next";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getCollection } from "astro:content";
+import MyImage from "@/components/MyImage.astro";
 import "@/../node_modules/viewerjs/dist/viewer.css";
 
 changeLanguage("es");
@@ -20,6 +21,7 @@ export async function getStaticPaths() {
     });
 }
 const { gallery: { title, photos }, } = Astro.props;
+// console.log({ photos });
 let imagesGrouped: Record<string, any>[] = [];
 let group1: Record<string, any>[] = [];
 let group2: Record<string, any>[] = [];
@@ -47,7 +49,7 @@ imagesGrouped.push(group1, group2, group3);
         imagesGrouped.map((group) => (
           <div class="flex">
             {group.map((image) => (
-              <img class="fade-up hover:cursor-pointer" src={image.path} alt={image.description} loading="lazy" />
+              <MyImage imagePath={image.path} altText={image.description} class="fade-up hover:cursor-pointer" />
             ))}
           </div>
         ))
@@ -78,6 +80,14 @@ imagesGrouped.push(group1, group2, group3);
     const img = document.querySelector(".gallery-container") as HTMLElement;
     new Viewer(img, {
       viewed() {},
+      url(image) {
+        // get teh original images without compress
+        const encodedUrl = image.src;
+        let path = decodeURIComponent(encodedUrl).split("/src/assets")[1];
+        path = path.split("?")[0];
+
+        return path;
+      },
     });
 
     const guideshouldNotRun = localStorage.getItem("guideshouldNotRun_gallery");
