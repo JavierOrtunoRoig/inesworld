@@ -4,7 +4,6 @@ import Footer from "@/components/Footer.astro";
 
 import "@/global.css";
 import "@/../node_modules/leaflet/dist/leaflet.css";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 ---
 
 <!doctype html>
@@ -25,19 +24,12 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
   <body>
     <Navbar />
     <h1 class="title">All my trips!</h1>
-    <span class="fi fi-es"></span>
 
     <div id="map"></div>
 
     <div class="px-8">
       <h2 class="m-8 text-center text-3xl font-bold">Comming soon!!</h2>
       <div id="comming-countries" class="flex flex-wrap gap-4 justify-center">
-        <!-- <div class="card w-fit bg-base-100 shadow-2xl">
-          <div class="card-body p-0 flex flex-row m-0">
-            <p class="fi fi-kr !h-[66px] !w-[5rem] !rounded-l-2xl"></p>
-            <h2 class="card-title">South Korea</h2>
-          </div>
-        </div> -->
       </div>
     </div>
 

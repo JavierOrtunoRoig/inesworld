@@ -3,6 +3,8 @@ import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
 import Theme from "@/icons/Theme.astro";
 import Youtube from "@/icons/Youtube.astro";
+
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 ---
 
 <nav class="navbar bg-base-100 z-10">
@@ -32,6 +34,18 @@ import Youtube from "@/icons/Youtube.astro";
         <li class="menu-item"><a href="/portfolio">Portfolio</a></li>
         <li class="menu-item"><a href="/contact">Contact</a></li>
         <li class="menu-item"><a href="/map">Trip map</a></li>
+        <li class="menu-item mr-4">
+          <details>
+            <summary>
+              <span class="fi fi-gb"></span>
+              EN
+            </summary>
+            <ul class="p-2 !mt-0">
+              <li><span><span class="fi fi-gb"></span>EN</span></li>
+              <li><span><span class="fi fi-es"></span>ES</span></li>
+            </ul>
+          </details>
+        </li>
         <ul class="icon-list">
           <!-- <Theme /> -->
           <li class="item instagram">
@@ -48,13 +62,6 @@ import Youtube from "@/icons/Youtube.astro";
             </a>
           </li>
         </ul>
-        <!-- <li>
-          <a>Parent</a>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li> -->
       </ul>
     </div>
     <a href="/" class="navbar-brand">
@@ -69,6 +76,18 @@ import Youtube from "@/icons/Youtube.astro";
       <li class="menu-item"><a href="/portfolio">Portfolio</a></li>
       <li class="menu-item"><a href="/contact">Contact</a></li>
       <li class="menu-item"><a href="/map">Trip map</a></li>
+      <li class="menu-item mr-4">
+        <details>
+          <summary>
+            <span class="fi fi-gb"></span>
+            EN
+          </summary>
+          <ul class="p-2 !mt-0">
+            <li><span><span class="fi fi-gb"></span>EN</span></li>
+            <li><span><span class="fi fi-es"></span>ES</span></li>
+          </ul>
+        </details>
+      </li>
       <ul class="icon-list">
         <!-- <Theme /> -->
         <li class="item instagram">
@@ -85,16 +104,6 @@ import Youtube from "@/icons/Youtube.astro";
           </a>
         </li>
       </ul>
-      <!-- <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li> -->
     </ul>
   </div>
   <div class="navbar-end hidden lg:flex"></div>
@@ -116,8 +125,7 @@ import Youtube from "@/icons/Youtube.astro";
   }
 
   ul.icon-list {
-    padding: 0rem;
-    margin-left: 1rem;
+    padding-left: 0.75rem;
     display: flex;
     gap: 10px;
     list-style-type: none;
