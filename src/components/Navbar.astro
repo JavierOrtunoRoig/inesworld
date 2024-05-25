@@ -11,7 +11,7 @@ const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 // get actual path
 const url = Astro.url;
-const pathName = url.pathname.split("/").pop(); // remove lang
+const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/").replaceAll("//", "/");
 ---
 
 <nav class="navbar bg-base-100 z-10">
@@ -43,7 +43,7 @@ const pathName = url.pathname.split("/").pop(); // remove lang
               {
                 Object.entries(languages).map(([lang, label]) => (
                   <li>
-                    <a href={translatePath(`/${pathName}`, lang)}>
+                    <a href={translatePath(finalPath, lang)}>
                       <span class={`fi fi-${isos[lang]}`} />
                       {label}
                     </a>
@@ -92,7 +92,7 @@ const pathName = url.pathname.split("/").pop(); // remove lang
             {
               Object.entries(languages).map(([lang, label]) => (
                 <li>
-                  <a href={translatePath(`/${pathName}`, lang)}>
+                  <a href={translatePath(finalPath, lang)}>
                     <span class={`fi fi-${isos[lang]}`} />
                     {label}
                   </a>
