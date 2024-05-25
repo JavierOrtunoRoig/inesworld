@@ -1,8 +1,12 @@
 ---
 import Diff from "./Diff.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="w-full p-8 flex flex-col items-center">
-  <h1 class="title">See my magic</h1>
+  <h1 class="title">{t("diff.title")}</h1>
   <Diff />
 </section>

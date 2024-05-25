@@ -1,9 +1,14 @@
 ---
 import Timeline from "./Timeline.astro";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="process" class="w-full p-8 flex flex-col items-center">
-  <h1 class="title">My process</h1>
+  <h1 class="title">{t("process.title")}</h1>
   <div class="lg:flex lg:flex-row lg:gap-16">
     <Timeline />
 
@@ -11,10 +16,9 @@ import Timeline from "./Timeline.astro";
       class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl"
     >
       <div class="card-body">
-        <h2 class="card-title">1. Connect</h2>
+        <h2 class="card-title">{t("process.step_1.title")}</h2>
         <p>
-          Connect with me to share your project details. Together, we'll explore
-          how I can help you achieve your goals and bring your vision to life.
+          {t("process.step_1.description")}
         </p>
       </div>
     </div>
@@ -23,11 +27,9 @@ import Timeline from "./Timeline.astro";
       class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
-        <h2 class="card-title">2. Concept</h2>
+        <h2 class="card-title">{t("process.step_2.title")}</h2>
         <p>
-          We develop unique and creative visual concepts, individually designed
-          for you. We tell meaningful stories and build a strong community
-          around your brand.
+          {t("process.step_2.description")}
         </p>
       </div>
     </div>
@@ -36,10 +38,9 @@ import Timeline from "./Timeline.astro";
       class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
-        <h2 class="card-title">3. Create</h2>
+        <h2 class="card-title">{t("process.step_3.title")}</h2>
         <p>
-          Now it's my turn. I start working on your project, using my expertise
-          and creativity to turn your vision into reality.
+          {t("process.step_3.description")}
         </p>
       </div>
     </div>
@@ -48,11 +49,9 @@ import Timeline from "./Timeline.astro";
       class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
-        <h2 class="card-title">4. Review</h2>
+        <h2 class="card-title">{t("process.step_4.title")}</h2>
         <p>
-          I receive your feedback on the project. I work with you to make the
-          necessary adjustments and ensure the final result meets your
-          expectations.
+          {t("process.step_4.description")}
         </p>
       </div>
     </div>
@@ -61,10 +60,9 @@ import Timeline from "./Timeline.astro";
       class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
     >
       <div class="card-body">
-        <h2 class="card-title">5. Deliver</h2>
+        <h2 class="card-title">{t("process.step_5.title")}</h2>
         <p>
-          I deliver the final product, making sure it meets your expectations
-          and is ready to impress your audience.
+          {t("process.step_5.description")}
         </p>
       </div>
     </div>

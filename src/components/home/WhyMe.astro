@@ -1,6 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="light-theme p-8 flex flex-col justify-center xl:items-center">
   <h1 class="text-center text-4xl uppercase mt-0 mb-8 font-bold sm:text-6xl">
-    Why me
+    {t("why_me.title")}
   </h1>
 
   <div class="md:flex md:gap-8 xl:w-2/3">
@@ -11,13 +18,10 @@
     />
     <div class="my-8 md:my-0 md:flex md:flex-col md:justify-center">
       <h2 class="font-bold text-2xl text-center mb-4">
-        Inclusive Storytelling
+        {t("why_me.reason_1.title")}
       </h2>
       <p class="md:text-center">
-        Authentic visuals that break barriers and contribute to positive social
-        change. I’m unlocking the full potential of your brand by creating a
-        space for all stories to be heard and valued. That sets you apart as a
-        leader of promoting diversity and equality.
+        {t("why_me.reason_1.description")}
       </p>
     </div>
   </div>
@@ -29,13 +33,10 @@
       alt="image to test"
     />
     <div class="md:flex md:flex-col md:justify-center md:order-1">
-      <h2 class="font-bold text-2xl text-center mb-4">Sustainable Business</h2>
-      <p class="md:text-center">
-        The stories I tell are individually tailored for companies that
-        prioritize sustainability. This will not only help to preserve the earth
-        and cultures for future generations, but also positions your business
-        for long-term success.
-      </p>
+      <h2 class="font-bold text-2xl text-center mb-4">
+        {t("why_me.reason_2.title")}
+      </h2>
+      <p class="md:text-center">{t("why_me.reason_2.description")}</p>
     </div>
   </div>
 
@@ -46,31 +47,13 @@
       alt="image to test"
     />
     <div class="md:flex md:flex-col md:justify-center">
-      <h2 class="font-bold text-2xl text-center mb-4">Embracing Community</h2>
-      <p class="md:text-center">
-        I’m dedicated to creating engaging and relevant content that helps
-        showcasing your brand’s values and builds a strong sense of community
-        around your brand to ensure the success of a business and its mission.
-      </p>
+      <h2 class="font-bold text-2xl text-center mb-4">
+        {t("why_me.reason_3.title")}
+      </h2>
+      <p class="md:text-center">{t("why_me.reason_3.description")}</p>
     </div>
   </div>
 </section>
-
-<!-- <script>
-  import {
-    createIntersectionObserver,
-    observeAll,
-  } from "@/helpers/IntersectionObserver.js";
-
-  const runAnimations = () => {
-    const fadeUpObserver = createIntersectionObserver();
-    observeAll(fadeUpObserver, ".fade-left");
-    observeAll(fadeUpObserver, ".fade-right");
-    observeAll(fadeUpObserver, ".fade-down");
-  };
-
-  document.addEventListener("astro:page-load", runAnimations);
-</script> -->
 
 <style>
   #why-me {

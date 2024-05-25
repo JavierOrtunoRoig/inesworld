@@ -3,8 +3,12 @@ import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
 import Theme from "@/icons/Theme.astro";
 import Youtube from "@/icons/Youtube.astro";
-
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import { languages, isos } from "../i18n/ui";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <nav class="navbar bg-base-100 z-10">
@@ -37,12 +41,20 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
         <li class="menu-item mr-4">
           <details>
             <summary>
-              <span class="fi fi-gb"></span>
-              EN
+              <span class={`fi fi-${isos[lang]}`}></span>
+              {languages[lang]}
             </summary>
             <ul class="p-2 !mt-0">
-              <li><span><span class="fi fi-gb"></span>EN</span></li>
-              <li><span><span class="fi fi-es"></span>ES</span></li>
+              {
+                Object.entries(languages).map(([lang, label]) => (
+                  <li>
+                    <a href={translatePath("/", lang)}>
+                      <span class={`fi fi-${isos[lang]}`} />
+                      {label}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </details>
         </li>
@@ -70,21 +82,31 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li class="menu-item"><a href="/">Home</a></li>
-      <li class="menu-item"><a href="/about">About</a></li>
-      <li class="menu-item"><a href="/blog">Blog</a></li>
-      <li class="menu-item"><a href="/portfolio">Portfolio</a></li>
-      <li class="menu-item"><a href="/contact">Contact</a></li>
-      <li class="menu-item"><a href="/map">Trip map</a></li>
+      <li class="menu-item"><a href={translatePath("/")}>Home</a></li>
+      <li class="menu-item"><a href={translatePath("/about")}>About</a></li>
+      <li class="menu-item"><a href={translatePath("/blog")}>Blog</a></li>
+      <li class="menu-item">
+        <a href={translatePath("/portfolio")}>Portfolio</a>
+      </li>
+      <li class="menu-item"><a href={translatePath("/contact")}>Contact</a></li>
+      <li class="menu-item"><a href={translatePath("/map")}>Trip map</a></li>
       <li class="menu-item mr-4">
         <details>
           <summary>
-            <span class="fi fi-gb"></span>
-            EN
+            <span class={`fi fi-${isos[lang]}`}></span>
+            {languages[lang]}
           </summary>
           <ul class="p-2 !mt-0">
-            <li><span><span class="fi fi-gb"></span>EN</span></li>
-            <li><span><span class="fi fi-es"></span>ES</span></li>
+            {
+              Object.entries(languages).map(([lang, label]) => (
+                <li>
+                  <a href={translatePath("/", lang)}>
+                    <span class={`fi fi-${isos[lang]}`} />
+                    {label}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </details>
       </li>
