@@ -12,12 +12,12 @@ export const trips: Trip[] = [
   },
   {
     title: "Indonesia",
-    image: "/trips/indonesia/1.jpg",
+    image: "/trips/indonesia/1.webp",
     link: "/trip/indonesia",
   },
   {
     title: "Vietnam",
-    image: "/trips/vietnam/1.jpg",
+    image: "/trips/vietnam/1.webp",
     link: "/trip/vietnam",
   },
 ];
