@@ -32,12 +32,16 @@ const translatePath = useTranslatedPath(lang);
         tabindex="0"
         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
       >
-        <li class="menu-item"><a href="/">Home</a></li>
-        <li class="menu-item"><a href="/about">About</a></li>
-        <li class="menu-item"><a href="/blog">Blog</a></li>
-        <li class="menu-item"><a href="/portfolio">Portfolio</a></li>
-        <li class="menu-item"><a href="/contact">Contact</a></li>
-        <li class="menu-item"><a href="/map">Trip map</a></li>
+        <li class="menu-item"><a href={translatePath("/")}>Home</a></li>
+        <li class="menu-item"><a href={translatePath("/about")}>About</a></li>
+        <li class="menu-item"><a href={translatePath("/blog")}>Blog</a></li>
+        <li class="menu-item">
+          <a href={translatePath("/portfolio")}>Portfolio</a>
+        </li>
+        <li class="menu-item">
+          <a href={translatePath("/contact")}>Contact</a>
+        </li>
+        <li class="menu-item"><a href={translatePath("/map")}>Trip map</a></li>
         <li class="menu-item mr-4">
           <details>
             <summary>
