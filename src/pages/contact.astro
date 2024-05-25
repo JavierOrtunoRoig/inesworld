@@ -16,27 +16,15 @@ const t = useTranslations(lang);
     <form class="pt-16 flex flex-col gap-4 w-full max-w-[400px]">
       <div class="form-field">
         <label class="text-xl" for="from_name">{t("contact.label.name")}</label>
-        <input
-          type="text"
-          name="from_name"
-          class="input input-bordered w-full"
-          required
-        />
+        <input type="text" id="from_name" name="from_name" class="input input-bordered w-full" required />
       </div>
       <div class="form-field">
         <label class="text-xl" for="to_email">{t("contact.label.email")}</label>
-        <input
-          type="email"
-          name="to_email"
-          class="input input-bordered w-full"
-          required
-        />
+        <input type="email" id="to_email" name="to_email" class="input input-bordered w-full" required />
       </div>
       <div class="form-field">
-        <label class="text-xl" for="message">{t("contact.label.message")}</label
-        >
-        <textarea class="textarea textarea-bordered" name="message" required
-        ></textarea>
+        <label class="text-xl" for="message">{t("contact.label.message")}</label>
+        <textarea class="textarea textarea-bordered" id="message" name="message" required></textarea>
       </div>
       <button class="btn" type="submit">{t("contact.button")}</button>
     </form>
