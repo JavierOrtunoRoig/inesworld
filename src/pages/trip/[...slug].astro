@@ -47,11 +47,7 @@ imagesGrouped.push(group1, group2, group3);
         imagesGrouped.map((group) => (
           <div class="flex">
             {group.map((image) => (
-              <img
-                class="fade-up hover:cursor-pointer"
-                src={image.path}
-                alt={image.description}
-              />
+              <img class="fade-up hover:cursor-pointer" src={image.path} alt={image.description} loading="lazy" />
             ))}
           </div>
         ))
@@ -62,10 +58,7 @@ imagesGrouped.push(group1, group2, group3);
 
 <!-- Script to add fade up animation -->
 <script>
-  import {
-    createIntersectionObserver,
-    observeAll,
-  } from "@/helpers/IntersectionObserver.js";
+  import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
 
   const runAnimation = () => {
     const fadeUpObserver = createIntersectionObserver();
