@@ -7,46 +7,45 @@ import i18next from "i18next";
 ---
 
 <html lang={i18next.language}>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos."
-		/>
+  <head>
+    <meta charset="utf-8" />
+    <!-- For SEO -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos." />
 
-		<slot name="custom-header-scripts" />
-		<slot name="custom-header-styles" />
-		<title>Inesworld</title>
-		<ViewTransitions />
-	</head>
-	<body>
-		<Navbar />
-		<div class="page-container">
-			<slot />
-		</div>
+    <slot name="custom-header-scripts" />
+    <slot name="custom-header-styles" />
+    <title>Inesworld</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Navbar />
+    <div class="page-container">
+      <slot />
+    </div>
 
-		<Footer />
+    <Footer />
 
-		<style>
-			body,
-			html {
-				height: 100%;
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-			}
+    <style>
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-			.page-container {
-				flex-grow: 1;
-			}
+      .page-container {
+        flex-grow: 1;
+      }
 
-			p {
-				margin: 0rem;
-				padding: 0.3rem;
-			}
-		</style>
-	</body>
+      p {
+        margin: 0rem;
+        padding: 0.3rem;
+      }
+    </style>
+  </body>
 </html>

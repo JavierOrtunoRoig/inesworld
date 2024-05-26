@@ -4,8 +4,11 @@ import mdx from "@astrojs/mdx";
 import astroI18next from 'astro-i18next';
 import tailwind from "@astrojs/tailwind";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://inesworld.vercel.app",
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es"],
@@ -16,5 +19,5 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime]
   },
-  integrations: [mdx(), tailwind(), astroI18next()]
+  integrations: [mdx(), tailwind(), astroI18next(), sitemap()]
 });
