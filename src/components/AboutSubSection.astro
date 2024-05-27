@@ -9,7 +9,7 @@ interface Props {
 const { title, src, text, direction = "left" } = Astro.props;
 
 const rotate = direction === "left" ? "xl:rotate-1" : "xl:-rotate-1";
-const float = direction === "left" ? "float-start" : "float-end";
+const float = direction === "left" ? "xl:float-start" : "xl:float-end";
 
 const imgClass = direction === "left" ? "left-img" : "right-img";
 ---
@@ -17,7 +17,7 @@ const imgClass = direction === "left" ? "left-img" : "right-img";
 <div class="px-8 flex flex-col items-center xl:px-32 xl:inline-block overflow-x-clip">
   <h2 class="subtitle">{title}</h2>
 
-  <img class={`${imgClass} rounded-md mb-4 xl:${float} xl:m-8 ${rotate}`} src={src} width="500" />
+  <img class={`${imgClass} rounded-md mb-4 ${float} xl:m-8 ${rotate}`} src={src} width="500" />
 
   {text.map((t) => <p class="mb-4">{t}</p>)}
 </div>
