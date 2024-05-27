@@ -1,203 +1,56 @@
 ---
 import { changeLanguage } from "i18next";
 import BasicLayout from "@/layouts/BasicLayout.astro";
+import Asd from "@/components/asd.astro";
+import AboutSubSection from "@/components/AboutSubSection.astro";
 
 changeLanguage("en");
 ---
 
 <BasicLayout>
-  <section id="who-am-i">
-    <div class="who-am-i">
-      <h1 class="title fade-up">WHO I AM</h1>
-      <p class="fade-up fade-delay-01">
-        I believe that visual storytelling can contribute to impactful change towards a more inclusive, sustainable and
-        connected world.
-      </p>
-      <p class="fade-up fade-delay-02">
-        I started my career as a creator by building a self-owned side business alongside my studies of media in
-        Germany. Followed by traveling South America for a full year in 2022, I focused on creating visually unique and
-        authentic content for various brands. Shooting and living abroad fundamentally shaped my character and purpose
-        as a storyteller towards encouraging more people to travel with intent and make a positive difference with their
-        actions.
-      </p>
-    </div>
-    <img class="fade-up" src="/ines.jpeg" alt="Inés Cuevas Jiménez" />
-  </section>
+  <h1 class="title">About Me</h1>
 
-  <section id="contact" class="light-theme">
-    <div>
-      <p class="fade-up">Here's the reality</p>
-      <h1 class="fade-up fade-delay-01">Exceptional brands tell exceptional stories</h1>
-      <p class="fade-up fade-delay-02">…because a story does way more than just that.</p>
-      <p class="fade-up fade-delay-03">It creates community.</p>
-      <p class="fade-up fade-delay-04">
-        Showing the world we share with impactful visuals that align with your mission, makes your audience feel more
-        connected and emotionally engaged. I believe that this is a underestimated but most valuable factor to achieve
-        better and lasting business success.
-      </p>
-      <a class="fade-up fade-delay-05" href="contact">let's get in touch!</a>
-    </div>
-  </section>
+  <AboutSubSection
+    title="¿Como empecé?"
+    src="/hero_image.webp"
+    text={[
+      "Desde pequeña, siempre fui una niña curiosa y llena de energía. Crecí en un pequeño pueblo rodeado de naturaleza, lo que me permitió desarrollar una profunda conexión con el entorno que me rodeaba. Mis padres solían llevarme a pasear por los bosques y campos cercanos, y desde muy joven, aprendí a apreciar la belleza en los detalles más simples: la luz del sol filtrándose entre las hojas, el suave murmullo del río y el canto de los pájaros al amanecer.",
+      "Mi primer acercamiento con una cámara fue a los 10 años. Encontré una vieja cámara analógica de mi padre en el ático. Fascinada por aquel objeto, le pedí que me enseñara a usarla. Recuerdo la emoción de cargar el rollo de película y esperar con ansias el momento de revelar las fotos. Aquellas primeras imágenes, aunque técnicamente imperfectas, capturaron momentos únicos y despertaron en mí una pasión que nunca se apagaría.",
+      "Durante mi adolescencia, comencé a experimentar más con la fotografía. Participaba en concursos escolares y dedicaba mis fines de semana a explorar y fotografiar paisajes locales. A los 15 años, gané mi primer concurso de fotografía, lo que me dio la confianza para seguir desarrollando mis habilidades. A medida que crecía, mi interés por la tecnología también aumentaba. Empecé a explorar la edición de fotos y vídeos, aprendiendo de forma autodidacta a través de tutoriales en línea.",
+      "Al terminar la escuela secundaria, decidí estudiar Comunicación Audiovisual. Durante mis años universitarios, tuve la oportunidad de trabajar en varios proyectos, desde cortometrajes hasta documentales. Fue una época de intenso aprendizaje y crecimiento personal. La universidad también me dio la oportunidad de viajar por primera vez al extranjero. Un intercambio estudiantil en Europa me permitió explorar nuevas culturas y paisajes, y me hizo darme cuenta de que quería combinar mi pasión por la fotografía con mi deseo de descubrir el mundo.",
+      "Tras graduarme, conseguí un trabajo en una empresa de producción audiovisual. Aunque aprendí mucho, pronto me di cuenta de que la rutina de oficina no era para mí. Sentía que necesitaba más libertad para crear y explorar. Fue entonces cuando descubrí el estilo de vida de los nómadas digitales. La idea de poder trabajar desde cualquier lugar del mundo, combinando mi pasión por la fotografía y los viajes, era demasiado atractiva para ignorarla.",
+      "Con mucho valor y un poco de miedo, dejé mi trabajo y comencé mi aventura como nómada digital. Desde entonces, he viajado a más de 30 países, capturando momentos y paisajes increíbles con mi cámara. Cada nuevo destino me ofrece una perspectiva diferente y una oportunidad para crecer tanto profesional como personalmente. Mi historia es una mezcla de pasión, descubrimiento y la constante búsqueda de nuevas experiencias, y estoy emocionada por ver a dónde me llevará mi próxima aventura.",
+    ]}
+  />
+  <AboutSubSection
+    title="Formación y Desarrollo"
+    src="/hero_image.webp"
+    direction="right"
+    text={[
+      "Mi pasión por la fotografía y el cine comenzó a tomar forma durante mis años escolares. Aunque ya había descubierto mi amor por las cámaras a una edad temprana, fue durante la secundaria cuando empecé a considerar seriamente una carrera en el campo audiovisual. Participé en el club de fotografía y me involucré en proyectos escolares que me permitieron experimentar con la creación de contenido visual. Estas experiencias tempranas me enseñaron la importancia de contar historias a través de imágenes y me ayudaron a definir mis intereses profesionales.",
+      "Al terminar la secundaria, decidí estudiar Comunicación Audiovisual en la universidad. El programa ofrecía una amplia gama de cursos, desde teoría de los medios hasta técnicas avanzadas de producción. En mi primer año, me inscribí en un curso de fotografía que me permitió profundizar en los aspectos técnicos y artísticos de la disciplina. Aprendí sobre composición, iluminación y postproducción, habilidades esenciales que continúo utilizando en mi trabajo diario.",
+      "Durante mis estudios, también me interesé por la edición de vídeo. Tomé varios cursos que me enseñaron a usar software de edición profesional como Adobe Premiere Pro y Final Cut Pro. Pasaba horas en el laboratorio de computación, editando proyectos y experimentando con diferentes técnicas de montaje. La edición de vídeo se convirtió en una extensión natural de mi pasión por la fotografía, permitiéndome crear narrativas visuales más complejas y emocionantes.",
+      "Uno de los momentos más significativos de mi formación fue un intercambio estudiantil en Europa. Pasé un semestre en una prestigiosa escuela de cine en Berlín, donde tuve la oportunidad de trabajar con estudiantes de todo el mundo. Este intercambio no solo me permitió mejorar mis habilidades técnicas, sino que también me expuso a diferentes estilos y perspectivas cinematográficas. En Berlín, trabajé en varios proyectos colaborativos, incluyendo cortometrajes y documentales, y aprendí a manejar la presión y los desafíos de trabajar en un entorno internacional.",
+      "Tras graduarme con honores, conseguí mi primer trabajo en una empresa de producción audiovisual. Allí, trabajé como asistente de producción y editor de vídeo. Esta experiencia inicial fue invaluable, ya que me permitió aplicar lo que había aprendido en la universidad en un entorno profesional. Trabajé en una variedad de proyectos, desde anuncios comerciales hasta vídeos corporativos, y aprendí a gestionar proyectos, cumplir con plazos ajustados y trabajar en equipo.",
+      "A pesar de la estabilidad que ofrecía mi trabajo, sentía que algo faltaba. La rutina de oficina y los proyectos repetitivos me hacían anhelar más creatividad y libertad. Fue entonces cuando comencé a investigar sobre el estilo de vida de los nómadas digitales. La posibilidad de trabajar de manera remota y viajar por el mundo me parecía la solución perfecta para combinar mi amor por la fotografía y la edición de vídeo con mi deseo de explorar nuevas culturas y paisajes.",
+      "Tomar la decisión de dejar mi trabajo y convertirme en nómada digital no fue fácil. Hubo momentos de duda y miedo, pero mi pasión por la aventura y la creación de contenido visual me impulsaron a seguir adelante. Desde entonces, he trabajado en numerosos proyectos independientes, colaborando con marcas de turismo y creando contenido para redes sociales. Cada nuevo destino me ofrece una oportunidad de aprendizaje y crecimiento, tanto personal como profesional.",
+      "Mi formación y desarrollo no se detienen; continúo aprendiendo y adaptándome a medida que el mundo de la tecnología y la comunicación audiovisual evoluciona. Ya sea a través de cursos en línea, talleres presenciales o la experiencia directa en el campo, siempre busco maneras de mejorar mis habilidades y mantenerme al día con las últimas tendencias y herramientas. Esta dedicación a la mejora continua es lo que me permite seguir siendo relevante y ofrecer trabajos de alta calidad a mis clientes y seguidores.",
+    ]}
+  />
 
-  <section id="what-i-do">
-    <h1 class="title fade-up">What I do</h1>
-
-    <div class="card-containers">
-      <div class="fade-up fade-delay-01 card w-96 bg-neutral text-neutral-content shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">title</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique deserunt quo animi quas et voluptatibus
-            veniam adipisci, rerum excepturi facere.
-          </p>
-        </div>
-      </div>
-
-      <div class="fade-up fade-delay-02 card w-96 bg-neutral text-neutral-content shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">title</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique deserunt quo animi quas et voluptatibus
-            veniam adipisci, rerum excepturi facere.
-          </p>
-        </div>
-      </div>
-
-      <div class="fade-up fade-delay-03 card w-96 bg-neutral text-neutral-content shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title">title</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique deserunt quo animi quas et voluptatibus
-            veniam adipisci, rerum excepturi facere.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
-
-    const runAnimations = () => {
-      const fadeUpObserver = createIntersectionObserver();
-      observeAll(fadeUpObserver, ".fade-up");
-      observeAll(fadeUpObserver, ".fade-down");
-      observeAll(fadeUpObserver, ".fade-down-right-corner");
-      observeAll(fadeUpObserver, ".fade-down-left-corner");
-      observeAll(fadeUpObserver, ".fade-up-right-corner");
-      observeAll(fadeUpObserver, ".fade-up-left-corner");
-    };
-
-    document.addEventListener("astro:page-load", runAnimations);
-  </script>
-
-  <style>
-    #who-am-i {
-      height: 100vh;
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-
-      .who-am-i {
-        flex: 3;
-        text-align: center;
-      }
-
-      img {
-        border-radius: 36% 64% 70% 30% / 30% 30% 70% 70%;
-        min-width: 300px;
-        flex: 2;
-        margin-bottom: 2rem;
-      }
-
-      .key-values-container {
-        flex: 0.7;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-      }
-    }
-
-    #contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      div {
-        width: 100%;
-        max-width: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4rem 0;
-      }
-
-      h1 {
-        text-align: center;
-      }
-
-      p {
-        margin: 0.2rem 0;
-        text-align: center;
-      }
-
-      a {
-        background-color: var(--primary-color);
-        color: var(--quinary-color);
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 5rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        margin-top: 2rem;
-        text-transform: uppercase;
-      }
-    }
-
-    #what-i-do {
-      padding: 2rem;
-
-      .card-containers {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 992px) {
-      #who-am-i {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-
-        img {
-          min-width: auto;
-          width: 75%;
-        }
-
-        .who-am-i {
-          flex: 2;
-          text-align: center;
-        }
-
-        .key-values-container {
-          padding: 0rem;
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      .card-containers {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .card {
-        width: 100%;
-      }
-    }
-  </style>
+  <AboutSubSection
+    title="Vida como Nómada Digital"
+    src="/hero_image.webp"
+    text={[
+      "Tomar la decisión de convertirme en nómada digital ha sido una de las más transformadoras de mi vida. Dejé atrás la seguridad de un trabajo de oficina para embarcarme en una aventura llena de incertidumbre, pero también de infinitas posibilidades. Mi vida como nómada digital comenzó hace cinco años, y desde entonces, he explorado más de 30 países, cada uno ofreciendo una nueva perspectiva y una fuente inagotable de inspiración.",
+      "Al principio, la transición no fue fácil. Adaptarse a un estilo de vida que cambia constantemente requiere flexibilidad y una mentalidad abierta. Aprendí a vivir con menos, a ser más organizada y a gestionar mi tiempo de manera eficiente. La habilidad de trabajar desde cualquier lugar del mundo es liberadora, pero también exige disciplina. Encontrar un equilibrio entre el trabajo y la exploración ha sido crucial para mantenerme productiva y disfrutar plenamente de mis viajes.",
+      "Una de las primeras cosas que hice fue invertir en un equipo adecuado. Mi cámara, computadora portátil y dron son mis herramientas esenciales. También compré una mochila resistente y práctica que me permite llevar todo mi equipo de manera segura y cómoda. Cada vez que llego a un nuevo destino, lo primero que hago es buscar un espacio de trabajo adecuado, ya sea un café tranquilo, un espacio de coworking o, en algunos casos, la habitación de mi alojamiento. Tener un lugar donde pueda concentrarme y trabajar sin interrupciones es vital para mi productividad.",
+      "Mis días como nómada digital son variados y llenos de actividades. Una jornada típica podría comenzar con una sesión de fotos al amanecer en un lugar emblemático, seguida de varias horas de edición y trabajo en mis proyectos. Aprovecho las tardes para explorar y conocer la cultura local, interactuando con los residentes y descubriendo rincones ocultos que a menudo se pasan por alto en las guías turísticas. Las noches, a menudo, las dedico a la planificación y organización de mis próximos destinos y proyectos.",
+      "Trabajar en distintos países también ha implicado adaptarme a diferentes zonas horarias. Esto ha requerido una gestión cuidadosa del tiempo, especialmente cuando se trata de coordinar con clientes y colaboradores que se encuentran en otras partes del mundo. Utilizo aplicaciones de gestión de proyectos y herramientas de comunicación para mantenerme conectada y asegurar que todos los aspectos de mi trabajo funcionen sin problemas, sin importar dónde me encuentre.",
+      "La vida como nómada digital también me ha permitido conocer a una comunidad increíble de personas con intereses similares. En mis viajes, he conocido a otros nómadas digitales, freelancers y creativos que comparten mi pasión por la aventura y la libertad. Estas conexiones no solo han enriquecido mi vida personal, sino que también han abierto oportunidades para colaboraciones y proyectos conjuntos. Compartir experiencias y conocimientos con otros nómadas me ha ayudado a crecer y a mantenerme inspirada.",
+      "Además de trabajar en proyectos fotográficos y de vídeo, he comenzado a documentar mis experiencias como nómada digital en un blog y en mis redes sociales. Esto no solo me permite compartir mis aventuras con una audiencia más amplia, sino que también sirve como una plataforma para inspirar a otros a perseguir sus sueños y explorar el mundo. A través de mis publicaciones, ofrezco consejos de viaje, guías de destinos y reflexiones personales sobre los desafíos y las recompensas de este estilo de vida.",
+      "Cada país que visito me ofrece algo nuevo que aprender y una nueva historia que contar. Desde las vibrantes calles de Tokio hasta las tranquilas playas de Bali, cada lugar deja una huella en mi vida y en mi trabajo. La diversidad de culturas, paisajes y experiencias ha enriquecido mi perspectiva y ha ampliado mi comprensión del mundo.",
+      "En resumen, mi vida como nómada digital es un constante viaje de descubrimiento y crecimiento. Aunque no siempre es fácil, la libertad de poder trabajar desde cualquier lugar del mundo y la oportunidad de conocer diferentes culturas y personas hacen que cada desafío valga la pena. Mi cámara y mi laptop son mis compañeros constantes, y con ellos, sigo documentando mi viaje, un paso a la vez, capturando la belleza y la diversidad del mundo en cada clic.",
+    ]}
+  />
 </BasicLayout>
