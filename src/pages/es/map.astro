@@ -5,6 +5,7 @@ import i18next, { changeLanguage } from "i18next";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import "@/global.css";
 import "@/../node_modules/leaflet/dist/leaflet.css";
+import Calendar from "@/components/Calendar.astro";
 
 changeLanguage("es");
 
@@ -31,6 +32,8 @@ const t = useTranslations(lang);
     <h1 class="title">{t("map.title")}</h1>
 
     <div id="map"></div>
+
+    <Calendar />
 
     <div class="px-8">
       <h2 class="subtitle mt-4">

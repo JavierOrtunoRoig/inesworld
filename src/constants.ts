@@ -21,3 +21,21 @@ export const trips: Trip[] = [
     link: "/trip/vietnam",
   },
 ];
+
+export interface Travel {
+  country: string;
+  startDate: Date;
+  endDate: Date;
+}
+export const nextTravels: Travel[] = [
+  {
+    country: "Philippines",
+    startDate: new Date("2024-07-21"),
+    endDate: new Date("2024-09-29"),
+  },
+  {
+    country: "Shout Korea",
+    startDate: new Date("2024-07-01"),
+    endDate: new Date("2024-07-15"),
+  },
+];

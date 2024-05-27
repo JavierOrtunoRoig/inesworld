@@ -1,0 +1,166 @@
+<div class="flex flex-col items-center px-4">
+  <h2 class="subtitle mt-8">Trip calendar</h2>
+
+  <div class="w-full h-auto flex flex-col p-[10px] bg-white rounded-md shadow-sm sm:w-[500px]">
+    <div class="header flex justify-between items-center mb-[10px]">
+      <button
+        id="prevBtn"
+        class="flex justify-center items-center border-none rounded-[50%] bg-white cursor-pointer size-[40px] shadow-[0_0_4px_rgba(0,0,0,0.2)]"
+      >
+        <!-- <i class="fa-solid fa-chevron-left"></i> -->
+        <span>{"<"}</span>
+      </button>
+      <div class="monthYear" id="monthYear"></div>
+      <button
+        id="nextBtn"
+        class="flex justify-center items-center border-none rounded-[50%] bg-white cursor-pointer size-[40px] shadow-[0_0_4px_rgba(0,0,0,0.2)]"
+      >
+        <!-- <i class="fa-solid fa-chevron-right"></i> -->
+        <span>{">"}</span>
+      </button>
+    </div>
+
+    <div class="grid grid-cols-[repeat(7,1fr)] *:text-center *:p-[5px] *:text-[#999fa6] *:font-medium">
+      <div class="day">Mon</div>
+      <div class="day">Tue</div>
+      <div class="day">Wed</div>
+      <div class="day">Thu</div>
+      <div class="day">Fri</div>
+      <div class="day">Sat</div>
+      <div class="day">Sun</div>
+    </div>
+    <div class="grid gap-[5px] grid-cols-[repeat(7,1fr)]" id="dates"></div>
+  </div>
+</div>
+
+<script>
+  import { nextTravels } from "@/constants.ts";
+  import type { Travel } from "@/constants.ts";
+
+  const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
+  const datesElement = document.getElementById("dates") as HTMLDivElement;
+  const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
+  const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
+
+  let currentDate = new Date();
+
+  const updateCalendar = () => {
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+
+    const firstDay = new Date(currentYear, currentMonth, 0);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    const totalDays = lastDay.getDate();
+    const firstDayIndex = firstDay.getDay();
+    const lastDayIndex = lastDay.getDay();
+
+    const monthYearString = currentDate.toLocaleString("default", {
+      month: "long",
+      year: "numeric",
+    });
+    monthYearElement.textContent = monthYearString;
+
+    let datesHTML = "";
+
+    for (let i = firstDayIndex; i > 0; i--) {
+      const prevDate = new Date(currentYear, currentMonth, 0 - i + 1);
+      datesHTML += `<div class="date inactive">${prevDate.getDate()}</div>`;
+    }
+
+    for (let i = 1; i <= totalDays; i++) {
+      const date = new Date(currentYear, currentMonth, i);
+      const activeClass = date.toDateString() === new Date().toDateString() ? "active" : "";
+      datesHTML += `<div class="date ${activeClass}">${i}</div>`;
+    }
+
+    for (let i = 1; i <= 7 - lastDayIndex; i++) {
+      const nextDate = new Date(currentYear, currentMonth + 1, i);
+      datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
+    }
+
+    datesElement.innerHTML = datesHTML;
+  };
+
+  const updateTravelsDays = () => {
+    const dates = document.querySelectorAll(".date");
+    dates.forEach((date) => {
+      const dateValue = date.textContent as string;
+      const dateValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
+
+      // date in english format
+      const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}`;
+      const fullDate = new Date(dateValueFull);
+
+      // check if fullDate is between nextTravels[0].starDate and nextTravels[0].endDate or nextTravels[1].starDate and nextTravels[1].endDate
+      // iterate over nextTravels
+      nextTravels.forEach((travel: Travel) => {
+        const startDate = new Date(travel.startDate);
+        const endDate = new Date(travel.endDate);
+
+        if (fullDate >= startDate && fullDate <= endDate) {
+          date.classList.add("travel");
+          date.classList.add("tooltip");
+          date.setAttribute("data-tip", travel.country);
+        }
+      });
+    });
+  };
+
+  prevBtn.addEventListener("click", () => {
+    currentDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+    updateCalendar();
+    updateTravelsDays();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
+    updateCalendar();
+    updateTravelsDays();
+  });
+
+  updateCalendar();
+  updateTravelsDays();
+</script>
+
+<style is:inline>
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+    color: black;
+  }
+
+  .date:hover,
+  .date.active {
+    background: #ff5869;
+    color: #fff;
+  }
+
+  .date.inactive {
+    color: #d2d2d2;
+  }
+
+  .date.inactive:hover {
+    background: #fff;
+  }
+
+  .date.travel {
+    background: #58b9ff;
+    color: #fff;
+  }
+</style>
