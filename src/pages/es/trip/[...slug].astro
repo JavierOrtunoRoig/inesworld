@@ -21,7 +21,6 @@ export async function getStaticPaths() {
     });
 }
 const { gallery: { title, photos }, } = Astro.props;
-// console.log({ photos });
 let imagesGrouped: Record<string, any>[] = [];
 let group1: Record<string, any>[] = [];
 let group2: Record<string, any>[] = [];
