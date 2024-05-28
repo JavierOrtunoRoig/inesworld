@@ -60,31 +60,19 @@ const t = useTranslations(lang);
         message: formData.get("message"),
       };
 
-      init({
-        publicKey: "Zysq_8MGlqpjcijD4",
-        limitRate: {
-          // Allow 1 request per 10s
-          throttle: 10000,
+      fetch("http://localhost:4321/emailjs", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      });
-
-      Swal.fire({
-        title: "Sending email...",
-        didOpen: () => {
-          Swal.showLoading();
-        },
-      });
-
-      send("service_3r6y8dq", "template_d3rlfnk", data).then(
-        (response) => {
-          Swal.close();
+        body: JSON.stringify(data),
+      }).then((response) => {
+        if (response.ok) {
           Swal.fire({
             title: "Email sent! I will contact you soon!",
             icon: "success",
           });
-        },
-        (error) => {
-          Swal.close();
+        } else {
           Swal.fire({
             title: "Error sending email",
             icon: "error",
@@ -94,8 +82,8 @@ const t = useTranslations(lang);
               }, 2000);
             },
           });
-        },
-      );
+        }
+      });
     });
   };
 
