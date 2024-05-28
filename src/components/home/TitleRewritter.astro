@@ -2,11 +2,7 @@
 const { texts } = Astro.props;
 ---
 
-<p
-  class="typewrite text-5xl md:text-6xl xl:text-8xl"
-  data-period="2000"
-  data-type=`${JSON.stringify(texts)}`
->
+<p class="typewrite text-5xl md:text-6xl xl:text-8xl flex" data-period="2000" data-type=`${JSON.stringify(texts)}`>
   <span class="wrap"></span>
   <span class="tick"></span>
 </p>
