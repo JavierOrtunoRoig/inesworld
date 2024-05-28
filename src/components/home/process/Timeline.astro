@@ -1,6 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <ul class="timeline timeline-vertical">
   <li>
-    <div class="timeline-start timeline-box">1. Connect</div>
+    <div class="timeline-start timeline-box">{t("process.step_1.title")}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +24,7 @@
   </li>
   <li>
     <hr />
-    <div class="timeline-end timeline-box">2. Concept</div>
+    <div class="timeline-end timeline-box">{t("process.step_2.title")}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +41,7 @@
   </li>
   <li>
     <hr />
-    <div class="timeline-start timeline-box">3. Create</div>
+    <div class="timeline-start timeline-box">{t("process.step_3.title")}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +58,7 @@
   </li>
   <li>
     <hr />
-    <div class="timeline-end timeline-box">4. Review</div>
+    <div class="timeline-end timeline-box">{t("process.step_4.title")}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +75,7 @@
   </li>
   <li>
     <hr />
-    <div class="timeline-start timeline-box">5. Deliver</div>
+    <div class="timeline-start timeline-box">{t("process.step_5.title")}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
