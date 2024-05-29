@@ -32,7 +32,6 @@ const t = useTranslations(lang);
 </BasicLayout>
 
 <script>
-  import { init, send } from "@emailjs/browser";
   import Swal from "sweetalert2";
 
   const runScript = () => {
@@ -60,42 +59,38 @@ const t = useTranslations(lang);
         message: formData.get("message"),
       };
 
-      init({
-        publicKey: "Zysq_8MGlqpjcijD4",
-        limitRate: {
-          // Allow 1 request per 10s
-          throttle: 10000,
+      fetch("https://inesworld-backend.vercel.app/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      });
-
-      Swal.fire({
-        title: "Sending email...",
-        didOpen: () => {
-          Swal.showLoading();
-        },
-      });
-
-      send("service_3r6y8dq", "template_d3rlfnk", data).then(
-        (response) => {
-          Swal.close();
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (response.ok) {
+            Swal.fire({
+              title: "Success",
+              text: "Email sent successfully",
+              icon: "success",
+              confirmButtonText: "Ok",
+            });
+          } else {
+            Swal.fire({
+              title: "Error",
+              text: "An error occurred while sending the email",
+              icon: "error",
+              confirmButtonText: "Ok",
+            });
+          }
+        })
+        .catch((error) => {
           Swal.fire({
-            title: "Email sent! I will contact you soon!",
-            icon: "success",
-          });
-        },
-        (error) => {
-          Swal.close();
-          Swal.fire({
-            title: "Error sending email",
+            title: "Error",
+            text: "An error occurred while sending the email",
             icon: "error",
-            didOpen: () => {
-              setTimeout(() => {
-                Swal.close();
-              }, 2000);
-            },
+            confirmButtonText: "Ok",
           });
-        },
-      );
+        });
     });
   };
 
