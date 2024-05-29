@@ -103,4 +103,9 @@ const t = useTranslations(lang);
     flex-direction: column;
     gap: 0.2rem;
   }
+
+  /* fix problem with footer */
+  :global(body.swal2-height-auto:has(.footer)) {
+    height: 100% !important;
+  }
 </style>

@@ -18,7 +18,7 @@ const t = useTranslations(lang);
     <div class="gradient"></div>
     <main class="info-container">
       <aside class="arrow"><ChevronLeft /></aside>
-      <article class="animate-fade-up">
+      <article class="animate-fade-down">
         <h1 class="title">Switzerland</h1>
         <a href="/trip/switzerland">{t("portfolio.title")}</a>
       </article>
@@ -96,20 +96,8 @@ const t = useTranslations(lang);
     --line-color: #fff;
   }
 
-  .fade-in-img {
-    animation: fade-in 0.3s ease-in-out;
-  }
-
-  .fade-in-1 {
-    animation: fade-in 1s ease-in-out;
-  }
-
-  .fade-in-2 {
-    animation: fade-in 2s ease-in-out;
-  }
-
-  .fade-in-up {
-    animation: fade-in-up 1s ease-in-out;
+  :global(.footer) {
+    display: none;
   }
 
   .container {
@@ -257,35 +245,6 @@ const t = useTranslations(lang);
           background-color: var(--line-color);
         }
       }
-    }
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes fade-in-up {
-    0% {
-      transform: translate(0px, 25px);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0px, 0);
-      opacity: 1;
     }
   }
 </style>
