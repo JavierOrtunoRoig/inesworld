@@ -43,11 +43,11 @@ const t = useTranslations(lang);
       <div id="comming-countries" class="flex flex-wrap gap-4 justify-center"></div>
     </div>
 
-    <div class="px-8 py-8">
+    <div class="p-8 flex flex-col">
       <h2 class="subtitle">
         {t("map.subtitle_2")}
       </h2>
-      <div id="visited-countries" class="flex flex-wrap gap-4 justify-center"></div>
+      <div id="visited-countries" class="gap-4 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] w-full"></div>
     </div>
 
     <Footer />
@@ -69,11 +69,11 @@ const t = useTranslations(lang);
   function createCard(container: HTMLDivElement, countryProperties) {
     const langName = `name_${document.documentElement.lang}`;
     const div = document.createElement("div");
-    div.classList.add("card", "w-fit", "bg-base-200", "shadow-2xl");
+    div.classList.add("card", "w-full", "bg-base-200", "shadow-2xl", "sm:max-w-[400px]");
     div.innerHTML = `
       <div class="card-body p-0 flex flex-row">
-        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl"></p>
-        <h2 class="card-title pr-4">${countryProperties[langName]}</h2>
+        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0"></p>
+        <h2 class="card-title px-2 sm:text-center">${countryProperties[langName]}</h2>
       </div>
     `;
     container.appendChild(div);
