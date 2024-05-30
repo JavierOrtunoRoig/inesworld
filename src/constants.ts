@@ -35,7 +35,7 @@ export const nextTravels: Travel[] = [
   },
   {
     country: "Shout Korea",
-    startDate: new Date("2024-07-01"),
-    endDate: new Date("2024-07-15"),
+    startDate: new Date("2025-02-01"),
+    endDate: new Date("2025-07-15"),
   },
 ];
