@@ -20,7 +20,7 @@ const { xRatio = 16, yRatio = 9 } = Astro.props;
   const resizer = document.querySelector(".diff-resizer") as HTMLDivElement;
 
   const totalWidth = diffContainer?.clientWidth;
-  const desiredPosition = totalWidth / 4; // 25% of the total width
+  const desiredPosition = totalWidth / 2; // 50% of the total width
 
   resizer.style.width = `${desiredPosition}px`;
 </script>

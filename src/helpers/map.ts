@@ -1,7 +1,7 @@
 import atlas from "@/data/atlas.geo.json";
 import geometries from "@/data/geometriesExtraction.json";
 import type { GEOJson } from "@/types";
-import { HOME_POPUP_TEXT, markersToShow, TRAVELLING_POPUP_TEXT } from "@/data/markers";
+import { HOME_POPUP_TEXT, markersToShow, TRAVELLING_POPUP_TEXT } from "@/constants";
 
 declare var L: any;
 
