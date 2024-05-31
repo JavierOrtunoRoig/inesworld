@@ -79,14 +79,15 @@ imagesGrouped.push(group1, group2, group3);
     const img = document.querySelector(".gallery-container") as HTMLElement;
     new Viewer(img, {
       viewed() {},
-      url(image) {
-        // get teh original images without compress
-        const encodedUrl = image.src;
-        let path = decodeURIComponent(encodedUrl).split("/src/assets")[1];
-        path = path.split("?")[0];
+      // url(image) {
+      //   // get teh original images without compress
+      //   const encodedUrl = image.src;
+      //   console.log( {encodedUrl});
+      //   let path = decodeURIComponent(encodedUrl).split("/src/assets")[1];
+      //   path = path.split("?")[0];
 
-        return path;
-      },
+      //   return path;
+      // },
     });
 
     const guideshouldNotRun = localStorage.getItem("guideshouldNotRun_gallery");
