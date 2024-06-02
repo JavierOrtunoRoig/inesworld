@@ -1,0 +1,20 @@
+---
+import { changeLanguage } from "i18next";
+import NotFoundIcon from "@/icons/NotFoundIcon.astro";
+import BasicLayout from "@/layouts/BasicLayout.astro";
+
+changeLanguage("en");
+---
+
+<BasicLayout>
+	<div class="relative flex flex-col items-center justify-center">
+		<NotFoundIcon class="max-w-full lg:max-w-[1000px]" />
+		<a
+			class="relative -top-6 text-[8px] sm:-top-12 lg:-top-16"
+			href="https://storyset.com/online"
+			aria-label="Online illustrations by Storyset"
+			target="_blank"
+			rel="noopener noreferrer">Online illustrations by Storyset</a
+		>
+	</div>
+</BasicLayout>
