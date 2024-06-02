@@ -3,8 +3,8 @@ import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
 import Theme from "@/icons/Theme.astro";
 import Youtube from "@/icons/Youtube.astro";
+import { isos, languages } from "../i18n/ui";
 import { getLangFromUrl, useTranslatedPath, useTranslations } from "../i18n/utils";
-import { languages, isos } from "../i18n/ui";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const lang = getLangFromUrl(Astro.url);
@@ -16,190 +16,190 @@ const url = Astro.url;
 const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/").replaceAll("//", "/");
 ---
 
-<nav class="navbar bg-base-100 z-10">
-  <div class="navbar-start w-full justify-between lg:w-[50%] lg:justify-normal">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg
-        >
-      </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-[9999]">
-        <li class="menu-item"><a href={translatePath("/")}>{t("navbar.home")}</a></li>
-        <li class="menu-item"><a href={translatePath("/about")}>{t("navbar.about")}</a></li>
-        <li class="menu-item"><a href={translatePath("/blog")}>{t("navbar.blog")}</a></li>
-        <li class="menu-item">
-          <a href={translatePath("/portfolio")}>{t("navbar.portfolio")}</a>
-        </li>
-        <li class="menu-item">
-          <a href={translatePath("/contact")}>{t("navbar.contact")}</a>
-        </li>
-        <li class="menu-item"><a href={translatePath("/map")}>{t("navbar.trip_map")}</a></li>
-        <li class="menu-item mr-4">
-          <details>
-            <summary>
-              <span class={`fi fi-${isos[lang]}`}></span>
-              {languages[lang]}
-            </summary>
-            <ul class="p-2 !mt-0">
-              {
-                Object.entries(languages).map(([lang, label]) => (
-                  <li>
-                    <a href={translatePath(finalPath, lang)}>
-                      <span class={`fi fi-${isos[lang]}`} />
-                      {label}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </details>
-        </li>
-        <ul class="icon-list">
-          <!-- <Theme /> -->
-          <li class="item instagram">
-            <a
-              href="https://www.instagram.com/inesworld.mov/"
-              aria-label="InesWorld Instagram account, it will open in a new tab"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram class={"icon"} />
-            </a>
-          </li>
-          <li class="item youtube">
-            <a
-              href="https://www.youtube.com/@InesWorldMov"
-              aria-label="InesWorld Youtube channel, it will open in a new tab"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Youtube class={"icon"} />
-            </a>
-          </li>
-        </ul>
-      </ul>
-    </div>
-    <a href="/" class="navbar-brand">
-      <Logo />
-    </a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li class="menu-item"><a href={translatePath("/")}>{t("navbar.home")}</a></li>
-      <li class="menu-item"><a href={translatePath("/about")}>{t("navbar.about")}</a></li>
-      <li class="menu-item"><a href={translatePath("/blog")}>{t("navbar.blog")}</a></li>
-      <li class="menu-item">
-        <a href={translatePath("/portfolio")}>{t("navbar.portfolio")}</a>
-      </li>
-      <li class="menu-item"><a href={translatePath("/contact")}>{t("navbar.contact")}</a></li>
-      <li class="menu-item"><a href={translatePath("/map")}>{t("navbar.trip_map")}</a></li>
-      <li class="menu-item mr-4">
-        <details>
-          <summary>
-            <span class={`fi fi-${isos[lang]}`}></span>
-            {languages[lang]}
-          </summary>
-          <ul class="p-2 !mt-0">
-            {
-              Object.entries(languages).map(([lang, label]) => (
-                <li>
-                  <a href={translatePath(finalPath, lang)}>
-                    <span class={`fi fi-${isos[lang]}`} />
-                    {label}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </details>
-      </li>
-      <ul class="icon-list">
-        <!-- <Theme /> -->
-        <li class="item instagram">
-          <a
-            href="https://www.instagram.com/inesworld.mov/"
-            aria-label="See my instagram account"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram class={"icon"} />
-          </a>
-        </li>
-        <li class="item youtube">
-          <a
-            href="https://www.youtube.com/@InesWorldMov"
-            aria-label="See my youtube channel"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Youtube class={"icon"} />
-          </a>
-        </li>
-      </ul>
-    </ul>
-  </div>
-  <div class="navbar-end hidden lg:flex"></div>
+<nav class="navbar z-10 bg-base-100">
+	<div class="navbar-start w-full justify-between lg:w-[50%] lg:justify-normal">
+		<div class="dropdown">
+			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+					><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg
+				>
+			</div>
+			<ul tabindex="0" class="menu dropdown-content menu-sm z-[9999] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+				<li class="menu-item"><a href={translatePath("/")}>{t("navbar.home")}</a></li>
+				<li class="menu-item"><a href={translatePath("/about")}>{t("navbar.about")}</a></li>
+				<li class="menu-item"><a href={translatePath("/blog")}>{t("navbar.blog")}</a></li>
+				<li class="menu-item">
+					<a href={translatePath("/portfolio")}>{t("navbar.portfolio")}</a>
+				</li>
+				<li class="menu-item">
+					<a href={translatePath("/contact")}>{t("navbar.contact")}</a>
+				</li>
+				<li class="menu-item"><a href={translatePath("/map")}>{t("navbar.trip_map")}</a></li>
+				<li class="menu-item mr-4">
+					<details>
+						<summary>
+							<span class={`fi fi-${isos[lang]}`}></span>
+							{languages[lang]}
+						</summary>
+						<ul class="!mt-0 p-2">
+							{
+								Object.entries(languages).map(([lang, label]) => (
+									<li>
+										<a href={translatePath(finalPath, lang)}>
+											<span class={`fi fi-${isos[lang]}`} />
+											{label}
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</details>
+				</li>
+				<ul class="icon-list">
+					<!-- <Theme /> -->
+					<li class="item instagram">
+						<a
+							href="https://www.instagram.com/inesworld.mov/"
+							aria-label="InesWorld Instagram account, it will open in a new tab"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Instagram class={"icon"} />
+						</a>
+					</li>
+					<li class="item youtube">
+						<a
+							href="https://www.youtube.com/@InesWorldMov"
+							aria-label="InesWorld Youtube channel, it will open in a new tab"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Youtube class={"icon"} />
+						</a>
+					</li>
+				</ul>
+			</ul>
+		</div>
+		<a href="/" class="navbar-brand">
+			<Logo />
+		</a>
+	</div>
+	<div class="navbar-center hidden lg:flex">
+		<ul class="menu menu-horizontal px-1">
+			<li class="menu-item"><a href={translatePath("/")}>{t("navbar.home")}</a></li>
+			<li class="menu-item"><a href={translatePath("/about")}>{t("navbar.about")}</a></li>
+			<li class="menu-item"><a href={translatePath("/blog")}>{t("navbar.blog")}</a></li>
+			<li class="menu-item">
+				<a href={translatePath("/portfolio")}>{t("navbar.portfolio")}</a>
+			</li>
+			<li class="menu-item"><a href={translatePath("/contact")}>{t("navbar.contact")}</a></li>
+			<li class="menu-item"><a href={translatePath("/map")}>{t("navbar.trip_map")}</a></li>
+			<li class="menu-item mr-4">
+				<details>
+					<summary>
+						<span class={`fi fi-${isos[lang]}`}></span>
+						{languages[lang]}
+					</summary>
+					<ul class="!mt-0 p-2">
+						{
+							Object.entries(languages).map(([lang, label]) => (
+								<li>
+									<a href={translatePath(finalPath, lang)}>
+										<span class={`fi fi-${isos[lang]}`} />
+										{label}
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</details>
+			</li>
+			<ul class="icon-list">
+				<!-- <Theme /> -->
+				<li class="item instagram">
+					<a
+						href="https://www.instagram.com/inesworld.mov/"
+						aria-label="See my instagram account"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Instagram class={"icon"} />
+					</a>
+				</li>
+				<li class="item youtube">
+					<a
+						href="https://www.youtube.com/@InesWorldMov"
+						aria-label="See my youtube channel"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Youtube class={"icon"} />
+					</a>
+				</li>
+			</ul>
+		</ul>
+	</div>
+	<div class="navbar-end hidden lg:flex"></div>
 </nav>
 
 <style>
-  .menu {
-    font-size: 1.1rem;
-  }
+	.menu {
+		font-size: 1.1rem;
+	}
 </style>
 
 <style is:global>
-  :root {
-    --navbar-height: 4rem;
-    --navbar-padding: 0.5rem;
-    --navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
-  }
+	:root {
+		--navbar-height: 4rem;
+		--navbar-padding: 0.5rem;
+		--navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
+	}
 
-  ul.icon-list {
-    padding-left: 0.75rem;
-    display: flex;
-    gap: 10px;
-    list-style-type: none;
-  }
+	ul.icon-list {
+		padding-left: 0.75rem;
+		display: flex;
+		gap: 10px;
+		list-style-type: none;
+	}
 
-  li.item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+	li.item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
 
-    transition: all 0.3s ease;
-  }
-  .item {
-    .icon {
-      --color: #f0f9fe;
-      font-size: 1.1rem;
-      color: var(--color);
-      fill: var(--color);
-    }
+		transition: all 0.3s ease;
+	}
+	.item {
+		.icon {
+			--color: #f0f9fe;
+			font-size: 1.1rem;
+			color: var(--color);
+			fill: var(--color);
+		}
 
-    &:hover {
-      transform: scale(1.1);
-    }
+		&:hover {
+			transform: scale(1.1);
+		}
 
-    a {
-      text-decoration: none;
-      /* width: 32px;
+		a {
+			text-decoration: none;
+			/* width: 32px;
       height: 32px; */
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
-  }
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			overflow: hidden;
+			padding: 0;
+		}
+	}
 
-  @media (min-width: 1024px) {
-    .icon-list {
-      margin: 0rem !important;
-      justify-content: center;
-    }
-  }
+	@media (min-width: 1024px) {
+		.icon-list {
+			margin: 0rem !important;
+			justify-content: center;
+		}
+	}
 </style>
