@@ -1,10 +1,10 @@
 ---
+import "@/flags-lib/flag-icons.css";
 import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
 import Youtube from "@/icons/Youtube.astro";
 import { isos, languages } from "../i18n/ui";
 import { getLangFromUrl, useTranslatedPath, useTranslations } from "../i18n/utils";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,6 +13,8 @@ const translatePath = useTranslatedPath(lang);
 // get actual path
 const url = Astro.url;
 const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/").replaceAll("//", "/");
+
+const actualLanguageFlag = isos[lang] === "es" ? "fi fi-es" : "fi fi-gb";
 ---
 
 <nav class="navbar z-10 bg-base-100">
@@ -37,7 +39,7 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 				<li class="menu-item mr-4">
 					<details>
 						<summary>
-							<span class={`fi fi-${isos[lang]}`}></span>
+							<span class={actualLanguageFlag}></span>
 							{languages[lang]}
 						</summary>
 						<ul class="!mt-0 p-2">
@@ -98,19 +100,23 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 			<li class="menu-item mr-4">
 				<details>
 					<summary>
-						<span class={`fi fi-${isos[lang]}`}></span>
+						<span class={actualLanguageFlag}></span>
 						{languages[lang]}
 					</summary>
 					<ul class="!mt-0 p-2">
 						{
-							Object.entries(languages).map(([lang, label]) => (
-								<li>
-									<a href={translatePath(finalPath, lang)}>
-										<span class={`fi fi-${isos[lang]}`} />
-										{label}
-									</a>
-								</li>
-							))
+							Object.entries(languages).map(([lang, label]) => {
+								const newFlagCss = `fi fi-${isos[lang]}`;
+
+								return (
+									<li>
+										<a href={translatePath(finalPath, lang)}>
+											<span class={newFlagCss} />
+											{label}
+										</a>
+									</li>
+								);
+							})
 						}
 					</ul>
 				</details>
