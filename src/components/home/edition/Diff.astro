@@ -3,24 +3,24 @@ const { xRatio = 16, yRatio = 9 } = Astro.props;
 ---
 
 <div class=`diff aspect-[${xRatio}/${yRatio}] lg:w-2/4 h-[600px] md:h-[800px]`>
-  <div class="diff-item-1">
-    <img class="rounded-md" src="/antes.webp" />
-  </div>
-  <div class="diff-item-2">
-    <img class="rounded-md" src="/despues.webp" />
-  </div>
-  <div class="diff-resizer"></div>
+	<div class="diff-item-1">
+		<img class="rounded-md" src="/antes.webp" alt="Unedited photograph taken of a family in India" />
+	</div>
+	<div class="diff-item-2">
+		<img class="rounded-md" src="/despues.webp" alt="Edited photograph taken of a family in India" />
+	</div>
+	<div class="diff-resizer"></div>
 </div>
 
 <script>
-  // this set the divider to the middle of the screen.
-  // for this I need to set width of .diff-resizer to 50% of the parent
+	// this set the divider to the middle of the screen.
+	// for this I need to set width of .diff-resizer to 50% of the parent
 
-  const diffContainer = document.querySelector(".diff") as HTMLDivElement;
-  const resizer = document.querySelector(".diff-resizer") as HTMLDivElement;
+	const diffContainer = document.querySelector(".diff") as HTMLDivElement;
+	const resizer = document.querySelector(".diff-resizer") as HTMLDivElement;
 
-  const totalWidth = diffContainer?.clientWidth;
-  const desiredPosition = totalWidth / 2; // 50% of the total width
+	const totalWidth = diffContainer?.clientWidth;
+	const desiredPosition = totalWidth / 2; // 50% of the total width
 
-  resizer.style.width = `${desiredPosition}px`;
+	resizer.style.width = `${desiredPosition}px`;
 </script>

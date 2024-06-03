@@ -1,10 +1,10 @@
 ---
-import { changeLanguage } from "i18next";
 import "@/global.css";
-import BasicLayout from "@/layouts/BasicLayout.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ChevronLeft from "@/icons/ChevronLeft.astro";
 import ChevronRight from "@/icons/ChevronRight.astro";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import BasicLayout from "@/layouts/BasicLayout.astro";
+import { changeLanguage } from "i18next";
 
 changeLanguage("en");
 
@@ -13,95 +13,99 @@ const t = useTranslations(lang);
 ---
 
 <BasicLayout>
-  <div class="container">
-    <img class="animate-fade" src="/trips/switzerland/1.webp" />
-    <div class="gradient"></div>
-    <main class="info-container">
-      <aside class="arrow"><ChevronLeft /></aside>
-      <article class="animate-fade-down">
-        <h1 class="title">Switzerland</h1>
-        <a href="/trip/switzerland">{t("portfolio.title")}</a>
-      </article>
-      <aside class="arrow"><ChevronRight /></aside>
-    </main>
-  </div>
+	<div class="container">
+		<img class="animate-fade" src="/trips/switzerland/1.webp" alt="Switzerland mountain" />
+		<div class="gradient"></div>
+		<main class="info-container">
+			<aside class="arrow"><ChevronLeft /></aside>
+			<article class="animate-fade-down">
+				<h1 class="title">Switzerland</h1>
+				<a href="/trip/switzerland">{t("portfolio.title")}</a>
+			</article>
+			<aside class="arrow"><ChevronRight /></aside>
+		</main>
+	</div>
 </BasicLayout>
 
 <script>
-  import { trips, type Trip } from "@/constants";
+	import { trips, type Trip } from "@/constants";
 
-  const loadScript = () => {
-    const $ = (selector) => document.querySelector(selector);
-    const $$ = (selector) => document.querySelectorAll(selector);
+	const loadScript = () => {
+		const $ = (selector) => document.querySelector(selector);
+		const $$ = (selector) => document.querySelectorAll(selector);
 
-    const image = $("img") as HTMLImageElement;
-    const leftArrow = $$(".arrow")[0] as HTMLDivElement;
-    const rightArrow = $$(".arrow")[1] as HTMLDivElement;
+		const image = $("img") as HTMLImageElement;
+		const leftArrow = $$(".arrow")[0] as HTMLDivElement;
+		const rightArrow = $$(".arrow")[1] as HTMLDivElement;
 
-    if (!image || !leftArrow || !rightArrow) {
-      return;
-    }
+		if (!image || !leftArrow || !rightArrow) {
+			return;
+		}
 
-    // set up the trips and preload the images
-    trips.forEach((trip) => {
-      const img = new Image();
-      img.src = trip.image;
-    });
+		// set up the trips and preload the images
+		trips.forEach((trip) => {
+			const img = new Image();
+			img.src = trip.image;
+			img.alt = trip.alt;
+		});
 
-    /**
-     * Restarts the animation of the title and the image
-     */
-    const restartAnimation = (trip) => {
-      const title = $("h1") as HTMLHeadingElement;
-      const link = $("article a") as HTMLAnchorElement;
-      const image = $("img") as HTMLImageElement;
+		/**
+		 * Restarts the animation of the title and the image
+		 */
+		const restartAnimation = (trip) => {
+			const title = $("h1") as HTMLHeadingElement;
+			const link = $("article a") as HTMLAnchorElement;
+			const image = $("img") as HTMLImageElement;
 
-      const newTitle = title.cloneNode(true);
-      const newLink = link.cloneNode(true) as HTMLAnchorElement;
-      const newImage = image.cloneNode(true) as HTMLImageElement;
+			const newTitle = title.cloneNode(true);
+			const newLink = link.cloneNode(true) as HTMLAnchorElement;
+			const newImage = image.cloneNode(true) as HTMLImageElement;
 
-      newTitle.textContent = trip.title;
-      newLink.href = trip.link;
-      newImage.src = trip.image;
+			newTitle.textContent = trip.title;
+			newLink.href = trip.link;
+			newImage.src = trip.image;
+			newImage.alt = trip.alt;
 
-      title.parentNode?.replaceChild(newTitle, title);
-      link.parentNode?.replaceChild(newLink, link);
-      image.parentNode?.replaceChild(newImage, image);
-    };
+			title.parentNode?.replaceChild(newTitle, title);
+			link.parentNode?.replaceChild(newLink, link);
+			image.parentNode?.replaceChild(newImage, image);
+		};
 
-    leftArrow.addEventListener("click", () => {
-      const title = $("h1") as HTMLHeadingElement;
-      const index = trips.findIndex((trip) => trip.title === title.textContent);
-      const trip = trips.at(index - 1) as Trip;
-      image.src = trip.image;
-      restartAnimation(trip);
-    });
+		leftArrow.addEventListener("click", () => {
+			const title = $("h1") as HTMLHeadingElement;
+			const index = trips.findIndex((trip) => trip.title === title.textContent);
+			const trip = trips.at(index - 1) as Trip;
+			image.src = trip.image;
+			image.alt = trip.alt;
+			restartAnimation(trip);
+		});
 
-    rightArrow.addEventListener("click", () => {
-      const title = $("h1") as HTMLHeadingElement;
-      const index = trips.findIndex((trip) => trip.title === title.textContent);
-      const newIndex = (index + 1) % trips.length;
-      const trip = trips[newIndex];
-      image.src = trip.image;
-      restartAnimation(trip);
-    });
-  };
+		rightArrow.addEventListener("click", () => {
+			const title = $("h1") as HTMLHeadingElement;
+			const index = trips.findIndex((trip) => trip.title === title.textContent);
+			const newIndex = (index + 1) % trips.length;
+			const trip = trips[newIndex];
+			image.src = trip.image;
+			image.alt = trip.alt;
+			restartAnimation(trip);
+		});
+	};
 
-  document.addEventListener("astro:page-load", loadScript);
+	document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>
-  :root {
-    --line-width: 70%;
-    --line-color: #fff;
-  }
+	:root {
+		--line-width: 70%;
+		--line-color: #fff;
+	}
 
-  :global(.footer) {
-    display: none;
-  }
+	:global(.footer) {
+		display: none;
+	}
 
-  .container {
-    /* 
+	.container {
+		/* 
     Las imágenes son elementos de remplazo (así se llaman), es decir que en realidad su representación es externa a css.  No puedes cambiar lo que hay en la iamgen con css.
     Su propiedad display por defecto es inline y para muchos casos es tratada igual que un texto.  Esto significa que al igual que el texto, el css lo trata como si tuviera una línea base (baseline), auqnue en realidad no la tiene por ser imagen.
     Cuando css utiliza esa baseline, deja un espacio por debajo (esos 4px en tu caso) para que quepan los trazos descendentes de las letras que los tienen (como la letra g o q), es decir el trazo que va por debajo de la línea base.
@@ -109,142 +113,142 @@ const t = useTranslations(lang);
     vertical-align: middle
     Con eso eliminas ese espacio.
     */
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: block;
-      height: calc(100dvh);
-      width: 100dvw;
-      object-fit: cover;
-    }
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			height: calc(100dvh);
+			width: 100dvw;
+			object-fit: cover;
+		}
 
-    .gradient {
-      position: absolute;
-      height: 100%;
-      background: linear-gradient(to top, #000000da 10%, transparent 100%);
-      top: 0;
-      width: 100%;
-    }
+		.gradient {
+			position: absolute;
+			height: 100%;
+			background: linear-gradient(to top, #000000da 10%, transparent 100%);
+			top: 0;
+			width: 100%;
+		}
 
-    .info-container {
-      width: 100%;
-      height: calc(100dvh - var(--navbar-total-height));
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: #fff;
-      padding: 0 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+		.info-container {
+			width: 100%;
+			height: calc(100dvh - var(--navbar-total-height));
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color: #fff;
+			padding: 0 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-      @media (max-width: 768px) {
-        padding: 0 1rem;
-        flex-direction: column;
-      }
+			@media (max-width: 768px) {
+				padding: 0 1rem;
+				flex-direction: column;
+			}
 
-      .arrow > svg {
-        fill: #fff;
-        width: 32px;
-        height: 32px;
-        transition: all 0.3s ease;
+			.arrow > svg {
+				fill: #fff;
+				width: 32px;
+				height: 32px;
+				transition: all 0.3s ease;
 
-        @media (any-hover: hover) {
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.5);
-          }
-        }
+				@media (any-hover: hover) {
+					&:hover {
+						cursor: pointer;
+						transform: scale(1.5);
+					}
+				}
 
-        @media (max-width: 768px) {
-          margin: 1.5rem 0;
-          transform: rotate(90deg);
+				@media (max-width: 768px) {
+					margin: 1.5rem 0;
+					transform: rotate(90deg);
 
-          &:hover {
-            transform: rotate(90deg);
-          }
-        }
-      }
+					&:hover {
+						transform: rotate(90deg);
+					}
+				}
+			}
 
-      article {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 5rem;
+			article {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				flex-direction: column;
+				padding-bottom: 5rem;
 
-        @media (max-width: 768px) {
-          padding-bottom: 1rem;
-        }
+				@media (max-width: 768px) {
+					padding-bottom: 1rem;
+				}
 
-        @media (max-height: 768px) {
-          padding-bottom: 2rem;
-        }
+				@media (max-height: 768px) {
+					padding-bottom: 2rem;
+				}
 
-        > a {
-          text-decoration: none;
-          margin-top: 1.5rem;
-          background-color: transparent;
-          color: #fff;
-          border: 1px solid #fff;
-          padding: 0.5rem 1rem;
-          font-size: 1.5rem;
-          transition: all 0.3s ease;
-          border-radius: 5px;
+				> a {
+					text-decoration: none;
+					margin-top: 1.5rem;
+					background-color: transparent;
+					color: #fff;
+					border: 1px solid #fff;
+					padding: 0.5rem 1rem;
+					font-size: 1.5rem;
+					transition: all 0.3s ease;
+					border-radius: 5px;
 
-          &:hover {
-            background-color: #fff;
-            color: #000;
-            cursor: pointer;
-          }
-        }
-      }
+					&:hover {
+						background-color: #fff;
+						color: #000;
+						cursor: pointer;
+					}
+				}
+			}
 
-      /* Style one -> https://codepen.io/vedadesigns/pen/GPxYZg */
-      h1 {
-        margin: 0;
-        position: relative;
-        padding: 0;
-        margin: 0;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        -webkit-transition: all 0.4s ease 0s;
-        -o-transition: all 0.4s ease 0s;
-        transition: all 0.4s ease 0s;
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        display: inline-block;
-        text-align: center;
+			/* Style one -> https://codepen.io/vedadesigns/pen/GPxYZg */
+			h1 {
+				margin: 0;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				font-family: "Raleway", sans-serif;
+				font-weight: 300;
+				-webkit-transition: all 0.4s ease 0s;
+				-o-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+				text-transform: uppercase;
+				padding-bottom: 5px;
+				display: inline-block;
+				text-align: center;
 
-        &:before {
-          width: 28px;
-          height: 5px;
-          display: block;
-          content: "";
-          position: absolute;
-          bottom: 3px;
-          left: 50%;
-          margin-left: -14px;
-          background-color: var(--line-color);
-          z-index: 1;
-          margin-left: calc(28px / 2 * -1);
-        }
-        &:after {
-          width: var(--line-width);
-          height: 1px;
-          display: block;
-          content: "";
-          position: relative;
-          margin-top: 25px;
-          left: 50%;
-          text-align: center;
-          margin-left: calc(70% / 2 * -1);
-          background-color: var(--line-color);
-        }
-      }
-    }
-  }
+				&:before {
+					width: 28px;
+					height: 5px;
+					display: block;
+					content: "";
+					position: absolute;
+					bottom: 3px;
+					left: 50%;
+					margin-left: -14px;
+					background-color: var(--line-color);
+					z-index: 1;
+					margin-left: calc(28px / 2 * -1);
+				}
+				&:after {
+					width: var(--line-width);
+					height: 1px;
+					display: block;
+					content: "";
+					position: relative;
+					margin-top: 25px;
+					left: 50%;
+					text-align: center;
+					margin-left: calc(70% / 2 * -1);
+					background-color: var(--line-color);
+				}
+			}
+		}
+	}
 </style>

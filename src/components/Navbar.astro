@@ -1,7 +1,6 @@
 ---
 import Instagram from "@/icons/Instagram.astro";
 import Logo from "@/icons/Logo.astro";
-import Theme from "@/icons/Theme.astro";
 import Youtube from "@/icons/Youtube.astro";
 import { isos, languages } from "../i18n/ui";
 import { getLangFromUrl, useTranslatedPath, useTranslations } from "../i18n/utils";
@@ -19,7 +18,7 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 <nav class="navbar z-10 bg-base-100">
 	<div class="navbar-start w-full justify-between lg:w-[50%] lg:justify-normal">
 		<div class="dropdown">
-			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Open menu button">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
 					><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg
 				>
@@ -55,32 +54,34 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 						</ul>
 					</details>
 				</li>
-				<ul class="icon-list">
-					<!-- <Theme /> -->
-					<li class="item instagram">
-						<a
-							href="https://www.instagram.com/inesworld.mov/"
-							aria-label="InesWorld Instagram account, it will open in a new tab"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Instagram class={"icon"} />
-						</a>
-					</li>
-					<li class="item youtube">
-						<a
-							href="https://www.youtube.com/@InesWorldMov"
-							aria-label="InesWorld Youtube channel, it will open in a new tab"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Youtube class={"icon"} />
-						</a>
-					</li>
-				</ul>
+				<li>
+					<ul class="icon-list m-0">
+						<!-- <Theme /> -->
+						<li class="item instagram">
+							<a
+								href="https://www.instagram.com/inesworld.mov/"
+								aria-label="InesWorld Instagram account, it will open in a new tab"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Instagram class={"icon"} />
+							</a>
+						</li>
+						<li class="item youtube">
+							<a
+								href="https://www.youtube.com/@InesWorldMov"
+								aria-label="InesWorld Youtube channel, it will open in a new tab"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Youtube class={"icon"} />
+							</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
-		<a href="/" class="navbar-brand">
+		<a href="/" class="navbar-brand" aria-label="See the home of Inesworld web">
 			<Logo />
 		</a>
 	</div>
@@ -114,29 +115,31 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 					</ul>
 				</details>
 			</li>
-			<ul class="icon-list">
-				<!-- <Theme /> -->
-				<li class="item instagram">
-					<a
-						href="https://www.instagram.com/inesworld.mov/"
-						aria-label="See my instagram account"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Instagram class={"icon"} />
-					</a>
-				</li>
-				<li class="item youtube">
-					<a
-						href="https://www.youtube.com/@InesWorldMov"
-						aria-label="See my youtube channel"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Youtube class={"icon"} />
-					</a>
-				</li>
-			</ul>
+			<li class="menu-item justify-center">
+				<ul class="icon-list">
+					<!-- <Theme /> -->
+					<li class="item instagram">
+						<a
+							href="https://www.instagram.com/inesworld.mov/"
+							aria-label="See my instagram account"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Instagram class={"icon"} />
+						</a>
+					</li>
+					<li class="item youtube">
+						<a
+							href="https://www.youtube.com/@InesWorldMov"
+							aria-label="See my youtube channel"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Youtube class={"icon"} />
+						</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 	<div class="navbar-end hidden lg:flex"></div>
@@ -155,8 +158,12 @@ const finalPath = translatePath(`/${url.pathname}`, lang).replaceAll("/es/", "/"
 		--navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
 	}
 
-	ul.icon-list {
-		padding-left: 0.75rem;
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	.icon-list {
 		display: flex;
 		gap: 10px;
 		list-style-type: none;

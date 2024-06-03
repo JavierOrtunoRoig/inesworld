@@ -3,9 +3,12 @@ const { text } = Astro.props;
 ---
 
 <div
-  class="radial-progress text-green-400"
-  style="--value: 0; --size: 13rem; --thickness: 0.75rem;"
-  role="progressbar"
+	class="radial-progress text-green-400"
+	style="--value: 0; --size: 13rem; --thickness: 0.75rem;"
+	role="progressbar"
+	aria-valuemin="0"
+	aria-valuemax="100"
+	aria-label={text}
 >
-  <p class="text-green-300 uppercase text-lg font-bold text-center">{text}</p>
+	<p class="text-center text-lg font-bold uppercase text-green-300">{text}</p>
 </div>

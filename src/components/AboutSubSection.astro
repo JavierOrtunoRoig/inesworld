@@ -1,105 +1,106 @@
 ---
 interface Props {
-  title: string;
-  src: string;
-  direction?: "left" | "right";
-  text: string[];
+	title: string;
+	src: string;
+	alt: string;
+	direction?: "left" | "right";
+	text: string[];
 }
 
-const { title, src, text, direction = "left" } = Astro.props;
+const { title, src, text, alt, direction = "left" } = Astro.props;
 
 const float = direction === "left" ? "xl:float-start" : "xl:float-end";
 
 const imgClass = direction === "left" ? "left-img" : "right-img";
 ---
 
-<div class="px-8 flex flex-col items-center xl:px-32 xl:inline-block overflow-x-clip">
-  <h2 class="subtitle">{title}</h2>
+<div class="flex flex-col items-center overflow-x-clip px-8 xl:inline-block xl:px-32">
+	<h2 class="subtitle">{title}</h2>
 
-  <img class={`${imgClass} rounded-md mb-4 ${float} xl:m-8 `} src={src} width="500" />
+	<img class={`${imgClass} rounded-md mb-4 ${float} xl:m-8 `} src={src} alt={alt} width="500" />
 
-  {text.map((t) => <p class="mb-4">{t}</p>)}
+	{text.map((t) => <p class="mb-4">{t}</p>)}
 </div>
 
 <style>
-  :root {
-    --start-deg: 5deg;
-    --end-deg: 1deg;
-  }
+	:root {
+		--start-deg: 5deg;
+		--end-deg: 1deg;
+	}
 
-  img {
-    animation-timeline: view();
-    animation-fill-mode: both;
-    animation-range: entry 25% cover 50%;
-    border-radius: 10px;
-  }
+	img {
+		animation-timeline: view();
+		animation-fill-mode: both;
+		animation-range: entry 25% cover 50%;
+		border-radius: 10px;
+	}
 
-  .left-img {
-    animation-name: left;
-  }
+	.left-img {
+		animation-name: left;
+	}
 
-  .right-img {
-    animation-name: right;
-  }
+	.right-img {
+		animation-name: right;
+	}
 
-  p {
-    animation-name: fade-in-text;
-    animation-timeline: view();
-    animation-fill-mode: both;
-    animation-range: entry 0% cover 12%;
-  }
+	p {
+		animation-name: fade-in-text;
+		animation-timeline: view();
+		animation-fill-mode: both;
+		animation-range: entry 0% cover 12%;
+	}
 
-  @media (max-width: 640px) {
-    p {
-      animation-range: entry 0% cover 25%;
-    }
-  }
+	@media (max-width: 640px) {
+		p {
+			animation-range: entry 0% cover 25%;
+		}
+	}
 
-  @media (max-width: 1024px) {
-    p {
-      animation-range: entry 0% cover 20%;
-    }
-  }
+	@media (max-width: 1024px) {
+		p {
+			animation-range: entry 0% cover 20%;
+		}
+	}
 
-  @keyframes fade-in-text {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-      scale: 0.5;
-    }
+	@keyframes fade-in-text {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+			scale: 0.5;
+		}
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      scale: 1;
-    }
-  }
+		to {
+			opacity: 1;
+			transform: translateY(0);
+			scale: 1;
+		}
+	}
 
-  @keyframes left {
-    from {
-      opacity: 0.25;
-      transform: translateX(-200px);
-      rotate: -var(--start-deg);
-    }
+	@keyframes left {
+		from {
+			opacity: 0.25;
+			transform: translateX(-200px);
+			rotate: -var(--start-deg);
+		}
 
-    to {
-      opacity: 1;
-      transform: translateX(0);
-      rotate: var(--end-deg);
-    }
-  }
+		to {
+			opacity: 1;
+			transform: translateX(0);
+			rotate: var(--end-deg);
+		}
+	}
 
-  @keyframes right {
-    from {
-      opacity: 0.25;
-      transform: translateX(200px);
-      rotate: var(--start-deg);
-    }
+	@keyframes right {
+		from {
+			opacity: 0.25;
+			transform: translateX(200px);
+			rotate: var(--start-deg);
+		}
 
-    to {
-      opacity: 1;
-      transform: translateX(0);
-      rotate: calc(var(--end-deg) * -1);
-    }
-  }
+		to {
+			opacity: 1;
+			transform: translateX(0);
+			rotate: calc(var(--end-deg) * -1);
+		}
+	}
 </style>
