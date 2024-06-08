@@ -4,22 +4,33 @@ import CardImage from "./latestWorks/CardImage.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+import IndonesiaImage from "@/assets/trips/indonesia/1.jpg";
+import SwitzerlandImage from "@/assets/trips/switzerland/1.jpg";
+import VietnamImage from "@/assets/trips/vietnam/1.jpg";
 ---
 
 <div class="flex flex-col items-center p-8">
 	<h1 class="title">{t("latest_works.title")}</h1>
 
 	<div class="flex flex-col gap-6 xl:flex-row">
-		<CardImage src="Indonesia" text={t("lastest_works.country_1")} alt="Little boy on the streets of Indonesia" />
 		<CardImage
-			src="Vietnam"
-			text={t("lastest_works.country_2")}
-			alt="Streets of Vietnam illuminated in the middle of the night"
+			src={IndonesiaImage}
+			text={t("lastest_works.country_1")}
+			alt="Little boy on the streets of Indonesia"
+			country="Indonesia"
 		/>
 		<CardImage
-			src="Switzerland"
+			src={VietnamImage}
+			text={t("lastest_works.country_2")}
+			alt="Streets of Vietnam illuminated in the middle of the night"
+			country="Vietnam"
+		/>
+		<CardImage
+			src={SwitzerlandImage}
 			text={t("lastest_works.country_3")}
 			alt="High mountain covered by clouds in Switzerland"
+			country="Switzerland"
 		/>
 	</div>
 </div>
