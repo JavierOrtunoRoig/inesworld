@@ -69,11 +69,18 @@ const { texts } = Astro.props;
 			delta = 500;
 		}
 
-		setTimeout(function () {
+		const timeoutId = setTimeout(function () {
 			that.tick();
 		}, delta);
+
+		window.lastTimeoutId = timeoutId;
 	};
 	const loadScript = () => {
+		// this is a workaround to avoid multiple instances of the typewrite effect when navigating between different languages
+		if (window.lastTimeoutId) {
+			clearTimeout(window.lastTimeoutId);
+		}
+
 		var elements = document.getElementsByClassName("typewrite");
 		for (var i = 0; i < elements.length; i++) {
 			var toRotate = elements[i].getAttribute("data-type");
