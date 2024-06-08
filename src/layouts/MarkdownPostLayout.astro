@@ -1,29 +1,30 @@
 ---
+import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
+import "@/global.css";
 import { getValidPosts } from "@/helpers/posts";
+import { HeadHrefLangs } from "astro-i18next/components";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
-import Footer from "@/components/Footer.astro";
 import i18next from "i18next";
-import "@/global.css";
 
 interface Post {
-  id: string;
-  slug: string;
-  body: string;
-  collection: string;
-  data: {
-    title: string;
-    pubDate: Date;
-    draft: boolean;
-    tags?: string[] | undefined;
-    image?:
-      | {
-          src?: string | undefined;
-          alt?: string | undefined;
-        }
-      | undefined;
-  };
+	id: string;
+	slug: string;
+	body: string;
+	collection: string;
+	data: {
+		title: string;
+		pubDate: Date;
+		draft: boolean;
+		tags?: string[] | undefined;
+		image?:
+			| {
+					src?: string | undefined;
+					alt?: string | undefined;
+			  }
+			| undefined;
+	};
 }
 
 const { frontmatter, slug } = Astro.props;
@@ -38,179 +39,182 @@ const nextPost = posts[currentPostIndex + 1];
 ---
 
 <html lang={i18next.language}>
-  <head>
-    <meta name="google-site-verification" content="5GRhhm_YYdtAFIMnUytnZRT8Dwghpw9EKt428qz0IhY" />
-    <meta charset="utf-8" />
-    <!-- For SEO -->
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={frontmatter.description} />
-    <link rel="canonical" href="https://inesworld.vercel.app/" />
+	<head>
+		<meta name="google-site-verification" content="5GRhhm_YYdtAFIMnUytnZRT8Dwghpw9EKt428qz0IhY" />
+		<meta charset="utf-8" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={frontmatter.description} />
+		<meta name="keywords" content="Inés Cuevas Jiménez, portfolio, photography, travel, trips, world" />
+		<meta name="author" content="Inés Cuevas Jiménez" />
+		<meta name="robots" content="index, follow" />
 
-    <slot name="custom-header-scripts" />
+		<HeadHrefLangs />
 
-    <title>Inesworld</title>
-    <ViewTransitions />
-  </head>
-  <body>
-    <Navbar />
+		<slot name="custom-header-scripts" />
 
-    <div class="info">
-      <h1 class="title">{frontmatter.title}</h1>
-      <p class="read-time">{minutesRead}</p>
-      <!-- render tags -->
-      {
-        frontmatter.tags && (
-          <div class="tags">
-            {frontmatter.tags.map((tag) => (
-              <span>#{tag} </span>
-            ))}
-          </div>
-        )
-      }
-      <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
-    </div>
+		<title>Inesworld</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<Navbar />
 
-    <article class="post-content">
-      <slot />
-      <div class="other-posts">
-        {nextPost && <a href={nextPost.slug}>&larr; {nextPost.data.title}</a>}
-        {
-          previousPost && (
-            <a class="previous-post" href={previousPost.slug}>
-              {previousPost.data.title} &rarr;
-            </a>
-          )
-        }
-      </div>
-    </article>
+		<div class="info">
+			<h1 class="title">{frontmatter.title}</h1>
+			<p class="read-time">{minutesRead}</p>
+			<!-- render tags -->
+			{
+				frontmatter.tags && (
+					<div class="tags">
+						{frontmatter.tags.map((tag) => (
+							<span>#{tag} </span>
+						))}
+					</div>
+				)
+			}
+			<img src={frontmatter.image.src} alt={frontmatter.image.alt} />
+		</div>
 
-    <Footer />
+		<article class="post-content">
+			<slot />
+			<div class="other-posts">
+				{nextPost && <a href={nextPost.slug}>&larr; {nextPost.data.title}</a>}
+				{
+					previousPost && (
+						<a class="previous-post" href={previousPost.slug}>
+							{previousPost.data.title} &rarr;
+						</a>
+					)
+				}
+			</div>
+		</article>
 
-    <style>
-      body,
-      html {
-        width: 100%;
-      }
+		<Footer />
 
-      .post-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 1rem;
-        overflow-x: hidden;
+		<style>
+			body,
+			html {
+				width: 100%;
+			}
 
-        strong,
-        del {
-          color: var(--special-text-color);
-        }
+			.post-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 1rem;
+				overflow-x: hidden;
 
-        h1 {
-          font-size: 2rem;
-          margin-top: 0;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          align-self: flex-start;
-          font-weight: 900;
-        }
+				strong,
+				del {
+					color: var(--special-text-color);
+				}
 
-        h2 {
-          font-size: 1.5rem;
-        }
+				h1 {
+					font-size: 2rem;
+					margin-top: 0;
+				}
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					align-self: flex-start;
+					font-weight: 900;
+				}
 
-        h3 {
-          font-size: 1.25rem;
-        }
+				h2 {
+					font-size: 1.5rem;
+				}
 
-        h4 {
-          font-size: 1.1rem;
-        }
+				h3 {
+					font-size: 1.25rem;
+				}
 
-        h5 {
-          font-size: 1rem;
-        }
+				h4 {
+					font-size: 1.1rem;
+				}
 
-        h6 {
-          font-size: 0.9rem;
-        }
+				h5 {
+					font-size: 1rem;
+				}
 
-        p {
-          font-size: 1rem;
-          line-height: 1.5;
-          margin: 1rem 0;
-        }
-      }
+				h6 {
+					font-size: 0.9rem;
+				}
 
-      a {
-        color: var(--special-text-color);
-        text-decoration-color: var(--special-text-color);
-        transition: color 0.2s;
+				p {
+					font-size: 1rem;
+					line-height: 1.5;
+					margin: 1rem 0;
+				}
+			}
 
-        &:hover {
-          color: var(--quaternary-color);
-          text-decoration-color: var(--quaternary-color);
-        }
-      }
+			a {
+				color: var(--special-text-color);
+				text-decoration-color: var(--special-text-color);
+				transition: color 0.2s;
 
-      .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 3rem;
+				&:hover {
+					color: var(--quaternary-color);
+					text-decoration-color: var(--quaternary-color);
+				}
+			}
 
-        & > .title {
-          font-size: 3rem;
-          margin: 0;
-          text-align: center;
-        }
+			.info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 3rem;
 
-        & > .read-time {
-          margin: 0.5em;
-          font-size: 1.2rem;
-          /* color: var(--tertiary-color); */
-        }
+				& > .title {
+					font-size: 3rem;
+					margin: 0;
+					text-align: center;
+				}
 
-        & > .tags {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+				& > .read-time {
+					margin: 0.5em;
+					font-size: 1.2rem;
+					/* color: var(--tertiary-color); */
+				}
 
-          & > span {
-            margin: 0 0.2rem;
-            /* color: var(--tertiary-color); */
-          }
-        }
+				& > .tags {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
 
-        & > img {
-          width: 100%;
-          max-width: 800px;
-          border-radius: 0.5rem;
-          margin: 1rem 0;
-        }
-      }
+					& > span {
+						margin: 0 0.2rem;
+						/* color: var(--tertiary-color); */
+					}
+				}
 
-      .other-posts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        margin: 1rem 0;
+				& > img {
+					width: 100%;
+					max-width: 800px;
+					border-radius: 0.5rem;
+					margin: 1rem 0;
+				}
+			}
 
-        & .previous-post {
-          align-self: flex-end;
-        }
-      }
-    </style>
-  </body>
+			.other-posts {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 100%;
+				margin: 1rem 0;
+
+				& .previous-post {
+					align-self: flex-end;
+				}
+			}
+		</style>
+	</body>
 </html>

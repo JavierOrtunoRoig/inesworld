@@ -1,7 +1,7 @@
 ---
-import { changeLanguage } from "i18next";
-import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import BasicLayout from "@/layouts/BasicLayout.astro";
+import { changeLanguage } from "i18next";
 
 changeLanguage("es");
 
@@ -10,39 +10,39 @@ const t = useTranslations(lang);
 ---
 
 <BasicLayout>
-  <div class="contact-container flex flex-col items-center justify-center p-4">
-    <h1 class="title">{t("contact.title")}</h1>
-    <p>{t("contact.subtitle")}</p>
-    <form class="pt-16 flex flex-col gap-4 w-full max-w-[400px]">
-      <div class="form-field">
-        <label class="text-xl" for="from_name">{t("contact.label.name")}</label>
-        <input type="text" id="from_name" name="from_name" class="input input-bordered w-full" required />
-      </div>
-      <div class="form-field">
-        <label class="text-xl" for="to_email">{t("contact.label.email")}</label>
-        <input type="email" id="to_email" name="to_email" class="input input-bordered w-full" required />
-      </div>
-      <div class="form-field">
-        <label class="text-xl" for="message">{t("contact.label.message")}</label>
-        <textarea class="textarea textarea-bordered" id="message" name="message" required></textarea>
-      </div>
-      <button class="btn" type="submit">{t("contact.button")}</button>
-    </form>
-  </div>
+	<div class="contact-container flex flex-col items-center justify-center p-4">
+		<h1 class="title">{t("contact.title")}</h1>
+		<p>{t("contact.subtitle")}</p>
+		<form class="flex w-full max-w-[400px] flex-col gap-4 pt-16">
+			<div class="form-field">
+				<label class="text-xl" for="from_name">{t("contact.label.name")}</label>
+				<input type="text" id="from_name" name="from_name" class="input input-bordered w-full" required />
+			</div>
+			<div class="form-field">
+				<label class="text-xl" for="to_email">{t("contact.label.email")}</label>
+				<input type="email" id="to_email" name="to_email" class="input input-bordered w-full" required />
+			</div>
+			<div class="form-field">
+				<label class="text-xl" for="message">{t("contact.label.message")}</label>
+				<textarea class="textarea textarea-bordered" id="message" name="message" required></textarea>
+			</div>
+			<button class="btn" type="submit">{t("contact.button")}</button>
+		</form>
+	</div>
 </BasicLayout>
 
 <script>
-  import Swal from "sweetalert2";
+	import Swal from "sweetalert2";
 
-  const runScript = () => {
-    const form = document.querySelector("form") as HTMLFormElement;
-    if (!form) return;
+	const runScript = () => {
+		const form = document.querySelector("form") as HTMLFormElement;
+		if (!form) return;
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const formData = new FormData(form);
+		form.addEventListener("submit", async (event) => {
+			event.preventDefault();
+			const formData = new FormData(form);
 
-      /* 
+			/* 
         In the web template:
         - From name: Es el nombre de la persona que envía el mensaje, aparecerá como nombre de la persona que envía el correo, EN LA PREVIEW DEL CORREO
 
@@ -50,62 +50,62 @@ const t = useTranslations(lang);
         Con reply to podemos enviar otro correo al que mandó el formulario
       */
 
-      // to_email will be inserted in the email body linked to {{to_email}}
-      // from_name will be inserted in the email body linked to {{from_name}}
-      // message will be inserted in the email body linked to {{message}}
-      const data = {
-        to_email: formData.get("to_email"),
-        from_name: formData.get("from_name"),
-        message: formData.get("message"),
-      };
+			// to_email will be inserted in the email body linked to {{to_email}}
+			// from_name will be inserted in the email body linked to {{from_name}}
+			// message will be inserted in the email body linked to {{message}}
+			const data = {
+				to_email: formData.get("to_email"),
+				from_name: formData.get("from_name"),
+				message: formData.get("message"),
+			};
 
-      fetch("https://inesworld-backend.vercel.app/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (response.ok) {
-            Swal.fire({
-              title: "Success",
-              text: "Email sent successfully",
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
-          } else {
-            Swal.fire({
-              title: "Error",
-              text: "An error occurred while sending the email",
-              icon: "error",
-              confirmButtonText: "Ok",
-            });
-          }
-        })
-        .catch((error) => {
-          Swal.fire({
-            title: "Error",
-            text: "An error occurred while sending the email",
-            icon: "error",
-            confirmButtonText: "Ok",
-          });
-        });
-    });
-  };
+			fetch("https://inesworld-backend.vercel.app/api/sendEmail", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			})
+				.then((response) => {
+					if (response.ok) {
+						Swal.fire({
+							title: "Success",
+							text: "Email sent successfully",
+							icon: "success",
+							confirmButtonText: "Ok",
+						});
+					} else {
+						Swal.fire({
+							title: "Error",
+							text: "An error occurred while sending the email",
+							icon: "error",
+							confirmButtonText: "Ok",
+						});
+					}
+				})
+				.catch((error) => {
+					Swal.fire({
+						title: "Error",
+						text: "An error occurred while sending the email",
+						icon: "error",
+						confirmButtonText: "Ok",
+					});
+				});
+		});
+	};
 
-  document.addEventListener("astro:page-load", runScript);
+	document.addEventListener("astro:page-load", runScript);
 </script>
 
 <style>
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
+	.form-field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
 
-  /* fix problem with footer */
-  :global(body.swal2-height-auto:has(.footer)) {
-    height: 100% !important;
-  }
+	/* fix problem with footer */
+	:global(body.swal2-height-auto:has(.footer)) {
+		height: 100% !important;
+	}
 </style>

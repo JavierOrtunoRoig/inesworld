@@ -1,9 +1,9 @@
 ---
-import { changeLanguage } from "i18next";
-import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getValidPosts } from "@/helpers/posts";
-import { getCollection } from "astro:content";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import BasicLayout from "@/layouts/BasicLayout.astro";
+import { getCollection } from "astro:content";
+import { changeLanguage } from "i18next";
 
 changeLanguage("en");
 
@@ -17,208 +17,191 @@ const posts = getValidPosts(allPosts);
 ---
 
 <BasicLayout>
-  <div class="search-container">
-    <input type="text" id="search" placeholder={t("blog.input.placeholder")} />
-  </div>
-  <div class="blogs-container">
-    {
-      (
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0">
-          {posts.map((post) => {
-            const date = new Date(post.data.pubDate);
-            const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-            const tags = post.data.tags;
+	<div class="search-container">
+		<input type="text" id="search" placeholder={t("blog.input.placeholder")} />
+	</div>
+	<div class="blogs-container">
+		{
+			(
+				<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0">
+					{posts.map((post) => {
+						const date = new Date(post.data.pubDate);
+						const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+						const tags = post.data.tags;
 
-            return (
-              <a class="post" href={`posts/${post.slug}`}>
-                <img
-                  src={post.data.image?.src ?? "https://picsum.photos/1600/900"}
-                  alt={post.data.image?.alt}
-                />
-                <div class="gradient" />
+						return (
+							<a class="post" href={`posts/${post.slug}`}>
+								<img src={post.data.image?.src ?? "https://picsum.photos/1600/900"} alt={post.data.image?.alt} />
+								<div class="gradient" />
 
-                <div class="info">
-                  <h2>
-                    <p>{post.data.title}</p>
-                  </h2>
-                  <div class="secondary-info">
-                    <p>{formattedDate}</p>
-                    <div class="tags">
-                      {tags.map((tag) => (
-                        <span>#{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      )
-    }
-  </div>
+								<div class="info">
+									<h2>
+										<p>{post.data.title}</p>
+									</h2>
+									<div class="secondary-info">
+										<p>{formattedDate}</p>
+										<div class="tags">
+											{tags.map((tag) => (
+												<span>#{tag}</span>
+											))}
+										</div>
+									</div>
+								</div>
+							</a>
+						);
+					})}
+				</div>
+			)
+		}
+	</div>
 </BasicLayout>
 
 <script>
-  const loadScript = (params) => {
-    document
-      .getElementById("search")
-      ?.addEventListener("input", (e: InputEvent) => {
-        const input = e.target as HTMLInputElement;
-        const search = input.value.toLowerCase();
+	const loadScript = (params) => {
+		document.getElementById("search")?.addEventListener("input", (e: InputEvent) => {
+			const input = e.target as HTMLInputElement;
+			const search = input.value.toLowerCase();
 
-        const $allPosts = document.querySelectorAll(".post");
+			const $allPosts = document.querySelectorAll(".post");
 
-        $allPosts.forEach((post: HTMLAnchorElement) => {
-          const $titleElement = post.querySelector("h2") as HTMLHeadingElement;
-          const $tags = post.querySelectorAll(".tags span");
-          const $date = post.querySelector(
-            ".secondary-info p",
-          ) as HTMLParagraphElement;
-          const title = $titleElement?.textContent?.toLowerCase();
+			$allPosts.forEach((post: HTMLAnchorElement) => {
+				const $titleElement = post.querySelector("h2") as HTMLHeadingElement;
+				const $tags = post.querySelectorAll(".tags span");
+				const $date = post.querySelector(".secondary-info p") as HTMLParagraphElement;
+				const title = $titleElement?.textContent?.toLowerCase();
 
-          const tags = Array.from($tags).map((tag) =>
-            tag?.textContent?.toLowerCase(),
-          );
-          const date = $date?.textContent?.toLowerCase();
+				const tags = Array.from($tags).map((tag) => tag?.textContent?.toLowerCase());
+				const date = $date?.textContent?.toLowerCase();
 
-          if (
-            title?.includes(search) ||
-            tags.some((tag) => tag?.includes(search)) ||
-            date?.includes(search)
-          ) {
-            post.style.display = "block";
-          } else {
-            post.style.display = "none";
-          }
-        });
-      });
-  };
+				if (title?.includes(search) || tags.some((tag) => tag?.includes(search)) || date?.includes(search)) {
+					post.style.display = "block";
+				} else {
+					post.style.display = "none";
+				}
+			});
+		});
+	};
 
-  document.addEventListener("astro:page-load", loadScript);
+	document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>
-  .search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+	.search-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
 
-    input {
-      width: 576px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+		input {
+			width: 576px;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
 
-    @media (max-width: 576px) {
-      padding: 0 2rem;
+		@media (max-width: 576px) {
+			padding: 0 2rem;
 
-      input {
-        width: 100%;
-      }
-    }
-  }
+			input {
+				width: 100%;
+			}
+		}
+	}
 
-  .blogs-container {
-    padding: 0 2rem;
-    .post {
-      --width: 500px;
-      --height: 300px;
+	.blogs-container {
+		padding: 0 2rem;
+		.post {
+			--width: 500px;
+			--height: 300px;
 
-      position: relative;
-      max-width: 100%;
-      width: var(--width);
-      height: var(--height);
+			position: relative;
+			max-width: 100%;
+			width: var(--width);
+			height: var(--height);
 
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.01);
-        transition: transform 0.5s;
-      }
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.01);
+				transition: transform 0.5s;
+			}
 
-      .gradient {
-        position: relative;
-        top: 0;
-        left: 0;
-        max-width: 100%;
-        width: var(--width);
-        height: var(--height);
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.5) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        border-radius: 10px;
-      }
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
+			.gradient {
+				position: relative;
+				top: 0;
+				left: 0;
+				max-width: 100%;
+				width: var(--width);
+				height: var(--height);
+				background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+				border-radius: 10px;
+			}
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 10px;
+			}
 
-      .info {
-        --padding: 10px;
+			.info {
+				--padding: 10px;
 
-        position: absolute;
-        bottom: var(--padding);
-        left: var(--padding);
-        color: white;
-        width: calc(100% - var(--padding) * 2);
+				position: absolute;
+				bottom: var(--padding);
+				left: var(--padding);
+				color: white;
+				width: calc(100% - var(--padding) * 2);
 
-        h2 {
-          margin: 10px 0;
-          font-size: 1.5rem;
-        }
+				h2 {
+					margin: 10px 0;
+					font-size: 1.5rem;
+				}
 
-        a {
-          color: white;
-          text-decoration: none;
-        }
+				a {
+					color: white;
+					text-decoration: none;
+				}
 
-        p {
-          margin: 0;
-        }
+				p {
+					margin: 0;
+				}
 
-        .secondary-info {
-          display: flex;
-          justify-content: space-between;
-          font-size: 0.9rem;
+				.secondary-info {
+					display: flex;
+					justify-content: space-between;
+					font-size: 0.9rem;
 
-          .tags {
-            display: flex;
-            gap: 5px;
-          }
-        }
-      }
+					.tags {
+						display: flex;
+						gap: 5px;
+					}
+				}
+			}
 
-      @media (max-width: 576px) {
-        height: calc(var(--height) / 2);
+			@media (max-width: 576px) {
+				height: calc(var(--height) / 2);
 
-        .gradient {
-          height: calc(var(--height) / 2);
-        }
+				.gradient {
+					height: calc(var(--height) / 2);
+				}
 
-        h2 {
-          margin: 5px 0;
-          font-size: 1.2rem;
-        }
+				h2 {
+					margin: 5px 0;
+					font-size: 1.2rem;
+				}
 
-        .info {
-          h2 {
-            font-size: 1.1rem;
-          }
+				.info {
+					h2 {
+						font-size: 1.1rem;
+					}
 
-          .secondary-info {
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-  }
+					.secondary-info {
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
 </style>

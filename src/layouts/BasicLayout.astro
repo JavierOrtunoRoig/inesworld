@@ -3,6 +3,7 @@ import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/flags-lib/flag-icons.css";
 import "@/global.css";
+import { HeadHrefLangs } from "astro-i18next/components";
 import { ViewTransitions } from "astro:transitions";
 import i18next from "i18next";
 ---
@@ -11,13 +12,16 @@ import i18next from "i18next";
 	<head>
 		<meta name="google-site-verification" content="5GRhhm_YYdtAFIMnUytnZRT8Dwghpw9EKt428qz0IhY" />
 		<meta charset="utf-8" />
-		<!-- For SEO -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos." />
-		<link rel="canonical" href="https://inesworld.vercel.app" />
+		<meta name="keywords" content="Inés Cuevas Jiménez, portfolio, photography, travel, trips, world" />
+		<meta name="author" content="Inés Cuevas Jiménez" />
+		<meta name="robots" content="index, follow" />
+
+		<HeadHrefLangs />
 
 		<slot name="custom-header-scripts" />
 		<slot name="custom-header-styles" />

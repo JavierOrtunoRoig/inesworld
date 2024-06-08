@@ -5,6 +5,7 @@ import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/global.css";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { HeadHrefLangs } from "astro-i18next/components";
 import i18next, { changeLanguage } from "i18next";
 
 changeLanguage("es");
@@ -18,11 +19,16 @@ const t = useTranslations(lang);
 	<head>
 		<meta name="google-site-verification" content="5GRhhm_YYdtAFIMnUytnZRT8Dwghpw9EKt428qz0IhY" />
 		<meta charset="UTF-8" />
-		<!-- For SEO -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="canonical" href="https://inesworld.vercel.app/" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos." />
+		<meta name="keywords" content="Inés Cuevas Jiménez, portfolio, photography, travel, trips, world" />
+		<meta name="author" content="Inés Cuevas Jiménez" />
+		<meta name="robots" content="index, follow" />
+
+		<HeadHrefLangs />
 
 		<title>Inesworld</title>
 
@@ -52,300 +58,299 @@ const t = useTranslations(lang);
 		</div>
 
 		<Footer />
-	</body>
-</html>
+		<script>
+			import atlas from "@/data/atlas.geo.json";
+			// Next trips
+			const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
+			const countriesToVisit = atlas.features.filter((country) => country.properties.visited === 1);
+			countriesToVisit.forEach((country) => createCard(commingContainer, country.properties));
 
-<script>
-	import atlas from "@/data/atlas.geo.json";
-	// Next trips
-	const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
-	const countriesToVisit = atlas.features.filter((country) => country.properties.visited === 1);
-	countriesToVisit.forEach((country) => createCard(commingContainer, country.properties));
+			// countried visited
+			const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
+			const countriesVisited = atlas.features.filter((country) => country.properties.visited === 2);
+			countriesVisited.forEach((country) => createCard(visitedContainer, country.properties));
 
-	// countried visited
-	const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
-	const countriesVisited = atlas.features.filter((country) => country.properties.visited === 2);
-	countriesVisited.forEach((country) => createCard(visitedContainer, country.properties));
-
-	function createCard(container: HTMLDivElement, countryProperties) {
-		const langName = `name_${document.documentElement.lang}`;
-		const div = document.createElement("div");
-		div.classList.add("card", "w-full", "bg-base-200", "shadow-2xl", "sm:max-w-[400px]");
-		div.innerHTML = `
+			function createCard(container: HTMLDivElement, countryProperties) {
+				const langName = `name_${document.documentElement.lang}`;
+				const div = document.createElement("div");
+				div.classList.add("card", "w-full", "bg-base-200", "shadow-2xl", "sm:max-w-[400px]");
+				div.innerHTML = `
       <div class="card-body p-0 flex flex-row">
         <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0"></p>
         <h2 class="card-title px-2 sm:text-center">${countryProperties[langName]}</h2>
       </div>
     `;
-		container.appendChild(div);
-	}
-</script>
+				container.appendChild(div);
+			}
+		</script>
 
-<script>
-	import introJs from "intro.js";
-	import "intro.js/introjs.css";
+		<script>
+			import introJs from "intro.js";
+			import "intro.js/introjs.css";
 
-	const loadScript = () => {
-		const guideshouldNotRun_map = localStorage.getItem("guideshouldNotRun_map");
-		if (guideshouldNotRun_map) return;
+			const loadScript = () => {
+				const guideshouldNotRun_map = localStorage.getItem("guideshouldNotRun_map");
+				if (guideshouldNotRun_map) return;
 
-		introJs()
-			.setOptions({
-				tooltipClass: "guide",
-			})
-			.oncomplete(() => {
-				localStorage.setItem("guideshouldNotRun_map", "true");
-			})
-			.setOptions({
-				steps: [
-					{
-						title: "Let's start a new journey together!",
-						intro:
-							"Right now you are viewing an interactive map with the countries I have visited and those I plan to visit. You can click on each country to see more information about it.",
-					},
-					{
-						element: document.querySelector(".info.legend") as HTMLElement,
-						intro:
-							"We have some filters! You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.",
-					},
-				],
-			})
-			.start();
-	};
-	loadScript();
-	document.addEventListener("astro:page-load", loadScript);
-</script>
+				introJs()
+					.setOptions({
+						tooltipClass: "guide",
+					})
+					.oncomplete(() => {
+						localStorage.setItem("guideshouldNotRun_map", "true");
+					})
+					.setOptions({
+						steps: [
+							{
+								title: "Let's start a new journey together!",
+								intro:
+									"Right now you are viewing an interactive map with the countries I have visited and those I plan to visit. You can click on each country to see more information about it.",
+							},
+							{
+								element: document.querySelector(".info.legend") as HTMLElement,
+								intro:
+									"We have some filters! You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.",
+							},
+						],
+					})
+					.start();
+			};
+			loadScript();
+			document.addEventListener("astro:page-load", loadScript);
+		</script>
 
-<script>
-	import { markersToShow } from "@/constants";
-	import {
-		addHouseMarker,
-		addTiles,
-		addTravellingMarker,
-		getColorFromVisitedProperty,
-		getDefaultGeoJsonStyle,
-		getIconExtendOptions,
-		highlightFeature,
-		mergeData,
-		onAdd,
-		preventMapDrag,
-		resetHighlight,
-		update,
-	} from "@/helpers/map";
-	import type { GEOJson } from "@/types";
-	import * as L from "leaflet";
-	import "leaflet-polylinedecorator";
+		<script>
+			import { markersToShow } from "@/constants";
+			import {
+				addHouseMarker,
+				addTiles,
+				addTravellingMarker,
+				getColorFromVisitedProperty,
+				getDefaultGeoJsonStyle,
+				getIconExtendOptions,
+				highlightFeature,
+				mergeData,
+				onAdd,
+				preventMapDrag,
+				resetHighlight,
+				update,
+			} from "@/helpers/map";
+			import type { GEOJson } from "@/types";
+			import * as L from "leaflet";
+			import "leaflet-polylinedecorator";
 
-	const geoJson: GEOJson = {
-		type: "FeatureCollection",
-		features: [],
-	};
-	mergeData(geoJson);
+			const geoJson: GEOJson = {
+				type: "FeatureCollection",
+				features: [],
+			};
+			mergeData(geoJson);
 
-	declare var L: any;
+			declare var L: any;
 
-	// create a map
-	const map = L.map("map").setView(markersToShow.livingIn, 3);
-	const tiles = addTiles(L, map);
+			// create a map
+			const map = L.map("map").setView(markersToShow.livingIn, 3);
+			const tiles = addTiles(L, map);
 
-	preventMapDrag(L, map);
+			preventMapDrag(L, map);
 
-	// control that shows state info on hover
-	const info = L.control();
-	info.onAdd = onAdd;
-	info.update = update;
-	info.addTo(map);
+			// control that shows state info on hover
+			const info = L.control();
+			info.onAdd = onAdd;
+			info.update = update;
+			info.addTo(map);
 
-	/* global statesData */
-	const geojson = L.geoJson(geoJson, {
-		style: getDefaultGeoJsonStyle,
-		onEachFeature,
-	}).addTo(map);
+			/* global statesData */
+			const geojson = L.geoJson(geoJson, {
+				style: getDefaultGeoJsonStyle,
+				onEachFeature,
+			}).addTo(map);
 
-	/* Add markers */
-	const LeafIcon = L.Icon.extend(getIconExtendOptions);
+			/* Add markers */
+			const LeafIcon = L.Icon.extend(getIconExtendOptions);
 
-	const houseIcon = new LeafIcon({ iconUrl: "/house.png" });
-	const planeIcon = new LeafIcon({ iconUrl: "/plane.png" });
+			const houseIcon = new LeafIcon({ iconUrl: "/house.png" });
+			const planeIcon = new LeafIcon({ iconUrl: "/plane.png" });
 
-	const houseMarker = addHouseMarker(L, map, houseIcon);
-	addTravellingMarker(L, map, houseMarker, planeIcon);
+			const houseMarker = addHouseMarker(L, map, houseIcon);
+			addTravellingMarker(L, map, houseMarker, planeIcon);
 
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+			map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-	const legend = L.control({ position: "bottomright" });
+			const legend = L.control({ position: "bottomright" });
 
-	legend.onAdd = legendOnAdd;
+			legend.onAdd = legendOnAdd;
 
-	legend.addTo(map);
+			legend.addTo(map);
 
-	function zoomToFeature(e) {
-		map.fitBounds(e.target.getBounds());
-	}
+			function zoomToFeature(e) {
+				map.fitBounds(e.target.getBounds());
+			}
 
-	function onEachFeature(feature, layer) {
-		layer.on({
-			mouseover: handleHighlightFeature,
-			mouseout: handleResetHighlight,
-			click: zoomToFeature,
-		});
-	}
-
-	function handleHighlightFeature(e) {
-		highlightFeature(e, info);
-	}
-
-	function handleResetHighlight(e) {
-		resetHighlight(e, info, geojson);
-	}
-
-	function legendOnAdd(map) {
-		const div = L.DomUtil.create("div", "info legend");
-		div.dataset.filterActive = -1;
-		const labels = ["Not visited", "Plan to visit", "Visited"];
-
-		// get number of countries in each category
-		const visited = geoJson.features.reduce(
-			(acc, feature) => {
-				acc[feature.properties.visited]++;
-				return acc;
-			},
-			[0, 0, 0]
-		);
-
-		const divGuide = renderHTMLLegend(div, labels, visited);
-		return divGuide;
-	}
-
-	function highlightVisit(this, event: PointerEvent, div) {
-		const filterActive = Number(this.parentNode.dataset.filterActive);
-		const filterClicked = Array.from(this.parentNode.children).indexOf(this);
-		const sameFilter = filterActive === filterClicked;
-
-		// add filter-not-selected class to all divs unless the one clicked
-		// if the filter is the same as the one clicked, remove the class
-		if (!sameFilter) {
-			Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
-				child.classList.add("filter-not-selected");
-			});
-			this.classList.remove("filter-not-selected");
-		} else {
-			Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
-				child.classList.remove("filter-not-selected");
-			});
-		}
-
-		if (sameFilter) {
-			div.dataset.filterActive = -1;
-			geojson.eachLayer((layer) => {
-				layer.setStyle({
-					fillOpacity: 0.7,
+			function onEachFeature(feature, layer) {
+				layer.on({
+					mouseover: handleHighlightFeature,
+					mouseout: handleResetHighlight,
+					click: zoomToFeature,
 				});
-			});
-			return div;
-		} else {
-			div.dataset.filterActive = filterClicked;
-			geojson.eachLayer((layer) => {
-				if (layer.feature.properties.visited !== filterClicked) {
-					layer.setStyle({
-						fillOpacity: 0.1,
+			}
+
+			function handleHighlightFeature(e) {
+				highlightFeature(e, info);
+			}
+
+			function handleResetHighlight(e) {
+				resetHighlight(e, info, geojson);
+			}
+
+			function legendOnAdd(map) {
+				const div = L.DomUtil.create("div", "info legend");
+				div.dataset.filterActive = -1;
+				const labels = ["Not visited", "Plan to visit", "Visited"];
+
+				// get number of countries in each category
+				const visited = geoJson.features.reduce(
+					(acc, feature) => {
+						acc[feature.properties.visited]++;
+						return acc;
+					},
+					[0, 0, 0]
+				);
+
+				const divGuide = renderHTMLLegend(div, labels, visited);
+				return divGuide;
+			}
+
+			function highlightVisit(this, event: PointerEvent, div) {
+				const filterActive = Number(this.parentNode.dataset.filterActive);
+				const filterClicked = Array.from(this.parentNode.children).indexOf(this);
+				const sameFilter = filterActive === filterClicked;
+
+				// add filter-not-selected class to all divs unless the one clicked
+				// if the filter is the same as the one clicked, remove the class
+				if (!sameFilter) {
+					Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
+						child.classList.add("filter-not-selected");
 					});
+					this.classList.remove("filter-not-selected");
 				} else {
-					layer.setStyle({
-						fillOpacity: 0.7,
+					Array.from(this.parentNode.children).forEach((child: HTMLDivElement) => {
+						child.classList.remove("filter-not-selected");
 					});
 				}
-			});
-		}
-	}
 
-	function renderHTMLLegend(div, labels, visited) {
-		function handleHighlightVisit(event) {
-			highlightVisit.call(this, event, div);
-		}
-		for (let i = 0; i < labels.length; i++) {
-			const visitContainer = L.DomUtil.create("div", "");
-			visitContainer.style.cursor = "pointer";
-			visitContainer.onclick = handleHighlightVisit;
-			visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}"></i> ${labels[i]} - ${visited[i]} countries`;
-			div.appendChild(visitContainer);
-		}
+				if (sameFilter) {
+					div.dataset.filterActive = -1;
+					geojson.eachLayer((layer) => {
+						layer.setStyle({
+							fillOpacity: 0.7,
+						});
+					});
+					return div;
+				} else {
+					div.dataset.filterActive = filterClicked;
+					geojson.eachLayer((layer) => {
+						if (layer.feature.properties.visited !== filterClicked) {
+							layer.setStyle({
+								fillOpacity: 0.1,
+							});
+						} else {
+							layer.setStyle({
+								fillOpacity: 0.7,
+							});
+						}
+					});
+				}
+			}
 
-		const divGuide = document.createElement("div");
-		divGuide.dataset.title = "We have some filters!";
-		divGuide.dataset.intro =
-			"You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.";
+			function renderHTMLLegend(div, labels, visited) {
+				function handleHighlightVisit(event) {
+					highlightVisit.call(this, event, div);
+				}
+				for (let i = 0; i < labels.length; i++) {
+					const visitContainer = L.DomUtil.create("div", "");
+					visitContainer.style.cursor = "pointer";
+					visitContainer.onclick = handleHighlightVisit;
+					visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}"></i> ${labels[i]} - ${visited[i]} countries`;
+					div.appendChild(visitContainer);
+				}
 
-		return divGuide.appendChild(div);
-	}
-</script>
+				const divGuide = document.createElement("div");
+				divGuide.dataset.title = "We have some filters!";
+				divGuide.dataset.intro =
+					"You can filter the countries by visited status. Click on the filter to see the countries that match the filter. Click again to remove the filter.";
 
-<style is:inline>
-	#map {
-		--footer-text-height: 22px;
-		--footer-padding: 1rem;
-		--footer-total-height: calc(var(--footer-text-height) + var(--footer-padding) * 2);
+				return divGuide.appendChild(div);
+			}
+		</script>
 
-		--navbar-height: 4rem;
-		--navbar-padding: 0.5rem;
-		--navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
+		<style is:inline>
+			#map {
+				--footer-text-height: 22px;
+				--footer-padding: 1rem;
+				--footer-total-height: calc(var(--footer-text-height) + var(--footer-padding) * 2);
 
-		--total-map-height: calc(100% - var(--footer-total-height) - var(--navbar-total-height));
+				--navbar-height: 4rem;
+				--navbar-padding: 0.5rem;
+				--navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
 
-		width: 100%;
-		height: calc(var(--total-map-height) - 20%);
-	}
+				--total-map-height: calc(100% - var(--footer-total-height) - var(--navbar-total-height));
 
-	html,
-	body {
-		height: 100%;
-		width: 100%;
-	}
+				width: 100%;
+				height: calc(var(--total-map-height) - 20%);
+			}
 
-	.info {
-		padding: 6px 8px;
-		font:
-			14px/16px Arial,
-			Helvetica,
-			sans-serif;
-		background: white;
-		background: rgba(255, 255, 255, 0.8);
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-		border-radius: 5px;
-		color: black;
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+			}
 
-		.country-name {
-			font-weight: bold;
-		}
+			.info {
+				padding: 6px 8px;
+				font:
+					14px/16px Arial,
+					Helvetica,
+					sans-serif;
+				background: white;
+				background: rgba(255, 255, 255, 0.8);
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				color: black;
 
-		.text {
-			margin: 0;
-		}
+				.country-name {
+					font-weight: bold;
+				}
 
-		.filter-not-selected {
-			filter: opacity(0.5);
-		}
-	}
-	.info h4 {
-		margin: 0 0 5px;
-		color: #777;
-	}
+				.text {
+					margin: 0;
+				}
 
-	.legend {
-		line-height: 18px;
-		color: #555;
-	}
-	.legend i {
-		width: 18px;
-		height: 18px;
-		float: left;
-		margin-right: 8px;
-		opacity: 0.7;
-	}
-	.guide {
-		color: black;
-		max-width: 100%;
-		width: 400px;
-		min-width: 400px;
-	}
-</style>
+				.filter-not-selected {
+					filter: opacity(0.5);
+				}
+			}
+			.info h4 {
+				margin: 0 0 5px;
+				color: #777;
+			}
+
+			.legend {
+				line-height: 18px;
+				color: #555;
+			}
+			.legend i {
+				width: 18px;
+				height: 18px;
+				float: left;
+				margin-right: 8px;
+				opacity: 0.7;
+			}
+			.guide {
+				color: black;
+				max-width: 100%;
+				width: 400px;
+				min-width: 400px;
+			}
+		</style>
+	</body>
+</html>
