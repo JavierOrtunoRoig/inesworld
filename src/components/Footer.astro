@@ -1,5 +1,12 @@
-<footer class="footer footer-center p-4 bg-base-300 text-base-content">
-  <aside>
-    <p>Copyright © 2024 - All right reserved by Inés Cuevas Jiménez</p>
-  </aside>
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="footer footer-center bg-base-300 p-4 text-base-content">
+	<aside>
+		<p>{t("footer")}</p>
+	</aside>
 </footer>

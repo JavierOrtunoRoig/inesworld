@@ -1,8 +1,8 @@
 ---
 const { text, alt } = Astro.props;
 
-const src = `/trips/${text.toLowerCase()}/1.webp`;
-const url = `/trip/${text.toLowerCase()}`;
+const src = `/trips/${Astro.props.src.toLowerCase()}/1.webp`;
+const url = `/trip/${Astro.props.src.toLowerCase()}`;
 ---
 
 <a

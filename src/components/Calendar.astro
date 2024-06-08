@@ -1,5 +1,12 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <div class="flex flex-col items-center px-4">
-	<h2 class="subtitle mt-8">Trip calendar</h2>
+	<h2 class="subtitle mt-8">{t("map.subtitle_1")}</h2>
 
 	<div class="flex h-auto w-full flex-col rounded-md bg-white p-[10px] shadow-sm sm:w-[500px]">
 		<div class="header mb-[10px] flex items-center justify-between">

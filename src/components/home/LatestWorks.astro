@@ -10,8 +10,16 @@ const t = useTranslations(lang);
 	<h1 class="title">{t("latest_works.title")}</h1>
 
 	<div class="flex flex-col gap-6 xl:flex-row">
-		<CardImage text="Indonesia" alt="Little boy on the streets of Indonesia" />
-		<CardImage text="Vietnam" alt="Streets of Vietnam illuminated in the middle of the night" />
-		<CardImage text="Switzerland" alt="High mountain covered by clouds in Switzerland" />
+		<CardImage src="Indonesia" text={t("lastest_works.country_1")} alt="Little boy on the streets of Indonesia" />
+		<CardImage
+			src="Vietnam"
+			text={t("lastest_works.country_2")}
+			alt="Streets of Vietnam illuminated in the middle of the night"
+		/>
+		<CardImage
+			src="Switzerland"
+			text={t("lastest_works.country_3")}
+			alt="High mountain covered by clouds in Switzerland"
+		/>
 	</div>
 </div>
