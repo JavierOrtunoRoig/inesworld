@@ -1,4 +1,5 @@
 ---
+import { trips } from "@/constants";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ChevronLeft from "@/icons/ChevronLeft.astro";
 import ChevronRight from "@/icons/ChevronRight.astro";
@@ -12,85 +13,45 @@ const t = useTranslations(lang);
 ---
 
 <BasicLayout>
-	<div class="container">
-		<img class="animate-fade" src="/trips/switzerland/1.webp" alt="Switzerland mountain" />
-		<div class="gradient"></div>
-		<main class="info-container">
-			<aside class="arrow"><ChevronLeft /></aside>
-			<article class="animate-fade-down">
-				<h1 class="title">Switzerland</h1>
-				<a href="/trip/switzerland">{t("portfolio.title")}</a>
-			</article>
-			<aside class="arrow"><ChevronRight /></aside>
-		</main>
-	</div>
+	{
+		trips.map((trip, index) => (
+			<div class={`container ${index === 0 ? "" : "hidden"}`}>
+				<img class="animate-fade" src={trip.image} alt={trip.title} />
+				<div class="gradient" />
+				<main class="info-container">
+					<aside class="arrow">
+						<ChevronLeft />
+					</aside>
+					<article class="animate-fade-down">
+						<h1 class="title">{trip.title}</h1>
+						<a href={`${trip.link}`}>{t("portfolio.title")}</a>
+					</article>
+					<aside class="arrow">
+						<ChevronRight />
+					</aside>
+				</main>
+			</div>
+		))
+	}
 </BasicLayout>
 
 <script>
-	import { trips, type Trip } from "@/constants";
+	const containers = document.querySelectorAll(".container") as NodeListOf<HTMLDivElement>;
+	const arrows = document.querySelectorAll(".arrow") as NodeListOf<HTMLDivElement>;
 
-	const loadScript = () => {
-		const $ = (selector) => document.querySelector(selector);
-		const $$ = (selector) => document.querySelectorAll(selector);
+	let current = 0;
 
-		const image = $("img") as HTMLImageElement;
-		const leftArrow = $$(".arrow")[0] as HTMLDivElement;
-		const rightArrow = $$(".arrow")[1] as HTMLDivElement;
-
-		if (!image || !leftArrow || !rightArrow) {
-			return;
-		}
-
-		// set up the trips and preload the images
-		trips.forEach((trip) => {
-			const img = new Image();
-			img.src = trip.image;
-			img.alt = trip.alt;
+	arrows.forEach((arrow, index) => {
+		arrow.addEventListener("click", () => {
+			containers[current].classList.add("hidden");
+			if (index === 0) {
+				current = current === 0 ? containers.length - 1 : current - 1;
+			} else {
+				current = current === containers.length - 1 ? 0 : current + 1;
+			}
+			containers[current].classList.remove("hidden");
 		});
-
-		/**
-		 * Restarts the animation of the title and the image
-		 */
-		const restartAnimation = (trip) => {
-			const title = $("h1") as HTMLHeadingElement;
-			const link = $("article a") as HTMLAnchorElement;
-			const image = $("img") as HTMLImageElement;
-
-			const newTitle = title.cloneNode(true);
-			const newLink = link.cloneNode(true) as HTMLAnchorElement;
-			const newImage = image.cloneNode(true) as HTMLImageElement;
-
-			newTitle.textContent = trip.title;
-			newLink.href = trip.link;
-			newImage.src = trip.image;
-			newImage.alt = trip.alt;
-
-			title.parentNode?.replaceChild(newTitle, title);
-			link.parentNode?.replaceChild(newLink, link);
-			image.parentNode?.replaceChild(newImage, image);
-		};
-
-		leftArrow.addEventListener("click", () => {
-			const title = $("h1") as HTMLHeadingElement;
-			const index = trips.findIndex((trip) => trip.title === title.textContent);
-			const trip = trips.at(index - 1) as Trip;
-			image.src = trip.image;
-			image.alt = trip.alt;
-			restartAnimation(trip);
-		});
-
-		rightArrow.addEventListener("click", () => {
-			const title = $("h1") as HTMLHeadingElement;
-			const index = trips.findIndex((trip) => trip.title === title.textContent);
-			const newIndex = (index + 1) % trips.length;
-			const trip = trips[newIndex];
-			image.src = trip.image;
-			image.alt = trip.alt;
-			restartAnimation(trip);
-		});
-	};
-
-	document.addEventListener("astro:page-load", loadScript);
+	});
 </script>
 
 <style>
