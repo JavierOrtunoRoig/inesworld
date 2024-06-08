@@ -4,19 +4,32 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ChevronLeft from "@/icons/ChevronLeft.astro";
 import ChevronRight from "@/icons/ChevronRight.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
+import { Image } from "astro:assets";
 import { changeLanguage } from "i18next";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+import IndonesiaImage from "@/assets/trips/indonesia/1.jpg";
+import SwitzerlandImage from "@/assets/trips/switzerland/1.jpg";
+import VietnamImage from "@/assets/trips/vietnam/1.jpg";
 
 changeLanguage("en");
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const getRightImageByIndex = (index: number) => {
+    if (index === 0)
+        return SwitzerlandImage;
+    if (index === 1)
+        return IndonesiaImage;
+    if (index === 2)
+        return VietnamImage;
+    return SwitzerlandImage;
+};
 ---
 
 <BasicLayout>
 	{
 		trips.map((trip, index) => (
 			<div class={`container ${index === 0 ? "" : "hidden"}`}>
-				<img class="animate-fade" src={trip.image} alt={trip.title} />
+				<Image class="animate-fade" src={getRightImageByIndex(index)} alt={trip.title} width={2000} />
 				<div class="gradient" />
 				<main class="info-container">
 					<aside class="arrow">

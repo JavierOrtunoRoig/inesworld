@@ -1,6 +1,5 @@
 export interface Trip {
 	title: string;
-	image: string;
 	link: string;
 	alt;
 }
@@ -8,19 +7,16 @@ export interface Trip {
 export const trips: Trip[] = [
 	{
 		title: "Switzerland",
-		image: "/trips/switzerland/1.webp",
 		link: "/trip/switzerland",
 		alt: "Switzerland mountain",
 	},
 	{
 		title: "Indonesia",
-		image: "/trips/indonesia/1.webp",
 		link: "/trip/indonesia",
 		alt: "Child",
 	},
 	{
 		title: "Vietnam",
-		image: "/trips/vietnam/1.webp",
 		link: "/trip/vietnam",
 		alt: "Vietnam street",
 	},
