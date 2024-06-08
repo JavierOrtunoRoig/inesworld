@@ -7,151 +7,139 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="process" class="w-full p-8 flex flex-col items-center">
-  <h1 class="title">{t("process.title")}</h1>
-  <div class="lg:flex lg:flex-row lg:gap-16">
-    <Timeline />
+<section id="process" class="flex w-full flex-col items-center p-8">
+	<h1 class="title">{t("process.title")}</h1>
+	<div class="lg:flex lg:flex-row lg:gap-16">
+		<Timeline />
 
-    <div
-      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl"
-    >
-      <div class="card-body">
-        <h2 class="card-title">{t("process.step_1.title")}</h2>
-        <p>
-          {t("process.step_1.description")}
-        </p>
-      </div>
-    </div>
+		<div class="w-90 card h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+			<div class="card-body h-auto flex-grow-0">
+				<h2 class="card-title">{t("process.step_1.title")}</h2>
+				<p>
+					{t("process.step_1.description")}
+				</p>
+			</div>
+		</div>
 
-    <div
-      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
-    >
-      <div class="card-body">
-        <h2 class="card-title">{t("process.step_2.title")}</h2>
-        <p>
-          {t("process.step_2.description")}
-        </p>
-      </div>
-    </div>
+		<div class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+			<div class="card-body h-auto">
+				<h2 class="card-title">{t("process.step_2.title")}</h2>
+				<p>
+					{t("process.step_2.description")}
+				</p>
+			</div>
+		</div>
 
-    <div
-      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
-    >
-      <div class="card-body">
-        <h2 class="card-title">{t("process.step_3.title")}</h2>
-        <p>
-          {t("process.step_3.description")}
-        </p>
-      </div>
-    </div>
+		<div class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+			<div class="card-body h-auto">
+				<h2 class="card-title">{t("process.step_3.title")}</h2>
+				<p>
+					{t("process.step_3.description")}
+				</p>
+			</div>
+		</div>
 
-    <div
-      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
-    >
-      <div class="card-body">
-        <h2 class="card-title">{t("process.step_4.title")}</h2>
-        <p>
-          {t("process.step_4.description")}
-        </p>
-      </div>
-    </div>
+		<div class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+			<div class="card-body h-auto">
+				<h2 class="card-title">{t("process.step_4.title")}</h2>
+				<p>
+					{t("process.step_4.description")}
+				</p>
+			</div>
+		</div>
 
-    <div
-      class="animate-fade animate-duration-1000 card w-90 sm:w-96 bg-base-100 shadow-xl hidden"
-    >
-      <div class="card-body">
-        <h2 class="card-title">{t("process.step_5.title")}</h2>
-        <p>
-          {t("process.step_5.description")}
-        </p>
-      </div>
-    </div>
-  </div>
+		<div class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+			<div class="card-body h-auto">
+				<h2 class="card-title">{t("process.step_5.title")}</h2>
+				<p>
+					{t("process.step_5.description")}
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <script>
-  let interval;
-  const loadScript = () => {
-    const cards = document.querySelectorAll("#process .card");
-    const timeline = document.querySelector("ul.timeline") as HTMLUListElement;
+	let interval;
+	const loadScript = () => {
+		const cards = document.querySelectorAll("#process .card");
+		const timeline = document.querySelector("ul.timeline") as HTMLUListElement;
 
-    if (!cards || !timeline) {
-      return;
-    }
+		if (!cards || !timeline) {
+			return;
+		}
 
-    const timelineItems = timeline.querySelectorAll("li");
+		const timelineItems = timeline.querySelectorAll("li");
 
-    // add click event listener to each timeline item
-    timelineItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        cards.forEach((card) => {
-          card.classList.add("hidden");
-        });
-        activeNextPoint(0);
-        activeNextPath(0);
+		// add click event listener to each timeline item
+		timelineItems.forEach((item, index) => {
+			item.addEventListener("click", () => {
+				cards.forEach((card) => {
+					card.classList.add("hidden");
+				});
+				activeNextPoint(0);
+				activeNextPath(0);
 
-        cards.item(index).classList.remove("hidden");
+				cards.item(index).classList.remove("hidden");
 
-        for (let i = 0; i < timelineItems.length; i++) {
-          if (i <= index) {
-            activeNextPoint(i);
-            activeNextPath(i);
-          }
-        }
-      });
-    });
+				for (let i = 0; i < timelineItems.length; i++) {
+					if (i <= index) {
+						activeNextPoint(i);
+						activeNextPath(i);
+					}
+				}
+			});
+		});
 
-    interval = setInterval(() => {
-      const activeItemIndex = Array.from(cards).findIndex(
-        (card) => !card.classList.contains("hidden"),
-      );
-      const nextItemIndex = (activeItemIndex + 1) % cards.length;
+		interval = setInterval(() => {
+			const activeItemIndex = Array.from(cards).findIndex((card) => !card.classList.contains("hidden"));
+			const nextItemIndex = (activeItemIndex + 1) % cards.length;
 
-      cards.item(activeItemIndex).classList.add("hidden");
-      cards.item(nextItemIndex).classList.remove("hidden");
+			cards.item(activeItemIndex).classList.add("hidden");
+			cards.item(nextItemIndex).classList.remove("hidden");
 
-      activeNextPoint(nextItemIndex);
-      activeNextPath(nextItemIndex);
-    }, 5000);
+			activeNextPoint(nextItemIndex);
+			activeNextPath(nextItemIndex);
+		}, 5000);
 
-    const activeNextPoint = (nextItemIndex: number) => {
-      const allSvgElements = timeline.querySelectorAll("svg");
+		const activeNextPoint = (nextItemIndex: number) => {
+			const allSvgElements = timeline.querySelectorAll("svg");
 
-      if (nextItemIndex === 0) {
-        for (let i = 1; i < allSvgElements.length; i++) {
-          // remove 'text-primary' class from all item svg elements
-          allSvgElements[i].classList.remove("text-primary");
-        }
-      } else {
-        // get the :nth-child index of the next item svg element
-        const nextItemSvgIndex = allSvgElements[nextItemIndex];
-        // add 'text-primary' class to the next item svg element
-        nextItemSvgIndex.classList.toggle("text-primary");
-      }
-    };
+			if (nextItemIndex === 0) {
+				for (let i = 1; i < allSvgElements.length; i++) {
+					// remove 'text-primary' class from all item svg elements
+					allSvgElements[i].classList.remove("text-primary");
+				}
+			} else {
+				// get the :nth-child index of the next item svg element
+				const nextItemSvgIndex = allSvgElements[nextItemIndex];
+				// add 'text-primary' class to the next item svg element
+				nextItemSvgIndex.classList.toggle("text-primary");
+			}
+		};
 
-    const activeNextPath = (nextItemIndex: number) => {
-      const allHrElements = timeline.querySelectorAll("hr");
+		const activeNextPath = (nextItemIndex: number) => {
+			const allHrElements = timeline.querySelectorAll("hr");
 
-      // debugger;
-      if (nextItemIndex === 0) {
-        allHrElements.forEach((hr) => {
-          hr.classList.remove("bg-primary");
-        });
-      } else {
-        // get the :nth-child index of the next item hr element
-        const nextItemHrIndex = allHrElements[(nextItemIndex - 1) * 2];
-        const nextItemHrIndex2 = allHrElements[(nextItemIndex - 1) * 2 + 1];
+			// debugger;
+			if (nextItemIndex === 0) {
+				allHrElements.forEach((hr) => {
+					hr.classList.remove("bg-primary");
+				});
+			} else {
+				// get the :nth-child index of the next item hr element
+				const nextItemHrIndex = allHrElements[(nextItemIndex - 1) * 2];
+				const nextItemHrIndex2 = allHrElements[(nextItemIndex - 1) * 2 + 1];
 
-        nextItemHrIndex.classList.toggle("bg-primary");
-        nextItemHrIndex2.classList.toggle("bg-primary");
-      }
-    };
-  };
+				nextItemHrIndex.classList.toggle("bg-primary");
+				nextItemHrIndex2.classList.toggle("bg-primary");
+			}
+		};
+	};
 
-  document.addEventListener("astro:page-load", loadScript);
-  document.addEventListener("astro:before-preparation", () => {
-    clearInterval(interval);
-    interval = null;
-  });
+	document.addEventListener("astro:page-load", loadScript);
+	document.addEventListener("astro:before-preparation", () => {
+		clearInterval(interval);
+		interval = null;
+	});
 </script>
