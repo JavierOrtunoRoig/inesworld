@@ -1,4 +1,6 @@
 ---
+import MyImage from "./MyImage.astro";
+
 interface Props {
 	title: string;
 	src: string;
@@ -17,30 +19,43 @@ const imgClass = direction === "left" ? "left-img" : "right-img";
 <div class="flex flex-col items-center overflow-x-clip px-8 xl:inline-block xl:px-32">
 	<h2 class="subtitle">{title}</h2>
 
-	<img class={`${imgClass} rounded-md mb-4 ${float} xl:m-8 `} src={src} alt={alt} width="500" />
+	<MyImage
+		class={`${imgClass} w-[500px] rounded-md mb-4 ${float} xl:m-8 `}
+		imagePath={src}
+		altText={alt}
+		widths={[256, 500, 790, 1000]}
+		sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+	/>
 
 	{text.map((t) => <p class="mb-4">{t}</p>)}
 </div>
+
+<!--
+	Styles inline because when I use <MyImage />
+	component, the styles are not applied.
+-->
+<style is:inline>
+	.left-img {
+		animation-timeline: view();
+		animation-fill-mode: both;
+		animation-range: entry 25% cover 50%;
+		border-radius: 10px;
+		animation-name: left;
+	}
+
+	.right-img {
+		animation-timeline: view();
+		animation-fill-mode: both;
+		animation-range: entry 25% cover 50%;
+		border-radius: 10px;
+		animation-name: right;
+	}
+</style>
 
 <style>
 	:root {
 		--start-deg: 5deg;
 		--end-deg: 1deg;
-	}
-
-	img {
-		animation-timeline: view();
-		animation-fill-mode: both;
-		animation-range: entry 25% cover 50%;
-		border-radius: 10px;
-	}
-
-	.left-img {
-		animation-name: left;
-	}
-
-	.right-img {
-		animation-name: right;
 	}
 
 	p {

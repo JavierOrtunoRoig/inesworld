@@ -48,7 +48,13 @@ imagesGrouped.push(group1, group2, group3);
 				imagesGrouped.map((group) => (
 					<div class="flex">
 						{group.map((image) => (
-							<MyImage imagePath={image.path} altText={image.description} class="fade-up hover:cursor-pointer" />
+							<MyImage
+								imagePath={image.path}
+								altText={image.description}
+								widths={[500, 1000]}
+								sizes="(min-width: 1700px) 500px, (min-width: 580px) calc(31.09vw - 22px), calc(100vw - 70px)"
+								class="fade-up hover:cursor-pointer"
+							/>
 						))}
 					</div>
 				))

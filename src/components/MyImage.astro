@@ -2,16 +2,27 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  imagePath: string;
-  altText: string;
-  quality?: number;
-  class?: string;
+	imagePath: string;
+	altText: string;
+	quality?: number;
+	class?: string;
+	width?: number;
+	widths?: number[];
+	sizes?: string;
 }
 
-const { imagePath, altText, class: customClass } = Astro.props;
+const { imagePath, altText, width = 1500, widths = [], sizes: sizesRaw, class: customClass } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>(`/src/assets/**/*.{jpg,webp,png}`);
-if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>(`/src/assets/**/*.{jpg,webp,png,jpeg}`);
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpg,webp,png,jpeg}"`);
+
+const sizes = sizesRaw || widths.map((w) => `(max-width: ${w}px) ${w}px`).join(", ");
 ---
 
-<Image class={customClass} src={images[imagePath]()} alt={altText} width={1500} quality={"high"} />
+{
+	widths.length === 0 ? (
+		<Image class={customClass} src={images[imagePath]()} alt={altText} width={width} quality={"high"} />
+	) : (
+		<Image class={customClass} src={images[imagePath]()} alt={altText} widths={widths} sizes={sizes} quality={"high"} />
+	)
+}

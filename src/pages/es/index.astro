@@ -1,4 +1,5 @@
 ---
+import MyImage from "@/components/MyImage.astro";
 import LatestWorks from "@/components/home/LatestWorks.astro";
 import TitleRewritter from "@/components/home/TitleRewritter.astro";
 import WhyMe from "@/components/home/WhyMe.astro";
@@ -36,10 +37,10 @@ const t = useTranslations(lang);
 					]}
 				/>
 			</div>
-			<img
+			<MyImage
 				class="rounded-[36%_64%_70%_30%_/_30%_30%_70%_70%]; mb-8 w-full min-w-[300px] max-w-[800px] flex-[2] animate-[fluid_45s_infinite_linear]"
-				src="/hero_image.webp"
-				alt="Selfie of Inés Cuevas Jiménez in the desert"
+				imagePath="/src/assets/hero_image.webp"
+				altText="Selfie of Inés Cuevas Jiménez in the desert"
 			/>
 		</section>
 
