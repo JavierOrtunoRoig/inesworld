@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/global.css";
+import "@fontsource/roboto";
 import { HeadHrefLangs } from "astro-i18next/components";
 import { ViewTransitions } from "astro:transitions";
 import i18next from "i18next";
@@ -51,6 +52,11 @@ import i18next from "i18next";
 			p {
 				margin: 0rem;
 				padding: 0.3rem;
+			}
+		</style>
+		<style is:global>
+			body {
+				font-family: "Roboto", sans-serif;
 			}
 		</style>
 	</body>

@@ -4,6 +4,7 @@ import MyImage from "@/components/MyImage.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/global.css";
 import { getValidPosts } from "@/helpers/posts";
+import "@fontsource/roboto";
 import { HeadHrefLangs } from "astro-i18next/components";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
@@ -213,6 +214,11 @@ const nextPost = posts[currentPostIndex + 1];
 				& .previous-post {
 					align-self: flex-end;
 				}
+			}
+		</style>
+		<style is:global>
+			body {
+				font-family: "Roboto", sans-serif;
 			}
 		</style>
 	</body>
