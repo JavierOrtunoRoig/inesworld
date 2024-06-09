@@ -19,7 +19,12 @@ const posts = getValidPosts(allPosts);
 
 <BasicLayout>
 	<div class="search-container">
-		<input type="text" id="search" placeholder={t("blog.input.placeholder")} />
+		<input
+			class="text-black placeholder:text-gray-600"
+			type="text"
+			id="search"
+			placeholder={t("blog.input.placeholder")}
+		/>
 	</div>
 	<div class="blogs-container">
 		{

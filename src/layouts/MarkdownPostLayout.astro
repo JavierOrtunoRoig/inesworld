@@ -1,5 +1,6 @@
 ---
 import Footer from "@/components/Footer.astro";
+import MyImage from "@/components/MyImage.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/global.css";
 import { getValidPosts } from "@/helpers/posts";
@@ -74,7 +75,12 @@ const nextPost = posts[currentPostIndex + 1];
 					</div>
 				)
 			}
-			<img src={frontmatter.image.src} alt={frontmatter.image.alt} />
+			<MyImage
+				class="my-4 w-full max-w-[800px] rounded-lg"
+				imagePath={frontmatter.image.src}
+				altText={frontmatter.image.alt}
+			/>
+			<!-- <img src={frontmatter.image.src} alt={frontmatter.image.alt} /> -->
 		</div>
 
 		<article class="post-content">
@@ -194,13 +200,6 @@ const nextPost = posts[currentPostIndex + 1];
 						margin: 0 0.2rem;
 						/* color: var(--tertiary-color); */
 					}
-				}
-
-				& > img {
-					width: 100%;
-					max-width: 800px;
-					border-radius: 0.5rem;
-					margin: 1rem 0;
 				}
 			}
 
