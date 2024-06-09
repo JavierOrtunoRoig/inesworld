@@ -55,22 +55,25 @@ const getRightImageByIndex = (index: number) => {
 </BasicLayout>
 
 <script>
-	const containers = document.querySelectorAll(".container") as NodeListOf<HTMLDivElement>;
-	const arrows = document.querySelectorAll(".arrow") as NodeListOf<HTMLDivElement>;
+	const loadScript = () => {
+		const containers = document.querySelectorAll(".container") as NodeListOf<HTMLDivElement>;
+		const arrows = document.querySelectorAll(".arrow") as NodeListOf<HTMLDivElement>;
 
-	let current = 0;
-
-	arrows.forEach((arrow, index) => {
-		arrow.addEventListener("click", () => {
-			containers[current].classList.add("hidden");
-			if (index === 0) {
-				current = current === 0 ? containers.length - 1 : current - 1;
-			} else {
-				current = current === containers.length - 1 ? 0 : current + 1;
-			}
-			containers[current].classList.remove("hidden");
+		let current = 0;
+		arrows.forEach((arrow, index) => {
+			arrow.addEventListener("click", () => {
+				containers[current].classList.add("hidden");
+				if (index === 0) {
+					current = current === 0 ? containers.length - 1 : current - 1;
+				} else {
+					current = current === containers.length - 1 ? 0 : current + 1;
+				}
+				containers[current].classList.remove("hidden");
+			});
 		});
-	});
+	};
+
+	document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>
