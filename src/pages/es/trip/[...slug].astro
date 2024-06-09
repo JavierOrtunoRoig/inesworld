@@ -49,16 +49,25 @@ imagesGrouped.push(group1, group2, group3);
 					<div class="flex">
 						{group.map((image) => (
 							<MyImage
+								dataAlternativePath={image.path.replace("/src/assets", "").replace("jpg", "webp")}
 								imagePath={image.path}
 								altText={image.description}
-								widths={[500, 1000]}
-								sizes="(min-width: 1700px) 500px, (min-width: 580px) calc(31.09vw - 22px), calc(100vw - 70px)"
+								width={500}
 								class="fade-up hover:cursor-pointer"
 							/>
 						))}
 					</div>
 				))
 			}
+			<!-- 
+				<MyImage
+					imagePath={image.path}
+					altText={image.description}
+					widths={[500, 1000]}
+					sizes="(min-width: 1700px) 500px, (min-width: 580px) calc(31.09vw - 22px), calc(100vw - 70px)"
+					class="fade-up hover:cursor-pointer"
+				/> 
+			-->
 		</div>
 	</div>
 </BasicLayout>
@@ -83,6 +92,8 @@ imagesGrouped.push(group1, group2, group3);
 
 	const loadScript = () => {
 		const img = document.querySelector(".gallery-container") as HTMLElement;
+		if (!img) return;
+
 		new Viewer(img, {
 			viewed() {},
 			toolbar: {
@@ -103,6 +114,26 @@ imagesGrouped.push(group1, group2, group3);
 			},
 
 			url(image) {
+				// get the original images without compress
+				return image?.dataset?.alternativePath;
+			},
+		});
+
+		// url(image) {
+		// 	// get the original images without compress
+		// 	const regex = /\/(\d+)\./;
+		// 	const match = image.src.match(regex);
+		// 	const country = document.querySelector("h1") as HTMLHeadingElement;
+
+		// 	const path = "/trips/" + country.textContent?.toLowerCase() + "/" + match[1] + ".webp";
+		// 	console.log({ path });
+		// 	return path;
+		// },
+		// 	},
+		// });
+
+		/* 
+		url(image) {
 				// get teh original images without compress
 				const encodedUrl = image.src;
 				let path = decodeURIComponent(encodedUrl).split("/src/assets")[1];
@@ -111,7 +142,7 @@ imagesGrouped.push(group1, group2, group3);
 				console.log({ path });
 				return path;
 			},
-		});
+		*/
 
 		const guideshouldNotRun = localStorage.getItem("guideshouldNotRun_gallery");
 
