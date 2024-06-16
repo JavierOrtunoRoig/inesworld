@@ -11,7 +11,7 @@ export default {
 	daisyui: {
 		themes: [{
 			"ines-theme": {
-				"primary": "#7582ff",
+				"primary": "#7582ff", // stepper color
 				"primary-content": "#050617",
 				"secondary": "#ff71cf",
 				"secondary-content": "#190211",
@@ -19,10 +19,10 @@ export default {
 				"accent-content": "#000e0c",
 				"neutral": "#2a323c",
 				"neutral-content": "#a6adbb",
-				"base-100": "#1d232a",
+				"base-100": "#1d232a", // background color
 				"base-200": "#191e24",
-				"base-300": "#15191e",
-				"base-content": "#a6adbb",
+				"base-300": "#15191e", // background footer color
+				"base-content": "#a6adbb", // text color
 				"info": "#00b3f0",
 				"info-content": "#000000",
 				"success": "#00a96f",
