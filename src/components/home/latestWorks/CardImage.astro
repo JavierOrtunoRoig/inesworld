@@ -17,18 +17,18 @@ import { Image } from "astro:assets";
 	class="fade-up flex w-full justify-center transition-transform hover:scale-105 hover:cursor-pointer sm:w-96"
 	href={url}
 >
-	<div class="card image-full shadow before:opacity-15">
+	<article class="card image-full shadow before:opacity-15">
 		<figure>
 			<Image src={src} alt={alt} width={450} />
 		</figure>
 		<div class="card-body">
 			<h2 class="title text-2xl text-white sm:text-4xl">{text}</h2>
 		</div>
-	</div>
+	</article>
 </a>
 
 <style>
-	div.card::before {
+	article.card::before {
 		opacity: 0.3;
 	}
 
