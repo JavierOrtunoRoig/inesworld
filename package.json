@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "astro dev -- --verbose",
     "start": "astro dev",
-    "build": "astro-i18next generate && astro build && ls && npm run generate:sitemaps",
+    "build": "astro-i18next generate && astro build && pwd && ls && npm run generate:sitemaps",
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky",
     "generate:i18n": "astro-i18next generate",
-    "generate:sitemaps": "node generateSitemap.cjs"
+    "generate:sitemaps": "node ./generateSitemap.cjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
