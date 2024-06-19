@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "src": "./generateSitemap.cjs",
+      "dest": "./generateSitemap.cjs"
+    }
+  ]
+}
