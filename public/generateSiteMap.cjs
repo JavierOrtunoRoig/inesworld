@@ -1,4 +1,6 @@
-// copy ./image-sitemap.xml to ./dist/image-sitemap.xml
+// This file is used to copy the sitemap-images.xml to the dist folder and edit the sitemap-index.xml in the dist folder to include the sitemap-images.xml file.
+// npm run build command was edited in vercel to run this script after the build command.
+// Now command is: npm run build && node ./public/generateSiteMap.cjs
 
 const fs = require('fs');
 const path = require('path');
