@@ -1,7 +1,7 @@
 ---
-import { changeLanguage } from "i18next";
 import MarkdownPostLayout from "@/layouts/MarkdownPostLayout.astro";
 import { getCollection } from "astro:content";
+import { changeLanguage } from "i18next";
 
 changeLanguage("es");
 
@@ -21,12 +21,9 @@ export async function getStaticPaths() {
 // 2. Para tu plantilla, puedes obtener la entrada directamente de la prop
 const { entry } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await entry.render();
+const description = entry.data.description || entry.data.title;
 ---
 
-<MarkdownPostLayout
-  slug={entry.slug}
-  data={entry.data}
-  frontmatter={remarkPluginFrontmatter}
->
-  <Content />
+<MarkdownPostLayout description={description} slug={entry.slug} data={entry.data} frontmatter={remarkPluginFrontmatter}>
+	<Content />
 </MarkdownPostLayout>

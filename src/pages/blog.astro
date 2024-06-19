@@ -17,7 +17,7 @@ const allPosts = await getCollection("blogs");
 const posts = getValidPosts(allPosts);
 ---
 
-<BasicLayout>
+<BasicLayout description={t("blog.description")}>
 	<div class="search-container">
 		<input
 			class="text-black placeholder:text-gray-600"

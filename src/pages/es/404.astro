@@ -1,12 +1,16 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import NotFoundIcon from "@/icons/NotFoundIcon.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { changeLanguage } from "i18next";
 
 changeLanguage("es");
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<BasicLayout>
+<BasicLayout description={t("404.description")}>
 	<div class="relative flex flex-col items-center justify-center">
 		<NotFoundIcon class="max-w-full lg:max-w-[1000px]" />
 		<a

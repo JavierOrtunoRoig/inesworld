@@ -13,8 +13,23 @@ export const defaultLang = "en";
 
 export const ui = {
 	en: {
-		"index.keywords":
+		"keywords":
 			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, photography, travels, trips, world, filmmaker, cinematography, visual storytelling, adventure, landscape photography, travel photography, documentary, filmmaking, short films, cinematographer, digital nomad, wanderlust, global exploration",
+
+		"index.description":
+			"Discover the portfolio of Inés Cuevas Jiménez, also known as inesworld. Connecting through photography and filmmaking, I travel to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
+		"about.description":
+			"Hey, it's Ines! I'm Inés Cuevas Jiménez, also known as inesworld. On this page, I share my story and deep love for photography. Every image I capture has a story behind it, reflecting my passion for travel and my connection to emotions and unique moments. Discover how I blend my art with my nomadic lifestyle, creating images that capture the essence of each experience.",
+		"blog.description":
+			"Explore the blog of Inés Cuevas Jiménez, also known as inesworld, where I post about my photographic adventures around the world. Discover stories, tips, and experiences from my travels, and join me on my journey as a photographer and digital nomad.",
+		"portfolio.description":
+			"Discover the photographic projects of Inés Cuevas Jiménez, also known as inesworld, organized by country. Explore the interactive carousel and immerse yourself in the images captured during my travels around the world. Each project tells a unique story through photography.",
+		"contact.description":
+			"Get in touch with Inés Cuevas Jiménez, also known as inesworld, for photography and filmmaking projects. If you're looking for a passionate photographer and filmmaker to capture your special moments, feel free to send me a message. I'm here to help bring your ideas to life.",
+		"map.description":
+			"Explore the travels of Inés Cuevas Jiménez, also known as inesworld. Discover the countries I have visited through an interactive map, check my travel calendar, and review the complete list of my destinations. Join me on my journey as a photographer and digital nomad.",
+		"404.description":
+			"Oops, it looks like this page doesn't exist. Return to the homepage of Inés Cuevas Jiménez (inesworld) and explore my photography and filmmaking projects, travels, and more.",
 
 		"footer": "Copyright © 2024 - All right reserved by Inés Cuevas Jiménez",
 
@@ -152,8 +167,23 @@ export const ui = {
 		"map.subtitle_3": "Countries visited!!",
 	},
 	es: {
-		"index.keywords":
+		"keywords":
 			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, fotografía, viajes, excursiones, mundo, cineasta, cinematografía, narración visual, aventura, fotografía de paisajes, fotografía de viajes, documental, realización cinematográfica, cortometrajes, director de fotografía, nómada digital, ansias de viajar, exploración global",
+
+		"index.description":
+			"Descubre el portfolio de Inés Cuevas Jiménez, también conocida como inesworld. Conectando a través de la fotografía y el filmmaking, viajo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Ve cómo transformo imágenes con mi proceso de edición y explora mis últimas obras fotográficas.",
+		"about.description":
+			"¡Hola! Soy Inés Cuevas Jiménez, también conocida como inesworld. En esta página te cuento mi historia y mi profundo amor por la fotografía. Cada imagen que capturo tiene una historia detrás, reflejando mi pasión por viajar y mi conexión con las emociones y los momentos únicos. Descubre cómo combino mi arte con mi estilo de vida nómada, creando imágenes que capturan la esencia de cada experiencia.",
+		"blog.description":
+			"Explora el blog de Inés Cuevas Jiménez, también conocida como inesworld, donde subo posts sobre mis aventuras fotográficas alrededor del mundo. Descubre historias, consejos y experiencias de mis viajes, y acompáñame en mi viaje como fotógrafa y nómada digital.",
+		"portfolio.description":
+			"Descubre los proyectos fotográficos de Inés Cuevas Jiménez, también conocida como inesworld, organizados por país. Explora el carousel interactivo y sumérgete en las imágenes capturadas durante mis viajes por el mundo. Cada proyecto cuenta una historia única a través de la fotografía.",
+		"contact.description":
+			"Ponte en contacto con Inés Cuevas Jiménez, también conocida como inesworld, para proyectos de fotografía y filmmaking. Si buscas una fotógrafa y filmmaker apasionada para capturar tus momentos especiales, no dudes en enviarme un mensaje. Estoy aquí para ayudarte a dar vida a tus ideas.",
+		"map.description":
+			"Explora los viajes de Inés Cuevas Jiménez, también conocida como inesworld. Descubre los países que he visitado a través de un mapa interactivo, consulta mi calendario de viajes y revisa la lista completa de mis destinos. Acompáñame en mi aventura como fotógrafa y nómada digital.",
+		"404.description":
+			"Ups, parece que esta página no existe. Vuelve al inicio de Inés Cuevas Jiménez (inesworld) y explora mis proyectos de fotografía y filmmaking, mis viajes y más.",
 
 		"footer": "Copyright © 2024 - Todos los derechos reservados - Inés Cuevas Jiménez",
 

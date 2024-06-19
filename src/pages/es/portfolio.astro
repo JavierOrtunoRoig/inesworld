@@ -14,6 +14,9 @@ changeLanguage("es");
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const getPrefix = () => {
+    return lang === "en" ? "" : `/${lang}`;
+};
 const getRightImageByIndex = (index: number) => {
     if (index === 0)
         return SwitzerlandImage;
@@ -25,7 +28,7 @@ const getRightImageByIndex = (index: number) => {
 };
 ---
 
-<BasicLayout>
+<BasicLayout description={t("portfolio.description")}>
 	{
 		trips.map((trip, index) => (
 			<div class={`container ${index === 0 ? "" : "hidden"}`}>
@@ -43,7 +46,7 @@ const getRightImageByIndex = (index: number) => {
 					</aside>
 					<article class="animate-fade-down">
 						<h1 class="title">{trip.title}</h1>
-						<a href={`${trip.link}`}>{t("portfolio.title")}</a>
+						<a href={`${getPrefix()}${trip.link}`}>{t("portfolio.title")}</a>
 					</article>
 					<aside class="arrow">
 						<ChevronRight />

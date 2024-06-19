@@ -10,7 +10,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BasicLayout>
+<BasicLayout description={t("about.description")}>
 	<h1 class="title">About Me</h1>
 
 	<AboutSubSection

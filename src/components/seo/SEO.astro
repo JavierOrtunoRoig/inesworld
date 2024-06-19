@@ -5,6 +5,14 @@ import Icons from "./Icons.astro";
 import OG from "./OG.astro";
 import TwitterCard from "./TwitterCard.astro";
 
+interface Props {
+	description: string;
+}
+
+if (!Astro.props.description) {
+	throw new Error("The description prop is required");
+}
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -19,7 +27,9 @@ const t = useTranslations(lang);
 
 <title>Inesworld</title>
 
-<meta name="keywords" content={t("index.keywords")} />
+<meta name="description" content={Astro.props.description} />
+
+<meta name="keywords" content={t("keywords")} />
 
 <meta name="author" content="Inés Cuevas Jiménez, inesworld, ines world" />
 <meta name="robots" content="index, follow" />

@@ -29,7 +29,7 @@ interface Post {
 	};
 }
 
-const { frontmatter, slug } = Astro.props;
+const { frontmatter, slug, description } = Astro.props;
 const { minutesRead } = Astro.props.frontmatter;
 
 // I want to get all posts in the project and get the next and previous post to add a link to them
@@ -42,7 +42,7 @@ const nextPost = posts[currentPostIndex + 1];
 
 <html lang={i18next.language}>
 	<head>
-		<SEO />
+		<SEO description={description} />
 		<slot name="custom-header-scripts" />
 		<ViewTransitions />
 	</head>

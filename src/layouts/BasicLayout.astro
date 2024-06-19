@@ -6,11 +6,15 @@ import "@/global.css";
 import "@fontsource/roboto";
 import { ViewTransitions } from "astro:transitions";
 import i18next from "i18next";
+
+interface Props {
+	description: string;
+}
 ---
 
 <html lang={i18next.language}>
 	<head>
-		<SEO />
+		<SEO description={Astro.props.description} />
 		<slot name="custom-header-scripts" />
 		<slot name="custom-header-styles" />
 		<ViewTransitions />

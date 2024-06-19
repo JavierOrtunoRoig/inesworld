@@ -1,12 +1,19 @@
 ---
 import "@/../node_modules/viewerjs/dist/viewer.css";
 import MyImage from "@/components/MyImage.astro";
+import { getLangFromUrl } from "@/i18n/utils";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getCollection } from "astro:content";
 import { changeLanguage } from "i18next";
 
 changeLanguage("en");
 
+const { gallery: { title, photos }, } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const description = {
+    en: `Explore the photo gallery of Inés Cuevas Jiménez, also known as inesworld, featuring images captured in ${title}. Discover breathtaking landscapes, vibrant streets, and portraits of local people that tell unique stories. Immerse yourself in the beauty and diversity of ${title} through my lens.`,
+    es: `Explora la galería de fotos de Inés Cuevas Jiménez, también conocida como inesworld, con imágenes capturadas en ${title}. Descubre paisajes impresionantes, calles vibrantes y retratos de personas locales que cuentan historias únicas. Sumérgete en la belleza y diversidad de ${title} a través de mi lente.`,
+};
 export async function getStaticPaths() {
     const gallery = await getCollection("gallery");
     return gallery.map((gallery) => {
@@ -20,7 +27,6 @@ export async function getStaticPaths() {
         };
     });
 }
-const { gallery: { title, photos }, } = Astro.props;
 let imagesGrouped: Record<string, any>[] = [];
 let group1: Record<string, any>[] = [];
 let group2: Record<string, any>[] = [];
@@ -40,7 +46,7 @@ for (let i = 0; i < photos.length; i++) {
 imagesGrouped.push(group1, group2, group3);
 ---
 
-<BasicLayout title={title}>
+<BasicLayout description={description[lang]}>
 	<div class="gallery-container">
 		<h1>{title}</h1>
 		<div>

@@ -9,7 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BasicLayout>
+<BasicLayout description={t("contact.description")}>
 	<div class="contact-container flex flex-col items-center justify-center p-4">
 		<h1 class="title">{t("contact.title")}</h1>
 		<p>{t("contact.subtitle")}</p>
