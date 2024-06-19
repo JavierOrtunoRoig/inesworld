@@ -10,7 +10,7 @@
     "astro": "astro",
     "prepare": "husky",
     "generate:i18n": "astro-i18next generate",
-    "generate:sitemaps": "node ./generateSitemap.cjs"
+    "generate:sitemaps": "node ./public/generateSitemap.cjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
