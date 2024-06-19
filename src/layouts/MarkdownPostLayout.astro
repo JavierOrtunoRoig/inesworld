@@ -2,11 +2,10 @@
 import Footer from "@/components/Footer.astro";
 import MyImage from "@/components/MyImage.astro";
 import Navbar from "@/components/Navbar.astro";
-import SEO from "@/components/SEO.astro";
+import SEO from "@/components/seo/SEO.astro";
 import "@/global.css";
 import { getValidPosts } from "@/helpers/posts";
 import "@fontsource/roboto";
-import { HeadHrefLangs } from "astro-i18next/components";
 import { getCollection } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import i18next from "i18next";
@@ -44,7 +43,6 @@ const nextPost = posts[currentPostIndex + 1];
 <html lang={i18next.language}>
 	<head>
 		<SEO />
-		<HeadHrefLangs />
 		<slot name="custom-header-scripts" />
 		<ViewTransitions />
 	</head>

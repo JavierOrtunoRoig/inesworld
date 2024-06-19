@@ -3,11 +3,10 @@ import "@/../node_modules/leaflet/dist/leaflet.css";
 import Calendar from "@/components/Calendar.astro";
 import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
-import SEO from "@/components/SEO.astro";
+import SEO from "@/components/seo/SEO.astro";
 import "@/global.css";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import "@fontsource/roboto";
-import { HeadHrefLangs } from "astro-i18next/components";
 import i18next, { changeLanguage } from "i18next";
 
 changeLanguage("es");
@@ -20,7 +19,6 @@ const t = useTranslations(lang);
 <html lang={i18next.language}>
 	<head>
 		<SEO />
-		<HeadHrefLangs />
 	</head>
 	<body>
 		<Navbar />

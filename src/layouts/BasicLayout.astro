@@ -1,10 +1,9 @@
 ---
 import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
-import SEO from "@/components/SEO.astro";
+import SEO from "@/components/seo/SEO.astro";
 import "@/global.css";
 import "@fontsource/roboto";
-import { HeadHrefLangs } from "astro-i18next/components";
 import { ViewTransitions } from "astro:transitions";
 import i18next from "i18next";
 ---
@@ -12,8 +11,6 @@ import i18next from "i18next";
 <html lang={i18next.language}>
 	<head>
 		<SEO />
-		<HeadHrefLangs />
-
 		<slot name="custom-header-scripts" />
 		<slot name="custom-header-styles" />
 		<ViewTransitions />
