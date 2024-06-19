@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev -- --verbose",
     "start": "astro dev",
-    "build": "astro-i18next generate && astro build",
+    "build": "astro-i18next generate && astro build && node generateSitemap.cjs",
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky",
