@@ -13,7 +13,11 @@ export const defaultLang = "en";
 
 export const ui = {
 	en: {
+		"index.keywords":
+			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, photography, travels, trips, world, filmmaker, cinematography, visual storytelling, adventure, landscape photography, travel photography, documentary, filmmaking, short films, cinematographer, digital nomad, wanderlust, global exploration",
+
 		"footer": "Copyright © 2024 - All right reserved by Inés Cuevas Jiménez",
+
 		"navbar.home": "Home",
 		"navbar.about": "About me",
 		"navbar.portfolio": "Portfolio",
@@ -148,6 +152,9 @@ export const ui = {
 		"map.subtitle_3": "Countries visited!!",
 	},
 	es: {
+		"index.keywords":
+			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, fotografía, viajes, excursiones, mundo, cineasta, cinematografía, narración visual, aventura, fotografía de paisajes, fotografía de viajes, documental, realización cinematográfica, cortometrajes, director de fotografía, nómada digital, ansias de viajar, exploración global",
+
 		"footer": "Copyright © 2024 - Todos los derechos reservados - Inés Cuevas Jiménez",
 
 		"navbar.home": "Inicio",

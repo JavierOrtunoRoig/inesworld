@@ -1,8 +1,12 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { HeadHrefLangs } from "astro-i18next/components";
 import Icons from "./Icons.astro";
 import OG from "./OG.astro";
 import TwitterCard from "./TwitterCard.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <meta name="google-site-verification" content="5GRhhm_YYdtAFIMnUytnZRT8Dwghpw9EKt428qz0IhY" />
@@ -15,11 +19,8 @@ import TwitterCard from "./TwitterCard.astro";
 
 <title>Inesworld</title>
 
-<meta name="description" content="Inés Cuevas Jiménez portfolio. Come to discover the world through my photos." />
-<meta
-	name="keywords"
-	content="Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, photography, travels, trips, world, filmmaker"
-/>
+<meta name="keywords" content={t("index.keywords")} />
+
 <meta name="author" content="Inés Cuevas Jiménez, inesworld, ines world" />
 <meta name="robots" content="index, follow" />
 
