@@ -12,3 +12,10 @@ const { text } = Astro.props;
 >
 	<p class="text-center text-lg font-bold uppercase text-green-300">{text}</p>
 </div>
+
+<style>
+	p {
+		--progress-bar-thickness: 0.75rem;
+		padding: 0 var(--progress-bar-thickness);
+	}
+</style>
