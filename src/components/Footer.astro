@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import RSS from "@/icons/Rss.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -7,6 +8,10 @@ const t = useTranslations(lang);
 
 <footer class="footer footer-center bg-base-300 p-4 text-base-content">
 	<aside>
-		<p>{t("footer")}</p>
+		<span
+			>{t("footer")} | <a href="/rss.xml">
+				<RSS />
+			</a>
+		</span>
 	</aside>
 </footer>

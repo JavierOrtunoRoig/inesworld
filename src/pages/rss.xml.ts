@@ -18,6 +18,11 @@ export async function GET(context) {
 			title: post.data.title,
 			pubDate: post.data.pubDate,
 			description: post.data.description,
+			enclosure: {
+				url: post.data.image.src,
+				type: "image/jpeg",
+				length: post.data.image.src.length,
+			},
 			// customData: post.data.customData,
 			// Compute RSS link from post `slug`
 			// This example assumes all posts are rendered as `/blog/[slug]` routes
