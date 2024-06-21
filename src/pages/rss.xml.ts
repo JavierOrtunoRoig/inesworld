@@ -36,7 +36,7 @@ export async function GET(context) {
 			// This example assumes all posts are rendered as `/blog/[slug]` routes
 			link: `/posts/${post.slug}/`,
 			customData: `
-        <media:content url="${context.site}${post.data.image.publicSrc}" type="image/${post.data.image.publicSrc}" medium="image">
+        <media:content url="${context.site}${post.data.image.publicSrc}" type="image/${post.data.image.publicSrc.split(".")[1]}" medium="image">
           <media:credit>Ines Cuevas Jiménez</media:credit>
           <media:title>${post.data.image.alt}</media:title>
           <media:text>${post.data.image.alt}</media:text>
