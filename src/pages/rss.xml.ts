@@ -42,10 +42,12 @@ export async function GET(context) {
         </media:content>
       `,
 		})), // (opcional) inyecta xml personalizado
-		customData: `<language>en</language><image>
-      <url>https://inesworld.vercel.app/ines.webp</url>
+		// image should be jpg, png or gif
+		customData: `<language>en</language>
+    <image>
+      <url>https://inesworld.vercel.app/ines.jpg</url>
       <title>Image of Ines Cuevas Jiménez | inesworld | ineworld.mov</title>
-      <link>https://inesworld.vercel.app/</link>
+      <link>https://inesworld.vercel.app/blog/</link>
     </image>`,
 		// stylesheet: "/rss-pretty-feed-v3.xsl",
 	});
