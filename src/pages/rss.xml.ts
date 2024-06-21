@@ -23,7 +23,11 @@ export async function GET(context) {
 			// This example assumes all posts are rendered as `/blog/[slug]` routes
 			link: `/posts/${post.slug}/`,
 		})), // (opcional) inyecta xml personalizado
-		customData: `<language>en</language>`,
-		stylesheet: "/rss-pretty-feed-v3.xsl",
+		customData: `<language>en</language><image>
+      <url>https://inesworld.vercel.app/ines.webp</url>
+      <title>Image of Ines Cuevas Jiménez | inesworld | ineworld.mov</title>
+      <link>https://inesworld.vercel.app/</link>
+    </image>`,
+		// stylesheet: "/rss-pretty-feed-v3.xsl",
 	});
 }
