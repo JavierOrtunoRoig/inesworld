@@ -20,7 +20,7 @@ const posts = getValidPosts(allPosts);
 <BasicLayout description={t("blog.description")}>
 	<div class="search-container">
 		<input
-			class="text-black placeholder:text-gray-600"
+			class="animate-fade-up text-black placeholder:text-gray-600"
 			type="text"
 			id="search"
 			placeholder={t("blog.input.placeholder")}
@@ -29,46 +29,48 @@ const posts = getValidPosts(allPosts);
 	<div class="blogs-container">
 		{
 			(
-				<article style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0">
+				<section style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0 ">
 					{posts.map((post) => {
 						const date = new Date(post.data.pubDate);
 						const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 						const tags = post.data.tags;
 
 						return (
-							<a class="post" href={`posts/${post.slug}`}>
-								<MyImage
-									imagePath={post.data.image?.src}
-									altText={post.data.image?.alt}
-									widths={[500, 1000]}
-									sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
-								/>
-								<div class="gradient" />
+							<article class="animate-fade-up animate-duration-[1500ms]">
+								<a class="post" href={`posts/${post.slug}`}>
+									<MyImage
+										imagePath={post.data.image?.src}
+										altText={post.data.image?.alt}
+										widths={[500, 1000]}
+										sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+									/>
+									<div class="gradient" />
 
-								<div class="info">
-									<h2>
-										<p>{post.data.title}</p>
-									</h2>
-									<div class="secondary-info">
-										<p>{formattedDate}</p>
-										<div class="tags">
-											{tags.map((tag) => (
-												<span>#{tag}</span>
-											))}
+									<div class="info">
+										<h2>
+											<p>{post.data.title}</p>
+										</h2>
+										<div class="secondary-info">
+											<p>{formattedDate}</p>
+											<div class="tags">
+												{tags.map((tag) => (
+													<span>#{tag}</span>
+												))}
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</article>
 						);
 					})}
-				</article>
+				</section>
 			)
 		}
 	</div>
 </BasicLayout>
 
 <script>
-	const loadScript = (params) => {
+	const loadScript = () => {
 		document.getElementById("search")?.addEventListener("input", (e: InputEvent) => {
 			const input = e.target as HTMLInputElement;
 			const search = input.value.toLowerCase();

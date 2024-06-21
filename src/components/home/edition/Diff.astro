@@ -2,7 +2,7 @@
 const { xRatio = 16, yRatio = 9 } = Astro.props;
 ---
 
-<div class=`diff aspect-[${xRatio}/${yRatio}] lg:w-2/4 h-[600px] md:h-[800px]`>
+<div class=`diff aspect-[${xRatio}/${yRatio}] lg:w-2/4 h-[600px] md:h-[800px] fade-up`>
 	<div class="diff-item-1">
 		<img class="rounded-md" src="/antes.webp" alt="Unedited photograph taken of a family in India" />
 	</div>
@@ -23,4 +23,15 @@ const { xRatio = 16, yRatio = 9 } = Astro.props;
 	const desiredPosition = totalWidth / 2; // 50% of the total width
 
 	resizer.style.width = `${desiredPosition}px`;
+</script>
+
+<script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver();
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
 </script>

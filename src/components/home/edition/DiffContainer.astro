@@ -1,12 +1,23 @@
 ---
-import Diff from "./Diff.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Diff from "./Diff.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="w-full p-8 flex flex-col items-center">
-  <h1 class="title">{t("diff.title")}</h1>
-  <Diff />
+<section class="flex w-full flex-col items-center p-8">
+	<h1 class="title fade-up">{t("diff.title")}</h1>
+	<Diff />
 </section>
+
+<script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver();
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
+</script>

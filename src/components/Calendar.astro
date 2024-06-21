@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="flex flex-col items-center px-4">
+<div class="fade-up flex flex-col items-center px-4">
 	<h2 class="subtitle mt-8">{t("map.subtitle_1")}</h2>
 
 	<div class="flex h-auto w-full flex-col rounded-md bg-white p-[10px] shadow-sm sm:w-[500px]">
@@ -41,95 +41,110 @@ const t = useTranslations(lang);
 </div>
 
 <script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver(undefined, { threshold: 0.2 });
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
+</script>
+
+<script>
 	import type { Travel } from "@/constants.ts";
 	import { nextTravels } from "@/constants.ts";
 
-	const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
-	const datesElement = document.getElementById("dates") as HTMLDivElement;
-	const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
-	const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
+	const loadScript = () => {
+		const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
+		const datesElement = document.getElementById("dates") as HTMLDivElement;
+		const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
+		const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
 
-	let currentDate = new Date();
+		let currentDate = new Date();
 
-	const updateCalendar = () => {
-		const currentYear = currentDate.getFullYear();
-		const currentMonth = currentDate.getMonth();
+		const updateCalendar = () => {
+			const currentYear = currentDate.getFullYear();
+			const currentMonth = currentDate.getMonth();
 
-		const firstDay = new Date(currentYear, currentMonth, 0);
-		const lastDay = new Date(currentYear, currentMonth + 1, 0);
-		const totalDays = lastDay.getDate();
-		const firstDayIndex = firstDay.getDay();
-		const lastDayIndex = lastDay.getDay();
+			const firstDay = new Date(currentYear, currentMonth, 0);
+			const lastDay = new Date(currentYear, currentMonth + 1, 0);
+			const totalDays = lastDay.getDate();
+			const firstDayIndex = firstDay.getDay();
+			const lastDayIndex = lastDay.getDay();
 
-		const monthYearString = currentDate.toLocaleString("default", {
-			month: "long",
-			year: "numeric",
-		});
-		monthYearElement.textContent = monthYearString;
-
-		let datesHTML = "";
-
-		for (let i = firstDayIndex; i > 0; i--) {
-			const prevDate = new Date(currentYear, currentMonth, 0 - i + 1);
-			datesHTML += `<div class="date inactive">${prevDate.getDate()}</div>`;
-		}
-
-		for (let i = 1; i <= totalDays; i++) {
-			const date = new Date(currentYear, currentMonth, i);
-			const activeClass = date.toDateString() === new Date().toDateString() ? "active" : "";
-			datesHTML += `<div class="date ${activeClass}">${i}</div>`;
-		}
-
-		for (let i = 1; i <= 7 - lastDayIndex; i++) {
-			const nextDate = new Date(currentYear, currentMonth + 1, i);
-			datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
-		}
-
-		datesElement.innerHTML = datesHTML;
-	};
-
-	const updateTravelsDays = () => {
-		const dates = document.querySelectorAll(".date");
-		dates.forEach((date) => {
-			const dateValue = date.textContent as string;
-			const dateValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
-
-			// date in english format
-			const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}`;
-			const fullDate = new Date(dateValueFull);
-
-			const isInactive = date.classList.contains("inactive");
-
-			// check if fullDate is between nextTravels[0].starDate and nextTravels[0].endDate or nextTravels[1].starDate and nextTravels[1].endDate
-			// iterate over nextTravels
-			nextTravels.forEach((travel: Travel) => {
-				// create startDate and endDate adding the time T00:00:00 because if not the date will be different set n UTC time zone and after adding the time it will be in local time zone with +2 hours. Specifying the time will make the date to be in UTC time zone
-				const startDate = new Date(`${travel.startDate}T00:00:00`);
-				const endDate = new Date(`${travel.endDate}T00:00:00`);
-
-				if (!isInactive && fullDate >= startDate && fullDate <= endDate) {
-					date.classList.add("travel");
-					date.classList.add("tooltip");
-					date.setAttribute("data-tip", travel.country);
-				}
+			const monthYearString = currentDate.toLocaleString("default", {
+				month: "long",
+				year: "numeric",
 			});
+			monthYearElement.textContent = monthYearString;
+
+			let datesHTML = "";
+
+			for (let i = firstDayIndex; i > 0; i--) {
+				const prevDate = new Date(currentYear, currentMonth, 0 - i + 1);
+				datesHTML += `<div class="date inactive">${prevDate.getDate()}</div>`;
+			}
+
+			for (let i = 1; i <= totalDays; i++) {
+				const date = new Date(currentYear, currentMonth, i);
+				const activeClass = date.toDateString() === new Date().toDateString() ? "active" : "";
+				datesHTML += `<div class="date ${activeClass}">${i}</div>`;
+			}
+
+			for (let i = 1; i <= 7 - lastDayIndex; i++) {
+				const nextDate = new Date(currentYear, currentMonth + 1, i);
+				datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
+			}
+
+			datesElement.innerHTML = datesHTML;
+		};
+
+		const updateTravelsDays = () => {
+			const dates = document.querySelectorAll(".date");
+			dates.forEach((date) => {
+				const dateValue = date.textContent as string;
+				const dateValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
+
+				// date in english format
+				const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}`;
+				const fullDate = new Date(dateValueFull);
+
+				const isInactive = date.classList.contains("inactive");
+
+				// check if fullDate is between nextTravels[0].starDate and nextTravels[0].endDate or nextTravels[1].starDate and nextTravels[1].endDate
+				// iterate over nextTravels
+				nextTravels.forEach((travel: Travel) => {
+					// create startDate and endDate adding the time T00:00:00 because if not the date will be different set n UTC time zone and after adding the time it will be in local time zone with +2 hours. Specifying the time will make the date to be in UTC time zone
+					const startDate = new Date(`${travel.startDate}T00:00:00`);
+					const endDate = new Date(`${travel.endDate}T00:00:00`);
+
+					if (!isInactive && fullDate >= startDate && fullDate <= endDate) {
+						date.classList.add("travel");
+						date.classList.add("tooltip");
+						date.setAttribute("data-tip", travel.country);
+					}
+				});
+			});
+		};
+
+		prevBtn.addEventListener("click", () => {
+			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
+			updateCalendar();
+			updateTravelsDays();
 		});
+
+		nextBtn.addEventListener("click", () => {
+			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
+			updateCalendar();
+			updateTravelsDays();
+		});
+
+		updateCalendar();
+		updateTravelsDays();
 	};
 
-	prevBtn.addEventListener("click", () => {
-		currentDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
-		updateCalendar();
-		updateTravelsDays();
-	});
-
-	nextBtn.addEventListener("click", () => {
-		currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
-		updateCalendar();
-		updateTravelsDays();
-	});
-
-	updateCalendar();
-	updateTravelsDays();
+	document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style is:inline>

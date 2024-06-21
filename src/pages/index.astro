@@ -43,12 +43,12 @@ const t = useTranslations(lang);
 			/>
 		</section>
 
-		<section class="flex max-w-full grow flex-col items-center justify-center p-8">
+		<section class="fade-up flex max-w-full grow flex-col items-center justify-center p-8">
 			<div class="showreel-container flex w-full max-w-full flex-col items-center overflow-hidden lg:w-[1000px]">
 				<h2 class="title">{t("showreel.title")}</h2>
 				<lite-youtube videoid="U_4y5UKOOTI" image-bg="/trips/indonesia/1.webp" playlabel="My showreel"></lite-youtube>
 				<a
-					class="btn mt-8 cursor-pointer self-center rounded-[5rem] p-4 text-[1.1rem] uppercase no-underline"
+					class="btn mt-8 block cursor-pointer self-center rounded-[5rem] p-4 text-[1.1rem] uppercase no-underline"
 					href="/portfolio">{t("showreel.button")}</a
 				>
 			</div>
@@ -61,6 +61,17 @@ const t = useTranslations(lang);
 		<LatestWorks />
 	</div>
 </BasicLayout>
+
+<script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver();
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
+</script>
 
 <style>
 	@keyframes fluid {

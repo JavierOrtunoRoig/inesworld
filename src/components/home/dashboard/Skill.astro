@@ -4,13 +4,24 @@ import RadialProgressBar from "./RadialProgressBar.astro";
 const { text, subText } = Astro.props;
 ---
 
-<div class="w-56 flex flex-col gap-8">
-  <div class="flex flex-col items-center gap-4">
-    <RadialProgressBar text={text} />
-  </div>
-  <div class="text-base flex flex-col items-center gap-2">
-    <div class="w-full text-xl text-center text-wrap">
-      {subText}
-    </div>
-  </div>
+<div class="flex w-56 flex-col gap-8">
+	<div class="fade-up flex flex-col items-center gap-4">
+		<RadialProgressBar text={text} />
+	</div>
+	<div class="fade-up flex flex-col items-center gap-2 text-base">
+		<div class="w-full text-wrap text-center text-xl">
+			{subText}
+		</div>
+	</div>
 </div>
+
+<script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver();
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
+</script>
