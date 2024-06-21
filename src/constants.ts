@@ -24,24 +24,24 @@ export const trips: Trip[] = [
 
 export interface Travel {
 	country: string;
-	startDate: Date;
-	endDate: Date;
+	startDate: string;
+	endDate: string;
 }
 export const nextTravels: Travel[] = [
 	{
 		country: "Philippines",
-		startDate: new Date("2024-07-21"),
-		endDate: new Date("2024-09-29"),
+		startDate: "2024-07-21",
+		endDate: "2024-09-29",
 	},
 	{
 		country: "Shout Korea",
-		startDate: new Date("2025-02-01"),
-		endDate: new Date("2025-07-15"),
+		startDate: "2025-02-01",
+		endDate: "2025-07-15",
 	},
 	{
 		country: "Switzerland",
-		startDate: new Date("2024-06-20"),
-		endDate: new Date("2024-06-25"),
+		startDate: "2024-06-20",
+		endDate: "2024-06-25",
 	},
 ];
 

@@ -103,8 +103,9 @@ const t = useTranslations(lang);
 			// check if fullDate is between nextTravels[0].starDate and nextTravels[0].endDate or nextTravels[1].starDate and nextTravels[1].endDate
 			// iterate over nextTravels
 			nextTravels.forEach((travel: Travel) => {
-				const startDate = new Date(travel.startDate);
-				const endDate = new Date(travel.endDate);
+				// create startDate and endDate adding the time T00:00:00 because if not the date will be different set n UTC time zone and after adding the time it will be in local time zone with +2 hours. Specifying the time will make the date to be in UTC time zone
+				const startDate = new Date(`${travel.startDate}T00:00:00`);
+				const endDate = new Date(`${travel.endDate}T00:00:00`);
 
 				if (!isInactive && fullDate >= startDate && fullDate <= endDate) {
 					date.classList.add("travel");
@@ -158,6 +159,10 @@ const t = useTranslations(lang);
 	.date.active {
 		background: #ff5869;
 		color: #fff;
+	}
+
+	.date.active.travel {
+		background: #8758ff;
 	}
 
 	.date.inactive {
