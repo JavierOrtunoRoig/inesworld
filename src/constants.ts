@@ -38,11 +38,17 @@ export const nextTravels: Travel[] = [
 		startDate: new Date("2025-02-01"),
 		endDate: new Date("2025-07-15"),
 	},
+	{
+		country: "Switzerland",
+		startDate: new Date("2024-06-20"),
+		endDate: new Date("2024-06-25"),
+	},
 ];
 
 const MALAGA = [36.72016, -4.42034];
 const SEUL = [37.5326, 127.024612];
 const PHILIPPINES = [12.879721, 121.774017];
+const SWITZERLAND = [46.818188, 8.227512];
 
 const NOT_TRAVELLING = [];
 
@@ -51,5 +57,5 @@ export const TRAVELLING_POPUP_TEXT = "I'm traveling here";
 
 export const markersToShow = {
 	livingIn: MALAGA,
-	travellingTo: NOT_TRAVELLING,
+	travellingTo: SWITZERLAND,
 };
