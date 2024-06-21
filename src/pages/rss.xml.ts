@@ -50,7 +50,7 @@ export async function GET(context) {
 		customData: `<language>en</language>
       <image>
         <url>https://inesworld.vercel.app/ines.jpg</url>
-        <title>Image of Ines Cuevas Jiménez | inesworld | ineworld.mov</title>
+        <title>Inesworld blog</title>
         <link>https://inesworld.vercel.app/blog/</link>
       </image>
       <copyright>Copyright © 2024 - All right reserved by Inés Cuevas Jiménez | inesworld.mov | inesworld</copyright>
