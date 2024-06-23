@@ -65,6 +65,5 @@ function getActualTripCoordinates(nextTravels: Travel[]) {
 	const today = new Date();
 	const todayString = today.toISOString().slice(0, 10);
 	const actualTrip = nextTravels.find((trip) => trip.startDate <= todayString && trip.endDate >= todayString);
-	console.log({ actualTrip });
 	return actualTrip?.coordinates || NOT_TRAVELLING;
 }
