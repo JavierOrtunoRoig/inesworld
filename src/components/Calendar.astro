@@ -1,5 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import ChevronLeft from "@/icons/ChevronLeft.astro";
+import ChevronRight from "@/icons/ChevronRight.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,18 +14,16 @@ const t = useTranslations(lang);
 		<div class="header mb-[10px] flex items-center justify-between">
 			<button
 				id="prevBtn"
-				class="flex size-[40px] cursor-pointer items-center justify-center rounded-[50%] border-none bg-white shadow-[0_0_4px_rgba(0,0,0,0.2)]"
+				class="*:duration-250 flex size-[40px] cursor-pointer items-center justify-center rounded-[50%] border-none bg-white shadow-[0_0_4px_rgba(0,0,0,0.2)] *:transition-all *:hover:fill-black"
 			>
-				<!-- <i class="fa-solid fa-chevron-left"></i> -->
-				<span>{"<"}</span>
+				<ChevronLeft className="size-4 fill-current" />
 			</button>
 			<div class="monthYear" id="monthYear"></div>
 			<button
 				id="nextBtn"
-				class="flex size-[40px] cursor-pointer items-center justify-center rounded-[50%] border-none bg-white shadow-[0_0_4px_rgba(0,0,0,0.2)]"
+				class="*:duration-250 flex size-[40px] cursor-pointer items-center justify-center rounded-[50%] border-none bg-white shadow-[0_0_4px_rgba(0,0,0,0.2)] *:transition-all *:hover:fill-black"
 			>
-				<!-- <i class="fa-solid fa-chevron-right"></i> -->
-				<span>{">"}</span>
+				<ChevronRight className="size-4 fill-current" />
 			</button>
 		</div>
 
