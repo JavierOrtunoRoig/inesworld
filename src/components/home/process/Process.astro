@@ -2,6 +2,7 @@
 import Timeline from "./Timeline.astro";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Connect from "@/icons/Connect.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,53 +10,56 @@ const t = useTranslations(lang);
 
 <section id="process" class="flex w-full flex-col items-center p-8">
 	<h1 class="title fade-up">{t("process.title")}</h1>
-	<div class="fade-up lg:flex lg:flex-row lg:gap-16">
-		<Timeline />
+	<div class="fade-up w-full items-center justify-center lg:flex lg:flex-row lg:gap-16">
+		<div class="flex flex-col items-center justify-center gap-4">
+			<Timeline />
 
-		<article class="w-90 card h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
-			<div class="card-body h-auto flex-grow-0">
-				<h2 class="card-title">{t("process.step_1.title")}</h2>
-				<p>
-					{t("process.step_1.description")}
-				</p>
-			</div>
-		</article>
+			<article class="card h-fit w-full animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+				<div class="card-body h-auto flex-grow-0">
+					<h2 class="card-title">{t("process.step_1.title")}</h2>
+					<p>
+						{t("process.step_1.description")}
+					</p>
+				</div>
+			</article>
 
-		<article class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
-			<div class="card-body h-auto">
-				<h2 class="card-title">{t("process.step_2.title")}</h2>
-				<p>
-					{t("process.step_2.description")}
-				</p>
-			</div>
-		</article>
+			<article class="card hidden h-fit w-full animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+				<div class="card-body h-auto">
+					<h2 class="card-title">{t("process.step_2.title")}</h2>
+					<p>
+						{t("process.step_2.description")}
+					</p>
+				</div>
+			</article>
 
-		<article class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
-			<div class="card-body h-auto">
-				<h2 class="card-title">{t("process.step_3.title")}</h2>
-				<p>
-					{t("process.step_3.description")}
-				</p>
-			</div>
-		</article>
+			<article class="card hidden h-fit w-full animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+				<div class="card-body h-auto">
+					<h2 class="card-title">{t("process.step_3.title")}</h2>
+					<p>
+						{t("process.step_3.description")}
+					</p>
+				</div>
+			</article>
 
-		<article class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
-			<div class="card-body h-auto">
-				<h2 class="card-title">{t("process.step_4.title")}</h2>
-				<p>
-					{t("process.step_4.description")}
-				</p>
-			</div>
-		</article>
+			<article class="card hidden h-fit w-full animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+				<div class="card-body h-auto">
+					<h2 class="card-title">{t("process.step_4.title")}</h2>
+					<p>
+						{t("process.step_4.description")}
+					</p>
+				</div>
+			</article>
 
-		<article class="w-90 card hidden h-fit animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
-			<div class="card-body h-auto">
-				<h2 class="card-title">{t("process.step_5.title")}</h2>
-				<p>
-					{t("process.step_5.description")}
-				</p>
-			</div>
-		</article>
+			<article class="card hidden h-fit w-full animate-fade bg-base-100 shadow-xl animate-duration-1000 sm:w-96">
+				<div class="card-body h-auto">
+					<h2 class="card-title">{t("process.step_5.title")}</h2>
+					<p>
+						{t("process.step_5.description")}
+					</p>
+				</div>
+			</article>
+		</div>
+		<Connect className="hidden xl:block" />
 	</div>
 </section>
 
@@ -111,7 +115,7 @@ const t = useTranslations(lang);
 
 			activeNextPoint(nextItemIndex);
 			activeNextPath(nextItemIndex);
-		}, 5000);
+		}, 50000);
 
 		const activeNextPoint = (nextItemIndex: number) => {
 			const allSvgElements = timeline.querySelectorAll("svg");
