@@ -13,7 +13,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<!-- <SEO description={t("map.description")} /> --><!doctype html>
 <BasicLayout description={t("map.description")}>
 	<div class="flex flex-col items-center px-8">
 		<h1 class="title">{t("map.title")}</h1>
@@ -250,11 +249,20 @@ const t = useTranslations(lang);
 			function handleHighlightVisit(event) {
 				highlightVisit.call(this, event, div);
 			}
+
+			const h3 = document.createElement("h3");
+			h3.innerHTML = "Filters";
+			h3.style.marginBottom = "4px";
+			h3.style.textAlign = "center";
+			h3.style.fontWeight = "bold";
+			div.appendChild(h3);
+
 			for (let i = 0; i < labels.length; i++) {
 				const visitContainer = L.DomUtil.create("div", "");
 				visitContainer.style.cursor = "pointer";
+				visitContainer.style.padding = "2px";
 				visitContainer.onclick = handleHighlightVisit;
-				visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}"></i> ${labels[i]} - ${visited[i]} countries`;
+				visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}; border: 1px solid black; border-radius: 2px"></i> ${labels[i]} - ${visited[i]} countries`;
 				div.appendChild(visitContainer);
 			}
 
