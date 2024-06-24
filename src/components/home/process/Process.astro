@@ -2,7 +2,11 @@
 import Timeline from "./Timeline.astro";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import Connect from "@/icons/Connect.astro";
+import Concept from "@/icons/process/Concept.astro";
+import Connect from "@/icons/process/Connect.astro";
+import Create from "@/icons/process/Create.astro";
+import Deliver from "@/icons/process/Deliver.astro";
+import Review from "@/icons/process/Review.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -60,6 +64,10 @@ const t = useTranslations(lang);
 			</article>
 		</div>
 		<Connect className="hidden xl:block" />
+		<Concept className="hidden" />
+		<Create className="hidden" />
+		<Review className="hidden" />
+		<Deliver className="hidden" />
 	</div>
 </section>
 
@@ -80,6 +88,14 @@ const t = useTranslations(lang);
 		const cards = document.querySelectorAll("#process .card");
 		const timeline = document.querySelector("ul.timeline") as HTMLUListElement;
 
+		const image1 = document.querySelector("#connect") as SVGElement;
+		const image2 = document.querySelector("#concept") as SVGElement;
+		const image3 = document.querySelector("#create") as SVGElement;
+		const image4 = document.querySelector("#review") as SVGElement;
+		const image5 = document.querySelector("#deliver") as SVGElement;
+
+		const images = [image1, image2, image3, image4, image5];
+
 		if (!cards || !timeline) {
 			return;
 		}
@@ -92,10 +108,14 @@ const t = useTranslations(lang);
 				cards.forEach((card) => {
 					card.classList.add("hidden");
 				});
+				images.forEach((image) => {
+					image.classList.remove("xl:block");
+				});
 				activeNextPoint(0);
 				activeNextPath(0);
 
 				cards.item(index).classList.remove("hidden");
+				images[index].classList.add("xl:block");
 
 				for (let i = 0; i < timelineItems.length; i++) {
 					if (i <= index) {
@@ -113,9 +133,12 @@ const t = useTranslations(lang);
 			cards.item(activeItemIndex).classList.add("hidden");
 			cards.item(nextItemIndex).classList.remove("hidden");
 
+			images[activeItemIndex].classList.remove("xl:block");
+			images[nextItemIndex].classList.add("xl:block");
+
 			activeNextPoint(nextItemIndex);
 			activeNextPath(nextItemIndex);
-		}, 50000);
+		}, 5000);
 
 		const activeNextPoint = (nextItemIndex: number) => {
 			const allSvgElements = timeline.querySelectorAll("svg");
