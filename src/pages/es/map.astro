@@ -39,14 +39,16 @@ const t = useTranslations(lang);
 
 <script>
 	import atlas from "@/data/atlas.geo.json";
+
+	const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
+	const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
+
 	const loadScript = () => {
 		// Next trips
-		const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
 		const countriesToVisit = atlas.features.filter((country) => country.properties.visited === 1);
 		countriesToVisit.forEach((country) => createCard(commingContainer, country.properties));
 
 		// countried visited
-		const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
 		const countriesVisited = atlas.features.filter((country) => country.properties.visited === 2);
 		countriesVisited.forEach((country) => createCard(visitedContainer, country.properties));
 
@@ -88,6 +90,9 @@ const t = useTranslations(lang);
 	declare var L: any;
 
 	const loadScript = () => {
+		// to avoid error on build
+		if (!document.getElementById("map")) return;
+
 		const geoJson: GEOJson = {
 			type: "FeatureCollection",
 			features: [],
