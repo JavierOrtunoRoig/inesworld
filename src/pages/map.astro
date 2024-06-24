@@ -58,8 +58,7 @@ const t = useTranslations(lang);
       <div class="card-body p-0 flex flex-row">
         <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0"></p>
         <h2 class="card-title px-2 sm:text-center">${countryProperties[langName]}</h2>
-      </div>
-    `;
+      </div>`;
 			container.appendChild(div);
 		}
 	};
@@ -230,6 +229,8 @@ const t = useTranslations(lang);
 				visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}; border: 1px solid black; border-radius: 2px"></i> ${labels[i]} - ${visited[i]} countries`;
 				div.appendChild(visitContainer);
 			}
+
+			return div;
 		}
 	};
 
