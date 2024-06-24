@@ -24,17 +24,20 @@ const t = useTranslations(lang);
 			id="who-am-i"
 			class="flex max-w-full flex-col items-center gap-16 p-8 md:flex-row md:justify-around md:gap-8"
 		>
-			<div class="who-am-i sm:flex sm:w-[50%] sm:items-center sm:justify-center">
-				<TitleRewritter
-					texts={[
-						t("typewriter.text_1"),
-						t("typewriter.text_2"),
-						t("typewriter.text_3"),
-						t("typewriter.text_4"),
-						t("typewriter.text_5"),
-						t("typewriter.text_6"),
-					]}
-				/>
+			<div class="flex flex-col items-center justify-center">
+				<h1 class="title text-5xl sm:text-8xl">Hey, It's Ines</h1>
+				<div class="who-am-i sm:flex sm:w-[50%] sm:items-center sm:justify-center">
+					<TitleRewritter
+						texts={[
+							// t("typewriter.text_1"),
+							t("typewriter.text_2"),
+							t("typewriter.text_3"),
+							t("typewriter.text_4"),
+							t("typewriter.text_5"),
+							t("typewriter.text_6"),
+						]}
+					/>
+				</div>
 			</div>
 			<MyImage
 				class="rounded-[36%_64%_70%_30%_/_30%_30%_70%_70%]; mb-8 w-full min-w-[300px] max-w-[800px] flex-[2] animate-[fluid_45s_infinite_linear]"
