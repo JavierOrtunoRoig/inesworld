@@ -1,6 +1,8 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
+import Image from "@/components/MyImage.astro";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -11,12 +13,14 @@ const t = useTranslations(lang);
 	</h1>
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
-		<img
-			class="w-full rounded-lg"
-			src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC01482-q4bj7p7pj0m2i9553q3iw0yw7vk18k8gke8imnsp2w.jpg"
-			alt="image to test"
+		<Image
+			imagePath="/src/assets/ines_1.jpg"
+			altText="Ines cuevas / inesworld / inesworld.mov stroking a cow in a field in Switzerland"
+			class="aspect-square w-full rounded-md object-cover md:w-[45%]"
+			width={700}
 		/>
-		<div class="my-8 md:my-0 md:flex md:flex-col md:justify-center">
+
+		<div class="my-8 w-full md:my-0 md:flex md:flex-col md:justify-center xl:w-1/2">
 			<h2 class="mb-4 text-center text-2xl font-bold">
 				{t("why_me.reason_1.title")}
 			</h2>
@@ -27,12 +31,13 @@ const t = useTranslations(lang);
 	</article>
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
-		<img
-			class="my-8 w-full rounded-lg md:order-2"
-			src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC05373-1-pw112w032dbrhm20j0e1506p479605mo55p4y26faw.jpg"
-			alt="image to test"
+		<Image
+			imagePath="/src/assets/ines_2.jpg"
+			altText="Ines cuevas / inesworld / inesworld.mov walking through the mountains of Switzerland"
+			class="order-2 aspect-square w-full rounded-md object-cover md:w-[45%]"
+			width={700}
 		/>
-		<div class="md:order-1 md:flex md:flex-col md:justify-center">
+		<div class="my-8 w-full md:order-1 md:flex md:flex-col md:justify-center xl:w-1/2">
 			<h2 class="mb-4 text-center text-2xl font-bold">
 				{t("why_me.reason_2.title")}
 			</h2>
@@ -41,12 +46,13 @@ const t = useTranslations(lang);
 	</article>
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
-		<img
-			class="my-8 w-full rounded-lg"
-			src="https://montestravels.com/wp-content/uploads/elementor/thumbs/DSC08211-q4bj8vig2k7z0pfp8qdqi8amy7rjuxwdq7ld841zaw.jpg"
-			alt="image to test"
+		<Image
+			imagePath="/src/assets/ines_3.jpg"
+			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
+			class="aspect-square w-full rounded-md object-cover md:w-[45%]"
+			width={700}
 		/>
-		<div class="md:flex md:flex-col md:justify-center">
+		<div class="my-8 w-full md:flex md:flex-col md:justify-center xl:w-1/2">
 			<h2 class="mb-4 text-center text-2xl font-bold">
 				{t("why_me.reason_3.title")}
 			</h2>

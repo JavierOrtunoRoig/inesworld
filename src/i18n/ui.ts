@@ -98,6 +98,8 @@ export const ui = {
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Switzerland",
 
+		"about.title": "About me",
+
 		"about_section_1.title": "How did I start?",
 		"about_section_1.text_1":
 			"Since I was little, I was always a curious and energetic girl. I grew up in a small town surrounded by nature, which allowed me to develop a deep connection with the environment that surrounded me. My parents used to take me for walks in the nearby forests and fields , and from a very young age, I learned to appreciate beauty in the simplest details: the sunlight filtering through the leaves, the soft murmur of the river and the singing of birds at dawn.",
@@ -251,6 +253,8 @@ export const ui = {
 		"lastest_works.country_1": "Indonesia",
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Suiza",
+
+		"about.title": "Sobre mí",
 
 		"about_section_1.title": "¿Como empecé?",
 		"about_section_1.text_1":
