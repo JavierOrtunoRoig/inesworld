@@ -2,6 +2,7 @@
 import "@/../node_modules/viewerjs/dist/viewer.css";
 import MyImage from "@/components/MyImage.astro";
 import { getLangFromUrl } from "@/i18n/utils";
+import SeeMore from "@/icons/SeeMore.astro";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getCollection } from "astro:content";
 import { changeLanguage } from "i18next";
@@ -49,31 +50,30 @@ imagesGrouped.push(group1, group2, group3);
 <BasicLayout description={description[lang]}>
 	<div class="gallery-container">
 		<h1>{title}</h1>
-		<div>
+		<div class="sub-container">
 			{
 				imagesGrouped.map((group) => (
-					<div class="flex">
+					<div class="column">
 						{group.map((image) => (
-							<MyImage
-								dataAlternativePath={image.path.replace("/src/assets", "").replace("jpg", "webp")}
-								imagePath={image.path}
-								altText={image.description}
-								width={500}
-								class="fade-up hover:cursor-pointer"
-							/>
+							<div class="fade-up relative flex justify-center gap-4">
+								<div class="acrylic absolute right-2 top-2 z-10 rounded-md p-2">
+									<SeeMore />
+								</div>
+								<div class="acrylic absolute bottom-2 left-2 z-10 rounded-md p-1">
+									<span class="text-white">{image.place}</span>
+								</div>
+								<MyImage
+									dataAlternativePath={image.path.replace("/src/assets", "").replace("jpg", "webp")}
+									imagePath={image.path}
+									altText={image.description}
+									width={500}
+									class="hover:cursor-pointer"
+								/>
+							</div>
 						))}
 					</div>
 				))
 			}
-			<!-- 
-				<MyImage
-					imagePath={image.path}
-					altText={image.description}
-					widths={[500, 1000]}
-					sizes="(min-width: 1700px) 500px, (min-width: 580px) calc(31.09vw - 22px), calc(100vw - 70px)"
-					class="fade-up hover:cursor-pointer"
-				/> 
-			-->
 		</div>
 	</div>
 </BasicLayout>
@@ -92,8 +92,6 @@ imagesGrouped.push(group1, group2, group3);
 
 <!-- Script to add image viewer -->
 <script>
-	import introJs from "intro.js";
-	import "intro.js/introjs.css";
 	import Viewer from "viewerjs";
 
 	const loadScript = () => {
@@ -149,30 +147,16 @@ imagesGrouped.push(group1, group2, group3);
 				return path;
 			},
 		*/
-
-		const guideshouldNotRun = localStorage.getItem("guideshouldNotRun_gallery");
-
-		if (guideshouldNotRun) return;
-
-		introJs()
-			.setOptions({
-				tooltipClass: "guide",
-				steps: [
-					{
-						intro: "Click on an image to view it in full screen.",
-					},
-				],
-			})
-			.oncomplete(() => {
-				localStorage.setItem("guideshouldNotRun_gallery", "true");
-			})
-			.start();
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
 </script>
 
 <style>
+	.acrylic {
+		@apply pointer-events-none bg-black/25 backdrop-blur-[3px];
+	}
+
 	.gallery-container {
 		display: flex;
 		flex-direction: column;
@@ -186,13 +170,13 @@ imagesGrouped.push(group1, group2, group3);
 			margin: 0 0 20px 0;
 		}
 
-		div {
+		.sub-container {
 			display: flex;
 			gap: 1rem;
 			justify-content: center;
 			flex-grow: 1;
 
-			.flex {
+			.column {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
@@ -213,7 +197,7 @@ imagesGrouped.push(group1, group2, group3);
 				font-size: 3rem;
 			}
 
-			div {
+			.sub-container {
 				flex-wrap: wrap;
 				width: 100%;
 

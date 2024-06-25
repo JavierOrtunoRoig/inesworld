@@ -3,27 +3,33 @@
   "photos": [
     {
       "path": "/src/assets/trips/vietnam/1.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     },
     {
       "path": "/src/assets/trips/vietnam/2.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     },
     {
       "path": "/src/assets/trips/vietnam/3.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     },
     {
       "path": "/src/assets/trips/vietnam/4.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     },
     {
       "path": "/src/assets/trips/vietnam/5.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     },
     {
       "path": "/src/assets/trips/vietnam/6.jpg",
-      "description": ""
+      "description": "",
+      "place": "Hanói" 
     }
   ]
 }

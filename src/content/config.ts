@@ -26,6 +26,7 @@ const photoGalleryCollection = defineCollection({
 			z.object({
 				path: z.string(),
 				description: z.string(),
+				place: z.string(),
 			})
 		),
 	}),

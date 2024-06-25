@@ -3,91 +3,113 @@
   "photos": [
     {
       "path": "/src/assets/trips/switzerland/1.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/2.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/3.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/4.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/5.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/6.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/7.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/8.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/9.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/10.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/11.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/12.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/13.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/14.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/15.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/16.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/17.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/18.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/19.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/20.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/21.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     },
     {
       "path": "/src/assets/trips/switzerland/22.jpg",
-      "description": ""
+      "description": "",
+      "place": "Zürich"
     }
   ]
 }

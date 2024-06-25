@@ -3,47 +3,58 @@
   "photos": [
     {
       "path": "/src/assets/trips/indonesia/1.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/2.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/3.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/4.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/5.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/6.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/7.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/8.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/9.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/10.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     },
     {
       "path": "/src/assets/trips/indonesia/11.jpg",
-      "description": ""
+      "description": "",
+      "place": "Yakarta"
     }
   ]
 }
