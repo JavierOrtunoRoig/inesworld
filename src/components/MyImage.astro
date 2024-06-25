@@ -10,6 +10,7 @@ interface Props {
 	widths?: number[];
 	sizes?: string;
 	dataAlternativePath?: string;
+	loading?: "lazy" | "eager";
 }
 
 const {
@@ -20,6 +21,7 @@ const {
 	sizes: sizesRaw,
 	dataAlternativePath = "",
 	class: customClass,
+	loading = "lazy",
 } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(`/src/assets/**/*.{jpg,webp,png,jpeg}`);
@@ -37,6 +39,7 @@ const sizes = sizesRaw || widths.map((w) => `(max-width: ${w}px) ${w}px`).join("
 			alt={altText}
 			width={width}
 			quality={"high"}
+			loading={loading}
 		/>
 	) : (
 		<Image
@@ -47,6 +50,7 @@ const sizes = sizesRaw || widths.map((w) => `(max-width: ${w}px) ${w}px`).join("
 			widths={widths}
 			sizes={sizes}
 			quality={"high"}
+			loading={loading}
 		/>
 	)
 }
