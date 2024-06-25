@@ -1,13 +1,29 @@
 ---
+import Image from "@/components/MyImage.astro";
+
 const { xRatio = 16, yRatio = 9 } = Astro.props;
 ---
 
 <div class=`diff aspect-[${xRatio}/${yRatio}] lg:w-2/4 h-[600px] md:h-[800px] fade-up`>
 	<div class="diff-item-1">
-		<img class="rounded-md" src="/antes.webp" alt="Unedited photograph taken of a family in India" />
+		<Image
+			class="rounded-md"
+			imagePath="/src/assets/antes.webp"
+			loading="eager"
+			altText="Unedited photograph taken of a family in India"
+			widths={[256, 1080, 1500]}
+			sizes="(min-width: 1040px) calc(50vw - 35px), calc(100vw - 70px)"
+		/>
 	</div>
 	<div class="diff-item-2">
-		<img class="rounded-md" src="/despues.webp" alt="Edited photograph taken of a family in India" />
+		<Image
+			class="rounded-md"
+			imagePath="/src/assets/despues.webp"
+			loading="eager"
+			altText="Edited photograph taken of a family in India"
+			widths={[256, 1080, 1500]}
+			sizes="(min-width: 1040px) calc(50vw - 35px), calc(100vw - 70px)"
+		/>
 	</div>
 	<div class="diff-resizer"></div>
 </div>
