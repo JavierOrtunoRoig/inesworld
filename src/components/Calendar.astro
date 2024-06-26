@@ -55,17 +55,10 @@ const t = useTranslations(lang);
 	import type { Travel } from "@/constants.ts";
 	import { nextTravels } from "@/constants.ts";
 
-	alert("Script started");
-
 	const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
 	const datesElement = document.getElementById("dates") as HTMLDivElement;
 	const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
 	const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
-
-	if (!monthYearElement) alert("monthYearElement not found");
-	if (!datesElement) alert("datesElement not found");
-	if (!prevBtn) alert("prevBtn not found");
-	if (!nextBtn) alert("nextBtn not found");
 
 	const loadScript = () => {
 		let currentDate = new Date();
@@ -113,16 +106,9 @@ const t = useTranslations(lang);
 				const dateValue = date.textContent as string;
 				const dayValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
 
-				alert(`dayValueString: ${dayValueString}`);
-
 				// I need to create a new Date object with this format due to IOS Safari not supporting the format "YYYY-MM-DD", it's more restrictive and only supports "YYYY/MM/DD" or "YYYY-MM-DDTHH:MM:SSZ"
 				const fullDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(dayValueString));
-
 				const isInactive = date.classList.contains("inactive");
-
-				alert(`fullDate: ${fullDate}`);
-				alert(`isInactive: ${isInactive}`);
-				alert(`nextTravels: ${nextTravels.length}`);
 
 				// check if fullDate is between nextTravels[0].startDate and nextTravels[0].endDate or nextTravels[1].startDate and nextTravels[1].endDate
 				// iterate over nextTravels
