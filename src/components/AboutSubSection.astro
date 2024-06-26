@@ -7,9 +7,10 @@ interface Props {
 	alt: string;
 	direction?: "left" | "right";
 	text: string[];
+	loading?: "lazy" | "eager";
 }
 
-const { title, src, text, alt, direction = "left" } = Astro.props;
+const { title, src, text, alt, direction = "left", loading = "lazy" } = Astro.props;
 
 const float = direction === "left" ? "xl:float-start" : "xl:float-end";
 
@@ -25,6 +26,7 @@ const imgClass = direction === "left" ? "left-img" : "right-img";
 		altText={alt}
 		widths={[256, 500, 790, 1000]}
 		sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+		loading={loading}
 	/>
 
 	{text.map((t) => <p class="mb-4">{t}</p>)}
