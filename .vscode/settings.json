@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "about",
     "contact",
-    "navbar"
+    "navbar",
+    "blog"
   ]
 }

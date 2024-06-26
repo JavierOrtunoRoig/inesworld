@@ -36,13 +36,14 @@ const posts = getValidPosts(allPosts);
 						const tags = post.data.tags;
 
 						return (
-							<article class="animate-fade-up animate-duration-[1500ms]">
+							<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
 								<a class="post" href={`posts/${post.slug}`}>
 									<MyImage
 										imagePath={post.data.image?.src}
 										altText={post.data.image?.alt}
 										widths={[500, 1000]}
 										sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+										class=""
 									/>
 									<div class="gradient" />
 
