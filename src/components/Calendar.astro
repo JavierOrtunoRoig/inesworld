@@ -68,11 +68,9 @@ const t = useTranslations(lang);
 	if (!nextBtn) alert("nextBtn not found");
 
 	const loadScript = () => {
-		alert("loadScript called");
 		let currentDate = new Date();
 
 		const updateCalendar = () => {
-			alert("updateCalendar called");
 			const currentYear = currentDate.getFullYear();
 			const currentMonth = currentDate.getMonth();
 
@@ -107,28 +105,22 @@ const t = useTranslations(lang);
 			}
 
 			datesElement.innerHTML = datesHTML;
-			alert("updateCalendar completed");
 		};
 
 		const updateTravelsDays = () => {
-			alert("updateTravelsDays called");
 			const dates = document.querySelectorAll(".date");
-			alert(`dates found: ${dates.length}`);
 			dates.forEach((date) => {
 				const dateValue = date.textContent as string;
-				const dateValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
+				const dayValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
 
-				alert(`dateValue: ${dateValue}`);
-				alert(`dateValueString: ${dateValueString}`);
+				alert(`dayValueString: ${dayValueString}`);
 
 				// date in english format
 				// Use use ISO 8601 format with "T" to avoid new Date problems with the date format in different browsers (IOS)
-				const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}T00:00:00Z`;
-				const fullDate = new Date(dateValueFull);
+				const fullDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(dayValueString));
 
 				const isInactive = date.classList.contains("inactive");
 
-				alert(`dateValueFull: ${dateValueFull}`);
 				alert(`fullDate: ${fullDate}`);
 				alert(`isInactive: ${isInactive}`);
 				alert(`nextTravels: ${nextTravels.length}`);
@@ -144,22 +136,18 @@ const t = useTranslations(lang);
 						date.classList.add("travel");
 						date.classList.add("tooltip");
 						date.setAttribute("data-tip", travel.country);
-						alert(`Travel date found: ${dateValueFull} for ${travel.country}`);
 					}
 				});
 			});
-			alert("updateTravelsDays completed");
 		};
 
 		prevBtn.addEventListener("click", () => {
-			alert("Prev button clicked");
 			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
 			updateCalendar();
 			updateTravelsDays();
 		});
 
 		nextBtn.addEventListener("click", () => {
-			alert("Next button clicked");
 			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
 			updateCalendar();
 			updateTravelsDays();
@@ -167,11 +155,9 @@ const t = useTranslations(lang);
 
 		updateCalendar();
 		updateTravelsDays();
-		alert("loadScript completed");
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
-	alert("Event listener added");
 </script>
 
 <style is:inline>
