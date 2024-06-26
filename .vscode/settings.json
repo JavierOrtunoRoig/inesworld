@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "about",
-    "contact"
+    "contact",
+    "navbar"
   ]
 }

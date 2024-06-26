@@ -158,14 +158,17 @@ const actualLanguageFlag = isos[lang] === "es" ? "fi fi-es" : "fi fi-gb";
 
 <style is:global>
 	:root {
-		--navbar-height: 4rem;
-		--navbar-padding: 0rem;
-		--navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding) * 2);
+		--navbar-height: 16px;
+		--navbar-padding-top: 8px;
+		--navbar-padding-bottom: 8px;
+		--navbar-total-height: calc(
+			var(--navbar-height) + ((var(--navbar-padding-top) + var(--navbar-padding-bottom)) * 2)
+		);
 	}
 
 	nav.navbar {
 		height: var(--navbar-total-height);
-		padding: var(--navbar-padding) 0.5rem;
+		padding: var(--navbar-padding-top) 8px var(--navbar-padding-bottom) 8px;
 	}
 
 	ul {
