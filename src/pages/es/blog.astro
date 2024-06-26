@@ -48,12 +48,10 @@ const posts = getValidPosts(allPosts);
 									<div class="gradient" />
 
 									<div class="info">
-										<h2>
-											<p>{post.data.title}</p>
-										</h2>
-										<div class="secondary-info">
-											<p>{formattedDate}</p>
-											<div class="tags">
+										<h2>{post.data.title}</h2>
+										<div class="flex justify-between">
+											<p class="text-xs">{formattedDate}</p>
+											<div class=" text-xs flex gap-1">
 												{tags.map((tag) => (
 													<span>#{tag}</span>
 												))}
@@ -160,7 +158,7 @@ const posts = getValidPosts(allPosts);
 			}
 
 			.info {
-				--padding: 10px;
+				--padding: 4px;
 
 				position: absolute;
 				bottom: var(--padding);
@@ -182,16 +180,6 @@ const posts = getValidPosts(allPosts);
 					margin: 0;
 				}
 
-				.secondary-info {
-					display: flex;
-					justify-content: space-between;
-					font-size: 0.9rem;
-
-					.tags {
-						display: flex;
-						gap: 5px;
-					}
-				}
 			}
 
 			@media (max-width: 576px) {
@@ -209,10 +197,6 @@ const posts = getValidPosts(allPosts);
 				.info {
 					h2 {
 						font-size: 1.1rem;
-					}
-
-					.secondary-info {
-						font-size: 0.8rem;
 					}
 				}
 			}
