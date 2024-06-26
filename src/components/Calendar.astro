@@ -115,8 +115,7 @@ const t = useTranslations(lang);
 
 				alert(`dayValueString: ${dayValueString}`);
 
-				// date in english format
-				// Use use ISO 8601 format with "T" to avoid new Date problems with the date format in different browsers (IOS)
+				// I need to create a new Date object with this format due to IOS Safari not supporting the format "YYYY-MM-DD", it's more restrictive and only supports "YYYY/MM/DD" or "YYYY-MM-DDTHH:MM:SSZ"
 				const fullDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(dayValueString));
 
 				const isInactive = date.classList.contains("inactive");
