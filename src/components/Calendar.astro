@@ -122,7 +122,8 @@ const t = useTranslations(lang);
 				alert(`dateValueString: ${dateValueString}`);
 
 				// date in english format
-				const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}`;
+				// Use use ISO 8601 format with "T" to avoid new Date problems with the date format in different browsers (IOS)
+				const dateValueFull = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${dateValueString}T00:00:00Z`;
 				const fullDate = new Date(dateValueFull);
 
 				const isInactive = date.classList.contains("inactive");
