@@ -55,12 +55,12 @@ const t = useTranslations(lang);
 	import type { Travel } from "@/constants.ts";
 	import { nextTravels } from "@/constants.ts";
 
-	const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
-	const datesElement = document.getElementById("dates") as HTMLDivElement;
-	const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
-	const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
-
 	const loadScript = () => {
+		const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
+		const datesElement = document.getElementById("dates") as HTMLDivElement;
+		const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
+		const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
+
 		let currentDate = new Date();
 
 		const updateCalendar = () => {

@@ -38,12 +38,16 @@ const t = useTranslations(lang);
 </BasicLayout>
 
 <script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver";
+
 	import atlas from "@/data/atlas.geo.json";
 
-	const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
-	const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
-
 	const loadScript = () => {
+		const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
+		const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
+
+		if (!commingContainer || !visitedContainer) return;
+
 		// Next trips
 		const countriesToVisit = atlas.features.filter((country) => country.properties.visited === 1);
 		countriesToVisit.forEach((country) => createCard(commingContainer, country.properties));
@@ -63,6 +67,9 @@ const t = useTranslations(lang);
       </div>`;
 			container.appendChild(div);
 		}
+
+		const fadeUpObserver = createIntersectionObserver(undefined, { threshold: 0.2 });
+		observeAll(fadeUpObserver, ".fade-up");
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
@@ -240,17 +247,6 @@ const t = useTranslations(lang);
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
-</script>
-
-<script>
-	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver";
-
-	const runAnimation = () => {
-		const fadeUpObserver = createIntersectionObserver(undefined, { threshold: 0.2 });
-		observeAll(fadeUpObserver, ".fade-up");
-	};
-
-	document.addEventListener("astro:page-load", runAnimation);
 </script>
 
 <style is:inline>
