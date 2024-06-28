@@ -18,53 +18,51 @@ const posts = getValidPosts(allPosts);
 ---
 
 <BasicLayout description={t("blog.description")}>
-	<div class="search-container">
+	<div class="mt-8 flex justify-center px-8">
 		<input
-			class="animate-fade-up text-black placeholder:text-gray-600"
+			class="mx-0 my-2 w-full animate-fade-up rounded border border-solid border-gray-700 p-2 text-black placeholder:text-gray-600 sm:w-[576px]"
 			type="text"
 			id="search"
 			placeholder={t("blog.input.placeholder")}
 		/>
 	</div>
-	<div class="blogs-container">
-		{
-			(
-				<section style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0 ">
-					{posts.map((post) => {
-						const date = new Date(post.data.pubDate);
-						const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-						const tags = post.data.tags;
+	<div class="blogs-container px-8 py-0">
+		<section class="mx-0 my-4 flex flex-wrap justify-center gap-2">
+			{
+				posts.map((post) => {
+					const date = new Date(post.data.pubDate);
+					const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+					const tags = post.data.tags;
 
-						return (
-							<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
-								<a class="post" href={`posts/${post.slug}`}>
-									<MyImage
-										imagePath={post.data.image?.src}
-										altText={post.data.image?.alt}
-										widths={[500, 1000]}
-										sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
-										class=""
-									/>
-									<div class="gradient" />
+					return (
+						<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
+							<a class="post relative h-[300px] w-[500px] max-w-full" href={`posts/${post.slug}`}>
+								<MyImage
+									imagePath={post.data.image?.src}
+									altText={post.data.image?.alt}
+									widths={[500, 1000]}
+									sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+									class="absolute left-0 top-0 h-full w-full rounded-md object-cover"
+								/>
+								<div class="gradient" />
 
-									<div class="info">
-										<h2>{post.data.title}</h2>
-										<div class="flex justify-between">
-											<p class="text-xs">{formattedDate}</p>
-											<div class=" text-xs flex gap-1">
-												{tags.map((tag) => (
-													<span>#{tag}</span>
-												))}
-											</div>
+								<div class="info absolute bottom-1 left-1 text-white">
+									<h2>{post.data.title}</h2>
+									<div class="flex justify-between">
+										<p class="text-xs">{formattedDate}</p>
+										<div class="flex gap-1 text-xs">
+											{tags.map((tag) => (
+												<span>#{tag}</span>
+											))}
 										</div>
 									</div>
-								</a>
-							</article>
-						);
-					})}
-				</section>
-			)
-		}
+								</div>
+							</a>
+						</article>
+					);
+				})
+			}
+		</section>
 	</div>
 </BasicLayout>
 
@@ -98,107 +96,27 @@ const posts = getValidPosts(allPosts);
 </script>
 
 <style>
-	.search-container {
-		display: flex;
-		justify-content: center;
-		margin-top: 2rem;
-
-		input {
-			width: 576px;
-			padding: 10px;
-			margin: 10px 0;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-		}
-
-		@media (max-width: 576px) {
-			padding: 0 2rem;
-
-			input {
-				width: 100%;
-			}
-		}
-	}
-
 	.blogs-container {
-		padding: 0 2rem;
 		.post {
 			--width: 500px;
 			--height: 300px;
 
-			position: relative;
-			max-width: 100%;
-			width: var(--width);
-			height: var(--height);
-
-			&:hover {
-				cursor: pointer;
-				transform: scale(1.01);
-				transition: transform 0.5s;
-			}
-
 			.gradient {
-				position: relative;
-				top: 0;
-				left: 0;
-				max-width: 100%;
-				width: var(--width);
-				height: var(--height);
+				@apply relative left-0 top-0 h-[var(--height)] w-[var(--width)] max-w-full rounded-[10px];
 				background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-				border-radius: 10px;
 			}
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				border-radius: 10px;
+			@media (max-width: 576px) {
+				.gradient {
+					@apply h-[calc(var(--height)_/_1.25)];
+				}
 			}
 
 			.info {
-				--padding: 4px;
-
-				position: absolute;
-				bottom: var(--padding);
-				left: var(--padding);
-				color: white;
-				width: calc(100% - var(--padding) * 2);
-
-				h2 {
-					margin: 10px 0;
-					font-size: 1.5rem;
-				}
-
-				a {
-					color: white;
-					text-decoration: none;
-				}
-
-				p {
-					margin: 0;
-				}
-
+				width: calc(100% - 4px * 2);
 			}
 
 			@media (max-width: 576px) {
 				height: calc(var(--height) / 2);
-
-				.gradient {
-					height: calc(var(--height) / 2);
-				}
-
-				h2 {
-					margin: 5px 0;
-					font-size: 1.2rem;
-				}
-
-				.info {
-					h2 {
-						font-size: 1.1rem;
-					}
-				}
 			}
 		}
 	}
