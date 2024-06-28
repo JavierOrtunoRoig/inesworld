@@ -26,7 +26,7 @@ const posts = getValidPosts(allPosts);
 			placeholder={t("blog.input.placeholder")}
 		/>
 	</div>
-	<div class="blogs-container px-8 py-0">
+	<div class="px-8 py-0">
 		<section class="mx-0 my-4 flex flex-wrap justify-center gap-4">
 			{
 				posts.map((post) => {
@@ -36,7 +36,7 @@ const posts = getValidPosts(allPosts);
 
 					return (
 						<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
-							<a class="post relative h-[300px] w-[500px] max-w-full" href={`posts/${post.slug}`}>
+							<a class="post relative block h-[300px] w-[500px] max-w-full" href={`posts/${post.slug}`}>
 								<MyImage
 									imagePath={post.data.image?.src}
 									altText={post.data.image?.alt}
@@ -44,10 +44,11 @@ const posts = getValidPosts(allPosts);
 									sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
 									class="absolute left-0 top-0 h-full w-full rounded-md object-cover"
 								/>
+
 								<div class="gradient" />
 
-								<div class="info absolute bottom-2 left-2 flex flex-col gap-2 text-white">
-									<h2 class="text-xl">{post.data.title}</h2>
+								<div class="info absolute bottom-2 left-2 flex flex-col gap-1 text-white sm:gap-2">
+									<h2 class="text-sm sm:text-xl">{post.data.title}</h2>
 									<div class="flex justify-between">
 										<p class="text-xs">{formattedDate}</p>
 										<div class="flex gap-1 text-xs">
@@ -103,27 +104,30 @@ const posts = getValidPosts(allPosts);
 			scale: 1.02;
 		}
 	}
-	.blogs-container {
-		.post {
-			--height: 300px;
+	.post {
+		--height: 300px;
 
-			.gradient {
-				@apply relative left-0 top-0 h-[var(--height)] w-[500px] max-w-full rounded-md;
-				background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-			}
-			@media (max-width: 576px) {
-				.gradient {
-					@apply h-[calc(var(--height)_/_1.25)];
-				}
-			}
-
-			.info {
-				width: calc(100% - 8px * 2);
-			}
+		.gradient {
+			position: relative;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			width: var(--width);
+			height: var(--height);
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+			border-radius: 6px;
 
 			@media (max-width: 576px) {
 				height: calc(var(--height) / 2);
 			}
+		}
+
+		.info {
+			width: calc(100% - 8px * 2);
+		}
+
+		@media (max-width: 576px) {
+			height: calc(var(--height) / 2);
 		}
 	}
 </style>
