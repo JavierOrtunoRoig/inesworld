@@ -4,5 +4,7 @@
     "contact",
     "navbar",
     "blog"
-  ]
+  ],
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false
 }
