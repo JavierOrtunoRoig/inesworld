@@ -20,14 +20,14 @@ const posts = getValidPosts(allPosts);
 <BasicLayout description={t("blog.description")}>
 	<div class="mt-8 flex justify-center px-8">
 		<input
-			class="mx-0 my-2 w-full animate-fade-up rounded border border-solid border-gray-700 p-2 text-black placeholder:text-gray-600 sm:w-[576px]"
+			class="mx-0 my-2 w-full animate-fade-up rounded border border-solid border-gray-700 p-2 text-black placeholder:text-gray-600 sm:w-[500px]"
 			type="text"
 			id="search"
 			placeholder={t("blog.input.placeholder")}
 		/>
 	</div>
 	<div class="blogs-container px-8 py-0">
-		<section class="mx-0 my-4 flex flex-wrap justify-center gap-2">
+		<section class="mx-0 my-4 flex flex-wrap justify-center gap-4">
 			{
 				posts.map((post) => {
 					const date = new Date(post.data.pubDate);
@@ -46,8 +46,8 @@ const posts = getValidPosts(allPosts);
 								/>
 								<div class="gradient" />
 
-								<div class="info absolute bottom-1 left-1 text-white">
-									<h2>{post.data.title}</h2>
+								<div class="info absolute bottom-2 left-2 flex flex-col gap-2 text-white">
+									<h2 class="text-xl">{post.data.title}</h2>
 									<div class="flex justify-between">
 										<p class="text-xs">{formattedDate}</p>
 										<div class="flex gap-1 text-xs">
@@ -96,13 +96,19 @@ const posts = getValidPosts(allPosts);
 </script>
 
 <style>
+	article {
+		transition: 0.5s;
+
+		&:hover {
+			scale: 1.02;
+		}
+	}
 	.blogs-container {
 		.post {
-			--width: 500px;
 			--height: 300px;
 
 			.gradient {
-				@apply relative left-0 top-0 h-[var(--height)] w-[var(--width)] max-w-full rounded-[10px];
+				@apply relative left-0 top-0 h-[var(--height)] w-[500px] max-w-full rounded-md;
 				background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 			}
 			@media (max-width: 576px) {
@@ -112,7 +118,7 @@ const posts = getValidPosts(allPosts);
 			}
 
 			.info {
-				width: calc(100% - 4px * 2);
+				width: calc(100% - 8px * 2);
 			}
 
 			@media (max-width: 576px) {
