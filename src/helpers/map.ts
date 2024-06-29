@@ -1,7 +1,7 @@
 import atlas from "@/data/atlas.geo.json";
 import geometries from "@/data/geometriesExtraction.json";
 import type { GEOJson } from "@/types";
-import { HOME_POPUP_TEXT, markersToShow, TRAVELLING_POPUP_TEXT } from "@/constants";
+import { markersToShow } from "@/constants";
 
 declare var L: any;
 
@@ -12,6 +12,8 @@ const languages = {
     name: "Name",
     continent: "Continent",
     subregion: "Subregion",
+    homePopupText: "I'm currently living here",
+		travellingPopupText: "I'm traveling here",
   },
   es: {
     hover: "Pasa el ratón sobre un país",
@@ -19,6 +21,8 @@ const languages = {
     name: "Nombre",
     continent: "Continente",
     subregion: "Subregión",
+    homePopupText: "Actualmente vivo aquí",
+		travellingPopupText: "Estoy viajando aquí",
   },
 }
 
@@ -166,7 +170,7 @@ export const getIconExtendOptions = {
 
 export const addHouseMarker = (L, map, houseIcon) => L.marker(markersToShow.livingIn, { icon: houseIcon })
   .addTo(map)
-  .bindPopup(HOME_POPUP_TEXT);
+  .bindPopup(translate("homePopupText"));
 
 export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
   if (markersToShow.travellingTo.length !== 0) {
@@ -174,7 +178,7 @@ export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
       icon: planeIcon,
     })
       .addTo(map)
-      .bindPopup(TRAVELLING_POPUP_TEXT);
+      .bindPopup(translate("travellingPopupText"));
 
     var latlngs = Array();
 

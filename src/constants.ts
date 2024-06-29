@@ -1,12 +1,10 @@
-const languages = {
+export const constsLanguages = {
   en: {
     hover: "Hover over a country",
     countryInfo: "Country information",
     name: "Name",
     continent: "Continent",
 		subregion: "Subregion",
-		homePopupText: "I'm currently living here",
-		travellingPopupText: "I'm traveling here",
   },
   es: {
     hover: "Pasa el ratón sobre un país",
@@ -14,12 +12,8 @@ const languages = {
     name: "Nombre",
     continent: "Continente",
 		subregion: "Subregión",
-		homePopupText: "Actualmente vivo aquí",
-		travellingPopupText: "Estoy viajando aquí",
   },
 }
-
-const translate = (key: keyof typeof languages["en"]) => languages[document.documentElement.lang][key]
 
 export interface Trip {
 	title: string;
@@ -52,6 +46,7 @@ export interface Travel {
 	endDate: string;
 	coordinates?: [number, number];
 }
+
 export const nextTravels: Travel[] = [
 	{
 		country: "Philippines",
@@ -101,8 +96,8 @@ const MALAGA = [36.72016, -4.42034];
 
 const NOT_TRAVELLING = [];
 
-export const HOME_POPUP_TEXT = translate("homePopupText");
-export const TRAVELLING_POPUP_TEXT = translate("travellingPopupText");
+// export const HOME_POPUP_TEXT = translate("homePopupText");
+// export const TRAVELLING_POPUP_TEXT = translate("travellingPopupText");
 
 export const markersToShow = {
 	livingIn: MALAGA,
