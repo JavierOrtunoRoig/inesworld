@@ -121,10 +121,12 @@ const t = useTranslations(lang);
 					const startDate = new Date(`${travel.startDate}T00:00:00`);
 					const endDate = new Date(`${travel.endDate}T00:00:00`);
 
+					const countryName = document.documentElement.lang === "es" ? travel.country_es : travel.country;
+
 					if (!isInactive && fullDate >= startDate && fullDate <= endDate) {
 						date.classList.add("travel");
 						date.classList.add("tooltip");
-						date.setAttribute("data-tip", travel.country);
+						date.setAttribute("data-tip", countryName);
 					}
 				});
 			});
