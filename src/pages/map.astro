@@ -62,7 +62,7 @@ const t = useTranslations(lang);
 			div.classList.add("card", "w-full", "bg-base-200", "shadow-2xl", "sm:max-w-[400px]", "fade-up");
 			div.innerHTML = `
       <div class="card-body p-0 flex flex-row">
-        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0"></p>
+        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0 ${countryProperties.iso_a2.toLowerCase() === 'ae' && "!w-[5.5rem]"}"></p>
         <h2 class="card-title px-2 sm:text-center">${countryProperties[langName]}</h2>
       </div>`;
 			container.appendChild(div);
