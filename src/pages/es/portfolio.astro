@@ -31,13 +31,14 @@ const getRightImageByIndex = (index: number) => {
 <BasicLayout description={t("portfolio.description")}>
 	{
 		trips.map((trip, index) => (
-			<div class={`container ${index === 0 ? "" : "hidden"}`}>
+			<div class={`portfolio-container ${index === 0 ? "" : "hidden"}`}>
 				<Image
 					class="animate-fade"
 					src={getRightImageByIndex(index)}
 					alt={trip.title}
 					widths={[300, 880, 1210, 1470, 1680, 1870, 2048]}
 					sizes={"100vw"}
+					loading={"eager"}
 				/>
 				<div class="gradient" />
 				<div class="info-container">
@@ -59,7 +60,7 @@ const getRightImageByIndex = (index: number) => {
 
 <script>
 	const loadScript = () => {
-		const containers = document.querySelectorAll(".container") as NodeListOf<HTMLDivElement>;
+		const containers = document.querySelectorAll(".portfolio-container") as NodeListOf<HTMLDivElement>;
 		const arrows = document.querySelectorAll(".arrow") as NodeListOf<HTMLDivElement>;
 
 		let current = 0;
@@ -89,7 +90,11 @@ const getRightImageByIndex = (index: number) => {
 		display: none;
 	}
 
-	.container {
+	.portfolio-container {
+
+		height: 100%;
+
+
 		/* 
     Las imágenes son elementos de remplazo (así se llaman), es decir que en realidad su representación es externa a css.  No puedes cambiar lo que hay en la iamgen con css.
     Su propiedad display por defecto es inline y para muchos casos es tratada igual que un texto.  Esto significa que al igual que el texto, el css lo trata como si tuviera una línea base (baseline), auqnue en realidad no la tiene por ser imagen.
@@ -101,9 +106,9 @@ const getRightImageByIndex = (index: number) => {
 		img {
 			position: absolute;
 			left: 0;
-			top: 0;
+			bottom: 0;
 			display: block;
-			height: calc(100dvh);
+			height: calc(100% - var(--navbar-total-height) - 11px * 2);
 			width: 100dvw;
 			object-fit: cover;
 		}
@@ -118,7 +123,7 @@ const getRightImageByIndex = (index: number) => {
 
 		.info-container {
 			width: 100%;
-			height: calc(100dvh - var(--navbar-total-height));
+			height: calc(100% - var(--navbar-total-height) - 11px * 2);
 			position: absolute;
 			bottom: 0;
 			left: 0;
