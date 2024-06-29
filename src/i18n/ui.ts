@@ -16,6 +16,7 @@ export const ui = {
 		"keywords":
 			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, photography, travels, trips, world, filmmaker, cinematography, visual storytelling, adventure, landscape photography, travel photography, documentary, filmmaking, short films, cinematographer, digital nomad, wanderlust, global exploration",
 
+		"index.title": "Hey, It's Ines!",
 		"index.description":
 			"Discover the portfolio of Inés Cuevas Jiménez, also known as inesworld or inesworld.mov. Connecting through photography and filmmaking, I travel to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
 		"about.description":
@@ -172,6 +173,7 @@ export const ui = {
 		"keywords":
 			"Inés Cuevas Jiménez, inesworld, ines world, inesworld.mov, portfolio, fotografía, viajes, excursiones, mundo, cineasta, cinematografía, narración visual, aventura, fotografía de paisajes, fotografía de viajes, documental, realización cinematográfica, cortometrajes, director de fotografía, nómada digital, ansias de viajar, exploración global",
 
+		"index.title": "¡Hola, soy Ines!",
 		"index.description":
 			"Descubre el portfolio de Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov. Conectando a través de la fotografía y el filmmaking, viajo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Ve cómo transformo imágenes con mi proceso de edición y explora mis últimas obras fotográficas.",
 		"about.description":
