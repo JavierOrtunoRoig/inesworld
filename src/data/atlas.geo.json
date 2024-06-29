@@ -68,7 +68,9 @@
         "filename": "CRI.geojson",
         "visited": 0,
         "iso_a2": "CR",
-        "iso_a3": "CRI"
+        "iso_a3": "CRI",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -138,7 +140,9 @@
         "filename": "NIC.geojson",
         "visited": 0,
         "iso_a2": "NI",
-        "iso_a3": "NIC"
+        "iso_a3": "NIC",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -208,7 +212,9 @@
         "filename": "MAF.geojson",
         "visited": 0,
         "iso_a2": "MF",
-        "iso_a3": "MAF"
+        "iso_a3": "MAF",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -278,7 +284,9 @@
         "filename": "SXM.geojson",
         "visited": 2,
         "iso_a2": "SX",
-        "iso_a3": "SXM"
+        "iso_a3": "SXM",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -348,7 +356,9 @@
         "filename": "HTI.geojson",
         "visited": 0,
         "iso_a2": "HT",
-        "iso_a3": "HTI"
+        "iso_a3": "HTI",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -418,7 +428,9 @@
         "filename": "DOM.geojson",
         "visited": 0,
         "iso_a2": "DO",
-        "iso_a3": "DOM"
+        "iso_a3": "DOM",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -488,7 +500,9 @@
         "filename": "SLV.geojson",
         "visited": 0,
         "iso_a2": "SV",
-        "iso_a3": "SLV"
+        "iso_a3": "SLV",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -558,7 +572,9 @@
         "filename": "GTM.geojson",
         "visited": 0,
         "iso_a2": "GT",
-        "iso_a3": "GTM"
+        "iso_a3": "GTM",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -628,7 +644,9 @@
         "filename": "CUB.geojson",
         "visited": 0,
         "iso_a2": "CU",
-        "iso_a3": "CUB"
+        "iso_a3": "CUB",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -698,7 +716,9 @@
         "filename": "HND.geojson",
         "visited": 0,
         "iso_a2": "HN",
-        "iso_a3": "HND"
+        "iso_a3": "HND",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -768,7 +788,9 @@
         "filename": "USA.geojson",
         "visited": 0,
         "iso_a2": "US",
-        "iso_a3": "USA"
+        "iso_a3": "USA",
+        "continent_es": "América del norte",
+        "subregion_es": "América del Norte"
       }
     },
     {
@@ -838,7 +860,9 @@
         "filename": "CAN.geojson",
         "visited": 0,
         "iso_a2": "CA",
-        "iso_a3": "CAN"
+        "iso_a3": "CAN",
+        "continent_es": "América del norte",
+        "subregion_es": "América del Norte"
       }
     },
     {
@@ -908,7 +932,9 @@
         "filename": "MEX.geojson",
         "visited": 0,
         "iso_a2": "MX",
-        "iso_a3": "MEX"
+        "iso_a3": "MEX",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -978,7 +1004,9 @@
         "filename": "BLZ.geojson",
         "visited": 0,
         "iso_a2": "BZ",
-        "iso_a3": "BLZ"
+        "iso_a3": "BLZ",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -1048,7 +1076,9 @@
         "filename": "PAN.geojson",
         "visited": 0,
         "iso_a2": "PA",
-        "iso_a3": "PAN"
+        "iso_a3": "PAN",
+        "continent_es": "América del norte",
+        "subregion_es": "Centroamérica"
       }
     },
     {
@@ -1118,7 +1148,9 @@
         "filename": "GRL.geojson",
         "visited": 0,
         "iso_a2": "GL",
-        "iso_a3": "GRL"
+        "iso_a3": "GRL",
+        "continent_es": "América del norte",
+        "subregion_es": "América del Norte"
       }
     },
     {
@@ -1188,7 +1220,9 @@
         "filename": "CUW.geojson",
         "visited": 0,
         "iso_a2": "CW",
-        "iso_a3": "CUW"
+        "iso_a3": "CUW",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1258,7 +1292,9 @@
         "filename": "ABW.geojson",
         "visited": 0,
         "iso_a2": "AW",
-        "iso_a3": "ABW"
+        "iso_a3": "ABW",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1328,7 +1364,9 @@
         "filename": "BHS.geojson",
         "visited": 0,
         "iso_a2": "BS",
-        "iso_a3": "BHS"
+        "iso_a3": "BHS",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1398,7 +1436,9 @@
         "filename": "TCA.geojson",
         "visited": 0,
         "iso_a2": "TC",
-        "iso_a3": "TCA"
+        "iso_a3": "TCA",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1468,7 +1508,9 @@
         "filename": "SPM.geojson",
         "visited": 0,
         "iso_a2": "PM",
-        "iso_a3": "SPM"
+        "iso_a3": "SPM",
+        "continent_es": "América del norte",
+        "subregion_es": "América del Norte"
       }
     },
     {
@@ -1538,7 +1580,9 @@
         "filename": "TTO.geojson",
         "visited": 0,
         "iso_a2": "TT",
-        "iso_a3": "TTO"
+        "iso_a3": "TTO",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1608,7 +1652,9 @@
         "filename": "GRD.geojson",
         "visited": 0,
         "iso_a2": "GD",
-        "iso_a3": "GRD"
+        "iso_a3": "GRD",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1678,7 +1724,9 @@
         "filename": "VCT.geojson",
         "visited": 0,
         "iso_a2": "VC",
-        "iso_a3": "VCT"
+        "iso_a3": "VCT",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1748,7 +1796,9 @@
         "filename": "BRB.geojson",
         "visited": 0,
         "iso_a2": "BB",
-        "iso_a3": "BRB"
+        "iso_a3": "BRB",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1818,7 +1868,9 @@
         "filename": "LCA.geojson",
         "visited": 0,
         "iso_a2": "LC",
-        "iso_a3": "LCA"
+        "iso_a3": "LCA",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1888,7 +1940,9 @@
         "filename": "DMA.geojson",
         "visited": 0,
         "iso_a2": "DM",
-        "iso_a3": "DMA"
+        "iso_a3": "DMA",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -1958,7 +2012,9 @@
         "filename": "MSR.geojson",
         "visited": 0,
         "iso_a2": "MS",
-        "iso_a3": "MSR"
+        "iso_a3": "MSR",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2028,7 +2084,9 @@
         "filename": "ATG.geojson",
         "visited": 0,
         "iso_a2": "AG",
-        "iso_a3": "ATG"
+        "iso_a3": "ATG",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2098,7 +2156,9 @@
         "filename": "KNA.geojson",
         "visited": 0,
         "iso_a2": "KN",
-        "iso_a3": "KNA"
+        "iso_a3": "KNA",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2168,7 +2228,9 @@
         "filename": "VIR.geojson",
         "visited": 0,
         "iso_a2": "VI",
-        "iso_a3": "VIR"
+        "iso_a3": "VIR",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2238,7 +2300,9 @@
         "filename": "BLM.geojson",
         "visited": 0,
         "iso_a2": "BL",
-        "iso_a3": "BLM"
+        "iso_a3": "BLM",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2308,7 +2372,9 @@
         "filename": "PRI.geojson",
         "visited": 0,
         "iso_a2": "PR",
-        "iso_a3": "PRI"
+        "iso_a3": "PRI",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2378,7 +2444,9 @@
         "filename": "AIA.geojson",
         "visited": 0,
         "iso_a2": "AI",
-        "iso_a3": "AIA"
+        "iso_a3": "AIA",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2448,7 +2516,9 @@
         "filename": "VGB.geojson",
         "visited": 0,
         "iso_a2": "VG",
-        "iso_a3": "VGB"
+        "iso_a3": "VGB",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2518,7 +2588,9 @@
         "filename": "JAM.geojson",
         "visited": 0,
         "iso_a2": "JM",
-        "iso_a3": "JAM"
+        "iso_a3": "JAM",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2588,7 +2660,9 @@
         "filename": "CYM.geojson",
         "visited": 0,
         "iso_a2": "KY",
-        "iso_a3": "CYM"
+        "iso_a3": "CYM",
+        "continent_es": "América del norte",
+        "subregion_es": "Caribe"
       }
     },
     {
@@ -2658,7 +2732,9 @@
         "filename": "BMU.geojson",
         "visited": 0,
         "iso_a2": "BM",
-        "iso_a3": "BMU"
+        "iso_a3": "BMU",
+        "continent_es": "América del norte",
+        "subregion_es": "América del Norte"
       }
     },
     {
@@ -2728,7 +2804,9 @@
         "name_zht": "印度尼西亞",
         "filename": "IDN.geojson",
         "iso_a2": "ID",
-        "iso_a3": "IDN"
+        "iso_a3": "IDN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -2798,7 +2876,9 @@
         "filename": "MYS.geojson",
         "visited": 0,
         "iso_a2": "MY",
-        "iso_a3": "MYS"
+        "iso_a3": "MYS",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -2882,7 +2962,9 @@
         "filename": "CYP.geojson",
         "visited": 2,
         "iso_a2": "CY",
-        "iso_a3": "CYP"
+        "iso_a3": "CYP",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -2952,7 +3034,9 @@
         "filename": "IND.geojson",
         "visited": 0,
         "iso_a2": "IN",
-        "iso_a3": "IND"
+        "iso_a3": "IND",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -3022,7 +3106,9 @@
         "filename": "CHN.geojson",
         "visited": 0,
         "iso_a2": "CN",
-        "iso_a3": "CHN"
+        "iso_a3": "CHN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -3092,7 +3178,9 @@
         "filename": "ISR.geojson",
         "visited": 0,
         "iso_a2": "IL",
-        "iso_a3": "ISR"
+        "iso_a3": "ISR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -3162,7 +3250,9 @@
         "filename": "PSE.geojson",
         "visited": 0,
         "iso_a2": "PS",
-        "iso_a3": "PSE"
+        "iso_a3": "PSE",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -3232,7 +3322,9 @@
         "filename": "LBN.geojson",
         "visited": 0,
         "iso_a2": "LB",
-        "iso_a3": "LBN"
+        "iso_a3": "LBN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -3302,7 +3394,9 @@
         "filename": "SYR.geojson",
         "visited": 0,
         "iso_a2": "SY",
-        "iso_a3": "SYR"
+        "iso_a3": "SYR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -3372,7 +3466,9 @@
         "filename": "KOR.geojson",
         "visited": 1,
         "iso_a2": "KR",
-        "iso_a3": "KOR"
+        "iso_a3": "KOR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -3442,7 +3538,9 @@
         "filename": "PRK.geojson",
         "visited": 0,
         "iso_a2": "KP",
-        "iso_a3": "PRK"
+        "iso_a3": "PRK",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -3512,7 +3610,9 @@
         "filename": "BTN.geojson",
         "visited": 0,
         "iso_a2": "BT",
-        "iso_a3": "BTN"
+        "iso_a3": "BTN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -3582,7 +3682,9 @@
         "filename": "OMN.geojson",
         "visited": 0,
         "iso_a2": "OM",
-        "iso_a3": "OMN"
+        "iso_a3": "OMN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -3652,7 +3754,9 @@
         "filename": "UZB.geojson",
         "visited": 0,
         "iso_a2": "UZ",
-        "iso_a3": "UZB"
+        "iso_a3": "UZB",
+        "continent_es": "Asia",
+        "subregion_es": "Asia central"
       }
     },
     {
@@ -3722,7 +3826,9 @@
         "filename": "KAZ.geojson",
         "visited": 0,
         "iso_a2": "KZ",
-        "iso_a3": "KAZ"
+        "iso_a3": "KAZ",
+        "continent_es": "Asia",
+        "subregion_es": "Asia central"
       }
     },
     {
@@ -3792,7 +3898,9 @@
         "filename": "TJK.geojson",
         "visited": 0,
         "iso_a2": "TJ",
-        "iso_a3": "TJK"
+        "iso_a3": "TJK",
+        "continent_es": "Asia",
+        "subregion_es": "Asia central"
       }
     },
     {
@@ -3862,7 +3970,9 @@
         "filename": "MNG.geojson",
         "visited": 0,
         "iso_a2": "MN",
-        "iso_a3": "MNG"
+        "iso_a3": "MNG",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -3932,7 +4042,9 @@
         "filename": "VNM.geojson",
         "visited": 2,
         "iso_a2": "VN",
-        "iso_a3": "VNM"
+        "iso_a3": "VNM",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -4002,7 +4114,9 @@
         "filename": "KHM.geojson",
         "visited": 0,
         "iso_a2": "KH",
-        "iso_a3": "KHM"
+        "iso_a3": "KHM",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -4072,7 +4186,9 @@
         "filename": "ARE.geojson",
         "visited": 2,
         "iso_a2": "AE",
-        "iso_a3": "ARE"
+        "iso_a3": "ARE",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4142,7 +4258,9 @@
         "filename": "GEO.geojson",
         "visited": 0,
         "iso_a2": "GE",
-        "iso_a3": "GEO"
+        "iso_a3": "GEO",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4212,7 +4330,9 @@
         "filename": "AZE.geojson",
         "visited": 0,
         "iso_a2": "AZ",
-        "iso_a3": "AZE"
+        "iso_a3": "AZE",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4282,7 +4402,9 @@
         "filename": "TUR.geojson",
         "visited": 2,
         "iso_a2": "TR",
-        "iso_a3": "TUR"
+        "iso_a3": "TUR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4352,7 +4474,9 @@
         "filename": "LAO.geojson",
         "visited": 0,
         "iso_a2": "LA",
-        "iso_a3": "LAO"
+        "iso_a3": "LAO",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -4422,7 +4546,9 @@
         "filename": "KGZ.geojson",
         "visited": 0,
         "iso_a2": "KG",
-        "iso_a3": "KGZ"
+        "iso_a3": "KGZ",
+        "continent_es": "Asia",
+        "subregion_es": "Asia central"
       }
     },
     {
@@ -4492,7 +4618,9 @@
         "filename": "ARM.geojson",
         "visited": 0,
         "iso_a2": "AM",
-        "iso_a3": "ARM"
+        "iso_a3": "ARM",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4562,7 +4690,9 @@
         "filename": "IRQ.geojson",
         "visited": 0,
         "iso_a2": "IQ",
-        "iso_a3": "IRQ"
+        "iso_a3": "IRQ",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4632,7 +4762,9 @@
         "filename": "IRN.geojson",
         "visited": 0,
         "iso_a2": "IR",
-        "iso_a3": "IRN"
+        "iso_a3": "IRN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -4702,7 +4834,9 @@
         "filename": "QAT.geojson",
         "visited": 0,
         "iso_a2": "QA",
-        "iso_a3": "QAT"
+        "iso_a3": "QAT",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4772,7 +4906,9 @@
         "filename": "SAU.geojson",
         "visited": 0,
         "iso_a2": "SA",
-        "iso_a3": "SAU"
+        "iso_a3": "SAU",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -4842,7 +4978,9 @@
         "filename": "PAK.geojson",
         "visited": 0,
         "iso_a2": "PK",
-        "iso_a3": "PAK"
+        "iso_a3": "PAK",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -4912,7 +5050,9 @@
         "filename": "THA.geojson",
         "visited": 2,
         "iso_a2": "TH",
-        "iso_a3": "THA"
+        "iso_a3": "THA",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -4982,7 +5122,9 @@
         "filename": "KWT.geojson",
         "visited": 0,
         "iso_a2": "KW",
-        "iso_a3": "KWT"
+        "iso_a3": "KWT",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -5052,7 +5194,9 @@
         "filename": "TLS.geojson",
         "visited": 0,
         "iso_a2": "TL",
-        "iso_a3": "TLS"
+        "iso_a3": "TLS",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -5122,7 +5266,9 @@
         "filename": "BRN.geojson",
         "visited": 0,
         "iso_a2": "BN",
-        "iso_a3": "BRN"
+        "iso_a3": "BRN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -5192,7 +5338,9 @@
         "filename": "MMR.geojson",
         "visited": 0,
         "iso_a2": "MM",
-        "iso_a3": "MMR"
+        "iso_a3": "MMR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -5262,7 +5410,9 @@
         "filename": "BGD.geojson",
         "visited": 0,
         "iso_a2": "BD",
-        "iso_a3": "BGD"
+        "iso_a3": "BGD",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -5332,7 +5482,9 @@
         "filename": "AFG.geojson",
         "visited": 0,
         "iso_a2": "AF",
-        "iso_a3": "AFG"
+        "iso_a3": "AFG",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -5402,7 +5554,9 @@
         "filename": "TKM.geojson",
         "visited": 0,
         "iso_a2": "TM",
-        "iso_a3": "TKM"
+        "iso_a3": "TKM",
+        "continent_es": "Asia",
+        "subregion_es": "Asia central"
       }
     },
     {
@@ -5472,7 +5626,9 @@
         "filename": "JOR.geojson",
         "visited": 0,
         "iso_a2": "JO",
-        "iso_a3": "JOR"
+        "iso_a3": "JOR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -5542,7 +5698,9 @@
         "filename": "NPL.geojson",
         "visited": 0,
         "iso_a2": "NP",
-        "iso_a3": "NPL"
+        "iso_a3": "NPL",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -5612,7 +5770,9 @@
         "filename": "YEM.geojson",
         "visited": 0,
         "iso_a2": "YE",
-        "iso_a3": "YEM"
+        "iso_a3": "YEM",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -5682,7 +5842,9 @@
         "filename": "HKG.geojson",
         "visited": 0,
         "iso_a2": "HK",
-        "iso_a3": "HKG"
+        "iso_a3": "HKG",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -5766,7 +5928,9 @@
         "filename": "CYN.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -5836,7 +6000,9 @@
         "filename": "siachenglacier.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -5906,7 +6072,9 @@
         "filename": "PHL.geojson",
         "visited": 1,
         "iso_a2": "PH",
-        "iso_a3": "PHL"
+        "iso_a3": "PHL",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -5976,7 +6144,9 @@
         "filename": "LKA.geojson",
         "visited": 0,
         "iso_a2": "LK",
-        "iso_a3": "LKA"
+        "iso_a3": "LKA",
+        "continent_es": "Asia",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -6046,7 +6216,9 @@
         "filename": "TWN.geojson",
         "visited": 0,
         "iso_a2": "CN-TW",
-        "iso_a3": "TWN"
+        "iso_a3": "TWN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -6116,7 +6288,9 @@
         "filename": "JPN.geojson",
         "visited": 0,
         "iso_a2": "JP",
-        "iso_a3": "JPN"
+        "iso_a3": "JPN",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -6186,7 +6360,9 @@
         "filename": "indianoceanter.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "Asia",
+        "subregion_es": "Siete mares (océano abierto)"
       }
     },
     {
@@ -6256,7 +6432,9 @@
         "filename": "SGP.geojson",
         "visited": 0,
         "iso_a2": "SG",
-        "iso_a3": "SGP"
+        "iso_a3": "SGP",
+        "continent_es": "Asia",
+        "subregion_es": "Asia sudoriental"
       }
     },
     {
@@ -6326,7 +6504,9 @@
         "filename": "BHR.geojson",
         "visited": 0,
         "iso_a2": "BH",
-        "iso_a3": "BHR"
+        "iso_a3": "BHR",
+        "continent_es": "Asia",
+        "subregion_es": "Asia occidental"
       }
     },
     {
@@ -6396,7 +6576,9 @@
         "filename": "MAC.geojson",
         "visited": 0,
         "iso_a2": "MO",
-        "iso_a3": "MAC"
+        "iso_a3": "MAC",
+        "continent_es": "Asia",
+        "subregion_es": "Asia oriental"
       }
     },
     {
@@ -6466,7 +6648,9 @@
         "filename": "CHL.geojson",
         "visited": 0,
         "iso_a2": "CL",
-        "iso_a3": "CHL"
+        "iso_a3": "CHL",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6536,7 +6720,9 @@
         "filename": "BOL.geojson",
         "visited": 0,
         "iso_a2": "BO",
-        "iso_a3": "BOL"
+        "iso_a3": "BOL",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6606,7 +6792,9 @@
         "filename": "PER.geojson",
         "visited": 0,
         "iso_a2": "PE",
-        "iso_a3": "PER"
+        "iso_a3": "PER",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6676,7 +6864,9 @@
         "filename": "ARG.geojson",
         "visited": 0,
         "iso_a2": "AR",
-        "iso_a3": "ARG"
+        "iso_a3": "ARG",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6746,7 +6936,9 @@
         "filename": "SUR.geojson",
         "visited": 0,
         "iso_a2": "SR",
-        "iso_a3": "SUR"
+        "iso_a3": "SUR",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6816,7 +7008,9 @@
         "filename": "GUY.geojson",
         "visited": 0,
         "iso_a2": "GY",
-        "iso_a3": "GUY"
+        "iso_a3": "GUY",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6886,7 +7080,9 @@
         "filename": "BRA.geojson",
         "visited": 0,
         "iso_a2": "BR",
-        "iso_a3": "BRA"
+        "iso_a3": "BRA",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -6956,7 +7152,9 @@
         "filename": "URY.geojson",
         "visited": 0,
         "iso_a2": "UY",
-        "iso_a3": "URY"
+        "iso_a3": "URY",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7026,7 +7224,9 @@
         "filename": "ECU.geojson",
         "visited": 0,
         "iso_a2": "EC",
-        "iso_a3": "ECU"
+        "iso_a3": "ECU",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7096,7 +7296,9 @@
         "filename": "COL.geojson",
         "visited": 0,
         "iso_a2": "CO",
-        "iso_a3": "COL"
+        "iso_a3": "COL",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7166,7 +7368,9 @@
         "filename": "PRY.geojson",
         "visited": 0,
         "iso_a2": "PY",
-        "iso_a3": "PRY"
+        "iso_a3": "PRY",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7236,7 +7440,9 @@
         "filename": "VEN.geojson",
         "visited": 0,
         "iso_a2": "VE",
-        "iso_a3": "VEN"
+        "iso_a3": "VEN",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7306,7 +7512,9 @@
         "filename": "FLK.geojson",
         "visited": 0,
         "iso_a2": "FK",
-        "iso_a3": "FLK"
+        "iso_a3": "FLK",
+        "continent_es": "Sudamerica",
+        "subregion_es": "Sudamérica"
       }
     },
     {
@@ -7376,7 +7584,9 @@
         "filename": "ETH.geojson",
         "visited": 0,
         "iso_a2": "ET",
-        "iso_a3": "ETH"
+        "iso_a3": "ETH",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7446,7 +7656,9 @@
         "filename": "SSD.geojson",
         "visited": 0,
         "iso_a2": "SS",
-        "iso_a3": "SSD"
+        "iso_a3": "SSD",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7516,7 +7728,9 @@
         "filename": "SOM.geojson",
         "visited": 0,
         "iso_a2": "SO",
-        "iso_a3": "SOM"
+        "iso_a3": "SOM",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7586,7 +7800,9 @@
         "filename": "KEN.geojson",
         "visited": 0,
         "iso_a2": "KE",
-        "iso_a3": "KEN"
+        "iso_a3": "KEN",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7656,7 +7872,9 @@
         "filename": "MWI.geojson",
         "visited": 0,
         "iso_a2": "MW",
-        "iso_a3": "MWI"
+        "iso_a3": "MWI",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7726,7 +7944,9 @@
         "filename": "TZA.geojson",
         "visited": 0,
         "iso_a2": "TZ",
-        "iso_a3": "TZA"
+        "iso_a3": "TZA",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7796,7 +8016,9 @@
         "filename": "SOL.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -7866,7 +8088,9 @@
         "filename": "MAR.geojson",
         "visited": 2,
         "iso_a2": "MA",
-        "iso_a3": "MAR"
+        "iso_a3": "MAR",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -7936,7 +8160,9 @@
         "filename": "ESH.geojson",
         "visited": 0,
         "iso_a2": "EH",
-        "iso_a3": "ESH"
+        "iso_a3": "ESH",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -8006,7 +8232,9 @@
         "filename": "COG.geojson",
         "visited": 0,
         "iso_a2": "CG",
-        "iso_a3": "COG"
+        "iso_a3": "COG",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -8076,7 +8304,9 @@
         "filename": "COD.geojson",
         "visited": 0,
         "iso_a2": "CD",
-        "iso_a3": "COD"
+        "iso_a3": "COD",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -8146,7 +8376,9 @@
         "filename": "NAM.geojson",
         "visited": 0,
         "iso_a2": "NA",
-        "iso_a3": "NAM"
+        "iso_a3": "NAM",
+        "continent_es": "África",
+        "subregion_es": "África del sur"
       }
     },
     {
@@ -8216,7 +8448,9 @@
         "filename": "ZAF.geojson",
         "visited": 0,
         "iso_a2": "ZA",
-        "iso_a3": "ZAF"
+        "iso_a3": "ZAF",
+        "continent_es": "África",
+        "subregion_es": "África del sur"
       }
     },
     {
@@ -8286,7 +8520,9 @@
         "filename": "LBY.geojson",
         "visited": 0,
         "iso_a2": "LY",
-        "iso_a3": "LBY"
+        "iso_a3": "LBY",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -8356,7 +8592,9 @@
         "filename": "TUN.geojson",
         "visited": 0,
         "iso_a2": "TN",
-        "iso_a3": "TUN"
+        "iso_a3": "TUN",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -8426,7 +8664,9 @@
         "filename": "ZMB.geojson",
         "visited": 0,
         "iso_a2": "ZM",
-        "iso_a3": "ZMB"
+        "iso_a3": "ZMB",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -8496,7 +8736,9 @@
         "filename": "SLE.geojson",
         "visited": 0,
         "iso_a2": "SL",
-        "iso_a3": "SLE"
+        "iso_a3": "SLE",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -8566,7 +8808,9 @@
         "filename": "GIN.geojson",
         "visited": 0,
         "iso_a2": "GN",
-        "iso_a3": "GIN"
+        "iso_a3": "GIN",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -8636,7 +8880,9 @@
         "filename": "LBR.geojson",
         "visited": 0,
         "iso_a2": "LR",
-        "iso_a3": "LBR"
+        "iso_a3": "LBR",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -8706,7 +8952,9 @@
         "filename": "CAF.geojson",
         "visited": 0,
         "iso_a2": "CF",
-        "iso_a3": "CAF"
+        "iso_a3": "CAF",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -8776,7 +9024,9 @@
         "filename": "SDN.geojson",
         "visited": 0,
         "iso_a2": "SD",
-        "iso_a3": "SDN"
+        "iso_a3": "SDN",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -8846,7 +9096,9 @@
         "filename": "DJI.geojson",
         "visited": 0,
         "iso_a2": "DJ",
-        "iso_a3": "DJI"
+        "iso_a3": "DJI",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -8916,7 +9168,9 @@
         "filename": "ERI.geojson",
         "visited": 0,
         "iso_a2": "ER",
-        "iso_a3": "ERI"
+        "iso_a3": "ERI",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -8986,7 +9240,9 @@
         "filename": "CIV.geojson",
         "visited": 0,
         "iso_a2": "CI",
-        "iso_a3": "CIV"
+        "iso_a3": "CIV",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -9056,7 +9312,9 @@
         "filename": "MLI.geojson",
         "visited": 0,
         "iso_a2": "ML",
-        "iso_a3": "MLI"
+        "iso_a3": "MLI",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -9126,7 +9384,9 @@
         "filename": "SEN.geojson",
         "visited": 0,
         "iso_a2": "SN",
-        "iso_a3": "SEN"
+        "iso_a3": "SEN",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -9196,7 +9456,9 @@
         "filename": "NGA.geojson",
         "visited": 0,
         "iso_a2": "NG",
-        "iso_a3": "NGA"
+        "iso_a3": "NGA",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -9266,7 +9528,9 @@
         "filename": "BEN.geojson",
         "visited": 0,
         "iso_a2": "BJ",
-        "iso_a3": "BEN"
+        "iso_a3": "BEN",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -9336,7 +9600,9 @@
         "filename": "AGO.geojson",
         "visited": 0,
         "iso_a2": "AO",
-        "iso_a3": "AGO"
+        "iso_a3": "AGO",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -9406,7 +9672,9 @@
         "filename": "BWA.geojson",
         "visited": 0,
         "iso_a2": "BW",
-        "iso_a3": "BWA"
+        "iso_a3": "BWA",
+        "continent_es": "África",
+        "subregion_es": "África del sur"
       }
     },
     {
@@ -9476,7 +9744,9 @@
         "filename": "ZWE.geojson",
         "visited": 0,
         "iso_a2": "ZW",
-        "iso_a3": "ZWE"
+        "iso_a3": "ZWE",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -9546,7 +9816,9 @@
         "filename": "TCD.geojson",
         "visited": 0,
         "iso_a2": "TD",
-        "iso_a3": "TCD"
+        "iso_a3": "TCD",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -9616,7 +9888,9 @@
         "filename": "DZA.geojson",
         "visited": 0,
         "iso_a2": "DZ",
-        "iso_a3": "DZA"
+        "iso_a3": "DZA",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -9686,7 +9960,9 @@
         "filename": "MOZ.geojson",
         "visited": 0,
         "iso_a2": "MZ",
-        "iso_a3": "MOZ"
+        "iso_a3": "MOZ",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -9756,7 +10032,9 @@
         "filename": "SWZ.geojson",
         "visited": 0,
         "iso_a2": "SZ",
-        "iso_a3": "SWZ"
+        "iso_a3": "SWZ",
+        "continent_es": "África",
+        "subregion_es": "África del sur"
       }
     },
     {
@@ -9826,7 +10104,9 @@
         "filename": "BDI.geojson",
         "visited": 0,
         "iso_a2": "BI",
-        "iso_a3": "BDI"
+        "iso_a3": "BDI",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -9896,7 +10176,9 @@
         "filename": "RWA.geojson",
         "visited": 0,
         "iso_a2": "RW",
-        "iso_a3": "RWA"
+        "iso_a3": "RWA",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -9966,7 +10248,9 @@
         "filename": "UGA.geojson",
         "visited": 0,
         "iso_a2": "UG",
-        "iso_a3": "UGA"
+        "iso_a3": "UGA",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -10036,7 +10320,9 @@
         "filename": "LSO.geojson",
         "visited": 0,
         "iso_a2": "LS",
-        "iso_a3": "LSO"
+        "iso_a3": "LSO",
+        "continent_es": "África",
+        "subregion_es": "África del sur"
       }
     },
     {
@@ -10106,7 +10392,9 @@
         "filename": "CMR.geojson",
         "visited": 0,
         "iso_a2": "CM",
-        "iso_a3": "CMR"
+        "iso_a3": "CMR",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -10176,7 +10464,9 @@
         "filename": "GAB.geojson",
         "visited": 0,
         "iso_a2": "GA",
-        "iso_a3": "GAB"
+        "iso_a3": "GAB",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -10246,7 +10536,9 @@
         "filename": "NER.geojson",
         "visited": 0,
         "iso_a2": "NE",
-        "iso_a3": "NER"
+        "iso_a3": "NER",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10316,7 +10608,9 @@
         "filename": "BFA.geojson",
         "visited": 0,
         "iso_a2": "BF",
-        "iso_a3": "BFA"
+        "iso_a3": "BFA",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10386,7 +10680,9 @@
         "filename": "TGO.geojson",
         "visited": 0,
         "iso_a2": "TG",
-        "iso_a3": "TGO"
+        "iso_a3": "TGO",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10456,7 +10752,9 @@
         "filename": "GHA.geojson",
         "visited": 0,
         "iso_a2": "GH",
-        "iso_a3": "GHA"
+        "iso_a3": "GHA",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10526,7 +10824,9 @@
         "filename": "GNB.geojson",
         "visited": 0,
         "iso_a2": "GW",
-        "iso_a3": "GNB"
+        "iso_a3": "GNB",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10596,7 +10896,9 @@
         "filename": "EGY.geojson",
         "visited": 0,
         "iso_a2": "EG",
-        "iso_a3": "EGY"
+        "iso_a3": "EGY",
+        "continent_es": "África",
+        "subregion_es": "África del norte"
       }
     },
     {
@@ -10666,7 +10968,9 @@
         "filename": "MRT.geojson",
         "visited": 0,
         "iso_a2": "MR",
-        "iso_a3": "MRT"
+        "iso_a3": "MRT",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10736,7 +11040,9 @@
         "filename": "GNQ.geojson",
         "visited": 0,
         "iso_a2": "GQ",
-        "iso_a3": "GNQ"
+        "iso_a3": "GNQ",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -10806,7 +11112,9 @@
         "filename": "GMB.geojson",
         "visited": 0,
         "iso_a2": "GM",
-        "iso_a3": "GMB"
+        "iso_a3": "GMB",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -10876,7 +11184,9 @@
         "filename": "MDG.geojson",
         "visited": 0,
         "iso_a2": "MG",
-        "iso_a3": "MDG"
+        "iso_a3": "MDG",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -10946,7 +11256,9 @@
         "filename": "COM.geojson",
         "visited": 0,
         "iso_a2": "KM",
-        "iso_a3": "COM"
+        "iso_a3": "COM",
+        "continent_es": "África",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -11016,7 +11328,9 @@
         "filename": "STP.geojson",
         "visited": 0,
         "iso_a2": "ST",
-        "iso_a3": "STP"
+        "iso_a3": "STP",
+        "continent_es": "África",
+        "subregion_es": "África central"
       }
     },
     {
@@ -11086,7 +11400,9 @@
         "filename": "CPV.geojson",
         "visited": 0,
         "iso_a2": "CV",
-        "iso_a3": "CPV"
+        "iso_a3": "CPV",
+        "continent_es": "África",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -11156,7 +11472,9 @@
         "filename": "FRA.geojson",
         "visited": 2,
         "iso_a2": "FR",
-        "iso_a3": "FRA"
+        "iso_a3": "FRA",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -11226,7 +11544,9 @@
         "filename": "UKR.geojson",
         "visited": 0,
         "iso_a2": "UA",
-        "iso_a3": "UKR"
+        "iso_a3": "UKR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -11296,7 +11616,9 @@
         "filename": "BLR.geojson",
         "visited": 0,
         "iso_a2": "BY",
-        "iso_a3": "BLR"
+        "iso_a3": "BLR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -11366,7 +11688,9 @@
         "filename": "LTU.geojson",
         "visited": 0,
         "iso_a2": "LT",
-        "iso_a3": "LTU"
+        "iso_a3": "LTU",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11436,7 +11760,9 @@
         "filename": "RUS.geojson",
         "visited": 0,
         "iso_a2": "RU",
-        "iso_a3": "RUS"
+        "iso_a3": "RUS",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -11506,7 +11832,9 @@
         "filename": "CZE.geojson",
         "visited": 0,
         "iso_a2": "CZ",
-        "iso_a3": "CZE"
+        "iso_a3": "CZE",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -11576,7 +11904,9 @@
         "filename": "DEU.geojson",
         "visited": 2,
         "iso_a2": "DE",
-        "iso_a3": "DEU"
+        "iso_a3": "DEU",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -11646,7 +11976,9 @@
         "filename": "EST.geojson",
         "visited": 0,
         "iso_a2": "EE",
-        "iso_a3": "EST"
+        "iso_a3": "EST",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11716,7 +12048,9 @@
         "filename": "LVA.geojson",
         "visited": 0,
         "iso_a2": "LV",
-        "iso_a3": "LVA"
+        "iso_a3": "LVA",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11786,7 +12120,9 @@
         "filename": "NOR.geojson",
         "visited": 2,
         "iso_a2": "NO",
-        "iso_a3": "NOR"
+        "iso_a3": "NOR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11856,7 +12192,9 @@
         "filename": "SWE.geojson",
         "visited": 2,
         "iso_a2": "SE",
-        "iso_a3": "SWE"
+        "iso_a3": "SWE",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11926,7 +12264,9 @@
         "filename": "FIN.geojson",
         "visited": 0,
         "iso_a2": "FI",
-        "iso_a3": "FIN"
+        "iso_a3": "FIN",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -11996,7 +12336,9 @@
         "filename": "LUX.geojson",
         "visited": 0,
         "iso_a2": "LU",
-        "iso_a3": "LUX"
+        "iso_a3": "LUX",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -12066,7 +12408,9 @@
         "filename": "BEL.geojson",
         "visited": 2,
         "iso_a2": "BE",
-        "iso_a3": "BEL"
+        "iso_a3": "BEL",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -12136,7 +12480,9 @@
         "filename": "MKD.geojson",
         "visited": 0,
         "iso_a2": "MK",
-        "iso_a3": "MKD"
+        "iso_a3": "MKD",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -12206,7 +12552,9 @@
         "filename": "ALB.geojson",
         "visited": 0,
         "iso_a2": "AL",
-        "iso_a3": "ALB"
+        "iso_a3": "ALB",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -12276,7 +12624,9 @@
         "filename": "kosovo.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -12346,7 +12696,9 @@
         "name_zht": "西班牙",
         "filename": "ESP.geojson",
         "iso_a2": "ES",
-        "iso_a3": "ESP"
+        "iso_a3": "ESP",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -12416,7 +12768,9 @@
         "filename": "DNK.geojson",
         "visited": 0,
         "iso_a2": "DK",
-        "iso_a3": "DNK"
+        "iso_a3": "DNK",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -12486,7 +12840,9 @@
         "filename": "ROU.geojson",
         "visited": 0,
         "iso_a2": "RO",
-        "iso_a3": "ROU"
+        "iso_a3": "ROU",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -12556,7 +12912,9 @@
         "filename": "HUN.geojson",
         "visited": 2,
         "iso_a2": "HU",
-        "iso_a3": "HUN"
+        "iso_a3": "HUN",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -12626,7 +12984,9 @@
         "filename": "SVK.geojson",
         "visited": 0,
         "iso_a2": "SK",
-        "iso_a3": "SVK"
+        "iso_a3": "SVK",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -12696,7 +13056,9 @@
         "filename": "POL.geojson",
         "visited": 2,
         "iso_a2": "PL",
-        "iso_a3": "POL"
+        "iso_a3": "POL",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -12766,7 +13128,9 @@
         "filename": "IRL.geojson",
         "visited": 0,
         "iso_a2": "IE",
-        "iso_a3": "IRL"
+        "iso_a3": "IRL",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -12836,7 +13200,9 @@
         "filename": "GBR.geojson",
         "visited": 2,
         "iso_a2": "GB",
-        "iso_a3": "GBR"
+        "iso_a3": "GBR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -12906,7 +13272,9 @@
         "filename": "GRC.geojson",
         "visited": 0,
         "iso_a2": "GR",
-        "iso_a3": "GRC"
+        "iso_a3": "GRC",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -12976,7 +13344,9 @@
         "filename": "AUT.geojson",
         "visited": 2,
         "iso_a2": "AT",
-        "iso_a3": "AUT"
+        "iso_a3": "AUT",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -13046,7 +13416,9 @@
         "filename": "ITA.geojson",
         "visited": 2,
         "iso_a2": "IT",
-        "iso_a3": "ITA"
+        "iso_a3": "ITA",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13116,7 +13488,9 @@
         "filename": "CHE.geojson",
         "visited": 2,
         "iso_a2": "CH",
-        "iso_a3": "CHE"
+        "iso_a3": "CHE",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -13186,7 +13560,9 @@
         "filename": "NLD.geojson",
         "visited": 2,
         "iso_a2": "NL",
-        "iso_a3": "NLD"
+        "iso_a3": "NLD",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -13256,7 +13632,9 @@
         "filename": "LIE.geojson",
         "visited": 0,
         "iso_a2": "LI",
-        "iso_a3": "LIE"
+        "iso_a3": "LIE",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -13326,7 +13704,9 @@
         "filename": "SRB.geojson",
         "visited": 0,
         "iso_a2": "RS",
-        "iso_a3": "SRB"
+        "iso_a3": "SRB",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13396,7 +13776,9 @@
         "filename": "HRV.geojson",
         "visited": 2,
         "iso_a2": "HR",
-        "iso_a3": "HRV"
+        "iso_a3": "HRV",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13466,7 +13848,9 @@
         "filename": "SVN.geojson",
         "visited": 0,
         "iso_a2": "SI",
-        "iso_a3": "SVN"
+        "iso_a3": "SVN",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13536,7 +13920,9 @@
         "filename": "BGR.geojson",
         "visited": 2,
         "iso_a2": "BG",
-        "iso_a3": "BGR"
+        "iso_a3": "BGR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -13606,7 +13992,9 @@
         "filename": "SMR.geojson",
         "visited": 0,
         "iso_a2": "SM",
-        "iso_a3": "SMR"
+        "iso_a3": "SMR",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13676,7 +14064,9 @@
         "filename": "MCO.geojson",
         "visited": 0,
         "iso_a2": "MC",
-        "iso_a3": "MCO"
+        "iso_a3": "MCO",
+        "continent_es": "Europa",
+        "subregion_es": "Europa occidental"
       }
     },
     {
@@ -13746,7 +14136,9 @@
         "filename": "AND.geojson",
         "visited": 0,
         "iso_a2": "AD",
-        "iso_a3": "AND"
+        "iso_a3": "AND",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13816,7 +14208,9 @@
         "filename": "MNE.geojson",
         "visited": 0,
         "iso_a2": "ME",
-        "iso_a3": "MNE"
+        "iso_a3": "MNE",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13886,7 +14280,9 @@
         "filename": "BIH.geojson",
         "visited": 0,
         "iso_a2": "BA",
-        "iso_a3": "BIH"
+        "iso_a3": "BIH",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -13956,7 +14352,9 @@
         "filename": "PRT.geojson",
         "visited": 2,
         "iso_a2": "PT",
-        "iso_a3": "PRT"
+        "iso_a3": "PRT",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -14026,7 +14424,9 @@
         "filename": "MDA.geojson",
         "visited": 0,
         "iso_a2": "MD",
-        "iso_a3": "MDA"
+        "iso_a3": "MDA",
+        "continent_es": "Europa",
+        "subregion_es": "Europa oriental"
       }
     },
     {
@@ -14096,7 +14496,9 @@
         "filename": "VAT.geojson",
         "visited": 2,
         "iso_a2": "VA",
-        "iso_a3": "VAT"
+        "iso_a3": "VAT",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -14166,7 +14568,9 @@
         "filename": "ISL.geojson",
         "visited": 0,
         "iso_a2": "IS",
-        "iso_a3": "ISL"
+        "iso_a3": "ISL",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14236,7 +14640,9 @@
         "filename": "MLT.geojson",
         "visited": 0,
         "iso_a2": "MT",
-        "iso_a3": "MLT"
+        "iso_a3": "MLT",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del sur"
       }
     },
     {
@@ -14306,7 +14712,9 @@
         "filename": "JEY.geojson",
         "visited": 0,
         "iso_a2": "JE",
-        "iso_a3": "JEY"
+        "iso_a3": "JEY",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14376,7 +14784,9 @@
         "filename": "GGY.geojson",
         "visited": 0,
         "iso_a2": "GG",
-        "iso_a3": "GGY"
+        "iso_a3": "GGY",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14446,7 +14856,9 @@
         "filename": "IMN.geojson",
         "visited": 0,
         "iso_a2": "IM",
-        "iso_a3": "IMN"
+        "iso_a3": "IMN",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14516,7 +14928,9 @@
         "filename": "ALA.geojson",
         "visited": 0,
         "iso_a2": "AX",
-        "iso_a3": "ALA"
+        "iso_a3": "ALA",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14586,7 +15000,9 @@
         "filename": "FRO.geojson",
         "visited": 2,
         "iso_a2": "FO",
-        "iso_a3": "FRO"
+        "iso_a3": "FRO",
+        "continent_es": "Europa",
+        "subregion_es": "Europa del norte"
       }
     },
     {
@@ -14656,7 +15072,9 @@
         "filename": "PNG.geojson",
         "visited": 0,
         "iso_a2": "PG",
-        "iso_a3": "PNG"
+        "iso_a3": "PNG",
+        "continent_es": "Oceanía",
+        "subregion_es": "Melanesia"
       }
     },
     {
@@ -14726,7 +15144,9 @@
         "filename": "AUS.geojson",
         "visited": 0,
         "iso_a2": "AU",
-        "iso_a3": "AUS"
+        "iso_a3": "AUS",
+        "continent_es": "Oceanía",
+        "subregion_es": "Australia y Nueva Zelanda"
       }
     },
     {
@@ -14796,7 +15216,9 @@
         "filename": "FJI.geojson",
         "visited": 0,
         "iso_a2": "FJ",
-        "iso_a3": "FJI"
+        "iso_a3": "FJI",
+        "continent_es": "Oceanía",
+        "subregion_es": "Melanesia"
       }
     },
     {
@@ -14866,7 +15288,9 @@
         "filename": "NZL.geojson",
         "visited": 0,
         "iso_a2": "NZ",
-        "iso_a3": "NZL"
+        "iso_a3": "NZL",
+        "continent_es": "Oceanía",
+        "subregion_es": "Australia y Nueva Zelanda"
       }
     },
     {
@@ -14936,7 +15360,9 @@
         "filename": "NCL.geojson",
         "visited": 0,
         "iso_a2": "NC",
-        "iso_a3": "NCL"
+        "iso_a3": "NCL",
+        "continent_es": "Oceanía",
+        "subregion_es": "Melanesia"
       }
     },
     {
@@ -15006,7 +15432,9 @@
         "filename": "PCN.geojson",
         "visited": 0,
         "iso_a2": "PN",
-        "iso_a3": "PCN"
+        "iso_a3": "PCN",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15076,7 +15504,9 @@
         "filename": "PYF.geojson",
         "visited": 0,
         "iso_a2": "PF",
-        "iso_a3": "PYF"
+        "iso_a3": "PYF",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15146,7 +15576,9 @@
         "filename": "KIR.geojson",
         "visited": 0,
         "iso_a2": "KI",
-        "iso_a3": "KIR"
+        "iso_a3": "KIR",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -15216,7 +15648,9 @@
         "filename": "MHL.geojson",
         "visited": 0,
         "iso_a2": "MH",
-        "iso_a3": "MHL"
+        "iso_a3": "MHL",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -15286,7 +15720,9 @@
         "filename": "NFK.geojson",
         "visited": 0,
         "iso_a2": "NF",
-        "iso_a3": "NFK"
+        "iso_a3": "NFK",
+        "continent_es": "Oceanía",
+        "subregion_es": "Australia y Nueva Zelanda"
       }
     },
     {
@@ -15356,7 +15792,9 @@
         "filename": "COK.geojson",
         "visited": 0,
         "iso_a2": "CK",
-        "iso_a3": "COK"
+        "iso_a3": "COK",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15426,7 +15864,9 @@
         "filename": "TON.geojson",
         "visited": 0,
         "iso_a2": "TO",
-        "iso_a3": "TON"
+        "iso_a3": "TON",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15496,7 +15936,9 @@
         "filename": "WLF.geojson",
         "visited": 0,
         "iso_a2": "WF",
-        "iso_a3": "WLF"
+        "iso_a3": "WLF",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15566,7 +16008,9 @@
         "filename": "WSM.geojson",
         "visited": 0,
         "iso_a2": "WS",
-        "iso_a3": "WSM"
+        "iso_a3": "WSM",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15636,7 +16080,9 @@
         "filename": "SLB.geojson",
         "visited": 0,
         "iso_a2": "SB",
-        "iso_a3": "SLB"
+        "iso_a3": "SLB",
+        "continent_es": "Oceanía",
+        "subregion_es": "Melanesia"
       }
     },
     {
@@ -15706,7 +16152,9 @@
         "filename": "TUV.geojson",
         "visited": 0,
         "iso_a2": "TV",
-        "iso_a3": "TUV"
+        "iso_a3": "TUV",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -15776,7 +16224,9 @@
         "filename": "NRU.geojson",
         "visited": 0,
         "iso_a2": "NR",
-        "iso_a3": "NRU"
+        "iso_a3": "NRU",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -15846,7 +16296,9 @@
         "filename": "FSM.geojson",
         "visited": 0,
         "iso_a2": "FM",
-        "iso_a3": "FSM"
+        "iso_a3": "FSM",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -15916,7 +16368,9 @@
         "filename": "VUT.geojson",
         "visited": 0,
         "iso_a2": "VU",
-        "iso_a3": "VUT"
+        "iso_a3": "VUT",
+        "continent_es": "Oceanía",
+        "subregion_es": "Melanesia"
       }
     },
     {
@@ -15986,7 +16440,9 @@
         "filename": "NIU.geojson",
         "visited": 0,
         "iso_a2": "NU",
-        "iso_a3": "NIU"
+        "iso_a3": "NIU",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -16056,7 +16512,9 @@
         "filename": "ASM.geojson",
         "visited": 0,
         "iso_a2": "AS",
-        "iso_a3": "ASM"
+        "iso_a3": "ASM",
+        "continent_es": "Oceanía",
+        "subregion_es": "Polinesia"
       }
     },
     {
@@ -16126,7 +16584,9 @@
         "filename": "PLW.geojson",
         "visited": 0,
         "iso_a2": "PW",
-        "iso_a3": "PLW"
+        "iso_a3": "PLW",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -16196,7 +16656,9 @@
         "filename": "GUM.geojson",
         "visited": 0,
         "iso_a2": "GU",
-        "iso_a3": "GUM"
+        "iso_a3": "GUM",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -16266,7 +16728,9 @@
         "filename": "MNP.geojson",
         "visited": 0,
         "iso_a2": "MP",
-        "iso_a3": "MNP"
+        "iso_a3": "MNP",
+        "continent_es": "Oceanía",
+        "subregion_es": "Micronesia"
       }
     },
     {
@@ -16336,7 +16800,9 @@
         "filename": "ashmoreandcartieris.geojson",
         "visited": 0,
         "iso_a2": "-99",
-        "iso_a3": "-99"
+        "iso_a3": "-99",
+        "continent_es": "Oceanía",
+        "subregion_es": "Australia y Nueva Zelanda"
       }
     },
     {
@@ -16406,7 +16872,9 @@
         "filename": "ATA.geojson",
         "visited": 0,
         "iso_a2": "AQ",
-        "iso_a3": "ATA"
+        "iso_a3": "ATA",
+        "continent_es": "Antártida",
+        "subregion_es": "Antártida"
       }
     },
     {
@@ -16476,7 +16944,9 @@
         "filename": "ATF.geojson",
         "visited": 0,
         "iso_a2": "TF",
-        "iso_a3": "ATF"
+        "iso_a3": "ATF",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "Siete mares (océano abierto)"
       }
     },
     {
@@ -16546,7 +17016,9 @@
         "filename": "SYC.geojson",
         "visited": 0,
         "iso_a2": "SC",
-        "iso_a3": "SYC"
+        "iso_a3": "SYC",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -16616,7 +17088,9 @@
         "filename": "HMD.geojson",
         "visited": 0,
         "iso_a2": "HM",
-        "iso_a3": "HMD"
+        "iso_a3": "HMD",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "Siete mares (océano abierto)"
       }
     },
     {
@@ -16686,7 +17160,9 @@
         "filename": "SHN.geojson",
         "visited": 0,
         "iso_a2": "SH",
-        "iso_a3": "SHN"
+        "iso_a3": "SHN",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "África occidental"
       }
     },
     {
@@ -16756,7 +17232,9 @@
         "filename": "MUS.geojson",
         "visited": 0,
         "iso_a2": "MU",
-        "iso_a3": "MUS"
+        "iso_a3": "MUS",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "África oriental"
       }
     },
     {
@@ -16826,7 +17304,9 @@
         "filename": "IOT.geojson",
         "visited": 0,
         "iso_a2": "IO",
-        "iso_a3": "IOT"
+        "iso_a3": "IOT",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "Siete mares (océano abierto)"
       }
     },
     {
@@ -16896,7 +17376,9 @@
         "filename": "MDV.geojson",
         "visited": 0,
         "iso_a2": "MV",
-        "iso_a3": "MDV"
+        "iso_a3": "MDV",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "Asia meridional"
       }
     },
     {
@@ -16966,7 +17448,9 @@
         "filename": "SGS.geojson",
         "visited": 0,
         "iso_a2": "GS",
-        "iso_a3": "SGS"
+        "iso_a3": "SGS",
+        "continent_es": "Siete mares (océano abierto)",
+        "subregion_es": "Siete mares (océano abierto)"
       }
     }
   ]

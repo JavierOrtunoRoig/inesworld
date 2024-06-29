@@ -5,6 +5,25 @@ import { HOME_POPUP_TEXT, markersToShow, TRAVELLING_POPUP_TEXT } from "@/constan
 
 declare var L: any;
 
+const languages = {
+  en: {
+    hover: "Hover over a country",
+    countryInfo: "Country information",
+    name: "Name",
+    continent: "Continent",
+    subregion: "Subregion",
+  },
+  es: {
+    hover: "Pasa el ratón sobre un país",
+    countryInfo: "Información del país",
+    name: "Nombre",
+    continent: "Continente",
+    subregion: "Subregión",
+  },
+}
+
+const translate = (key: keyof typeof languages["en"]) => languages[document.documentElement.lang][key]
+
 // merge atlas with geometries by name
 export const mergeData = (geoJson: GEOJson) => {
 
@@ -219,19 +238,29 @@ export function onAdd(map) {
 
 export function update(props) {
   if (!props) {
-    const contents = "Hover over a state";
+    const contents = translate("hover");
     this._div.innerHTML = contents;
   } else {
     // get the language of the user using js
-    var userLang = navigator.language.split("-")[0];
+    var userLang = document.documentElement.lang;
 
-    const contents = props?.name || "N/A";
+    const enName = props?.name || "N/A";
+    const esName = props?.name_es || "N/A";
+    const name = userLang === "en" ? enName : esName;
+
+    const enContinent = props?.continent || "N/A";
+    const esContinent = props?.continent_es || "N/A";
+    const continent = userLang === "en" ? enContinent : esContinent;
+
+    const enSubregion = props?.subregion || "N/A";
+    const esSubregion = props?.subregion_es || "N/A";
+    const subregion = userLang === "en" ? enSubregion : esSubregion;
+
     this._div.innerHTML = `
-      <h4>Country information</h4>
-      <p class="text country-name">Name: ${contents}</p>
-      <p class="text country-name">Name in ${userLang}: ${props?.[`name_${userLang}`] || "N/A"}</p>
-      <p class="text text">Continent: ${props?.continent || "N/A"}</p>
-      <p class="text">Subregion: ${props?.subregion || "N/A"}</p>
+      <h4>${translate('countryInfo')}</h4>
+      <p class="text country-name">${translate('name')}: ${name}</p>
+      <p class="text text">${translate('continent')}: ${continent}</p>
+      <p class="text">${translate('subregion')}: ${subregion}</p>
     `;
   }
 }

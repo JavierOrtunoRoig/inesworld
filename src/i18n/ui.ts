@@ -168,6 +168,14 @@ export const ui = {
 		"map.subtitle_1": "Trip calendar",
 		"map.subtitle_2": "Comming soon!!",
 		"map.subtitle_3": "Countries visited!!",
+
+		"calendar.monday": "Mon",
+		"calendar.tuesday": "Tue",
+		"calendar.wednesday": "Wed",
+		"calendar.thursday": "Thu",
+		"calendar.friday": "Fri",
+		"calendar.saturday": "Sat",
+		"calendar.sunday": "Sun",
 	},
 	es: {
 		"keywords":
@@ -326,5 +334,13 @@ export const ui = {
 		"map.subtitle_1": "Calendario de viajes",
 		"map.subtitle_2": "¡Próximamente!",
 		"map.subtitle_3": "¡Países visitados!",
+
+		"calendar.monday": "Lun",
+		"calendar.tuesday": "Mar",
+		"calendar.wednesday": "Mié",
+		"calendar.thursday": "Jue",
+		"calendar.friday": "Vie",
+		"calendar.saturday": "Sáb",
+		"calendar.sunday": "Dom",
 	},
 } as const;

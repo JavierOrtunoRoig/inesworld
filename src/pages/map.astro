@@ -94,6 +94,25 @@ const t = useTranslations(lang);
 	import type { GEOJson } from "@/types";
 	import "leaflet-polylinedecorator";
 
+	const languages = {
+		en: {
+			filters: "Filters",
+			notVisited: "Not visited",
+			planToVisit: "Plan to visit",
+			visited: "Visited",
+			countries: "countries",
+		},
+		es: {
+			filters: "Filtros",
+			notVisited: "No visitados",
+			planToVisit: "Planeo visitar",
+			visited: "Visitados",
+			countries: "países",
+		},
+	}
+
+	const translate = (key: keyof typeof languages["en"]) => languages[document.documentElement.lang][key];
+
 	declare var L: any;
 
 	const loadScript = () => {
@@ -164,7 +183,7 @@ const t = useTranslations(lang);
 		function legendOnAdd(map) {
 			const div = L.DomUtil.create("div", "info legend");
 			div.dataset.filterActive = -1;
-			const labels = ["Not visited", "Plan to visit", "Visited"];
+			const labels = [translate("notVisited"), translate("planToVisit"), translate("visited")];
 
 			// get number of countries in each category
 			const visited = geoJson.features.reduce(
@@ -227,7 +246,8 @@ const t = useTranslations(lang);
 			}
 
 			const h3 = document.createElement("h3");
-			h3.innerHTML = "Filters";
+			// h3.innerHTML = "Filters";
+			h3.innerHTML = translate("filters");
 			h3.style.marginBottom = "4px";
 			h3.style.textAlign = "center";
 			h3.style.fontWeight = "bold";
@@ -238,7 +258,7 @@ const t = useTranslations(lang);
 				visitContainer.style.cursor = "pointer";
 				visitContainer.style.padding = "2px";
 				visitContainer.onclick = handleHighlightVisit;
-				visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}; border: 1px solid black; border-radius: 2px"></i> ${labels[i]} - ${visited[i]} countries`;
+				visitContainer.innerHTML = `<i style="background:${getColorFromVisitedProperty(i)}; border: 1px solid black; border-radius: 2px"></i> ${labels[i]} - ${visited[i]} ${translate("countries")}`;
 				div.appendChild(visitContainer);
 			}
 

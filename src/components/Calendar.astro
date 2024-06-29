@@ -28,13 +28,13 @@ const t = useTranslations(lang);
 		</div>
 
 		<div class="grid grid-cols-[repeat(7,1fr)] *:p-[5px] *:text-center *:font-medium *:text-[#585858]">
-			<div class="day">Mon</div>
-			<div class="day">Tue</div>
-			<div class="day">Wed</div>
-			<div class="day">Thu</div>
-			<div class="day">Fri</div>
-			<div class="day">Sat</div>
-			<div class="day">Sun</div>
+			<div class="day">{t("calendar.monday")}</div>
+			<div class="day">{t("calendar.tuesday")}</div>
+			<div class="day">{t("calendar.wednesday")}</div>
+			<div class="day">{t("calendar.thursday")}</div>
+			<div class="day">{t("calendar.friday")}</div>
+			<div class="day">{t("calendar.saturday")}</div>
+			<div class="day">{t("calendar.sunday")}</div>
 		</div>
 		<div class="grid grid-cols-[repeat(7,1fr)] gap-[5px]" id="dates"></div>
 	</div>
@@ -77,7 +77,7 @@ const t = useTranslations(lang);
 			const firstDayIndex = firstDay.getDay();
 			const lastDayIndex = lastDay.getDay();
 
-			const monthYearString = currentDate.toLocaleString("default", {
+			const monthYearString = currentDate.toLocaleString(document.documentElement.lang, {
 				month: "long",
 				year: "numeric",
 			});

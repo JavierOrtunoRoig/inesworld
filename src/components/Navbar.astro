@@ -102,7 +102,7 @@ const actualLanguageFlag = isos[lang] === "es" ? "fi fi-es" : "fi fi-gb";
 						<span class={actualLanguageFlag}></span>
 						{languages[lang]}
 					</summary>
-					<ul class="!mt-0 p-2">
+					<ul class="!mt-0 !p-0">
 						{
 							Object.entries(languages).map(([lang, label]) => {
 								const newFlagCss = `fi fi-${isos[lang]}`;
