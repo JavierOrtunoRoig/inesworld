@@ -199,8 +199,8 @@ const t = useTranslations(lang);
 		}
 
 		function highlightVisit(this, event: PointerEvent, div) {
-			const filterActive = Number(this.parentNode.dataset.filterActive);
-			const filterClicked = Array.from(this.parentNode.children).indexOf(this);
+			const filterActive = Number(this.parentNode.dataset.filterActive); // -1 is no filter
+			const filterClicked = Array.from(this.parentNode.children).indexOf(this) - 1; // we rest 1 because the first child is the h3
 			const sameFilter = filterActive === filterClicked;
 
 			// add filter-not-selected class to all divs unless the one clicked
