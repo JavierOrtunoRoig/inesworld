@@ -166,7 +166,7 @@ export const ui = {
 
 		"map.title": "All my trips",
 		"map.subtitle_1": "Trip calendar",
-		"map.subtitle_2": "Comming soon!!",
+		"map.subtitle_2": "Coming soon!!",
 		"map.subtitle_3": "Countries visited!!",
 
 		"calendar.monday": "Mon",
