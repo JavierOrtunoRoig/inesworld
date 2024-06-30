@@ -136,12 +136,12 @@ export const highlightFeature = (e, info) => {
 
 export const resetHighlight = (e, info, geojson) => {
   const div = document.querySelector("div.info.legend") as HTMLDivElement;
-    const filterActive = Number(div.dataset.filterActive);
+  const filterActive = Number(div.dataset.filterActive);
     geojson.resetStyle(e.target);
     if (filterActive !== -1) {
       // iterate in the geojson layers. If the layer is not the same as the one hovered, set opacity to 0.1
       geojson.eachLayer((layer) => {
-        geojson.resetStyle(e.target);
+
         if (layer.feature.properties.visited !== filterActive) {
           layer.setStyle({
             fillOpacity: 0.1,
