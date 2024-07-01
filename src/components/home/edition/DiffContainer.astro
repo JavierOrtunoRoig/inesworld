@@ -1,14 +1,28 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import Diff from "./Diff.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="flex w-full flex-col items-center p-8">
+<script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+
+<section class="md:m flex w-full flex-col items-center p-8">
 	<h1 class="title fade-up">{t("diff.title")}</h1>
-	<Diff />
+
+	<div class="fade-up relative md:w-3/4 xl:w-2/4">
+		<div class="acrylic pointer-events-none absolute left-2 top-2 z-10 rounded-md bg-black/50 p-1">
+			<span class="text-white">before</span>
+		</div>
+		<img-comparison-slider>
+			<img class="rounded-md" width="100%" slot="first" src="before.webp" />
+			<img class="rounded-md" width="100%" slot="second" src="after.webp" />
+		</img-comparison-slider>
+		<div class="acrylic pointer-events-none absolute right-2 top-2 z-10 rounded-md bg-black/50 p-1">
+			<span class="text-white">after</span>
+		</div>
+	</div>
 </section>
 
 <script>
