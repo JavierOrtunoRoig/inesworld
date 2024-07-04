@@ -56,7 +56,7 @@ export const nextTravels: Travel[] = [
 		coordinates: [12.879721, 121.774017],
 	},
 	{
-		country: "Shout Korea",
+		country: "South Korea",
 		country_es: "Corea del Sur",
 		startDate: "2025-02-01",
 		endDate: "2025-07-15",

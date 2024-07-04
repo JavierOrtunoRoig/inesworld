@@ -52,124 +52,37 @@ const t = useTranslations(lang);
 </script>
 
 <script>
-	import type { Travel } from "@/constants.ts";
-	import { nextTravels } from "@/constants.ts";
+	import { recalculateCalendarData, updateCalendar, updateTravelsDays } from './calendar.helper';
 
 	const loadScript = () => {
-		const monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
-		const datesElement = document.getElementById("dates") as HTMLDivElement;
-		const prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
-		const nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
+		const $monthYearElement = document.getElementById("monthYear") as HTMLDivElement;
+		const $dates = document.getElementById("dates") as HTMLDivElement;
+		const $prevBtn = document.getElementById("prevBtn") as HTMLButtonElement;
+		const $nextBtn = document.getElementById("nextBtn") as HTMLButtonElement;
 
-		if (!monthYearElement || !datesElement || !prevBtn || !nextBtn) {
+		if (!$monthYearElement || !$dates || !$prevBtn || !$nextBtn) {
 			return;
 		}
 
 		let currentDate = new Date();
 
-		const updateCalendar = () => {
-			const currentYear = currentDate.getFullYear();
-			const currentMonth = currentDate.getMonth();
 
-			const firstDay = new Date(currentYear, currentMonth, 0);
-			const lastDay = new Date(currentYear, currentMonth + 1, 0);
-			const totalDays = lastDay.getDate();
-			const firstDayIndex = firstDay.getDay();
-			const lastDayIndex = lastDay.getDay();
-
-			const monthYearString = currentDate.toLocaleString(document.documentElement.lang, {
-				month: "long",
-				year: "numeric",
-			});
-			monthYearElement.textContent = monthYearString;
-
-			let datesHTML = "";
-
-			for (let i = firstDayIndex; i > 0; i--) {
-				const prevDate = new Date(currentYear, currentMonth, 0 - i + 1);
-				datesHTML += `<div class="date inactive">${prevDate.getDate()}</div>`;
-			}
-
-			for (let i = 1; i <= totalDays; i++) {
-				const date = new Date(currentYear, currentMonth, i);
-				const activeClass = date.toDateString() === new Date().toDateString() ? "active" : "";
-				datesHTML += `<div class="date ${activeClass}">${i}</div>`;
-			}
-
-			for (let i = 1; i <= 7 - lastDayIndex; i++) {
-				const nextDate = new Date(currentYear, currentMonth + 1, i);
-				datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
-			}
-
-			datesElement.innerHTML = datesHTML;
-		};
-
-		const updateTravelsDays = () => {
-			const dates = document.querySelectorAll(".date");
-
-			dates.forEach((date, index) => {
-				const dateValue = date.textContent as string;
-				const dayValueString = dateValue.length === 1 ? `0${dateValue}` : dateValue;
-				const day = parseInt(dayValueString);
-
-				// I need to create a new Date object with this format due to IOS Safari not supporting the format "YYYY-MM-DD", it's more restrictive and only supports "YYYY/MM/DD" or "YYYY-MM-DDTHH:MM:SSZ"
-				let fullDate = new Date(
-					currentDate.getFullYear(),
-					currentDate.getMonth(),
-					day
-				);
-
-				// if the date is inactive, I need to re calculate fullDate to the previous month or next month
-				if (date.classList.contains("inactive")) {
-					if (index < 7) {
-						fullDate = new Date(
-							currentDate.getFullYear(),
-							currentDate.getMonth() - 1,
-							day
-						);
-					} else {
-						fullDate = new Date(
-							currentDate.getFullYear(),
-							currentDate.getMonth() + 1,
-							day
-						);
-					}
-				}
-
-				// check if fullDate is between nextTravels[0].startDate and nextTravels[0].endDate or nextTravels[1].startDate and nextTravels[1].endDate
-				// iterate over nextTravels
-				nextTravels.forEach((travel: Travel) => {
-					// create startDate and endDate adding the time T00:00:00 because if not the date will be different set n UTC time zone and after adding the time it will be in local time zone with +2 hours. Specifying the time will make the date to be in UTC time zone
-					const startDate = new Date(`${travel.startDate}T00:00:00`);
-					const endDate = new Date(`${travel.endDate}T00:00:00`);
-
-					const countryName = document.documentElement.lang === "es" ? travel.country_es : travel.country;
-
-
-					// if (!isInactive && fullDate >= startDate && fullDate <= endDate) {
-					if (fullDate >= startDate && fullDate <= endDate) {
-						date.classList.add("travel");
-						date.classList.add("tooltip");
-						date.setAttribute("data-tip", countryName);
-					}
-				});
-			});
-		};
-
-		prevBtn.addEventListener("click", () => {
-			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() - 1));
-			updateCalendar();
-			updateTravelsDays();
+		$prevBtn.addEventListener("click", () => {
+			const newMonth = currentDate.getMonth() - 1;
+			currentDate = recalculateCalendarData(currentDate, newMonth);
+			updateCalendar(currentDate, $dates, $monthYearElement);
+			updateTravelsDays(currentDate);
 		});
 
-		nextBtn.addEventListener("click", () => {
-			currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1));
-			updateCalendar();
-			updateTravelsDays();
+		$nextBtn.addEventListener("click", () => {
+			const newMonth = currentDate.getMonth() + 1;
+			currentDate = recalculateCalendarData(currentDate, newMonth);
+			updateCalendar(currentDate, $dates, $monthYearElement);
+			updateTravelsDays(currentDate);
 		});
 
-		updateCalendar();
-		updateTravelsDays();
+			updateCalendar(currentDate, $dates, $monthYearElement);
+		updateTravelsDays(currentDate);
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
