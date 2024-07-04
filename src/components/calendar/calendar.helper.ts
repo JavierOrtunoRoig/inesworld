@@ -40,9 +40,14 @@ const renderCalendar = ($dates: HTMLDivElement, {
   }
 
   // Render next month's dates
-  for (let i = 1; i <= 7 - lastDayIndex; i++) {
-    const nextDate = new Date(currentYear, currentMonth + 1, i);
-    datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
+  const necessaryWeek = lastDayIndex !== 0;
+
+  // with this we are going to check if we need to render the next month dates or not, if the last day of the month is not a saturday we need to render the next month dates to complete the week
+  if (necessaryWeek) {
+    for (let i = 1; i <= 7 - lastDayIndex; i++) {
+      const nextDate = new Date(currentYear, currentMonth + 1, i);
+      datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
+    }
   }
 
   $dates.innerHTML = datesHTML;

@@ -69,6 +69,7 @@ const t = useTranslations(lang);
 
 		$prevBtn.addEventListener("click", () => {
 			const newMonth = currentDate.getMonth() - 1;
+			currentDate.setDate(1);
 			currentDate = recalculateCalendarData(currentDate, newMonth);
 			updateCalendar(currentDate, $dates, $monthYearElement);
 			updateTravelsDays(currentDate);
@@ -76,12 +77,13 @@ const t = useTranslations(lang);
 
 		$nextBtn.addEventListener("click", () => {
 			const newMonth = currentDate.getMonth() + 1;
+			currentDate.setDate(1);
 			currentDate = recalculateCalendarData(currentDate, newMonth);
 			updateCalendar(currentDate, $dates, $monthYearElement);
 			updateTravelsDays(currentDate);
 		});
 
-			updateCalendar(currentDate, $dates, $monthYearElement);
+		updateCalendar(currentDate, $dates, $monthYearElement);
 		updateTravelsDays(currentDate);
 	};
 
