@@ -221,7 +221,7 @@ export const addTravellingMarker = (L, map, houseMarker, planeIcon) => {
               rotate: true,
               markerOptions: {
                 icon: L.icon({
-                  iconUrl: "plane.png",
+                  iconUrl: "/plane.png",
                   iconAnchor: [16, 16],
                   iconSize: [32, 32],
                 }),
