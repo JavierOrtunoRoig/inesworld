@@ -81,7 +81,24 @@ const addNumVisited = () => {
   fs.writeFileSync('./src/data/atlas.geo.json',  JSON.stringify(geojson, null, 2));
 }
 
+const getNumberOfVisitedCountries = () => {
+  const visitedCountries = geojson.features.filter(f => f.properties.num_visited > 1);
+  
+  let totalNumberOfDuplicates = 0;
+  visitedCountries.forEach(f => {
+    const num_visited = f.properties.num_visited
+    if (num_visited > 1) {
+      totalNumberOfDuplicates += num_visited - 1;
+    }
+  });
+
+  console.log({visitedCountries: visitedCountries.length, totalNumberOfDuplicates});
+}
+
 // addContinentsTraduction();
 // addSubRegionsTraduction();
 
-addNumVisited();
+// addNumVisited();
+
+
+getNumberOfVisitedCountries();
