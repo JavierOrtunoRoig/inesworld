@@ -73,5 +73,15 @@ const addSubRegionsTraduction = () => {
   fs.writeFileSync('./src/data/atlas.geo.json',  JSON.stringify(geojson, null, 2));
 }
 
+const addNumVisited = () => {
+  geojson.features.forEach(f => {
+    f.properties["num_visited"] = 0;
+  });
+
+  fs.writeFileSync('./src/data/atlas.geo.json',  JSON.stringify(geojson, null, 2));
+}
+
 // addContinentsTraduction();
-addSubRegionsTraduction();
+// addSubRegionsTraduction();
+
+addNumVisited();

@@ -70,7 +70,8 @@
         "iso_a2": "CR",
         "iso_a3": "CRI",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -142,7 +143,8 @@
         "iso_a2": "NI",
         "iso_a3": "NIC",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -214,7 +216,8 @@
         "iso_a2": "MF",
         "iso_a3": "MAF",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -286,7 +289,8 @@
         "iso_a2": "SX",
         "iso_a3": "SXM",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -358,7 +362,8 @@
         "iso_a2": "HT",
         "iso_a3": "HTI",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -430,7 +435,8 @@
         "iso_a2": "DO",
         "iso_a3": "DOM",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -502,7 +508,8 @@
         "iso_a2": "SV",
         "iso_a3": "SLV",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -574,7 +581,8 @@
         "iso_a2": "GT",
         "iso_a3": "GTM",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -646,7 +654,8 @@
         "iso_a2": "CU",
         "iso_a3": "CUB",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -718,7 +727,8 @@
         "iso_a2": "HN",
         "iso_a3": "HND",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -790,7 +800,8 @@
         "iso_a2": "US",
         "iso_a3": "USA",
         "continent_es": "América del norte",
-        "subregion_es": "América del Norte"
+        "subregion_es": "América del Norte",
+        "num_visited": 0
       }
     },
     {
@@ -862,7 +873,8 @@
         "iso_a2": "CA",
         "iso_a3": "CAN",
         "continent_es": "América del norte",
-        "subregion_es": "América del Norte"
+        "subregion_es": "América del Norte",
+        "num_visited": 0
       }
     },
     {
@@ -934,7 +946,8 @@
         "iso_a2": "MX",
         "iso_a3": "MEX",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -1006,7 +1019,8 @@
         "iso_a2": "BZ",
         "iso_a3": "BLZ",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -1078,7 +1092,8 @@
         "iso_a2": "PA",
         "iso_a3": "PAN",
         "continent_es": "América del norte",
-        "subregion_es": "Centroamérica"
+        "subregion_es": "Centroamérica",
+        "num_visited": 0
       }
     },
     {
@@ -1150,7 +1165,8 @@
         "iso_a2": "GL",
         "iso_a3": "GRL",
         "continent_es": "América del norte",
-        "subregion_es": "América del Norte"
+        "subregion_es": "América del Norte",
+        "num_visited": 0
       }
     },
     {
@@ -1222,7 +1238,8 @@
         "iso_a2": "CW",
         "iso_a3": "CUW",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1294,7 +1311,8 @@
         "iso_a2": "AW",
         "iso_a3": "ABW",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1366,7 +1384,8 @@
         "iso_a2": "BS",
         "iso_a3": "BHS",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1438,7 +1457,8 @@
         "iso_a2": "TC",
         "iso_a3": "TCA",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1510,7 +1530,8 @@
         "iso_a2": "PM",
         "iso_a3": "SPM",
         "continent_es": "América del norte",
-        "subregion_es": "América del Norte"
+        "subregion_es": "América del Norte",
+        "num_visited": 0
       }
     },
     {
@@ -1582,7 +1603,8 @@
         "iso_a2": "TT",
         "iso_a3": "TTO",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1654,7 +1676,8 @@
         "iso_a2": "GD",
         "iso_a3": "GRD",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1726,7 +1749,8 @@
         "iso_a2": "VC",
         "iso_a3": "VCT",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1798,7 +1822,8 @@
         "iso_a2": "BB",
         "iso_a3": "BRB",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1870,7 +1895,8 @@
         "iso_a2": "LC",
         "iso_a3": "LCA",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -1942,7 +1968,8 @@
         "iso_a2": "DM",
         "iso_a3": "DMA",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2014,7 +2041,8 @@
         "iso_a2": "MS",
         "iso_a3": "MSR",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2086,7 +2114,8 @@
         "iso_a2": "AG",
         "iso_a3": "ATG",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2158,7 +2187,8 @@
         "iso_a2": "KN",
         "iso_a3": "KNA",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2230,7 +2260,8 @@
         "iso_a2": "VI",
         "iso_a3": "VIR",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2302,7 +2333,8 @@
         "iso_a2": "BL",
         "iso_a3": "BLM",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2374,7 +2406,8 @@
         "iso_a2": "PR",
         "iso_a3": "PRI",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2446,7 +2479,8 @@
         "iso_a2": "AI",
         "iso_a3": "AIA",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2518,7 +2552,8 @@
         "iso_a2": "VG",
         "iso_a3": "VGB",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2590,7 +2625,8 @@
         "iso_a2": "JM",
         "iso_a3": "JAM",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2662,7 +2698,8 @@
         "iso_a2": "KY",
         "iso_a3": "CYM",
         "continent_es": "América del norte",
-        "subregion_es": "Caribe"
+        "subregion_es": "Caribe",
+        "num_visited": 0
       }
     },
     {
@@ -2734,7 +2771,8 @@
         "iso_a2": "BM",
         "iso_a3": "BMU",
         "continent_es": "América del norte",
-        "subregion_es": "América del Norte"
+        "subregion_es": "América del Norte",
+        "num_visited": 0
       }
     },
     {
@@ -2806,7 +2844,8 @@
         "iso_a2": "ID",
         "iso_a3": "IDN",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -2878,7 +2917,8 @@
         "iso_a2": "MY",
         "iso_a3": "MYS",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -2964,7 +3004,8 @@
         "iso_a2": "CY",
         "iso_a3": "CYP",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3036,7 +3077,8 @@
         "iso_a2": "IN",
         "iso_a3": "IND",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -3108,7 +3150,8 @@
         "iso_a2": "CN",
         "iso_a3": "CHN",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -3180,7 +3223,8 @@
         "iso_a2": "IL",
         "iso_a3": "ISR",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3252,7 +3296,8 @@
         "iso_a2": "PS",
         "iso_a3": "PSE",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3324,7 +3369,8 @@
         "iso_a2": "LB",
         "iso_a3": "LBN",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3396,7 +3442,8 @@
         "iso_a2": "SY",
         "iso_a3": "SYR",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3468,7 +3515,8 @@
         "iso_a2": "KR",
         "iso_a3": "KOR",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -3540,7 +3588,8 @@
         "iso_a2": "KP",
         "iso_a3": "PRK",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -3612,7 +3661,8 @@
         "iso_a2": "BT",
         "iso_a3": "BTN",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -3684,7 +3734,8 @@
         "iso_a2": "OM",
         "iso_a3": "OMN",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -3756,7 +3807,8 @@
         "iso_a2": "UZ",
         "iso_a3": "UZB",
         "continent_es": "Asia",
-        "subregion_es": "Asia central"
+        "subregion_es": "Asia central",
+        "num_visited": 0
       }
     },
     {
@@ -3828,7 +3880,8 @@
         "iso_a2": "KZ",
         "iso_a3": "KAZ",
         "continent_es": "Asia",
-        "subregion_es": "Asia central"
+        "subregion_es": "Asia central",
+        "num_visited": 0
       }
     },
     {
@@ -3900,7 +3953,8 @@
         "iso_a2": "TJ",
         "iso_a3": "TJK",
         "continent_es": "Asia",
-        "subregion_es": "Asia central"
+        "subregion_es": "Asia central",
+        "num_visited": 0
       }
     },
     {
@@ -3972,7 +4026,8 @@
         "iso_a2": "MN",
         "iso_a3": "MNG",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -4044,7 +4099,8 @@
         "iso_a2": "VN",
         "iso_a3": "VNM",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -4116,7 +4172,8 @@
         "iso_a2": "KH",
         "iso_a3": "KHM",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -4188,7 +4245,8 @@
         "iso_a2": "AE",
         "iso_a3": "ARE",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4260,7 +4318,8 @@
         "iso_a2": "GE",
         "iso_a3": "GEO",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4332,7 +4391,8 @@
         "iso_a2": "AZ",
         "iso_a3": "AZE",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4404,7 +4464,8 @@
         "iso_a2": "TR",
         "iso_a3": "TUR",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4476,7 +4537,8 @@
         "iso_a2": "LA",
         "iso_a3": "LAO",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -4548,7 +4610,8 @@
         "iso_a2": "KG",
         "iso_a3": "KGZ",
         "continent_es": "Asia",
-        "subregion_es": "Asia central"
+        "subregion_es": "Asia central",
+        "num_visited": 0
       }
     },
     {
@@ -4620,7 +4683,8 @@
         "iso_a2": "AM",
         "iso_a3": "ARM",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4692,7 +4756,8 @@
         "iso_a2": "IQ",
         "iso_a3": "IRQ",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4764,7 +4829,8 @@
         "iso_a2": "IR",
         "iso_a3": "IRN",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -4836,7 +4902,8 @@
         "iso_a2": "QA",
         "iso_a3": "QAT",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4908,7 +4975,8 @@
         "iso_a2": "SA",
         "iso_a3": "SAU",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -4980,7 +5048,8 @@
         "iso_a2": "PK",
         "iso_a3": "PAK",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -5052,7 +5121,8 @@
         "iso_a2": "TH",
         "iso_a3": "THA",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -5124,7 +5194,8 @@
         "iso_a2": "KW",
         "iso_a3": "KWT",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -5196,7 +5267,8 @@
         "iso_a2": "TL",
         "iso_a3": "TLS",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -5268,7 +5340,8 @@
         "iso_a2": "BN",
         "iso_a3": "BRN",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -5340,7 +5413,8 @@
         "iso_a2": "MM",
         "iso_a3": "MMR",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -5412,7 +5486,8 @@
         "iso_a2": "BD",
         "iso_a3": "BGD",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -5484,7 +5559,8 @@
         "iso_a2": "AF",
         "iso_a3": "AFG",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -5556,7 +5632,8 @@
         "iso_a2": "TM",
         "iso_a3": "TKM",
         "continent_es": "Asia",
-        "subregion_es": "Asia central"
+        "subregion_es": "Asia central",
+        "num_visited": 0
       }
     },
     {
@@ -5628,7 +5705,8 @@
         "iso_a2": "JO",
         "iso_a3": "JOR",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -5700,7 +5778,8 @@
         "iso_a2": "NP",
         "iso_a3": "NPL",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -5772,7 +5851,8 @@
         "iso_a2": "YE",
         "iso_a3": "YEM",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -5844,7 +5924,8 @@
         "iso_a2": "HK",
         "iso_a3": "HKG",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -5930,7 +6011,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -6002,7 +6084,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -6074,7 +6157,8 @@
         "iso_a2": "PH",
         "iso_a3": "PHL",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -6146,7 +6230,8 @@
         "iso_a2": "LK",
         "iso_a3": "LKA",
         "continent_es": "Asia",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -6218,7 +6303,8 @@
         "iso_a2": "CN-TW",
         "iso_a3": "TWN",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -6290,7 +6376,8 @@
         "iso_a2": "JP",
         "iso_a3": "JPN",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -6362,7 +6449,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "Asia",
-        "subregion_es": "Siete mares (océano abierto)"
+        "subregion_es": "Siete mares (océano abierto)",
+        "num_visited": 0
       }
     },
     {
@@ -6434,7 +6522,8 @@
         "iso_a2": "SG",
         "iso_a3": "SGP",
         "continent_es": "Asia",
-        "subregion_es": "Asia sudoriental"
+        "subregion_es": "Asia sudoriental",
+        "num_visited": 0
       }
     },
     {
@@ -6506,7 +6595,8 @@
         "iso_a2": "BH",
         "iso_a3": "BHR",
         "continent_es": "Asia",
-        "subregion_es": "Asia occidental"
+        "subregion_es": "Asia occidental",
+        "num_visited": 0
       }
     },
     {
@@ -6578,7 +6668,8 @@
         "iso_a2": "MO",
         "iso_a3": "MAC",
         "continent_es": "Asia",
-        "subregion_es": "Asia oriental"
+        "subregion_es": "Asia oriental",
+        "num_visited": 0
       }
     },
     {
@@ -6650,7 +6741,8 @@
         "iso_a2": "CL",
         "iso_a3": "CHL",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -6722,7 +6814,8 @@
         "iso_a2": "BO",
         "iso_a3": "BOL",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -6794,7 +6887,8 @@
         "iso_a2": "PE",
         "iso_a3": "PER",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -6866,7 +6960,8 @@
         "iso_a2": "AR",
         "iso_a3": "ARG",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -6938,7 +7033,8 @@
         "iso_a2": "SR",
         "iso_a3": "SUR",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7010,7 +7106,8 @@
         "iso_a2": "GY",
         "iso_a3": "GUY",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7082,7 +7179,8 @@
         "iso_a2": "BR",
         "iso_a3": "BRA",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7154,7 +7252,8 @@
         "iso_a2": "UY",
         "iso_a3": "URY",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7226,7 +7325,8 @@
         "iso_a2": "EC",
         "iso_a3": "ECU",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7298,7 +7398,8 @@
         "iso_a2": "CO",
         "iso_a3": "COL",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7370,7 +7471,8 @@
         "iso_a2": "PY",
         "iso_a3": "PRY",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7442,7 +7544,8 @@
         "iso_a2": "VE",
         "iso_a3": "VEN",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7514,7 +7617,8 @@
         "iso_a2": "FK",
         "iso_a3": "FLK",
         "continent_es": "Sudamerica",
-        "subregion_es": "Sudamérica"
+        "subregion_es": "Sudamérica",
+        "num_visited": 0
       }
     },
     {
@@ -7586,7 +7690,8 @@
         "iso_a2": "ET",
         "iso_a3": "ETH",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -7658,7 +7763,8 @@
         "iso_a2": "SS",
         "iso_a3": "SSD",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -7730,7 +7836,8 @@
         "iso_a2": "SO",
         "iso_a3": "SOM",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -7802,7 +7909,8 @@
         "iso_a2": "KE",
         "iso_a3": "KEN",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -7874,7 +7982,8 @@
         "iso_a2": "MW",
         "iso_a3": "MWI",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -7946,7 +8055,8 @@
         "iso_a2": "TZ",
         "iso_a3": "TZA",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -8018,7 +8128,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -8090,7 +8201,8 @@
         "iso_a2": "MA",
         "iso_a3": "MAR",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -8162,7 +8274,8 @@
         "iso_a2": "EH",
         "iso_a3": "ESH",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -8234,7 +8347,8 @@
         "iso_a2": "CG",
         "iso_a3": "COG",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -8306,7 +8420,8 @@
         "iso_a2": "CD",
         "iso_a3": "COD",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -8378,7 +8493,8 @@
         "iso_a2": "NA",
         "iso_a3": "NAM",
         "continent_es": "África",
-        "subregion_es": "África del sur"
+        "subregion_es": "África del sur",
+        "num_visited": 0
       }
     },
     {
@@ -8450,7 +8566,8 @@
         "iso_a2": "ZA",
         "iso_a3": "ZAF",
         "continent_es": "África",
-        "subregion_es": "África del sur"
+        "subregion_es": "África del sur",
+        "num_visited": 0
       }
     },
     {
@@ -8522,7 +8639,8 @@
         "iso_a2": "LY",
         "iso_a3": "LBY",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -8594,7 +8712,8 @@
         "iso_a2": "TN",
         "iso_a3": "TUN",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -8666,7 +8785,8 @@
         "iso_a2": "ZM",
         "iso_a3": "ZMB",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -8738,7 +8858,8 @@
         "iso_a2": "SL",
         "iso_a3": "SLE",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -8810,7 +8931,8 @@
         "iso_a2": "GN",
         "iso_a3": "GIN",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -8882,7 +9004,8 @@
         "iso_a2": "LR",
         "iso_a3": "LBR",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -8954,7 +9077,8 @@
         "iso_a2": "CF",
         "iso_a3": "CAF",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -9026,7 +9150,8 @@
         "iso_a2": "SD",
         "iso_a3": "SDN",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -9098,7 +9223,8 @@
         "iso_a2": "DJ",
         "iso_a3": "DJI",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -9170,7 +9296,8 @@
         "iso_a2": "ER",
         "iso_a3": "ERI",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -9242,7 +9369,8 @@
         "iso_a2": "CI",
         "iso_a3": "CIV",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -9314,7 +9442,8 @@
         "iso_a2": "ML",
         "iso_a3": "MLI",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -9386,7 +9515,8 @@
         "iso_a2": "SN",
         "iso_a3": "SEN",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -9458,7 +9588,8 @@
         "iso_a2": "NG",
         "iso_a3": "NGA",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -9530,7 +9661,8 @@
         "iso_a2": "BJ",
         "iso_a3": "BEN",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -9602,7 +9734,8 @@
         "iso_a2": "AO",
         "iso_a3": "AGO",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -9674,7 +9807,8 @@
         "iso_a2": "BW",
         "iso_a3": "BWA",
         "continent_es": "África",
-        "subregion_es": "África del sur"
+        "subregion_es": "África del sur",
+        "num_visited": 0
       }
     },
     {
@@ -9746,7 +9880,8 @@
         "iso_a2": "ZW",
         "iso_a3": "ZWE",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -9818,7 +9953,8 @@
         "iso_a2": "TD",
         "iso_a3": "TCD",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -9890,7 +10026,8 @@
         "iso_a2": "DZ",
         "iso_a3": "DZA",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -9962,7 +10099,8 @@
         "iso_a2": "MZ",
         "iso_a3": "MOZ",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -10034,7 +10172,8 @@
         "iso_a2": "SZ",
         "iso_a3": "SWZ",
         "continent_es": "África",
-        "subregion_es": "África del sur"
+        "subregion_es": "África del sur",
+        "num_visited": 0
       }
     },
     {
@@ -10106,7 +10245,8 @@
         "iso_a2": "BI",
         "iso_a3": "BDI",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -10178,7 +10318,8 @@
         "iso_a2": "RW",
         "iso_a3": "RWA",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -10250,7 +10391,8 @@
         "iso_a2": "UG",
         "iso_a3": "UGA",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -10322,7 +10464,8 @@
         "iso_a2": "LS",
         "iso_a3": "LSO",
         "continent_es": "África",
-        "subregion_es": "África del sur"
+        "subregion_es": "África del sur",
+        "num_visited": 0
       }
     },
     {
@@ -10394,7 +10537,8 @@
         "iso_a2": "CM",
         "iso_a3": "CMR",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -10466,7 +10610,8 @@
         "iso_a2": "GA",
         "iso_a3": "GAB",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -10538,7 +10683,8 @@
         "iso_a2": "NE",
         "iso_a3": "NER",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -10610,7 +10756,8 @@
         "iso_a2": "BF",
         "iso_a3": "BFA",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -10682,7 +10829,8 @@
         "iso_a2": "TG",
         "iso_a3": "TGO",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -10754,7 +10902,8 @@
         "iso_a2": "GH",
         "iso_a3": "GHA",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -10826,7 +10975,8 @@
         "iso_a2": "GW",
         "iso_a3": "GNB",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -10898,7 +11048,8 @@
         "iso_a2": "EG",
         "iso_a3": "EGY",
         "continent_es": "África",
-        "subregion_es": "África del norte"
+        "subregion_es": "África del norte",
+        "num_visited": 0
       }
     },
     {
@@ -10970,7 +11121,8 @@
         "iso_a2": "MR",
         "iso_a3": "MRT",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -11042,7 +11194,8 @@
         "iso_a2": "GQ",
         "iso_a3": "GNQ",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -11114,7 +11267,8 @@
         "iso_a2": "GM",
         "iso_a3": "GMB",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -11186,7 +11340,8 @@
         "iso_a2": "MG",
         "iso_a3": "MDG",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11258,7 +11413,8 @@
         "iso_a2": "KM",
         "iso_a3": "COM",
         "continent_es": "África",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11330,7 +11486,8 @@
         "iso_a2": "ST",
         "iso_a3": "STP",
         "continent_es": "África",
-        "subregion_es": "África central"
+        "subregion_es": "África central",
+        "num_visited": 0
       }
     },
     {
@@ -11402,7 +11559,8 @@
         "iso_a2": "CV",
         "iso_a3": "CPV",
         "continent_es": "África",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -11474,7 +11632,8 @@
         "iso_a2": "FR",
         "iso_a3": "FRA",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -11546,7 +11705,8 @@
         "iso_a2": "UA",
         "iso_a3": "UKR",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11618,7 +11778,8 @@
         "iso_a2": "BY",
         "iso_a3": "BLR",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11690,7 +11851,8 @@
         "iso_a2": "LT",
         "iso_a3": "LTU",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -11762,7 +11924,8 @@
         "iso_a2": "RU",
         "iso_a3": "RUS",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11834,7 +11997,8 @@
         "iso_a2": "CZ",
         "iso_a3": "CZE",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -11906,7 +12070,8 @@
         "iso_a2": "DE",
         "iso_a3": "DEU",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -11978,7 +12143,8 @@
         "iso_a2": "EE",
         "iso_a3": "EST",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12050,7 +12216,8 @@
         "iso_a2": "LV",
         "iso_a3": "LVA",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12122,7 +12289,8 @@
         "iso_a2": "NO",
         "iso_a3": "NOR",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12194,7 +12362,8 @@
         "iso_a2": "SE",
         "iso_a3": "SWE",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12266,7 +12435,8 @@
         "iso_a2": "FI",
         "iso_a3": "FIN",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12338,7 +12508,8 @@
         "iso_a2": "LU",
         "iso_a3": "LUX",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -12410,7 +12581,8 @@
         "iso_a2": "BE",
         "iso_a3": "BEL",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -12482,7 +12654,8 @@
         "iso_a2": "MK",
         "iso_a3": "MKD",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -12554,7 +12727,8 @@
         "iso_a2": "AL",
         "iso_a3": "ALB",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -12626,7 +12800,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -12698,7 +12873,8 @@
         "iso_a2": "ES",
         "iso_a3": "ESP",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -12770,7 +12946,8 @@
         "iso_a2": "DK",
         "iso_a3": "DNK",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -12842,7 +13019,8 @@
         "iso_a2": "RO",
         "iso_a3": "ROU",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -12914,7 +13092,8 @@
         "iso_a2": "HU",
         "iso_a3": "HUN",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -12986,7 +13165,8 @@
         "iso_a2": "SK",
         "iso_a3": "SVK",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -13058,7 +13238,8 @@
         "iso_a2": "PL",
         "iso_a3": "POL",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -13130,7 +13311,8 @@
         "iso_a2": "IE",
         "iso_a3": "IRL",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -13202,7 +13384,8 @@
         "iso_a2": "GB",
         "iso_a3": "GBR",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -13274,7 +13457,8 @@
         "iso_a2": "GR",
         "iso_a3": "GRC",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -13346,7 +13530,8 @@
         "iso_a2": "AT",
         "iso_a3": "AUT",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -13418,7 +13603,8 @@
         "iso_a2": "IT",
         "iso_a3": "ITA",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -13490,7 +13676,8 @@
         "iso_a2": "CH",
         "iso_a3": "CHE",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -13562,7 +13749,8 @@
         "iso_a2": "NL",
         "iso_a3": "NLD",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -13634,7 +13822,8 @@
         "iso_a2": "LI",
         "iso_a3": "LIE",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -13706,7 +13895,8 @@
         "iso_a2": "RS",
         "iso_a3": "SRB",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -13778,7 +13968,8 @@
         "iso_a2": "HR",
         "iso_a3": "HRV",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -13850,7 +14041,8 @@
         "iso_a2": "SI",
         "iso_a3": "SVN",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -13922,7 +14114,8 @@
         "iso_a2": "BG",
         "iso_a3": "BGR",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -13994,7 +14187,8 @@
         "iso_a2": "SM",
         "iso_a3": "SMR",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14066,7 +14260,8 @@
         "iso_a2": "MC",
         "iso_a3": "MCO",
         "continent_es": "Europa",
-        "subregion_es": "Europa occidental"
+        "subregion_es": "Europa occidental",
+        "num_visited": 0
       }
     },
     {
@@ -14138,7 +14333,8 @@
         "iso_a2": "AD",
         "iso_a3": "AND",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14210,7 +14406,8 @@
         "iso_a2": "ME",
         "iso_a3": "MNE",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14282,7 +14479,8 @@
         "iso_a2": "BA",
         "iso_a3": "BIH",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14354,7 +14552,8 @@
         "iso_a2": "PT",
         "iso_a3": "PRT",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14426,7 +14625,8 @@
         "iso_a2": "MD",
         "iso_a3": "MDA",
         "continent_es": "Europa",
-        "subregion_es": "Europa oriental"
+        "subregion_es": "Europa oriental",
+        "num_visited": 0
       }
     },
     {
@@ -14498,7 +14698,8 @@
         "iso_a2": "VA",
         "iso_a3": "VAT",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14570,7 +14771,8 @@
         "iso_a2": "IS",
         "iso_a3": "ISL",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -14642,7 +14844,8 @@
         "iso_a2": "MT",
         "iso_a3": "MLT",
         "continent_es": "Europa",
-        "subregion_es": "Europa del sur"
+        "subregion_es": "Europa del sur",
+        "num_visited": 0
       }
     },
     {
@@ -14714,7 +14917,8 @@
         "iso_a2": "JE",
         "iso_a3": "JEY",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -14786,7 +14990,8 @@
         "iso_a2": "GG",
         "iso_a3": "GGY",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -14858,7 +15063,8 @@
         "iso_a2": "IM",
         "iso_a3": "IMN",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -14930,7 +15136,8 @@
         "iso_a2": "AX",
         "iso_a3": "ALA",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -15002,7 +15209,8 @@
         "iso_a2": "FO",
         "iso_a3": "FRO",
         "continent_es": "Europa",
-        "subregion_es": "Europa del norte"
+        "subregion_es": "Europa del norte",
+        "num_visited": 0
       }
     },
     {
@@ -15074,7 +15282,8 @@
         "iso_a2": "PG",
         "iso_a3": "PNG",
         "continent_es": "Oceanía",
-        "subregion_es": "Melanesia"
+        "subregion_es": "Melanesia",
+        "num_visited": 0
       }
     },
     {
@@ -15146,7 +15355,8 @@
         "iso_a2": "AU",
         "iso_a3": "AUS",
         "continent_es": "Oceanía",
-        "subregion_es": "Australia y Nueva Zelanda"
+        "subregion_es": "Australia y Nueva Zelanda",
+        "num_visited": 0
       }
     },
     {
@@ -15218,7 +15428,8 @@
         "iso_a2": "FJ",
         "iso_a3": "FJI",
         "continent_es": "Oceanía",
-        "subregion_es": "Melanesia"
+        "subregion_es": "Melanesia",
+        "num_visited": 0
       }
     },
     {
@@ -15290,7 +15501,8 @@
         "iso_a2": "NZ",
         "iso_a3": "NZL",
         "continent_es": "Oceanía",
-        "subregion_es": "Australia y Nueva Zelanda"
+        "subregion_es": "Australia y Nueva Zelanda",
+        "num_visited": 0
       }
     },
     {
@@ -15362,7 +15574,8 @@
         "iso_a2": "NC",
         "iso_a3": "NCL",
         "continent_es": "Oceanía",
-        "subregion_es": "Melanesia"
+        "subregion_es": "Melanesia",
+        "num_visited": 0
       }
     },
     {
@@ -15434,7 +15647,8 @@
         "iso_a2": "PN",
         "iso_a3": "PCN",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -15506,7 +15720,8 @@
         "iso_a2": "PF",
         "iso_a3": "PYF",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -15578,7 +15793,8 @@
         "iso_a2": "KI",
         "iso_a3": "KIR",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -15650,7 +15866,8 @@
         "iso_a2": "MH",
         "iso_a3": "MHL",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -15722,7 +15939,8 @@
         "iso_a2": "NF",
         "iso_a3": "NFK",
         "continent_es": "Oceanía",
-        "subregion_es": "Australia y Nueva Zelanda"
+        "subregion_es": "Australia y Nueva Zelanda",
+        "num_visited": 0
       }
     },
     {
@@ -15794,7 +16012,8 @@
         "iso_a2": "CK",
         "iso_a3": "COK",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -15866,7 +16085,8 @@
         "iso_a2": "TO",
         "iso_a3": "TON",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -15938,7 +16158,8 @@
         "iso_a2": "WF",
         "iso_a3": "WLF",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -16010,7 +16231,8 @@
         "iso_a2": "WS",
         "iso_a3": "WSM",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -16082,7 +16304,8 @@
         "iso_a2": "SB",
         "iso_a3": "SLB",
         "continent_es": "Oceanía",
-        "subregion_es": "Melanesia"
+        "subregion_es": "Melanesia",
+        "num_visited": 0
       }
     },
     {
@@ -16154,7 +16377,8 @@
         "iso_a2": "TV",
         "iso_a3": "TUV",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -16226,7 +16450,8 @@
         "iso_a2": "NR",
         "iso_a3": "NRU",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -16298,7 +16523,8 @@
         "iso_a2": "FM",
         "iso_a3": "FSM",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -16370,7 +16596,8 @@
         "iso_a2": "VU",
         "iso_a3": "VUT",
         "continent_es": "Oceanía",
-        "subregion_es": "Melanesia"
+        "subregion_es": "Melanesia",
+        "num_visited": 0
       }
     },
     {
@@ -16442,7 +16669,8 @@
         "iso_a2": "NU",
         "iso_a3": "NIU",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -16514,7 +16742,8 @@
         "iso_a2": "AS",
         "iso_a3": "ASM",
         "continent_es": "Oceanía",
-        "subregion_es": "Polinesia"
+        "subregion_es": "Polinesia",
+        "num_visited": 0
       }
     },
     {
@@ -16586,7 +16815,8 @@
         "iso_a2": "PW",
         "iso_a3": "PLW",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -16658,7 +16888,8 @@
         "iso_a2": "GU",
         "iso_a3": "GUM",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -16730,7 +16961,8 @@
         "iso_a2": "MP",
         "iso_a3": "MNP",
         "continent_es": "Oceanía",
-        "subregion_es": "Micronesia"
+        "subregion_es": "Micronesia",
+        "num_visited": 0
       }
     },
     {
@@ -16802,7 +17034,8 @@
         "iso_a2": "-99",
         "iso_a3": "-99",
         "continent_es": "Oceanía",
-        "subregion_es": "Australia y Nueva Zelanda"
+        "subregion_es": "Australia y Nueva Zelanda",
+        "num_visited": 0
       }
     },
     {
@@ -16874,7 +17107,8 @@
         "iso_a2": "AQ",
         "iso_a3": "ATA",
         "continent_es": "Antártida",
-        "subregion_es": "Antártida"
+        "subregion_es": "Antártida",
+        "num_visited": 0
       }
     },
     {
@@ -16946,7 +17180,8 @@
         "iso_a2": "TF",
         "iso_a3": "ATF",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "Siete mares (océano abierto)"
+        "subregion_es": "Siete mares (océano abierto)",
+        "num_visited": 0
       }
     },
     {
@@ -17018,7 +17253,8 @@
         "iso_a2": "SC",
         "iso_a3": "SYC",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -17090,7 +17326,8 @@
         "iso_a2": "HM",
         "iso_a3": "HMD",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "Siete mares (océano abierto)"
+        "subregion_es": "Siete mares (océano abierto)",
+        "num_visited": 0
       }
     },
     {
@@ -17162,7 +17399,8 @@
         "iso_a2": "SH",
         "iso_a3": "SHN",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "África occidental"
+        "subregion_es": "África occidental",
+        "num_visited": 0
       }
     },
     {
@@ -17234,7 +17472,8 @@
         "iso_a2": "MU",
         "iso_a3": "MUS",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "África oriental"
+        "subregion_es": "África oriental",
+        "num_visited": 0
       }
     },
     {
@@ -17306,7 +17545,8 @@
         "iso_a2": "IO",
         "iso_a3": "IOT",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "Siete mares (océano abierto)"
+        "subregion_es": "Siete mares (océano abierto)",
+        "num_visited": 0
       }
     },
     {
@@ -17378,7 +17618,8 @@
         "iso_a2": "MV",
         "iso_a3": "MDV",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "Asia meridional"
+        "subregion_es": "Asia meridional",
+        "num_visited": 0
       }
     },
     {
@@ -17450,7 +17691,8 @@
         "iso_a2": "GS",
         "iso_a3": "SGS",
         "continent_es": "Siete mares (océano abierto)",
-        "subregion_es": "Siete mares (océano abierto)"
+        "subregion_es": "Siete mares (océano abierto)",
+        "num_visited": 0
       }
     }
   ]

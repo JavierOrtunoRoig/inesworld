@@ -13,7 +13,8 @@ const languages = {
     continent: "Continent",
     subregion: "Subregion",
     homePopupText: "I'm currently living here",
-		travellingPopupText: "I'm traveling here",
+    travellingPopupText: "I'm traveling here",
+		numVisited: "Visited",
   },
   es: {
     hover: "Pasa el ratón sobre un país",
@@ -22,7 +23,8 @@ const languages = {
     continent: "Continente",
     subregion: "Subregión",
     homePopupText: "Actualmente vivo aquí",
-		travellingPopupText: "Estoy viajando aquí",
+    travellingPopupText: "Estoy viajando aquí",
+		numVisited: "Visitados",
   },
 }
 
@@ -260,11 +262,14 @@ export function update(props) {
     const esSubregion = props?.subregion_es || "N/A";
     const subregion = userLang === "en" ? enSubregion : esSubregion;
 
+    const visited = props?.num_visited ?? "N/A";
+
     this._div.innerHTML = `
       <h4>${translate('countryInfo')}</h4>
       <p class="text country-name">${translate('name')}: ${name}</p>
-      <p class="text text">${translate('continent')}: ${continent}</p>
+      <p class="text">${translate('numVisited')}: ${visited}</p>
       <p class="text">${translate('subregion')}: ${subregion}</p>
+      <p class="text text">${translate('continent')}: ${continent}</p>
     `;
   }
 }
