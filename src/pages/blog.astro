@@ -5,6 +5,7 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { getCollection } from "astro:content";
 import { changeLanguage } from "i18next";
+import Feather from "@/icons/Feather.astro";
 
 changeLanguage("en");
 
@@ -15,54 +16,69 @@ const t = useTranslations(lang);
 */
 const allPosts = await getCollection("blogs");
 const posts = getValidPosts(allPosts);
+const thereArePosts = posts.length > 0;
 ---
 
 <BasicLayout description={t("blog.description")}>
-	<div class="mt-8 flex justify-center px-8">
-		<input
-			class="mx-0 my-2 w-full animate-fade-up rounded border border-solid border-gray-700 p-2 text-black placeholder:text-gray-600 sm:w-[500px]"
-			type="text"
-			id="search"
-			placeholder={t("blog.input.placeholder")}
-		/>
-	</div>
-	<section class="mx-0 my-4 flex flex-wrap justify-center gap-4 px-8 py-0">
-		{
-			posts.map((post) => {
-				const date = new Date(post.data.pubDate);
-				const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
-				const tags = post.data.tags;
+	{
+		thereArePosts && (
+			<>
+				<div class="mt-8 flex justify-center px-8">
+					<input
+						class="mx-0 my-2 w-full animate-fade-up rounded border border-solid border-gray-700 p-2 text-black placeholder:text-gray-600 sm:w-[500px]"
+						type="text"
+						id="search"
+						placeholder={t("blog.input.placeholder")}
+					/>
+				</div>
+				<section class="mx-0 my-4 flex flex-wrap justify-center gap-4 px-8 py-0">
+					{posts.map((post) => {
+						const date = new Date(post.data.pubDate);
+						const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+						const tags = post.data.tags;
 
-				return (
-					<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
-						<a class="post relative block h-[300px] w-[500px] max-w-full" href={`posts/${post.slug}`}>
-							<MyImage
-								imagePath={post.data.image?.src}
-								altText={post.data.image?.alt}
-								widths={[500, 1000]}
-								sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
-								class="absolute left-0 top-0 h-full w-full rounded-md object-cover"
-							/>
+						return (
+							<article class="max-w-full animate-fade-up animate-duration-[1500ms]">
+								<a class="post relative block h-[300px] w-[500px] max-w-full" href={`posts/${post.slug}`}>
+									<MyImage
+										imagePath={post.data.image?.src}
+										altText={post.data.image?.alt}
+										widths={[500, 1000]}
+										sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+										class="absolute left-0 top-0 h-full w-full rounded-md object-cover"
+									/>
 
-							<div class="gradient" />
+									<div class="gradient" />
 
-							<div class="info absolute bottom-2 left-2 flex flex-col gap-1 text-white sm:gap-2">
-								<h2 class="text-sm sm:text-xl">{post.data.title}</h2>
-								<div class="flex justify-between">
-									<p class="text-xs">{formattedDate}</p>
-									<div class="flex gap-1 text-xs">
-										{tags.map((tag) => (
-											<span>#{tag}</span>
-										))}
+									<div class="info absolute bottom-2 left-2 flex flex-col gap-1 text-white sm:gap-2">
+										<h2 class="text-sm sm:text-xl">{post.data.title}</h2>
+										<div class="flex justify-between">
+											<p class="text-xs">{formattedDate}</p>
+											<div class="flex gap-1 text-xs">
+												{tags.map((tag) => (
+													<span>#{tag}</span>
+												))}
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						</a>
-					</article>
-				);
-			})
-		}
-	</section>
+								</a>
+							</article>
+						);
+					})}
+				</section>
+			</>
+		)
+	}
+
+	{
+		!thereArePosts && (
+			<div class="flex h-full gap-8 items-center justify-center flex-col">
+				<Feather class="size-24" />
+				<h1 class="title mb-0">No hay posts por el momento</h1>
+				<p class="text-center">Actualmente me encuentro trabajando en la creación de contenido. Habrá publicaciones próximamente.</p>
+			</div>
+		)
+	}
 </BasicLayout>
 
 <script>
