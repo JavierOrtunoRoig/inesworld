@@ -74,8 +74,8 @@ const thereArePosts = posts.length > 0;
 		!thereArePosts && (
 			<div class="flex h-full gap-8 items-center justify-center flex-col">
 				<Feather class="size-24" />
-				<h1 class="title mb-0">No hay posts por el momento</h1>
-				<p class="text-center">Actualmente me encuentro trabajando en la creación de contenido. Habrá publicaciones próximamente.</p>
+				<h1 class="title mb-0">{t("blog.no_posts")}</h1>
+				<p class="text-center">{t("blog.no_posts_description")}</p>
 			</div>
 		)
 	}
