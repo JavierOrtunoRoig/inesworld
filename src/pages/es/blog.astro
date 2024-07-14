@@ -53,8 +53,8 @@ const thereArePosts = posts.length > 0;
 									<div class="info absolute bottom-2 left-2 flex flex-col gap-1 text-white sm:gap-2">
 										<h2 class="text-sm sm:text-xl">{post.data.title}</h2>
 										<div class="flex justify-between">
-											<p class="text-xs">{formattedDate}</p>
-											<div class="flex gap-1 text-xs">
+											<p class="date text-xs">{formattedDate}</p>
+											<div class="tags flex gap-1 text-xs">
 												{tags.map((tag) => (
 													<span>#{tag}</span>
 												))}
@@ -82,28 +82,64 @@ const thereArePosts = posts.length > 0;
 </BasicLayout>
 
 <script>
+	const languages = {
+		en: {
+			"no_found": "No posts found",
+			"no_posts_description": "No posts found for the selected search criteria. Please try again.",
+		},
+		es: {
+			"no_found": "No se encontraron publicaciones",
+			"no_posts_description": "No se encontraron publicaciones para los criterios de búsqueda seleccionados. Por favor, inténtelo de nuevo.",
+		}
+	}
+
 	const loadScript = () => {
+
+
+		const translate = (key: keyof typeof languages["en"]) => languages[document.documentElement.lang][key]
+
+
 		document.getElementById("search")?.addEventListener("input", (e: InputEvent) => {
 			const input = e.target as HTMLInputElement;
 			const search = input.value.toLowerCase();
 
-			const $allPosts = document.querySelectorAll(".post");
+			const $allPosts = document.querySelectorAll(".post") as NodeListOf<HTMLAnchorElement>;
 
 			$allPosts.forEach((post: HTMLAnchorElement) => {
 				const $titleElement = post.querySelector("h2") as HTMLHeadingElement;
 				const $tags = post.querySelectorAll(".tags span");
-				const $date = post.querySelector(".secondary-info p") as HTMLParagraphElement;
+				const $date = post.querySelector(".date") as HTMLParagraphElement;
 				const title = $titleElement?.textContent?.toLowerCase();
+				const parent = post.parentElement as HTMLDivElement;
 
 				const tags = Array.from($tags).map((tag) => tag?.textContent?.toLowerCase());
 				const date = $date?.textContent?.toLowerCase();
-
 				if (title?.includes(search) || tags.some((tag) => tag?.includes(search)) || date?.includes(search)) {
-					post.style.display = "block";
+					parent.style.display = "block";
 				} else {
-					post.style.display = "none";
+					parent.style.display = "none";
 				}
 			});
+
+			// get all the posts that are visible
+			const $visiblePosts = Array.from($allPosts).filter((post) => post.parentElement?.style.display === "block");
+			const visiblePostsCount = $visiblePosts.length;
+			const $notFound = document.querySelector("[data-notFound]");
+
+			if (visiblePostsCount === 0 && !$notFound) {
+				const $noPosts = document.createElement("div");
+				$noPosts.innerHTML = `
+					<div data-notFound="true" class="flex h-full gap-8 items-center justify-center flex-col">
+						<h1 class="subtitle mb-0">${translate('no_found')}</h1>
+						<p class="text-center">${translate('no_posts_description')}</p>
+					</div>
+				`;
+
+				// add the no posts message to the parent element
+				document.querySelector("section")?.appendChild($noPosts);
+			} else if (visiblePostsCount > 0 && $notFound) {
+				$notFound.remove();
+			}
 		});
 	};
 

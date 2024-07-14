@@ -154,11 +154,11 @@ export const ui = {
 		"about_section_3.text_9":
 			"In short, my life as a digital nomad is a constant journey of discovery and growth. Although it is not always easy, the freedom of being able to work from anywhere in the world and the opportunity to experience different cultures and people make every challenge worth it .My camera and my laptop are my constant companions, and with them, I continue to document my journey, one step at a time, capturing the beauty and diversity of the world in every click.",
 
-		"blog.input.placeholder": "Search for a title posts or any tag",
+		"blog.input.placeholder": "Search for a title posts, date or any tag",
 		"blog.no_posts": "THERE ARE NO POSTS AT THE MOMENT",
 		"blog.no_posts_description": "I am currently working on content creation. There will be posts soon.",
-		// "blog.no_posts": "No posts found",
-		// "blog.no_posts_description": "No posts found for the selected search criteria. Please try again.",
+		"blog.search.no_posts": "No posts found",
+		"blog.search.no_posts_description": "No posts found for the selected search criteria. Please try again.",
 
 		"portfolio.title": "See gallery",
 
@@ -323,7 +323,7 @@ export const ui = {
 		"about_section_3.text_9":
 			"En resumen, mi vida como nómada digital es un constante viaje de descubrimiento y crecimiento. Aunque no siempre es fácil, la libertad de poder trabajar desde cualquier lugar del mundo y la oportunidad de conocer diferentes culturas y personas hacen que cada desafío valga la pena. Mi cámara y mi laptop son mis compañeros constantes, y con ellos, sigo documentando mi viaje, un paso a la vez, capturando la belleza y la diversidad del mundo en cada clic.",
 
-		"blog.input.placeholder": "Busca un post por título o tag",
+		"blog.input.placeholder": "Busca un post por título, fecha o tag",
 		"blog.no_posts": "No hay posts por el momento",
 		"blog.no_posts_description": "Actualmente me encuentro trabajando en la creación de contenido. Habrá posts próximamente.",
 
