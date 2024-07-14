@@ -8,6 +8,7 @@ import DiffContainer from "@/components/home/edition/DiffContainer.astro";
 import Process from "@/components/home/process/Process.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BasicLayout from "@/layouts/BasicLayout.astro";
+import Image from "@/components/MyImage.astro";
 import { changeLanguage } from "i18next";
 
 changeLanguage("en");
@@ -21,13 +22,10 @@ const t = useTranslations(lang);
 	<script slot="custom-header-scripts" is:inline src="/lite-youtube/lite-yt-embed.min.js"></script>
 
 	<div>
-		<section
-			id="who-am-i"
-			class="flex max-w-full flex-col items-center p-8 md:flex-row md:justify-around gap-8"
-		>
-			<div class="flex flex-col w-full items-center justify-center md:w-1/2">
+		<section id="who-am-i" class="flex max-w-full flex-col items-center gap-8 p-8 md:flex-row md:justify-around">
+			<div class="flex w-full flex-col items-center justify-center md:w-1/2">
 				<h1 class="title text-5xl sm:text-6xl lg:text-8xl">{t("index.title")}</h1>
-				<div class="who-am-i flex w-full items-center justify-center ">
+				<div class="who-am-i flex w-full items-center justify-center">
 					<TitleRewritter
 						texts={[
 							// t("typewriter.text_1"),
@@ -66,6 +64,36 @@ const t = useTranslations(lang);
 		<DiffContainer />
 		<Process />
 		<LatestWorks />
+
+		<section class="flex flex-col items-center justify-center p-8">
+			<h2 class="title">Support me</h2>
+
+			<div class="flex flex-col gap-8 text-center md:flex-row">
+				<Image
+				imagePath="/src/assets/ok.jpg"
+				altText="Inés Cuevas Jiménez / inesworld / inesworld.mov doing a ok sign"
+				class="w-96 rounded"
+				/>
+				<div class="flex flex-col justify-center items-center gap-12">
+					<p class="md:max-w-[500px]">
+						Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!
+					</p>
+					<form class="flex justify-center items-center" action="https://www.paypal.com/donate" method="post" target="_top">
+						<input type="hidden" name="hosted_button_id" value="JFNWYYZ52SR3J" />
+						<script
+						src="https://www.paypalobjects.com/api/button.js?"
+						data-merchant="braintree"
+						data-id="paypal-button"
+						data-button="checkout"
+						data-color="gold"
+						data-size="medium"
+						data-shape="pill"
+						data-button_type="submit"
+						data-button_disabled="false"></script>
+					</form>
+				</div>
+			</div>
+		</section>
 	</div>
 </BasicLayout>
 
@@ -75,6 +103,9 @@ const t = useTranslations(lang);
 	const runAnimation = () => {
 		const fadeUpObserver = createIntersectionObserver();
 		observeAll(fadeUpObserver, ".fade-up");
+
+		const paypalText = document.querySelector(".paypal-button-tag-content") as HTMLSpanElement;
+		paypalText.style.color = "white";
 	};
 
 	document.addEventListener("astro:page-load", runAnimation);
