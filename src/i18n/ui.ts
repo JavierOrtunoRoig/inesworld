@@ -100,6 +100,9 @@ export const ui = {
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Switzerland",
 
+		"paypal.title": "Support my work",
+		"paypal.descrition": "Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!",
+
 		"about.title": "About me",
 
 		"about_section_1.title": "How did I start?",
@@ -268,6 +271,10 @@ export const ui = {
 		"lastest_works.country_1": "Indonesia",
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Suiza",
+
+		"paypal.title": "Apóyame my trabajo",
+		"paypal.descrition": "Viajar y mantener el equipo de fotografía y edición es costoso, por lo que cualquier donación para ayudar a mejorar mi trabajo es muy apreciada. Si disfrutas de mis fotos y vídeos, tu apoyo me ayudará a seguir creando y compartiendo momentos increíbles. ¡Gracias por tu generosidad!",
+
 
 		"about.title": "Sobre mí",
 

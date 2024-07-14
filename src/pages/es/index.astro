@@ -66,7 +66,7 @@ const t = useTranslations(lang);
 		<LatestWorks />
 
 		<section class="flex flex-col items-center justify-center p-8">
-			<h2 class="title">Support me</h2>
+			<h2 class="title">{t("paypal.title")}</h2>
 
 			<div class="flex flex-col gap-8 text-center md:flex-row">
 				<Image
@@ -76,7 +76,7 @@ const t = useTranslations(lang);
 				/>
 				<div class="flex flex-col justify-center items-center gap-12">
 					<p class="md:max-w-[500px]">
-						Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!
+						{t("paypal.descrition")}
 					</p>
 					<form class="flex justify-center items-center" action="https://www.paypal.com/donate" method="post" target="_top">
 						<input type="hidden" name="hosted_button_id" value="JFNWYYZ52SR3J" />
