@@ -104,8 +104,12 @@ const t = useTranslations(lang);
 		const fadeUpObserver = createIntersectionObserver();
 		observeAll(fadeUpObserver, ".fade-up");
 
-		const paypalText = document.querySelector(".paypal-button-tag-content") as HTMLSpanElement;
-		paypalText.style.color = "white";
+		const paypalText = document.querySelector(".paypal-button-tag-content");
+
+		if (paypalText instanceof HTMLSpanElement) {
+			paypalText.style.color = "white";
+		}
+
 	};
 
 	document.addEventListener("astro:page-load", runAnimation);
