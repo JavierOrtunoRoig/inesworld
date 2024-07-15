@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
 ---
 
 <a
-	class="fade-up flex w-full justify-center transition-transform hover:scale-105 hover:cursor-pointer sm:w-96"
+	class="flex w-full justify-center transition-transform hover:scale-105 hover:cursor-pointer sm:w-96"
 	href={url}
 >
 	<article class="card image-full shadow before:opacity-15">
@@ -36,15 +36,3 @@ import { Image } from "astro:assets";
 		transition: transform 0.75s;
 	}
 </style>
-
-<!-- Script to add fade up animation -->
-<script>
-	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
-
-	const runAnimation = () => {
-		const fadeUpObserver = createIntersectionObserver();
-		observeAll(fadeUpObserver, ".fade-up");
-	};
-
-	document.addEventListener("astro:page-load", runAnimation);
-</script>

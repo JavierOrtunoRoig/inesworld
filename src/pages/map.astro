@@ -28,11 +28,11 @@ const t = useTranslations(lang);
 			<div id="comming-countries" class="flex flex-wrap justify-center gap-4"></div>
 		</div>
 
-		<div class="flex w-full flex-col p-8">
+		<div class="flex w-full flex-col p-8 md:p-32 xl:p-64">
 			<h2 class="subtitle fade-up">
 				{t("map.subtitle_3")}
 			</h2>
-			<div id="visited-countries" class="grid w-full grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4"></div>
+			<div id="visited-countries" class="grid w-full grid-cols-[repeat(auto-fit,minmax(300px,1fr))] place-items-center gap-4"></div>
 		</div>
 	</div>
 </BasicLayout>

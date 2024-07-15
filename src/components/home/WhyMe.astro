@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="light-theme flex flex-col justify-center p-8 xl:items-center">
+<section class="fade-up light-theme flex flex-col justify-center p-8 xl:items-center">
 	<h1 class="mb-8 mt-0 text-center text-4xl font-bold uppercase text-base-100/90 sm:text-6xl">
 		{t("why_me.title")}
 	</h1>
@@ -63,3 +63,14 @@ const t = useTranslations(lang);
 		</div>
 	</article>
 </section>
+
+<script>
+	import { createIntersectionObserver, observeAll } from "@/helpers/IntersectionObserver.js";
+
+	const runAnimation = () => {
+		const fadeUpObserver = createIntersectionObserver();
+		observeAll(fadeUpObserver, ".fade-up");
+	};
+
+	document.addEventListener("astro:page-load", runAnimation);
+</script>
