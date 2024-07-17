@@ -49,7 +49,7 @@ export const ui = {
 		"typewriter.text_5": "Travelling",
 		"typewriter.text_6": "Storytelling",
 
-		"showreel.title": "My Showreel",
+		"showreel.title": "Watch my showreel",
 		"showreel.button": "Discover my work!",
 
 		"why_me.title": "Why Me?",
@@ -221,7 +221,7 @@ export const ui = {
 		"typewriter.text_5": "Viajar",
 		"typewriter.text_6": "Contar historias",
 
-		"showreel.title": "Mi showreel",
+		"showreel.title": "Mira mi showreel",
 		"showreel.button": "¡Descubre mi trabajo!",
 
 		"why_me.title": "¿Por qué yo?",
