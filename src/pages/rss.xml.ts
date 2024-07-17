@@ -37,7 +37,7 @@ export async function GET(context) {
 			link: `/posts/${post.slug}/`,
 			customData: `
         <media:content url="${context.site}${post.data.image.publicSrc}" type="image/${post.data.image.publicSrc.split(".")[1]}" medium="image">
-          <media:credit>Ines Cuevas Jiménez</media:credit>
+          <media:credit>Inés Cuevas Jiménez</media:credit>
           <media:title>${post.data.image.alt}</media:title>
           <media:text>${post.data.image.alt}</media:text>
           <media:description>${post.data.image.alt}</media:description>
@@ -49,7 +49,7 @@ export async function GET(context) {
 		// image should be jpg, png or gif
 		customData: `<language>en</language>
       <image>
-        <url>https://inesworld.vercel.app/ines.jpg</url>
+        <url>https://inesworld.vercel.app/Inés.jpg</url>
         <title>Inesworld blog</title>
         <link>https://inesworld.vercel.app/blog/</link>
       </image>
