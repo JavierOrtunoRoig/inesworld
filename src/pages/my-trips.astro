@@ -22,17 +22,21 @@ const t = useTranslations(lang);
 		<Calendar />
 
 		<div class="w-full px-8">
-			<h2 class="subtitle fade-up mt-4">
+			<h2 class="subtitle fade-up mt-8">
 				{t("map.subtitle_2")}
 			</h2>
 			<div id="comming-countries" class="flex flex-wrap justify-center gap-4"></div>
 		</div>
 
-		<div class="flex w-full flex-col p-8 md:p-32 xl:p-64">
+		<div class="mt-8 flex w-full flex-col px-8 pb-8 md:px-32 md:pb-16">
 			<h2 class="subtitle fade-up">
 				{t("map.subtitle_3")}
 			</h2>
-			<div id="visited-countries" class="grid w-full grid-cols-[repeat(auto-fit,minmax(300px,1fr))] place-items-center gap-4"></div>
+			<div
+				id="visited-countries"
+				class="grid w-full grid-cols-[repeat(auto-fit,minmax(300px,1fr))] place-items-center gap-4"
+			>
+			</div>
 		</div>
 	</div>
 </BasicLayout>
@@ -62,7 +66,7 @@ const t = useTranslations(lang);
 			div.classList.add("card", "w-full", "bg-base-200", "shadow-2xl", "sm:max-w-[400px]", "fade-up");
 			div.innerHTML = `
       <div class="card-body p-0 flex flex-row">
-        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0 ${countryProperties.iso_a2.toLowerCase() === 'ae' && "!w-[5.5rem]"}"></p>
+        <p class="fi fi-${countryProperties.iso_a2.toLowerCase()} !h-[66px] !w-[5rem] !rounded-l-2xl grow-0 ${countryProperties.iso_a2.toLowerCase() === "ae" && "!w-[5.5rem]"}"></p>
         <h2 class="card-title px-2 sm:text-center">${countryProperties[langName]}</h2>
       </div>`;
 			container.appendChild(div);
@@ -109,9 +113,9 @@ const t = useTranslations(lang);
 			visited: "Visitados",
 			countries: "países",
 		},
-	}
+	};
 
-	const translate = (key: keyof typeof languages["en"]) => languages[document.documentElement.lang][key];
+	const translate = (key: keyof (typeof languages)["en"]) => languages[document.documentElement.lang][key];
 
 	declare var L: any;
 

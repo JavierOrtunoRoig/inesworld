@@ -108,7 +108,7 @@ export const ui = {
 
 		"about_section_1.title": "How did I start?",
 		"about_section_1.text_1":
-			"Since I was little, I was always a curious and energetic girl. I grew up in a small town surrounded by nature, which allowed me to develop a deep connection with the environment that surrounded me. My parents used to take me for walks in the nearby forests and fields , and from a very young age, I learned to appreciate beauty in the simplest details: the sunlight filtering through the leaves, the soft murmur of the river and the singing of birds at dawn.",
+			"Since I was little, I was always a curious and energetic girl. I grew up in a small town surrounded by nature, which allowed me to develop a deep connection with the environment that surrounded me. My parents used to take me for walks in the nearby forests and fields, and from a very young age, I learned to appreciate beauty in the simplest details: the sunlight filtering through the leaves, the soft murmur of the river and the singing of birds at dawn.",
 		"about_section_1.text_2":
 			"My first experience with a camera was when I was 10 years old. I found my father's old analog camera in the attic. Fascinated by that object, I asked him to teach me how to use it. I remember the excitement of loading the roll of film and waiting with I look forward to developing the photos. Those first images, although technically imperfect, captured unique moments and awakened a passion in me that would never fade.",
 		"about_section_1.text_3":
@@ -175,8 +175,8 @@ export const ui = {
 
 		"map.title": "All my trips",
 		"map.subtitle_1": "Trip calendar",
-		"map.subtitle_2": "Coming soon!!",
-		"map.subtitle_3": "Countries visited!!",
+		"map.subtitle_2": "Coming soon!",
+		"map.subtitle_3": "Countries visited!",
 
 		"calendar.monday": "Mon",
 		"calendar.tuesday": "Tue",
