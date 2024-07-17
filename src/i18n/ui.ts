@@ -216,11 +216,11 @@ export const ui = {
 		"navbar.trip_map": "Mapa de viajes",
 
 		"typewriter.text_1": "Vamos a crear juntos",
-		"typewriter.text_4": "Fotografía",
-		"typewriter.text_8": "Filmmaking",
-		"typewriter.text_6": "Contar historias",
-		"typewriter.text_3": "Conectando",
-		"typewriter.text_5": "Viajar",
+		"typewriter.text_2": "Fotografía",
+		"typewriter.text_3": "Filmmaking",
+		"typewriter.text_4": "Contar historias",
+		"typewriter.text_5": "Conectando",
+		"typewriter.text_6": "Viajar",
 		
 		"showreel.title": "Mira mi showreel",
 		"showreel.button": "¡Descubre mi trabajo!",
