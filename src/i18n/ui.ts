@@ -42,17 +42,20 @@ export const ui = {
 		"navbar.contact": "Contact",
 		"navbar.trip_map": "Trip Map",
 
-		"typewriter.text_1": "Hey, It's Inés",
-		"typewriter.text_2": "Creativity",
-		"typewriter.text_3": "Connecting",
+		// "typewriter.text_1": "Hey, It's Inés",
+		// "typewriter.text_2": "Creativity",
+		"typewriter.text_7": "Let's create together",
 		"typewriter.text_4": "Photography",
-		"typewriter.text_5": "Travelling",
+		"typewriter.text_8": "Filmmaking",
 		"typewriter.text_6": "Storytelling",
+		"typewriter.text_3": "Connecting",
+		"typewriter.text_5": "Travelling",
 
 		"showreel.title": "Watch my showreel",
 		"showreel.button": "Discover my work!",
 
-		"why_me.title": "Why Me?",
+		"why_me.title": "My way",
+		"why_me.subtitle": "Making you feel the world",
 		"why_me.reason_1.title": "Inclusive Storytelling",
 		"why_me.reason_1.description":
 			"Authentic visuals that break barriers and contribute to positive social change. I’m unlocking the full potential of your brand by creating a space for all stories to be heard and valued. That sets you apart as a leader of promoting diversity and equality.",
@@ -95,7 +98,7 @@ export const ui = {
 		"process.step_5.description":
 			"I deliver the final product, making sure it meets your expectations and is ready to impress your audience.",
 
-		"latest_works.title": "Latest Works",
+		"latest_works.title": "See my work",
 		"lastest_works.country_1": "Indonesia",
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Switzerland",
@@ -219,12 +222,15 @@ export const ui = {
 		"typewriter.text_3": "Conectando",
 		"typewriter.text_4": "Fotografía",
 		"typewriter.text_5": "Viajar",
-		"typewriter.text_6": "Contar historias",
+		"typewriter.text_6": "Contar historias", 
+		"typewriter.text_7": "Vamos a crear juntos", 
+		"typewriter.text_8": "Filmmaking",
 
 		"showreel.title": "Mira mi showreel",
 		"showreel.button": "¡Descubre mi trabajo!",
 
-		"why_me.title": "¿Por qué yo?",
+		"why_me.title": "Mi manera",
+		"why_me.subtitle": "Haciendote sentir el mundo",
 		"why_me.reason_1.title": "Narración Inclusiva",
 		"why_me.reason_1.description":
 			"Visuales auténticos que rompen barreras y contribuyen al cambio social positivo. Estoy desbloqueando el potencial completo de tu marca creando un espacio para que todas las historias sean escuchadas y valoradas. Esto te distingue como un líder en la promoción de la diversidad y la igualdad.",
@@ -267,7 +273,7 @@ export const ui = {
 		"process.step_5.description":
 			"Entrego el producto final, asegurándome de que cumpla con tus expectativas y esté listo para impresionar a tu audiencia.",
 
-		"latest_works.title": "Últimos Trabajos",
+		"latest_works.title": "Mira mi trabajo",
 		"lastest_works.country_1": "Indonesia",
 		"lastest_works.country_2": "Vietnam",
 		"lastest_works.country_3": "Suiza",
