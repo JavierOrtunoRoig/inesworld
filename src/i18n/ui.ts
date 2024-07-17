@@ -20,16 +20,16 @@ export const ui = {
 		"index.description":
 			"Discover the portfolio of Inés World, photographer and filmmaker. Travelling the world to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
 		"about.description":
-			"Hey, it's Inés! I'm Inés Cuevas Jiménez, also known as inesworld or inesworld.mov. On this page, I share my story and deep love for photography. Every image I capture has a story behind it, reflecting my passion for travel and my connection to emotions and unique moments. Discover how I blend my art with my nomadic lifestyle, creating images that capture the essence of each experience.",
+			"Hey, it's Inés! On this page, I share my story and deep love for photography. Every image I capture has a story behind it, reflecting my passion for travel and my connection to emotions and unique moments. Discover how I blend my art with my nomadic lifestyle, creating images that capture the essence of each experience.",
 		"blog.description":
-			"Explore the blog of Inés Cuevas Jiménez, also known as inesworld or inesworld.mov, where I post about my photographic adventures around the world. Discover stories, tips, and experiences from my travels, and join me on my journey as a photographer and digital nomad.",
+			"Explore the blog of Inés, where she posts about her photographic adventures around the world. Discover stories, tips, and experiences from her travels, and join her on her journey as a photographer and digital nomad.",
 
 		"portfolio.description":
-			"Discover the photographic projects of Inés Cuevas Jiménez, also known as inesworld or inesworld.mov, organized by country. Explore the interactive carousel and immerse yourself in the images captured during my travels around the world. Each project tells a unique story through photography.",
+			"Discover the photographic projects of Inés, organized by country. Explore the interactive carousel and immerse yourself in the images captured during her travels around the world. Each project tells a unique story through photography.",
 		"contact.description":
-			"Get in touch with Inés Cuevas Jiménez, also known as inesworld or inesworld.mov, for photography and filmmaking projects. If you're looking for a passionate photographer and filmmaker to capture your special moments, feel free to send me a message. I'm here to help bring your ideas to life.",
+			"Get in touch with me for photography and filmmaking projects. If you're looking for a passionate photographer and filmmaker to capture your special story, feel free to send me a message. I'm here to help bring your ideas to life.",
 		"map.description":
-			"Explore the travels of Inés Cuevas Jiménez, also known as inesworld or inesworld.mov. Discover the countries I have visited through an interactive map, check my travel calendar, and review the complete list of my destinations. Join me on my journey as a photographer and digital nomad.",
+			"Explore the travels of Inés, Discover the countries I have visited through an interactive map, check my travel calendar, and review the complete list of my destinations. Join me on my journey as a photographer and digital nomad.",
 		"404.description":
 			"Oops, it looks like this page doesn't exist. Return to the homepage of Inés Cuevas Jiménez (inesworld) and explore my photography and filmmaking projects, travels, and more.",
 
@@ -42,14 +42,12 @@ export const ui = {
 		"navbar.contact": "Contact",
 		"navbar.trip_map": "Trip Map",
 
-		// "typewriter.text_1": "Hey, It's Inés",
-		// "typewriter.text_2": "Creativity",
-		"typewriter.text_7": "Let's create together",
-		"typewriter.text_4": "Photography",
-		"typewriter.text_8": "Filmmaking",
-		"typewriter.text_6": "Storytelling",
-		"typewriter.text_3": "Connecting",
-		"typewriter.text_5": "Travelling",
+		"typewriter.text_1": "Let's create together",
+		"typewriter.text_2": "Photography",
+		"typewriter.text_3": "Filmmaking",
+		"typewriter.text_4": "Storytelling",
+		"typewriter.text_5": "Connecting",
+		"typewriter.text_6": "Travelling",
 
 		"showreel.title": "Watch my showreel",
 		"showreel.button": "Discover my work!",
@@ -68,12 +66,12 @@ export const ui = {
 		"why_me.reason_3.description":
 			"I’m dedicated to creating engaging and relevant content that helps showcasing your brand’s values and builds a strong sense of community around your brand to ensure the success of a business and its mission.",
 
-		"skills.skill_1.title": "SCRIPT WRITING",
-		"skills.skill_1.reason": "Vision from the concept and developing",
+		"skills.skill_1.title": "SCRIPTWRITING",
+		"skills.skill_1.reason": "Crafting compelling scripts that bring your stories to life",
 		"skills.skill_2.title": "FILMING",
-		"skills.skill_2.reason": "Materialising your ideas",
+		"skills.skill_2.reason": "Transforming concepts into visually stunning and captivating footage",
 		"skills.skill_3.title": "EDITING",
-		"skills.skill_3.reason": "Gather everything together to have final piece",
+		"skills.skill_3.reason": "Weaving together every element with the magic of editing to create the final product",
 
 		"diff.title": "See my magic",
 
@@ -168,8 +166,8 @@ export const ui = {
 
 		"portfolio.title": "See gallery",
 
-		"contact.title": "CONTACT WITH ME!",
-		"contact.subtitle": "Maybe here we can put a text giving thanks to users or any message that Inés want to share",
+		"contact.title": "CONTACT ME",
+		"contact.subtitle": "Let's bring your story to life!",
 		"contact.label.name": "Name:",
 		"contact.label.email": "Email:",
 		"contact.label.message": "Message:",
@@ -194,17 +192,17 @@ export const ui = {
 
 		"index.title": "¡Hola, soy Inés!",
 		"index.description":
-			"Descubre el portfolio de Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov. Conectando a través de la fotografía y el filmmaking, viajo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Ve cómo transformo imágenes con mi proceso de edición y explora mis últimas obras fotográficas.",
+			"Descubre el portafolio de Inés World, fotógrafa y cineasta. Viajando por el mundo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Mira cómo transformo las imágenes con mi proceso de edición y explora mis últimos trabajos fotográficos.",
 		"about.description":
-			"¡Hola! Soy Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov. En esta página te cuento mi historia y mi profundo amor por la fotografía. Cada imagen que capturo tiene una historia detrás, reflejando mi pasión por viajar y mi conexión con las emociones y los momentos únicos. Descubre cómo combino mi arte con mi estilo de vida nómada, creando imágenes que capturan la esencia de cada experiencia.",
+			"¡Hola, soy Inés! En esta página, comparto mi historia y mi profundo amor por la fotografía. Cada imagen que capturo tiene una historia detrás, reflejando mi pasión por los viajes y mi conexión con las emociones y momentos únicos. Descubre cómo combino mi arte con mi estilo de vida nómada, creando imágenes que capturan la esencia de cada experiencia.",
 		"blog.description":
-			"Explora el blog de Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov, donde subo posts sobre mis aventuras fotográficas alrededor del mundo. Descubre historias, consejos y experiencias de mis viajes, y acompáñame en mi viaje como fotógrafa y nómada digital.",
+			"Explora el blog de Inés, donde ella publica sobre sus aventuras fotográficas alrededor del mundo. Descubre historias, consejos y experiencias de sus viajes, y únete a su viaje como fotógrafa y nómada digital.",
 		"portfolio.description":
-			"Descubre los proyectos fotográficos de Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov, organizados por país. Explora el carousel interactivo y sumérgete en las imágenes capturadas durante mis viajes por el mundo. Cada proyecto cuenta una historia única a través de la fotografía.",
+			"Descubre los proyectos fotográficos de Inés, organizados por país. Explora el carrusel interactivo y sumérgete en las imágenes capturadas durante sus viajes por el mundo. Cada proyecto cuenta una historia única a través de la fotografía.",
 		"contact.description":
-			"Ponte en contacto con Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov, para proyectos de fotografía y filmmaking. Si buscas una fotógrafa y filmmaker apasionada para capturar tus momentos especiales, no dudes en enviarme un mensaje. Estoy aquí para ayudarte a dar vida a tus ideas.",
+			"Ponte en contacto conmigo para proyectos de fotografía y cine. Si buscas a una fotógrafa y cineasta apasionada para capturar tu historia especial, no dudes en enviarme un mensaje. Estoy aquí para ayudar a dar vida a tus ideas.",
 		"map.description":
-			"Explora los viajes de Inés Cuevas Jiménez, también conocida como inesworld o inesworld.mov. Descubre los países que he visitado a través de un mapa interactivo, consulta mi calendario de viajes y revisa la lista completa de mis destinos. Acompáñame en mi aventura como fotógrafa y nómada digital.",
+			"Explora los viajes de Inés. Descubre los países que he visitado a través de un mapa interactivo, consulta mi calendario de viajes y revisa la lista completa de mis destinos. Únete a mi viaje como fotógrafa y nómada digital.",
 		"404.description":
 			"Ups, parece que esta página no existe. Vuelve al inicio de Inés Cuevas Jiménez (inesworld) y explora mis proyectos de fotografía y filmmaking, mis viajes y más.",
 
@@ -217,15 +215,13 @@ export const ui = {
 		"navbar.contact": "Contacto",
 		"navbar.trip_map": "Mapa de viajes",
 
-		"typewriter.text_1": "Hola, soy Inés",
-		"typewriter.text_2": "Creatividad",
-		"typewriter.text_3": "Conectando",
+		"typewriter.text_1": "Vamos a crear juntos",
 		"typewriter.text_4": "Fotografía",
-		"typewriter.text_5": "Viajar",
-		"typewriter.text_6": "Contar historias", 
-		"typewriter.text_7": "Vamos a crear juntos", 
 		"typewriter.text_8": "Filmmaking",
-
+		"typewriter.text_6": "Contar historias",
+		"typewriter.text_3": "Conectando",
+		"typewriter.text_5": "Viajar",
+		
 		"showreel.title": "Mira mi showreel",
 		"showreel.button": "¡Descubre mi trabajo!",
 
@@ -244,11 +240,11 @@ export const ui = {
 			"Estoy dedicado a crear contenido atractivo y relevante que ayude a mostrar los valores de tu marca y construir un fuerte sentido de comunidad alrededor de ella para asegurar el éxito del negocio y su misión.",
 
 		"skills.skill_1.title": "ESCRITURA DE GUIONES",
-		"skills.skill_1.reason": "Visión desde el concepto y desarrollo",
+		"skills.skill_1.reason": "Crear guiones convincentes que den vida a tus historias",
 		"skills.skill_2.title": "FILMACIÓN",
-		"skills.skill_2.reason": "Materializando tus ideas",
+		"skills.skill_2.reason": "Transformar conceptos en metraje visualmente impresionante y cautivador",
 		"skills.skill_3.title": "EDICIÓN",
-		"skills.skill_3.reason": "Reuniendo todo para tener la pieza final",
+		"skills.skill_3.reason": "Tejer juntos cada elemento con la magia de la edición para crear el producto final",
 
 		"diff.title": "Mira mi magia",
 
@@ -344,7 +340,7 @@ export const ui = {
 
 		"contact.title": "Contacta conmigo",
 		"contact.subtitle":
-			"Tal vez aquí podamos poner un texto dando las gracias a los usuarios o cualquier mensaje que Inés quiera compartir",
+			"Let's bring your story to life!",
 		"contact.label.name": "Nombre:",
 		"contact.label.email": "Correo electrónico:",
 		"contact.label.message": "Mensaje:",
