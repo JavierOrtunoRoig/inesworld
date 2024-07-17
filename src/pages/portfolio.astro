@@ -75,6 +75,19 @@ const getRightImageByIndex = (index: number) => {
 				containers[current].classList.remove("hidden");
 			});
 		});
+
+		// add event when user press left or right arrow key
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "ArrowLeft") {
+				containers[current].classList.add("hidden");
+				current = current === 0 ? containers.length - 1 : current - 1;
+				containers[current].classList.remove("hidden");
+			} else if (event.key === "ArrowRight") {
+				containers[current].classList.add("hidden");
+				current = current === containers.length - 1 ? 0 : current + 1;
+				containers[current].classList.remove("hidden");
+			}
+		});
 	};
 
 	document.addEventListener("astro:page-load", loadScript);
