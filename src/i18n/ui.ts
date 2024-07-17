@@ -40,7 +40,7 @@ export const ui = {
 		"navbar.portfolio": "Portfolio",
 		"navbar.blog": "Blog",
 		"navbar.contact": "Contact",
-		"navbar.trip_map": "Trip Map",
+		"navbar.trip_map": "My trips",
 
 		"typewriter.text_1": "Let's create together",
 		"typewriter.text_2": "Photography",
@@ -213,7 +213,7 @@ export const ui = {
 		"navbar.portfolio": "Portafolio",
 		"navbar.blog": "Blog",
 		"navbar.contact": "Contacto",
-		"navbar.trip_map": "Mapa de viajes",
+		"navbar.trip_map": "Mis viajes",
 
 		"typewriter.text_1": "Vamos a crear juntos",
 		"typewriter.text_2": "Fotografía",
