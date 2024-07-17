@@ -62,10 +62,10 @@ const t = useTranslations(lang);
 		<WhyMe />
 		<Dashboard />
 		<DiffContainer />
-		<Process />
+		<!-- <Process /> -->
 		<LatestWorks />
 
-		<section class="fade-up flex flex-col items-center justify-center p-8">
+		<!-- <section class="fade-up flex flex-col items-center justify-center p-8">
 			<h2 class="title">{t("paypal.title")}</h2>
 
 			<div class="flex flex-col gap-8 text-center md:flex-row">
@@ -93,7 +93,7 @@ const t = useTranslations(lang);
 					</form>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	</div>
 </BasicLayout>
 
@@ -104,11 +104,11 @@ const t = useTranslations(lang);
 		const fadeUpObserver = createIntersectionObserver();
 		observeAll(fadeUpObserver, ".fade-up");
 
-		const paypalText = document.querySelector(".paypal-button-tag-content");
+		// const paypalText = document.querySelector(".paypal-button-tag-content");
 
-		if (paypalText instanceof HTMLSpanElement) {
-			paypalText.style.color = "white";
-		}
+		// if (paypalText instanceof HTMLSpanElement) {
+		// 	paypalText.style.color = "white";
+		// }
 
 	};
 

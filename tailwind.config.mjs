@@ -21,10 +21,10 @@ export default {
 				"accent-content": "#000e0c",
 				"neutral": "#2a323c",
 				"neutral-content": "#a6adbb",
-				"base-100": "#1d232a", // background color
-				"base-200": "#191e24",
-				"base-300": "#15191e", // background footer color
-				"base-content": "#a6adbb", // text color
+				"base-100": "#d6ccc2", // background color
+				"base-200": "#f5ebe0", // card background color
+				"base-300": "#fff5e7", // background footer color
+				"base-content": "#353535", // text color
 				"info": "#00b3f0",
 				"info-content": "#000000",
 				"success": "#00a96f",
