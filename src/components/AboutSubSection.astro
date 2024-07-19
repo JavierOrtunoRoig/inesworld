@@ -8,28 +8,33 @@ interface Props {
 	direction?: "left" | "right";
 	text: string[];
 	loading?: "lazy" | "eager";
+	textPaddingTop?: boolean;
 }
 
-const { title, src, text, alt, direction = "left", loading = "lazy" } = Astro.props;
+const { title, src, text, alt, direction = "left", loading = "lazy", textPaddingTop } = Astro.props;
 
 const float = direction === "left" ? "xl:float-start" : "xl:float-end";
-
 const imgClass = direction === "left" ? "left-img" : "right-img";
+const textClass = textPaddingTop ? "pt-12" : "";
 ---
 
-<div class="flex flex-col items-center px-8 md:px-32 lg:px-64 2xl:inline-block 2xl:px-[24rem]">
+<div class="flex flex-col items-center overflow-x-clip xl:inline-block">
 	<h2 class="subtitle m-8">{title}</h2>
 
+	<div class="flex flex-col items-center xl:inline-block">
 		<MyImage
-			class={`${imgClass} md:w-[80%] lg:w-[60%] 2xl:w-[300px] rounded-md mb-8 ${float} xl:mx-8`}
+			class={`${imgClass} md:w-[80%] lg:w-[60%] xl:w-[300px] rounded-md mb-8 ${float} xl:mx-8`}
 			imagePath={src}
 			altText={alt}
 			widths={[256, 500, 790, 1000]}
 			sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
 			loading={loading}
 		/>
-	
+
+		<div class=`${textClass}`>
 			{text.map((t) => <p class="mb-4">{t}</p>)}
+		</div>
+	</div>
 </div>
 
 <!--
@@ -64,19 +69,7 @@ const imgClass = direction === "left" ? "left-img" : "right-img";
 		animation-name: fade-in-text;
 		animation-timeline: view();
 		animation-fill-mode: both;
-		animation-range: entry 0% cover 12%;
-	}
-
-	@media (max-width: 640px) {
-		p {
-			animation-range: entry 0% cover 25%;
-		}
-	}
-
-	@media (max-width: 1024px) {
-		p {
-			animation-range: entry 0% cover 20%;
-		}
+		animation-range: entry 0% cover 8%;
 	}
 
 	@keyframes fade-in-text {
