@@ -17,19 +17,19 @@ const float = direction === "left" ? "xl:float-start" : "xl:float-end";
 const imgClass = direction === "left" ? "left-img" : "right-img";
 ---
 
-<div class="flex flex-col items-center overflow-x-clip px-8 md:px-32 lg:px-64 2xl:inline-block 2xl:px-[24rem]">
-	<h2 class="subtitle">{title}</h2>
+<div class="flex flex-col items-center px-8 md:px-32 lg:px-64 2xl:inline-block 2xl:px-[24rem]">
+	<h2 class="subtitle m-8">{title}</h2>
 
-	<MyImage
-		class={`${imgClass} md:w-[80%] lg:w-[60%] 2xl:w-[500px] rounded-md mb-4 ${float} xl:m-8 `}
-		imagePath={src}
-		altText={alt}
-		widths={[256, 500, 790, 1000]}
-		sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
-		loading={loading}
-	/>
-
-	{text.map((t) => <p class="mb-4">{t}</p>)}
+		<MyImage
+			class={`${imgClass} md:w-[80%] lg:w-[60%] 2xl:w-[300px] rounded-md mb-8 ${float} xl:mx-8`}
+			imagePath={src}
+			altText={alt}
+			widths={[256, 500, 790, 1000]}
+			sizes="(min-width: 600px) 500px, calc(96.43vw - 59px)"
+			loading={loading}
+		/>
+	
+			{text.map((t) => <p class="mb-4">{t}</p>)}
 </div>
 
 <!--

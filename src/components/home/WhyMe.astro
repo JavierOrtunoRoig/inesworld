@@ -17,7 +17,7 @@ const t = useTranslations(lang);
 		<Image
 			imagePath="/src/assets/ines_1.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov stroking a cow in a field in Switzerland"
-			class="aspect-square w-full rounded-md object-cover md:w-[45%]"
+			class="aspect-square w-full rounded-md object-cover md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
 			sizes="(min-width: 1280px) calc(30vw - 21px), (min-width: 780px) calc(45vw - 32px), calc(100vw - 70px)"
 		/>
@@ -36,7 +36,7 @@ const t = useTranslations(lang);
 		<Image
 			imagePath="/src/assets/ines_2.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov walking through the mountains of Switzerland"
-			class="order-2 aspect-square w-full rounded-md object-cover md:w-[45%]"
+			class="order-2 aspect-square w-full rounded-md object-cover md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
 			sizes="(min-width: 1280px) calc(30vw - 21px), (min-width: 780px) calc(45vw - 32px), calc(100vw - 70px)"
 		/>
@@ -50,9 +50,9 @@ const t = useTranslations(lang);
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
 		<Image
-			imagePath="/src/assets/ines_3.jpg"
+			imagePath="/src/assets/my_way_3.jpg"
 			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
-			class="aspect-square w-full rounded-md object-cover md:w-[45%]"
+			class="aspect-square w-full rounded-md object-cover md:w-[40%] object-bottom"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
 			sizes="(min-width: 1280px) calc(30vw - 21px), (min-width: 780px) calc(45vw - 32px), calc(100vw - 70px)"
 		/>
@@ -61,6 +61,22 @@ const t = useTranslations(lang);
 				{t("why_me.reason_3.title")}
 			</h2>
 			<p class="md:text-center">{t("why_me.reason_3.description")}</p>
+		</div>
+	</article>
+
+	<article class="md:flex md:gap-8 xl:w-2/3">
+		<Image
+			imagePath="/src/assets/ines_3.jpg"
+			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
+			class="order-2 aspect-square w-full rounded-md object-cover md:w-[40%]"
+			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
+			sizes="(min-width: 1280px) calc(30vw - 21px), (min-width: 780px) calc(45vw - 32px), calc(100vw - 70px)"
+		/>
+		<div class="my-8 w-full md:flex md:flex-col md:justify-center xl:w-1/2">
+			<h2 class="mb-4 text-center text-2xl font-bold">
+				{t("why_me.reason_4.title")}
+			</h2>
+			<p class="md:text-center">{t("why_me.reason_4.description")}</p>
 		</div>
 	</article>
 </section>
