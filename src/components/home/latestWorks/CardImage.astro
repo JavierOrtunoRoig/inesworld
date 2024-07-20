@@ -13,10 +13,7 @@ const url = `/trip/${Astro.props.country.toLowerCase()}`;
 import { Image } from "astro:assets";
 ---
 
-<a
-	class="flex w-full justify-center transition-transform hover:scale-105 hover:cursor-pointer sm:w-96"
-	href={url}
->
+<a class="flex w-full justify-center transition-transform hover:scale-105 hover:cursor-pointer sm:w-96" href={url}>
 	<article class="card image-full shadow before:opacity-15">
 		<figure>
 			<Image src={src} alt={alt} width={450} />
