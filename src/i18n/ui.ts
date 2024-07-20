@@ -100,9 +100,9 @@ export const ui = {
 			"I deliver the final product, making sure it meets your expectations and is ready to impress your audience.",
 
 		"latest_works.title": "See my work",
-		"lastest_works.country_1": "Indonesia",
-		"lastest_works.country_2": "Vietnam",
-		"lastest_works.country_3": "Switzerland",
+		"latest_works.country_1": "Indonesia",
+		"latest_works.country_2": "Vietnam",
+		"latest_works.country_3": "Switzerland",
 
 		"paypal.title": "Support my work",
 		"paypal.descrition":
@@ -237,9 +237,9 @@ export const ui = {
 			"Entrego el producto final, asegurándome de que cumpla con tus expectativas y esté listo para impresionar a tu audiencia.",
 
 		"latest_works.title": "Mira mi trabajo",
-		"lastest_works.country_1": "Indonesia",
-		"lastest_works.country_2": "Vietnam",
-		"lastest_works.country_3": "Suiza",
+		"latest_works.country_1": "Indonesia",
+		"latest_works.country_2": "Vietnam",
+		"latest_works.country_3": "Suiza",
 
 		"paypal.title": "Apóyame my trabajo",
 		"paypal.descrition":

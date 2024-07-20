@@ -1,20 +1,3 @@
-export const constsLanguages = {
-  en: {
-    hover: "Hover over a country",
-    countryInfo: "Country information",
-    name: "Name",
-    continent: "Continent",
-		subregion: "Subregion",
-  },
-  es: {
-    hover: "Pasa el ratón sobre un país",
-    countryInfo: "Información del país",
-    name: "Nombre",
-    continent: "Continente",
-		subregion: "Subregión",
-  },
-}
-
 export interface Trip {
 	title: string;
 	link: string;
