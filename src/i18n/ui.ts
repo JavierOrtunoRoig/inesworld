@@ -18,7 +18,7 @@ export const ui = {
 
 		"index.title": "Hey, It's Inés!",
 		"index.description":
-			"Discover the portfolio of Inés World, photographer and filmmaker. Traveling the world to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
+			"Discover the portfolio of Inés World, photographer and filmmaker. Travelling the world to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
 		"about.description":
 			"Hey, it's Inés! On this page, I share my story and deep love for photography. Every image I capture has a story behind it, reflecting my passion for travel and my connection to emotions and unique moments. Discover how I blend my art with my nomadic lifestyle, creating images that capture the essence of each experience.",
 		"blog.description":
@@ -47,7 +47,7 @@ export const ui = {
 		"typewriter.text_3": "Filmmaking",
 		"typewriter.text_4": "Storytelling",
 		"typewriter.text_5": "Connecting",
-		"typewriter.text_6": "Traveling",
+		"typewriter.text_6": "Travelling",
 
 		"showreel.title": "Watch my showreel",
 
@@ -106,7 +106,7 @@ export const ui = {
 
 		"paypal.title": "Support my work",
 		"paypal.descrition":
-			"Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!",
+			"Travelling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!",
 
 		"about.title": "About me",
 
