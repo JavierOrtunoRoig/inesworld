@@ -18,7 +18,7 @@ export const ui = {
 
 		"index.title": "Hey, It's Inés!",
 		"index.description":
-			"Discover the portfolio of Inés World, photographer and filmmaker. Travelling the world to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
+			"Discover the portfolio of Inés World, photographer and filmmaker. Traveling the world to tell unique stories. Explore my showreel and uncover my skills in scriptwriting, filming, and editing. See how I transform images with my editing process and explore my latest photographic works.",
 		"about.description":
 			"Hey, it's Inés! On this page, I share my story and deep love for photography. Every image I capture has a story behind it, reflecting my passion for travel and my connection to emotions and unique moments. Discover how I blend my art with my nomadic lifestyle, creating images that capture the essence of each experience.",
 		"blog.description":
@@ -47,7 +47,7 @@ export const ui = {
 		"typewriter.text_3": "Filmmaking",
 		"typewriter.text_4": "Storytelling",
 		"typewriter.text_5": "Connecting",
-		"typewriter.text_6": "Travelling",
+		"typewriter.text_6": "Traveling",
 
 		"showreel.title": "Watch my showreel",
 
@@ -189,20 +189,20 @@ export const ui = {
 		"showreel.title": "Mira mi showreel",
 
 		"why_me.title": "Mi manera",
-		"why_me.subtitle": "Haciendote sentir el mundo",
-		"why_me.reason_1.title": "The power of stories",
+		"why_me.subtitle": "Haciéndote sentir el mundo",
+		"why_me.reason_1.title": "El poder de las historias",
 		"why_me.reason_1.description":
 			"Pienso que hay historias que tienen el poder de cambiar el mundo. Mi objetivo es dar voz a través de la fotografía y el filmmaking a todas esas realidades con potencial que puedan inspirar al cambio.",
 
-		"why_me.reason_2.title": "Community and Nature",
+		"why_me.reason_2.title": "Comunidad y naturaleza",
 		"why_me.reason_2.description":
 			"Son los pilares de mi trabajo, busco la preservación y el cuidado de ambos, tratando de promover proyectos que mejoren la calidad de vida de comunidades y que protejan el mundo donde vivimos.",
 
-		"why_me.reason_3.title": "Authenticity and Immersion",
+		"why_me.reason_3.title": "Autenticidad e inmersión",
 		"why_me.reason_3.description":
 			"La autenticidad es la esencia de mi trabajo. Me sumerjo en cada historia, capturando el alma de sus habitantes y la realidad que les rodea.",
 
-		"why_me.reason_4.title": "Looking for Beauty",
+		"why_me.reason_4.title": "Buscando la belleza",
 		"why_me.reason_4.description":
 			"Busco la belleza en cada detalle, ya sea en un paisaje impresionante o en un momento íntimo y fugaz. Mi objetivo es descubrir y resaltar esa belleza para que cada imagen y vídeo se conviertan en una obra de arte.",
 
