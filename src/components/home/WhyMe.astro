@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 	</h1>
 	<h2 class="subtitle mb-12 tracking-wider">Making you feel the world</h2>
 
-	<article class="md:flex md:gap-8 xl:w-2/3">
+	<article id="move-image-1" class="md:flex md:gap-8 xl:w-2/3">
 		<Image
 			imagePath="/src/assets/my_way_1.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov stroking a cow in a field in Switzerland"
@@ -32,7 +32,7 @@ const t = useTranslations(lang);
 		</div>
 	</article>
 
-	<article class="md:flex md:gap-8 xl:w-2/3">
+	<article id="move-image-2" class="md:flex md:gap-8 xl:w-2/3">
 		<Image
 			imagePath="/src/assets/my_way_2.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov walking through the mountains of Switzerland"
@@ -48,7 +48,7 @@ const t = useTranslations(lang);
 		</div>
 	</article>
 
-	<article id="move-image" class="md:flex md:gap-8 xl:w-2/3">
+	<article id="move-image-3" class="md:flex md:gap-8 xl:w-2/3">
 		<Image
 			imagePath="/src/assets/my_way_3.jpg"
 			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
@@ -64,7 +64,7 @@ const t = useTranslations(lang);
 		</div>
 	</article>
 
-	<article class="md:flex md:gap-8 xl:w-2/3">
+	<article id="move-image-4" class="md:flex md:gap-8 xl:w-2/3">
 		<Image
 			imagePath="/src/assets/my_way_4.jpg"
 			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
@@ -94,9 +94,27 @@ const t = useTranslations(lang);
 
 <style is:inline>
 	/* change css of third article  */
-	#move-image {
+	#move-image-1 {
+		img {
+			object-position: 75% 100%;
+		}
+	}
+
+	#move-image-2 {
+		img {
+			object-position: 0 100%;
+		}
+	}
+
+	#move-image-3 {
 		img {
 			object-position: 0 80%;
+		}
+	}
+
+	#move-image-4 {
+		img {
+			object-position: 65% 100%;
 		}
 	}
 </style>
