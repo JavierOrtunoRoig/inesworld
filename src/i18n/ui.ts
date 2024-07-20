@@ -65,7 +65,7 @@ export const ui = {
 		"why_me.reason_3.title": "Authenticity and Immersion",
 		"why_me.reason_3.description":
 			"Authenticity is the essence of my work. I immerse myself in each story, capturing the soul of its people and the reality surrounding them.",
-		
+
 		"why_me.reason_4.title": "Looking for Beauty",
 		"why_me.reason_4.description":
 			"I seek beauty in every detail, whether in a breathtaking landscape or an intimate, fleeting moment. My goal is to discover and highlight that beauty so that each image and video becomes a work of art.",
@@ -106,7 +106,8 @@ export const ui = {
 		"lastest_works.country_3": "Switzerland",
 
 		"paypal.title": "Support my work",
-		"paypal.descrition": "Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!",
+		"paypal.descrition":
+			"Traveling and maintaining photography and editing equipment is costly, so any donation to help improve my work is greatly appreciated. If you enjoy my photos and videos, your support will help me continue creating and sharing amazing moments. Thank you for your generosity!",
 
 		"about.title": "About me",
 
@@ -185,7 +186,7 @@ export const ui = {
 		"typewriter.text_4": "Contar historias",
 		"typewriter.text_5": "Conectando",
 		"typewriter.text_6": "Viajar",
-		
+
 		"showreel.title": "Mira mi showreel",
 		"showreel.button": "¡Descubre mi trabajo!",
 
@@ -243,8 +244,8 @@ export const ui = {
 		"lastest_works.country_3": "Suiza",
 
 		"paypal.title": "Apóyame my trabajo",
-		"paypal.descrition": "Viajar y mantener el equipo de fotografía y edición es costoso, por lo que cualquier donación para ayudar a mejorar mi trabajo es muy apreciada. Si disfrutas de mis fotos y vídeos, tu apoyo me ayudará a seguir creando y compartiendo momentos increíbles. ¡Gracias por tu generosidad!",
-
+		"paypal.descrition":
+			"Viajar y mantener el equipo de fotografía y edición es costoso, por lo que cualquier donación para ayudar a mejorar mi trabajo es muy apreciada. Si disfrutas de mis fotos y vídeos, tu apoyo me ayudará a seguir creando y compartiendo momentos increíbles. ¡Gracias por tu generosidad!",
 
 		"about.title": "Sobre mí",
 
@@ -253,18 +254,20 @@ export const ui = {
 			"Mi historia comienza en el sur de España, Málaga. Allí había una niña que descubrió el mundo desde casa, gracias al trabajo de otros creadores que me acercaron otras culturas cuando no podía hacerlo por mi misma. Desde ese entonces supe que quería hacer lo que veía en la televisión: contar historias. Así que mi curiosidad me ha llevado a explorar el mundo con mi cámara con el propósito de documentar esas realidades para hacer a los demás sentir el mundo. ",
 
 		"about_section_2.title": "Mi viaje",
-		"about_section_2.text_1": "Sin embargo antes de lanzarme al mundo y explorarlo por mi cuenta estuve formándome en filmmaking, photography y media además de acumular experiencia profesional como cámara y editora en empresas de cine y teatro como Krakow film Klaster o Soho theatre Caixa bank. As a freelancer he trabajado para artistas musicales e influencers que acumulan cientos de miles de reproducciones y seguidores, además de hacer documentales para asociaciones que tienen el objetivo de impactar positivamente a nivel social.",
-		"about_section_2.text_2": "Esta experiencia me ayudó a formar mi visión y conocer las herramientas que necesitaba para darle voz a esas amazing historias que merecen ser contadas, in order to make people from all over the world connect and empathize with their realities. ",
+		"about_section_2.text_1":
+			"Sin embargo antes de lanzarme al mundo y explorarlo por mi cuenta estuve formándome en filmmaking, photography y media además de acumular experiencia profesional como cámara y editora en empresas de cine y teatro como Krakow film Klaster o Soho theatre Caixa bank. As a freelancer he trabajado para artistas musicales e influencers que acumulan cientos de miles de reproducciones y seguidores, además de hacer documentales para asociaciones que tienen el objetivo de impactar positivamente a nivel social.",
+		"about_section_2.text_2":
+			"Esta experiencia me ayudó a formar mi visión y conocer las herramientas que necesitaba para darle voz a esas amazing historias que merecen ser contadas, in order to make people from all over the world connect and empathize with their realities. ",
 
 		"blog.input.placeholder": "Busca un post por título, fecha o tag",
 		"blog.no_posts": "No hay posts por el momento",
-		"blog.no_posts_description": "Actualmente me encuentro trabajando en la creación de contenido. Habrá posts próximamente.",
+		"blog.no_posts_description":
+			"Actualmente me encuentro trabajando en la creación de contenido. Habrá posts próximamente.",
 
 		"portfolio.title": "Ver galería",
 
 		"contact.title": "Contacta conmigo",
-		"contact.subtitle":
-			"Let's bring your story to life!",
+		"contact.subtitle": "¡Demos vida a tu historia!!",
 		"contact.label.name": "Nombre:",
 		"contact.label.email": "Correo electrónico:",
 		"contact.label.message": "Mensaje:",

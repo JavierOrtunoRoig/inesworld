@@ -50,7 +50,9 @@ const t = useTranslations(lang);
 		const commingContainer = document.getElementById("comming-countries") as HTMLDivElement;
 		const visitedContainer = document.getElementById("visited-countries") as HTMLDivElement;
 
-		if (!commingContainer || !visitedContainer) return;
+		const alreadyHaveCards = commingContainer.children.length > 0 || visitedContainer.children.length > 0;
+
+		if (!commingContainer || !visitedContainer || alreadyHaveCards) return;
 
 		// Next trips
 		const countriesToVisit = atlas.features.filter((country) => country.properties.visited === 1);
