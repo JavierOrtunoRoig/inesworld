@@ -60,7 +60,6 @@ const t = useTranslations(lang);
 		<Dashboard />
 		<DiffContainer />
 		<LatestWorks />
-		
 	</div>
 </BasicLayout>
 
@@ -68,6 +67,8 @@ const t = useTranslations(lang);
 	#who-am-i {
 		img {
 			max-height: calc(100vh - 120px);
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
 		}
 	}
 </style>
@@ -84,7 +85,6 @@ const t = useTranslations(lang);
 		if (paypalText instanceof HTMLSpanElement) {
 			paypalText.style.color = "white";
 		}
-
 	};
 
 	document.addEventListener("astro:page-load", runAnimation);
