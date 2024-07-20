@@ -11,11 +11,11 @@ const t = useTranslations(lang);
 	<h1 class="mb-4 text-center text-4xl font-bold uppercase sm:text-6xl">
 		{t("why_me.title")}
 	</h1>
-	<h2 class="subtitle tracking-wider mb-12">Making you feel the world</h2>
+	<h2 class="subtitle mb-12 tracking-wider">Making you feel the world</h2>
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
 		<Image
-			imagePath="/src/assets/ines_1.jpg"
+			imagePath="/src/assets/my_way_1.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov stroking a cow in a field in Switzerland"
 			class="aspect-square w-full rounded-md object-cover md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
@@ -34,7 +34,7 @@ const t = useTranslations(lang);
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
 		<Image
-			imagePath="/src/assets/ines_2.jpg"
+			imagePath="/src/assets/my_way_2.jpg"
 			altText="Inés cuevas / inesworld / inesworld.mov walking through the mountains of Switzerland"
 			class="order-2 aspect-square w-full rounded-md object-cover md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
@@ -48,11 +48,11 @@ const t = useTranslations(lang);
 		</div>
 	</article>
 
-	<article class="md:flex md:gap-8 xl:w-2/3">
+	<article id="move-image" class="md:flex md:gap-8 xl:w-2/3">
 		<Image
 			imagePath="/src/assets/my_way_3.jpg"
 			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
-			class="aspect-square w-full rounded-md object-cover md:w-[40%] object-bottom"
+			class="aspect-square w-full rounded-md object-cover object-bottom md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
 			sizes="(min-width: 1280px) calc(30vw - 21px), (min-width: 780px) calc(45vw - 32px), calc(100vw - 70px)"
 		/>
@@ -66,7 +66,7 @@ const t = useTranslations(lang);
 
 	<article class="md:flex md:gap-8 xl:w-2/3">
 		<Image
-			imagePath="/src/assets/ines_3.jpg"
+			imagePath="/src/assets/my_way_4.jpg"
 			altText="Crystal lake with a boat in the middle of the mountains of Switzerland"
 			class="order-2 aspect-square w-full rounded-md object-cover md:w-[40%]"
 			widths={[256, 700, 880, 1110, 1310, 1470, 1536]}
@@ -91,3 +91,12 @@ const t = useTranslations(lang);
 
 	document.addEventListener("astro:page-load", runAnimation);
 </script>
+
+<style is:inline>
+	/* change css of third article  */
+	#move-image {
+		img {
+			object-position: 0 80%;
+		}
+	}
+</style>
