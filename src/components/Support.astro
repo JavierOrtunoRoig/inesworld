@@ -10,33 +10,33 @@ const t = useTranslations(lang);
 ---
 
 <section class="fade-up flex flex-col items-center justify-center p-8">
-  <h2 class="title">{t("paypal.title")}</h2>
+	<h2 class="title">{t("paypal.title")}</h2>
 
-  <div class="flex flex-col gap-8 text-center md:flex-row">
-    <Image
+	<div class="flex flex-col gap-8 text-center md:flex-row">
+		<!-- <Image
     imagePath="/src/assets/ok.jpg"
     altText="Inés Cuevas Jiménez / inesworld / inesworld.mov doing a ok sign"
     class="w-96 rounded"
-    />
-    <div class="flex flex-col justify-center items-center gap-12">
-      <p class="md:max-w-[500px]">
-        {t("paypal.descrition")}
-      </p>
-      <form class="flex justify-center items-center" action="https://www.paypal.com/donate" method="post" target="_top">
-        <input type="hidden" name="hosted_button_id" value="JFNWYYZ52SR3J" />
-        <script
-        src="https://www.paypalobjects.com/api/button.js?"
-        data-merchant="braintree"
-        data-id="paypal-button"
-        data-button="checkout"
-        data-color="gold"
-        data-size="medium"
-        data-shape="pill"
-        data-button_type="submit"
-        data-button_disabled="false"></script>
-      </form>
-    </div>
-  </div>
+    /> -->
+		<div class="flex flex-col items-center justify-center gap-12">
+			<p class="md:max-w-[500px]">
+				{t("paypal.descrition")}
+			</p>
+			<form class="flex items-center justify-center" action="https://www.paypal.com/donate" method="post" target="_top">
+				<input type="hidden" name="hosted_button_id" value="JFNWYYZ52SR3J" />
+				<script
+					src="https://www.paypalobjects.com/api/button.js?"
+					data-merchant="braintree"
+					data-id="paypal-button"
+					data-button="checkout"
+					data-color="gold"
+					data-size="medium"
+					data-shape="pill"
+					data-button_type="submit"
+					data-button_disabled="false"></script>
+			</form>
+		</div>
+	</div>
 </section>
 
 <script>
@@ -51,7 +51,6 @@ const t = useTranslations(lang);
 		if (paypalText instanceof HTMLSpanElement) {
 			paypalText.style.color = "white";
 		}
-
 	};
 
 	document.addEventListener("astro:page-load", runAnimation);
