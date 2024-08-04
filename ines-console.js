@@ -3,9 +3,6 @@ import en from './src/en.json' assert { type: 'json' };
 import es from './src/es.json' assert { type: 'json' };
 import fs from 'fs';
 
-fs.writeFileSync('./src/en.json', JSON.stringify(en, null, 2));
-fs.writeFileSync('./src/es.json', JSON.stringify(es, null, 2));
-
 const actions = {
   cambiarTexto,
 }
@@ -13,18 +10,18 @@ const actions = {
 
 intro(`¡Hey, it's Javi! Este es el panel de administración de InesWorld. ¿En qué puedo ayudarte?`);
 
-// const projectType = await select({
-//   message: 'Elige la acción que quieras realizar',
-//   options: [
-//     {
-//       value: 'cambiarTexto',
-//       label: 'Cambiar textos',
-//       hint: 'Actualiza los textos de la web',
-//     },
-//   ],
-// });
+const projectType = await select({
+  message: 'Elige la acción que quieras realizar',
+  options: [
+    {
+      value: 'cambiarTexto',
+      label: 'Cambiar textos',
+      hint: 'Actualiza los textos de la web',
+    },
+  ],
+});
 
-// await actions[projectType]();
+await actions[projectType]();
 
 
 outro(`Enohorabuena, has actulizado la web de InesWorld. ¡A seguir creando, hasta la próxima!`);
@@ -100,8 +97,6 @@ async function cambiarTexto() {
   log.message('Por:');
   log.message(`"${newTraduction}"`);
   log.message(`En el idioma '${desiredLanguage}'`);
-
-  // log.info(`Vas a cambiar el texto \n "${dictionary[selectedKey]}" \n por \n "${newTraduction}" \n en el idioma ${desiredLanguage}`);
 
   if (updateOtherLanguage === 'yes') {
     log.info(`Además, vas a cambiar el texto "${dictionary[selectedKey]}" por "${newTraductionInOtherLanguage}" en el idioma ${notDesiredLanguage}`);
