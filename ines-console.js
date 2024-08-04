@@ -6,6 +6,8 @@ import { exec } from 'child_process';
 
 const actions = {
   cambiarTexto,
+  subirCambios,
+  cancel,
 }
 
 const yesNoOptions = [
@@ -27,6 +29,16 @@ const selectAction = {
       label: 'Cambiar textos',
       hint: 'Actualiza los textos de la web',
     },
+    {
+      value: 'subirCambios',
+      label: 'Subir cambios',
+      hint: 'Sube los cambios a la web para que sean visibles para todos',
+    },
+    {
+      value: 'cancel',
+      label: 'Cancelar',
+      hint: 'Salir del programa',
+    }
   ],
 }
 
@@ -166,19 +178,46 @@ async function cambiarTexto() {
 
   log.info('Intentando subir los cambios de la web...');
 
+  // I think this should be a separate action
+  // try {
+  //   exec('git add . && git commit -m "Update translations" && git push', (error, stdout, stderr) => {
+  //     if (error) {
+  //       log.error('No se ha podido subir los cambios a la web');
+  //       log.error(error.message);
+  //       return;
+  //     }
+
+  //     log.success('Cambios subidos a la web con éxito');
+  //   });
+  // } catch (error) {
+  //   log.error('No se ha podido subir los cambios a la web');
+  //   log.error(error.message);
+  // }
+
+}
+
+async function cancel() {
+  log.info('Saliendo del programa...');
+  process.exit(0);
+}
+
+async function subirCambios() {
+  log.info('Intentando subir los cambios de la web...');
+
   try {
-    exec('git add . && git commit -m "Update translations" && git push', (error, stdout, stderr) => {
+    exec('git add . && git commit -m "Ines has update the web" && git push', (error, stdout, stderr) => {
       if (error) {
         log.error('No se ha podido subir los cambios a la web');
+        log.error('Por favor, contáctame para poder solucionar el problema');
         log.error(error.message);
         return;
       }
-
+      
       log.success('Cambios subidos a la web con éxito');
     });
   } catch (error) {
     log.error('No se ha podido subir los cambios a la web');
+    log.error('Por favor, contáctame para poder solucionar el problema');
     log.error(error.message);
   }
-
 }
