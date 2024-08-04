@@ -1,129 +1,81 @@
 {
-  "keywords":
-    "Inés Cuevas Jiménez, inesworld, Inés world, inesworld.mov, portfolio, fotografía, viajes, excursiones, mundo, cineasta, cinematografía, narración visual, aventura, fotografía de paisajes, fotografía de viajes, documental, realización cinematográfica, cortometrajes, director de fotografía, nómada digital, ansias de viajar, exploración global",
-
+  "keywords": "Inés Cuevas Jiménez, inesworld, Inés world, inesworld.mov, portfolio, fotografía, viajes, excursiones, mundo, cineasta, cinematografía, narración visual, aventura, fotografía de paisajes, fotografía de viajes, documental, realización cinematográfica, cortometrajes, director de fotografía, nómada digital, ansias de viajar, exploración global",
   "index.title": "¡Hola, soy Inés!",
-  "index.description":
-    "Descubre el portafolio de Inés World, fotógrafa y cineasta. Viajando por el mundo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Mira cómo transformo las imágenes con mi proceso de edición y explora mis últimos trabajos fotográficos.",
-  "about.description":
-    "¡Hola, soy Inés! En esta página, comparto mi historia y mi profundo amor por la fotografía. Cada imagen que capturo tiene una historia detrás, reflejando mi pasión por los viajes y mi conexión con las emociones y momentos únicos. Descubre cómo combino mi arte con mi estilo de vida nómada, creando imágenes que capturan la esencia de cada experiencia.",
-  "blog.description":
-    "Explora el blog de Inés, donde ella publica sobre sus aventuras fotográficas alrededor del mundo. Descubre historias, consejos y experiencias de sus viajes, y únete a su viaje como fotógrafa y nómada digital.",
-  "portfolio.description":
-    "Descubre los proyectos fotográficos de Inés, organizados por país. Explora el carrusel interactivo y sumérgete en las imágenes capturadas durante sus viajes por el mundo. Cada proyecto cuenta una historia única a través de la fotografía.",
-  "contact.description":
-    "Ponte en contacto conmigo para proyectos de fotografía y cine. Si buscas a una fotógrafa y cineasta apasionada para capturar tu historia especial, no dudes en enviarme un mensaje. Estoy aquí para ayudar a dar vida a tus ideas.",
-  "map.description":
-    "Explora los viajes de Inés. Descubre los países que he visitado a través de un mapa interactivo, consulta mi calendario de viajes y revisa la lista completa de mis destinos. Únete a mi viaje como fotógrafa y nómada digital.",
-  "404.description":
-    "Ups, parece que esta página no existe. Vuelve al inicio de Inés Cuevas Jiménez (inesworld) y explora mis proyectos de fotografía y filmmaking, mis viajes y más.",
-
+  "index.description": "Descubre el portafolio de Inés World, fotógrafa y cineasta. Viajando por el mundo para contar historias únicas. Explora mi showreel y descubre mis habilidades en escritura de guiones, filmación y edición. Mira cómo transformo las imágenes con mi proceso de edición y explora mis últimos trabajos fotográficos.",
+  "about.description": "¡Hola, soy Inés! En esta página, comparto mi historia y mi profundo amor por la fotografía. Cada imagen que capturo tiene una historia detrás, reflejando mi pasión por los viajes y mi conexión con las emociones y momentos únicos. Descubre cómo combino mi arte con mi estilo de vida nómada, creando imágenes que capturan la esencia de cada experiencia.",
+  "blog.description": "Explora el blog de Inés, donde ella publica sobre sus aventuras fotográficas alrededor del mundo. Descubre historias, consejos y experiencias de sus viajes, y únete a su viaje como fotógrafa y nómada digital.",
+  "portfolio.description": "Descubre los proyectos fotográficos de Inés, organizados por país. Explora el carrusel interactivo y sumérgete en las imágenes capturadas durante sus viajes por el mundo. Cada proyecto cuenta una historia única a través de la fotografía.",
+  "contact.description": "Ponte en contacto conmigo para proyectos de fotografía y cine. Si buscas a una fotógrafa y cineasta apasionada para capturar tu historia especial, no dudes en enviarme un mensaje. Estoy aquí para ayudar a dar vida a tus ideas.",
+  "map.description": "Explora los viajes de Inés. Descubre los países que he visitado a través de un mapa interactivo, consulta mi calendario de viajes y revisa la lista completa de mis destinos. Únete a mi viaje como fotógrafa y nómada digital.",
+  "404.description": "Ups, parece que esta página no existe. Vuelve al inicio de Inés Cuevas Jiménez (inesworld) y explora mis proyectos de fotografía y filmmaking, mis viajes y más.",
   "footer": "Copyright © 2024 - Todos los derechos reservados - Inés Cuevas Jiménez | inesworld.mov | inesworld",
-
   "navbar.home": "Inicio",
   "navbar.about": "Sobre mí",
   "navbar.portfolio": "Portafolio",
   "navbar.blog": "Blog",
   "navbar.contact": "Contacto",
   "navbar.trip_map": "Mis viajes",
-
   "typewriter.text_1": "Vamos a crear juntos",
   "typewriter.text_2": "Fotografía",
   "typewriter.text_3": "Filmmaking",
   "typewriter.text_4": "Contar historias",
   "typewriter.text_5": "Conectando",
   "typewriter.text_6": "Viajar",
-
   "showreel.title": "Mira mi showreel",
-
   "why_me.title": "Mi manera",
   "why_me.subtitle": "Haciéndote sentir el mundo",
   "why_me.reason_1.title": "El poder de las historias",
-  "why_me.reason_1.description":
-    "Pienso que hay historias que tienen el poder de cambiar el mundo. Mi objetivo es dar voz a través de la fotografía y el filmmaking a todas esas realidades con potencial que puedan inspirar al cambio.",
-
+  "why_me.reason_1.description": "Pienso que hay historias que tienen el poder de cambiar el mundo. Mi objetivo es dar voz a través de la fotografía y el filmmaking a todas esas realidades con potencial que puedan inspirar al cambio.",
   "why_me.reason_2.title": "Comunidad y naturaleza",
-  "why_me.reason_2.description":
-    "Son los pilares de mi trabajo, busco la preservación y el cuidado de ambos, tratando de promover proyectos que mejoren la calidad de vida de comunidades y que protejan el mundo donde vivimos.",
-
+  "why_me.reason_2.description": "Son los pilares de mi trabajo, busco la preservación y el cuidado de ambos, tratando de promover proyectos que mejoren la calidad de vida de comunidades y que protejan el mundo donde vivimos.",
   "why_me.reason_3.title": "Autenticidad e inmersión",
-  "why_me.reason_3.description":
-    "La autenticidad es la esencia de mi trabajo. Me sumerjo en cada historia, capturando el alma de sus habitantes y la realidad que les rodea.",
-
+  "why_me.reason_3.description": "La autenticidad es la esencia de mi trabajo. Me sumerjo en cada historia, capturando el alma de sus habitantes y la realidad que les rodea.",
   "why_me.reason_4.title": "Buscando la belleza",
-  "why_me.reason_4.description":
-    "Busco la belleza en cada detalle, ya sea en un paisaje impresionante o en un momento íntimo y fugaz. Mi objetivo es descubrir y resaltar esa belleza para que cada imagen y vídeo se conviertan en una obra de arte.",
-
+  "why_me.reason_4.description": "Busco la belleza en cada detalle, ya sea en un paisaje impresionante o en un momento íntimo y fugaz. Mi objetivo es descubrir y resaltar esa belleza para que cada imagen y vídeo se conviertan en una obra de arte.",
   "skills.skill_1.title": "ESCRITURA DE GUIONES",
   "skills.skill_1.reason": "Crear guiones convincentes que den vida a tus historias",
   "skills.skill_2.title": "FILMACIÓN",
   "skills.skill_2.reason": "Transformar conceptos en metraje visualmente impresionante y cautivador",
   "skills.skill_3.title": "EDICIÓN",
   "skills.skill_3.reason": "Tejer juntos cada elemento con la magia de la edición para crear el producto final",
-
   "diff.title": "Mira mi magia",
-
   "process.title": "Mi Proceso",
   "process.step_1.title": "1. Conectar",
-  "process.step_1.description":
-    "Conéctate conmigo para compartir los detalles de tu proyecto. Juntos exploraremos cómo puedo ayudarte a alcanzar tus objetivos y dar vida a tu visión.",
-
+  "process.step_1.description": "Conéctate conmigo para compartir los detalles de tu proyecto. Juntos exploraremos cómo puedo ayudarte a alcanzar tus objetivos y dar vida a tu visión.",
   "process.step_2.title": "2. Concepto",
-  "process.step_2.description":
-    "Desarrollamos conceptos visuales únicos y creativos, diseñados individualmente para ti. Contamos historias significativas y construimos una comunidad fuerte alrededor de tu marca.",
-
+  "process.step_2.description": "Desarrollamos conceptos visuales únicos y creativos, diseñados individualmente para ti. Contamos historias significativas y construimos una comunidad fuerte alrededor de tu marca.",
   "process.step_3.title": "3. Crear",
-  "process.step_3.description":
-    "Ahora es mi turno. Comienzo a trabajar en tu proyecto, utilizando mi experiencia y creatividad para convertir tu visión en realidad.",
-
+  "process.step_3.description": "Ahora es mi turno. Comienzo a trabajar en tu proyecto, utilizando mi experiencia y creatividad para convertir tu visión en realidad.",
   "process.step_4.title": "4. Revisar",
-  "process.step_4.description":
-    "Recibo tus comentarios sobre el proyecto. Trabajo contigo para hacer los ajustes necesarios y asegurarme de que el resultado final cumpla con tus expectativas.",
-
+  "process.step_4.description": "Recibo tus comentarios sobre el proyecto. Trabajo contigo para hacer los ajustes necesarios y asegurarme de que el resultado final cumpla con tus expectativas.",
   "process.step_5.title": "5. Entregar",
-  "process.step_5.description":
-    "Entrego el producto final, asegurándome de que cumpla con tus expectativas y esté listo para impresionar a tu audiencia.",
-
+  "process.step_5.description": "Entrego el producto final, asegurándome de que cumpla con tus expectativas y esté listo para impresionar a tu audiencia.",
   "latest_works.title": "Mira mi trabajo",
   "latest_works.country_1": "Indonesia",
   "latest_works.country_2": "Vietnam",
   "latest_works.country_3": "Suiza",
-
   "paypal.title": "Apóyame my trabajo",
-  "paypal.descrition":
-    "Viajar y mantener el equipo de fotografía y edición es costoso, por lo que cualquier donación para ayudar a mejorar mi trabajo es muy apreciada. Si disfrutas de mis fotos y vídeos, tu apoyo me ayudará a seguir creando y compartiendo momentos increíbles. ¡Gracias por tu generosidad!",
-
+  "paypal.descrition": "Viajar y mantener el equipo de fotografía y edición es costoso, por lo que cualquier donación para ayudar a mejorar mi trabajo es muy apreciada. Si disfrutas de mis fotos y vídeos, tu apoyo me ayudará a seguir creando y compartiendo momentos increíbles. ¡Gracias por tu generosidad!",
   "about.title": "Sobre mí",
-
   "about_section_1.title": "Mi historia",
-  "about_section_1.text_1":
-    "Mi historia comienza en el sur de España, Málaga. Allí había una niña que descubrió el mundo desde casa, gracias al trabajo de otros creadores que me acercaron otras culturas cuando no podía hacerlo por mi misma. Desde ese entonces supe que quería hacer lo que veía en la televisión: contar historias. Así que mi curiosidad me ha llevado a explorar el mundo con mi cámara con el propósito de documentar esas realidades para hacer a los demás sentir el mundo. ",
-
+  "about_section_1.text_1": "Mi historia comienza en el sur de España, Málaga. Allí había una niña que descubrió el mundo desde casa, gracias al trabajo de otros creadores que me acercaron otras culturas cuando no podía hacerlo por mi misma. Desde ese entonces supe que quería hacer lo que veía en la televisión: contar historias. Así que mi curiosidad me ha llevado a explorar el mundo con mi cámara con el propósito de documentar esas realidades para hacer a los demás sentir el mundo. ",
   "about_section_2.title": "Mi viaje",
-  "about_section_2.text_1":
-    "Sin embargo antes de lanzarme al mundo y explorarlo por mi cuenta estuve formándome en filmmaking, photography y media además de acumular experiencia profesional como cámara y editora en empresas de cine y teatro como Krakow film Klaster o Soho theatre Caixa bank. As a freelancer he trabajado para artistas musicales e influencers que acumulan cientos de miles de reproducciones y seguidores, además de hacer documentales para asociaciones que tienen el objetivo de impactar positivamente a nivel social.",
-  "about_section_2.text_2":
-    "Esta experiencia me ayudó a formar mi visión y conocer las herramientas que necesitaba para darle voz a esas amazing historias que merecen ser contadas, in order to make people from all over the world connect and empathize with their realities. ",
-
+  "about_section_2.text_1": "Sin embargo antes de lanzarme al mundo y explorarlo por mi cuenta estuve formándome en filmmaking, photography y media además de acumular experiencia profesional como cámara y editora en empresas de cine y teatro como Krakow film Klaster o Soho theatre Caixa bank. As a freelancer he trabajado para artistas musicales e influencers que acumulan cientos de miles de reproducciones y seguidores, además de hacer documentales para asociaciones que tienen el objetivo de impactar positivamente a nivel social.",
+  "about_section_2.text_2": "Esta experiencia me ayudó a formar mi visión y conocer las herramientas que necesitaba para darle voz a esas amazing historias que merecen ser contadas, in order to make people from all over the world connect and empathize with their realities. ",
   "blog.input.placeholder": "Busca un post por título, fecha o tag",
   "blog.no_posts": "No hay posts por el momento",
-  "blog.no_posts_description":
-    "Actualmente me encuentro trabajando en la creación de contenido. Habrá posts próximamente.",
-
+  "blog.no_posts_description": "Actualmente me encuentro trabajando en la creación de contenido. Habrá posts próximamente.",
   "portfolio.title": "Ver galería",
-
   "contact.title": "Contacta conmigo",
   "contact.subtitle": "¡Demos vida a tu historia!!",
   "contact.label.name": "Nombre:",
   "contact.label.email": "Correo electrónico:",
   "contact.label.message": "Mensaje:",
   "contact.button": "Enviar petición",
-
   "map.title": "Todos mis viajes",
   "map.subtitle_1": "Calendario de viajes",
   "map.subtitle_2": "¡Próximamente!",
   "map.subtitle_3": "¡Países visitados!",
-
   "calendar.monday": "Lun",
   "calendar.tuesday": "Mar",
   "calendar.wednesday": "Mié",
