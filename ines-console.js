@@ -1,13 +1,16 @@
-import { intro, log, outro, select, text, cancel } from '@clack/prompts';
+import { intro, log, outro, select, text } from '@clack/prompts';
 import en from './src/en.json' assert { type: 'json' };
 import es from './src/es.json' assert { type: 'json' };
 import fs from 'fs';
+import path from 'path';
 import { exec } from 'child_process';
+
 
 const actions = {
   cambiarTexto,
   subirCambios,
-  cancel,
+  cancelProgram,
+  addPortfolioPhotos
 }
 
 const yesNoOptions = [
@@ -25,19 +28,24 @@ const selectAction = {
   message: 'Elige la acción que quieras realizar',
   options: [
     {
-      value: 'cambiarTexto',
-      label: 'Cambiar textos',
-      hint: 'Actualiza los textos de la web',
-    },
-    {
       value: 'subirCambios',
       label: 'Subir cambios',
       hint: 'Sube los cambios a la web para que sean visibles para todos',
     },
     {
-      value: 'cancel',
+      value: 'cancelProgram',
       label: 'Cancelar',
       hint: 'Salir del programa',
+    },
+    {
+      value: 'cambiarTexto',
+      label: 'Cambiar textos',
+      hint: 'Actualiza los textos de la web',
+    },
+    {
+      label: 'Añadir fotos a un portfolio',
+      value: 'addPortfolioPhotos',
+      hint: 'Añade fotos a un portfolio',
     }
   ],
 }
@@ -178,25 +186,59 @@ async function cambiarTexto() {
 
   log.info('Intentando subir los cambios de la web...');
 
-  // I think this should be a separate action
-  // try {
-  //   exec('git add . && git commit -m "Update translations" && git push', (error, stdout, stderr) => {
-  //     if (error) {
-  //       log.error('No se ha podido subir los cambios a la web');
-  //       log.error(error.message);
-  //       return;
-  //     }
+}
 
-  //     log.success('Cambios subidos a la web con éxito');
-  //   });
-  // } catch (error) {
-  //   log.error('No se ha podido subir los cambios a la web');
-  //   log.error(error.message);
-  // }
+async function addPortfolioPhotos() {
+
+  // check filenames in the folder ./content/gallery with sync approach
+  const portfolioPath = './src/content/gallery';
+  const assetsPath = './src/assets/trips';
+  const galleryFiles = fs.readdirSync(portfolioPath);
+
+  // show the files in the folder
+  const portfolio = await select({
+    message: 'Selecciona a qué portfolio quieres añadir fotos',
+    options: galleryFiles.map(file => ({ value: file, label: file })),
+  });
+  
+  log.info(`Has seleccionado el portfolio ${portfolio}`);
+  const folderPortfolio = path.basename(portfolio, '.json');
+
+  // ask for the path of the photos
+
+  const photosPath = await text({
+    message: 'Introduce la ruta de las fotos que quieres añadir, separadas por comas',
+    hint: 'Por ejemplo: c/path/to/photo1.jpg, c/path/to/photo2.jpg',
+  });
+
+  const photos = photosPath.split(',').map(photo => photo.trim());
+
+  photos.forEach(photo => {
+    fs.copyFileSync(photo, `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`);
+  });
+
+  // add the photos to the portfolio file
+  const portfolioFile = fs.readFileSync(`${portfolioPath}/${portfolio}`);
+  const portfolioData = JSON.parse(portfolioFile);
+
+  photos.forEach(photo => {
+    let finalPath = `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`;
+    if (finalPath.at(0) === '.') {
+      finalPath = finalPath.slice(1);
+    }
+    
+    portfolioData.photos.push({
+      place: '',
+      description: '',
+      path: finalPath,
+    });
+  });
+
+  fs.writeFileSync(`${portfolioPath}/${portfolio}`, JSON.stringify(portfolioData, null, 2));
 
 }
 
-async function cancel() {
+async function cancelProgram() {
   log.info('Saliendo del programa...');
   process.exit(0);
 }
