@@ -1,117 +1,22 @@
-import { intro, log, outro, select, text } from '@clack/prompts';
-import en from './src/en.json' assert { type: 'json' };
-import es from './src/es.json' assert { type: 'json' };
-import fs from 'fs';
+import { log, outro, select, text } from '@clack/prompts';
+
 import path from 'path';
 import { exec } from 'child_process';
+import { readFile, writeFile } from './prompt/files.js';
+import { main } from './prompt/steps/mainProcess.js';
+import { getLanguages, getDictionaries, searchTexts } from './prompt/helpers.js';
 
+main();
 
-const actions = {
-  cambiarTexto,
-  subirCambios,
-  cancelProgram,
-  addPortfolioPhotos
-}
-
-const yesNoOptions = [
-  {
-    value: 'yes',
-    label: 'Sí',
-  },
-  {
-    value: 'no',
-    label: 'No',
-  }
-]
-
-const selectAction = {
-  message: 'Elige la acción que quieras realizar',
-  options: [
-    {
-      value: 'subirCambios',
-      label: 'Subir cambios',
-      hint: 'Sube los cambios a la web para que sean visibles para todos',
-    },
-    {
-      value: 'cancelProgram',
-      label: 'Cancelar',
-      hint: 'Salir del programa',
-    },
-    {
-      value: 'cambiarTexto',
-      label: 'Cambiar textos',
-      hint: 'Actualiza los textos de la web',
-    },
-    {
-      label: 'Añadir fotos a un portfolio',
-      value: 'addPortfolioPhotos',
-      hint: 'Añade fotos a un portfolio',
-    }
-  ],
-}
-
-intro(`¡Hey, it's Javi! Este es el panel de administración de InesWorld. ¿En qué puedo ayudarte?`);
-
-const projectType = await select(selectAction);
-
-await actions[projectType]();
-
-
-outro(`Enhorabuena, has actulizado la web de InesWorld. ¡A seguir creando, hasta la próxima!`);
-
-/**
- * Get the desired language from the user and the not desired language
- * 
- * @returns {Promise<{ desiredLanguage: string, notDesiredLanguage: string }>}
- */
-
-async function getLanguages() {
-  const desiredLanguage = await select({
-    message: '¿En qué idioma quieres buscar el texto?',
-    options: [
-      {
-        value: 'en',
-        label: 'Inglés',
-      },
-      {
-        value: 'es',
-        label: 'Español',
-      }
-    ],
-  });
-
-  const notDesiredLanguage = desiredLanguage === 'en' ? 'es' : 'en';
-
-  return { desiredLanguage, notDesiredLanguage };
-}
-
-/**
- * @param {string} desiredLanguage
- * @returns {Promise<{ desiredDictionary notDesiredDictionary }>}
- */
-async function getDictionaries(desiredLanguage) {
-  return {
-    desiredDictionary: desiredLanguage === 'en' ? en : es,
-    notDesiredDictionary: desiredLanguage === 'en' ? es : en,
-  }
-}
-
-
-async function cambiarTexto() {
+export async function cambiarTexto() {
 
   log.info('Vamos a cambiar el texto de la web. Para esto primero necesito saber qué texto quieres cambiar. Voy a buscar entre todos los textos de la web');
 
   
   const { desiredLanguage, notDesiredLanguage } = await getLanguages();
-
   const { desiredDictionary, notDesiredDictionary } = await getDictionaries(desiredLanguage);
 
-  const desiredText = await text({
-    message: '¿Podrías escribir parte del texto actual que quieres cambiar? Ya sea una palabra o una frase:',
-    hint: `Por ejemplo: "Hey, it's Ines"`,
-  });
-
-  log.info(`Buscando textos que contengan "${desiredText}" en el idioma '${desiredLanguage}'...`);
+  const desiredText = await searchTexts();
 
   // get an array of object with the keys that match the desired text and their values
   const matchingTexts = Object.keys(desiredDictionary).filter(key => desiredDictionary[key].toLowerCase().includes(desiredText.toLowerCase())).map(key => ({ key, value: desiredDictionary[key] }));
@@ -174,12 +79,12 @@ async function cambiarTexto() {
   // save the changes overwriting the file
   const dictionaryPath = desiredLanguage === 'en' ? './src/en.json' : './src/es.json';
 
-  fs.writeFileSync(dictionaryPath, JSON.stringify(desiredDictionary, null, 2));
+  writeFile(dictionaryPath, desiredDictionary);
 
   if (updateOtherLanguage === 'yes') {
     const otherLanguageDictionaryPath = notDesiredLanguage === 'en' ? './src/en.json' : './src/es.json';
 
-    fs.writeFileSync(otherLanguageDictionaryPath, JSON.stringify(notDesiredDictionary, null, 2));
+    writeFile(otherLanguageDictionaryPath, notDesiredDictionary);
   }
 
   log.success('Cambios guardados con éxito');
@@ -188,12 +93,12 @@ async function cambiarTexto() {
 
 }
 
-async function addPortfolioPhotos() {
+export async function addPortfolioPhotos() {
 
   // check filenames in the folder ./content/gallery with sync approach
   const portfolioPath = './src/content/gallery';
   const assetsPath = './src/assets/trips';
-  const galleryFiles = fs.readdirSync(portfolioPath);
+  const galleryFiles = readFile(portfolioPath);
 
   // show the files in the folder
   const portfolio = await select({
@@ -214,11 +119,11 @@ async function addPortfolioPhotos() {
   const photos = photosPath.split(',').map(photo => photo.trim());
 
   photos.forEach(photo => {
-    fs.copyFileSync(photo, `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`);
+    copyFile(photo, `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`);
   });
 
   // add the photos to the portfolio file
-  const portfolioFile = fs.readFileSync(`${portfolioPath}/${portfolio}`);
+  const portfolioFile = readFile(`${portfolioPath}/${portfolio}`);
   const portfolioData = JSON.parse(portfolioFile);
 
   photos.forEach(photo => {
@@ -234,16 +139,16 @@ async function addPortfolioPhotos() {
     });
   });
 
-  fs.writeFileSync(`${portfolioPath}/${portfolio}`, JSON.stringify(portfolioData, null, 2));
+  writeFile(`${portfolioPath}/${portfolio}`, portfolioData);
 
 }
 
-async function cancelProgram() {
+export async function cancelProgram() {
   log.info('Saliendo del programa...');
   process.exit(0);
 }
 
-async function subirCambios() {
+export async function subirCambios() {
   log.info('Intentando subir los cambios de la web...');
 
   try {
