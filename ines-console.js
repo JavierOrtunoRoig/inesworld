@@ -1,10 +1,14 @@
-import { log, outro, select, text } from '@clack/prompts';
+import fs from 'fs';
+
+import { log, text } from '@clack/prompts';
 
 import path from 'path';
 import { exec } from 'child_process';
-import { readFile, writeFile } from './prompt/files.js';
+import { copyFile, readFile, writeFile } from './prompt/files.js';
 import { main } from './prompt/steps/mainProcess.js';
-import { getLanguages, getDictionaries, searchTexts } from './prompt/helpers.js';
+import { getLanguages, getDictionaries } from './prompt/helpers.js';
+import { searchTexts, chooseText, writeNewTexts, confirmChanges } from './prompt/steps/changeTexts.js';
+import { addPhotosToPortfolio, choosePortfolio } from './prompt/steps/newPhotoPortfolio.js';
 
 main();
 
@@ -16,65 +20,14 @@ export async function cambiarTexto() {
   const { desiredLanguage, notDesiredLanguage } = await getLanguages();
   const { desiredDictionary, notDesiredDictionary } = await getDictionaries(desiredLanguage);
 
-  const desiredText = await searchTexts();
-
-  // get an array of object with the keys that match the desired text and their values
-  const matchingTexts = Object.keys(desiredDictionary).filter(key => desiredDictionary[key].toLowerCase().includes(desiredText.toLowerCase())).map(key => ({ key, value: desiredDictionary[key] }));
-
-  if (matchingTexts.length === 0) {
-    log.error('No se han encontrado textos que coincidan con la búsqueda');
-    outro('Vuelve a iniciar el programa para intentarlo de nuevo');
-    process.exit(1);
-  }
+  const matchingTexts = await searchTexts(desiredLanguage, desiredDictionary);
 
   // show a select with the matching texts
-  const selectedKey = await select({
-    message: 'Elige el texto que quieres cambiar',
-    options: matchingTexts.map(text => ({ value: text.key, label: text.value })),
-  });
+  const selectedKey = await chooseText(matchingTexts);
 
-  const newTraduction = await text({
-    message: 'Escribe el nuevo texto:',
-  });
-
-  let newTraductionInOtherLanguage = '';
-
-  const updateOtherLanguage = await select({
-    message: `¿Quieres proporcionar el nuevo texto para el idioma '${notDesiredLanguage}'?`,
-    options: yesNoOptions,
-  });
-
-  if (updateOtherLanguage === 'yes') {
-    newTraductionInOtherLanguage = await text({
-      message: `Escribe el texto para '${notDesiredLanguage}':`,
-    });
-  }
-
-  log.message('Vas a cambiar el siguiente texto:');
-  log.message(`"${desiredDictionary[selectedKey]}"`);
-  log.message('Por:');
-  log.message(`"${newTraduction}"`);
-  log.message(`En el idioma '${desiredLanguage}'`);
-
-  if (updateOtherLanguage === 'yes') {
-    log.info(`Además, vas a cambiar el texto "${desiredDictionary[selectedKey]}" por "${newTraductionInOtherLanguage}" en el idioma ${notDesiredLanguage}`);
-  }
-
-  const confirmChanges = await select({
-    message: '¿Quieres aplicar estos cambios?',
-    options: yesNoOptions,
-  });
-
-  if (confirmChanges === 'yes') {
-    desiredDictionary[selectedKey] = newTraduction;
-
-    if (updateOtherLanguage === 'yes') {
-      notDesiredDictionary[selectedKey] = newTraductionInOtherLanguage;
-    }
-
-  } else {
-    log.error('Cambios cancelados');
-  }
+  const {newTraduction, updateOtherLanguage, newTraductionInOtherLanguage} = await writeNewTexts(selectedKey, desiredDictionary, notDesiredDictionary, desiredLanguage, notDesiredLanguage);
+  
+  await confirmChanges(desiredDictionary, notDesiredDictionary, selectedKey, newTraduction, updateOtherLanguage, newTraductionInOtherLanguage);
 
   // save the changes overwriting the file
   const dictionaryPath = desiredLanguage === 'en' ? './src/en.json' : './src/es.json';
@@ -98,16 +51,13 @@ export async function addPortfolioPhotos() {
   // check filenames in the folder ./content/gallery with sync approach
   const portfolioPath = './src/content/gallery';
   const assetsPath = './src/assets/trips';
-  const galleryFiles = readFile(portfolioPath);
+  const galleryFiles = fs.readdirSync(portfolioPath);
 
   // show the files in the folder
-  const portfolio = await select({
-    message: 'Selecciona a qué portfolio quieres añadir fotos',
-    options: galleryFiles.map(file => ({ value: file, label: file })),
-  });
+  const portfolio = await choosePortfolio(galleryFiles);
   
-  log.info(`Has seleccionado el portfolio ${portfolio}`);
   const folderPortfolio = path.basename(portfolio, '.json');
+  log.info(`Has seleccionado el portfolio ${folderPortfolio}`);
 
   // ask for the path of the photos
 
@@ -122,22 +72,7 @@ export async function addPortfolioPhotos() {
     copyFile(photo, `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`);
   });
 
-  // add the photos to the portfolio file
-  const portfolioFile = readFile(`${portfolioPath}/${portfolio}`);
-  const portfolioData = JSON.parse(portfolioFile);
-
-  photos.forEach(photo => {
-    let finalPath = `${assetsPath}/${folderPortfolio}/${path.basename(photo)}`;
-    if (finalPath.at(0) === '.') {
-      finalPath = finalPath.slice(1);
-    }
-    
-    portfolioData.photos.push({
-      place: '',
-      description: '',
-      path: finalPath,
-    });
-  });
+  const portfolioData = await addPhotosToPortfolio(photos, portfolioPath, portfolio, assetsPath, folderPortfolio);
 
   writeFile(`${portfolioPath}/${portfolio}`, portfolioData);
 

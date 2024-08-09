@@ -17,6 +17,5 @@ export const main = async () => {
 
   await actions[projectType]();
 
-
   outro(`Enhorabuena, has actulizado la web de InesWorld. ¡A seguir creando, hasta la próxima!`);
 }

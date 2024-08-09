@@ -13,11 +13,6 @@ export const selectAction = {
   message: 'Elige la acción que quieras realizar',
   options: [
     {
-      value: 'subirCambios',
-      label: 'Subir cambios',
-      hint: 'Sube los cambios a la web para que sean visibles para todos',
-    },
-    {
       value: 'cancelProgram',
       label: 'Cancelar',
       hint: 'Salir del programa',
@@ -31,6 +26,11 @@ export const selectAction = {
       label: 'Añadir fotos a un portfolio',
       value: 'addPortfolioPhotos',
       hint: 'Añade fotos a un portfolio',
-    }
+    },
+    {
+      value: 'subirCambios',
+      label: 'Subir cambios',
+      hint: 'Sube los cambios a la web para que sean visibles para todos',
+    },
   ],
 }

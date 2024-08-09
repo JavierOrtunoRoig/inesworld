@@ -1,3 +1,4 @@
+import { select } from '@clack/prompts';
 import en from '../src/en.json' assert { type: 'json' };
 import es from '../src/es.json' assert { type: 'json' };
 
@@ -36,14 +37,3 @@ export async function getDictionaries(desiredLanguage) {
     notDesiredDictionary: desiredLanguage === 'en' ? es : en,
   }
 }
-
-
-export const searchTexts = async () => {
-  const desiredText = await text({
-    message: '¿Podrías escribir parte del texto actual que quieres cambiar? Ya sea una palabra o una frase:',
-    hint: `Por ejemplo: "Hey, it's Ines"`,
-  });
-
-  log.info(`Buscando textos que contengan "${desiredText}" en el idioma '${desiredLanguage}'...`);
-
-};
