@@ -1,27 +1,3 @@
-export interface Trip {
-	title: string;
-	link: string;
-	alt;
-}
-
-export const trips: Trip[] = [
-	{
-		title: "Switzerland",
-		link: "/trip/switzerland",
-		alt: "Switzerland mountain",
-	},
-	{
-		title: "Indonesia",
-		link: "/trip/indonesia",
-		alt: "Child",
-	},
-	{
-		title: "Vietnam",
-		link: "/trip/vietnam",
-		alt: "Vietnam street",
-	},
-];
-
 export interface Travel {
 	country: string;
 	country_es: string;

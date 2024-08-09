@@ -1,12 +1,13 @@
 import { intro, outro, select } from '@clack/prompts';
-import { cambiarTexto, subirCambios, cancelProgram, addPortfolioPhotos } from "../../ines-console.js";
+import { cambiarTexto, subirCambios, cancelProgram, addPortfolioPhotos, addNewPortfolio } from "../../ines-console.js";
 import { selectAction } from '../conts.js';
 
 const actions = {
   cambiarTexto,
   subirCambios,
   cancelProgram,
-  addPortfolioPhotos
+  addPortfolioPhotos,
+  addNewPortfolio
 }
 
 

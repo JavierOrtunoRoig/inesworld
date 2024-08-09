@@ -2,7 +2,7 @@
 import IndonesiaImage from "@/assets/trips/indonesia/1.jpg";
 import SwitzerlandImage from "@/assets/trips/switzerland/1.jpg";
 import VietnamImage from "@/assets/trips/vietnam/1.jpg";
-import { trips } from "@/constants";
+import trips from "@/constants/trips.json";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ChevronLeft from "@/icons/ChevronLeft.astro";
 import ChevronRight from "@/icons/ChevronRight.astro";
@@ -115,9 +115,7 @@ const getRightImageByIndex = (index: number) => {
 	*/
 
 	.portfolio-container {
-
 		height: 100%;
-
 
 		/* 
     Las imágenes son elementos de remplazo (así se llaman), es decir que en realidad su representación es externa a css.  No puedes cambiar lo que hay en la iamgen con css.

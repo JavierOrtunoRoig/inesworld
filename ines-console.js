@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+import trips from './src/constants/trips.json' assert { type: 'json' };
+
 import { log, text } from '@clack/prompts';
 
 import path from 'path';
@@ -60,7 +62,6 @@ export async function addPortfolioPhotos() {
   log.info(`Has seleccionado el portfolio ${folderPortfolio}`);
 
   // ask for the path of the photos
-
   const photosPath = await text({
     message: 'Introduce la ruta de las fotos que quieres añadir, separadas por comas',
     hint: 'Por ejemplo: c/path/to/photo1.jpg, c/path/to/photo2.jpg',
@@ -76,6 +77,92 @@ export async function addPortfolioPhotos() {
 
   writeFile(`${portfolioPath}/${portfolio}`, portfolioData);
 
+}
+
+export async function addNewPortfolio() {
+  
+  const portfolioPath = './src/content/gallery';
+  const assetsPath = './src/assets/trips';
+
+  log.info('Vamos a añadir un nuevo portfolio a la web. Dime el nombre del nuevo portfolio');
+
+  const newPortfolio = await text({
+    message: 'Introduce el nombre del nuevo portfolio',
+    hint: 'Por ejemplo: newPortfolio',
+  });
+
+  const newPortfolioPath = `${portfolioPath}/${newPortfolio}.json`;
+
+  // ask for the path of the photos
+  const photosPath = await text({
+    message: 'Introduce la ruta de las fotos que quieres añadir, separadas por comas',
+    hint: 'Por ejemplo: c/path/to/photo1.jpg, c/path/to/photo2.jpg',
+  });
+
+  // create folder for the new portfolio
+  fs.mkdirSync(`${assetsPath}/${newPortfolio}`, {recursive: true});
+
+  const photos = photosPath.split(',').map(photo => photo.trim());
+
+  photos.forEach(photo => {
+    copyFile(photo, `${assetsPath}/${newPortfolio}/${path.basename(photo)}`);
+  });
+  // D:\Users\Javier\Downloads\ines.jpg
+  
+  const portfolioData = {
+    title: newPortfolio,
+    photos: [],
+  }
+
+  photos.forEach(photo => {
+    let finalPath = `${assetsPath}/${newPortfolio}/${path.basename(photo)}`;
+    if (finalPath.at(0) === '.') {
+      finalPath = finalPath.slice(1);
+    }
+    
+    portfolioData.photos.push({
+      place: '',
+      description: '',
+      path: finalPath,
+    });
+  });
+
+
+  writeFile(`${newPortfolioPath}`, portfolioData);
+
+  const title = newPortfolio.charAt(0).toUpperCase() + newPortfolio.slice(1);
+
+  let newTrips = [...trips];
+  newTrips.push({
+    title,
+    link: `/trip/${newPortfolio}`,
+    "alt": ""
+  });
+
+  writeFile('./src/constants/trips.json', newTrips);
+
+  const titleImage = title + "Image"; 
+  const photo = path.basename(photosPath);
+  const index = newTrips.length - 1;
+
+
+  let page = readFile('./src/pages/portfolio.astro')
+  let lines = page.split(/\r?\n/)
+
+  let firstDelimiterIndex = lines.indexOf('---');
+  if (firstDelimiterIndex !== -1) {
+    lines.splice(firstDelimiterIndex + 1, 0, `import ${titleImage} from "@/assets/trips/${newPortfolio}/${photo}"`);
+  }
+
+  let returnStatementIndex = lines.findIndex(line => line.includes('\treturn SwitzerlandImage;'));
+  if (returnStatementIndex !== -1) {
+    lines.splice(returnStatementIndex, 0, `\tif (index === ${index}) return ${titleImage};`);
+  }
+
+  // Unir las líneas nuevamente en una cadena, respetando los saltos de línea
+  const newData = lines.join('\n');
+
+  fs.writeFileSync('./src/pages/portfolio.astro', newData, 'utf8');
 }
 
 export async function cancelProgram() {

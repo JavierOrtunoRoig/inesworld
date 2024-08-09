@@ -28,6 +28,11 @@ export const selectAction = {
       hint: 'Añade fotos a un portfolio',
     },
     {
+      value: 'addNewPortfolio',
+      label: 'Añadir un nuevo portfolio',
+      hint: 'Crea un nuevo portfolio',
+    },
+    {
       value: 'subirCambios',
       label: 'Subir cambios',
       hint: 'Sube los cambios a la web para que sean visibles para todos',
