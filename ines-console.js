@@ -163,6 +163,17 @@ export async function addNewPortfolio() {
   const newData = lines.join('\n');
 
   fs.writeFileSync('./src/pages/portfolio.astro', newData, 'utf8');
+
+  exec('npm run generate:i18n', (error, stdout, stderr) => {
+    if (error) {
+      log.error('No se ha podido generar los archivos de internacionalización');
+      log.error('Por favor, contáctame para poder solucionar el problema');
+      log.error(error.message);
+      return;
+    }
+    
+    log.success('Archivos de internacionalización generados con éxito');
+  });
 }
 
 export async function cancelProgram() {
