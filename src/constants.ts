@@ -11,8 +11,22 @@ export const nextTravels: Travel[] = [
 		country: "Philippines",
 		country_es: "Filipinas",
 		startDate: "2024-07-21",
-		endDate: "2024-10-01",
+		endDate: "2024-08-19",
 		coordinates: [12.879721, 121.774017],
+	},
+	{
+		country: "Laos",
+		country_es: "Laos",
+		startDate: "2024-08-20",
+		endDate: "2024-09-17",
+		coordinates: [18.205208, 103.89504249999999],
+	},
+	{
+		country: "Cambodia",
+		country_es: "Camboya",
+		startDate: "2024-09-17",
+		endDate: "2024-10-01",
+		coordinates: [12.5433216, 104.8144914],
 	},
 ];
 

@@ -4168,12 +4168,12 @@
         "name_zh": "柬埔寨",
         "name_zht": "柬埔寨",
         "filename": "KHM.geojson",
-        "visited": 0,
+        "visited": 2,
         "iso_a2": "KH",
         "iso_a3": "KHM",
         "continent_es": "Asia",
         "subregion_es": "Asia sudoriental",
-        "num_visited": 0
+        "num_visited": 1
       }
     },
     {
@@ -4533,12 +4533,12 @@
         "name_zh": "老挝",
         "name_zht": "寮國",
         "filename": "LAO.geojson",
-        "visited": 0,
+        "visited": 2,
         "iso_a2": "LA",
         "iso_a3": "LAO",
         "continent_es": "Asia",
         "subregion_es": "Asia sudoriental",
-        "num_visited": 0
+        "num_visited": 1
       }
     },
     {
@@ -6153,12 +6153,12 @@
         "name_zh": "菲律宾",
         "name_zht": "菲律賓",
         "filename": "PHL.geojson",
-        "visited": 1,
+        "visited": 2,
         "iso_a2": "PH",
         "iso_a3": "PHL",
         "continent_es": "Asia",
         "subregion_es": "Asia sudoriental",
-        "num_visited": 0
+        "num_visited": 1
       }
     },
     {
