@@ -5,6 +5,7 @@ import TitleRewritter from "@/components/home/TitleRewritter.astro";
 import WhyMe from "@/components/home/WhyMe.astro";
 import Dashboard from "@/components/home/dashboard/SkillsContainer.astro";
 import DiffContainer from "@/components/home/edition/DiffContainer.astro";
+import Process from "@/components/home/process/Process.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import { changeLanguage } from "i18next";
@@ -55,6 +56,7 @@ const t = useTranslations(lang);
 		<WhyMe />
 		<Dashboard />
 		<DiffContainer />
+		<Process />
 		<LatestWorks />
 	</div>
 </BasicLayout>
